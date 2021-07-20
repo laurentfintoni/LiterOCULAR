@@ -5,5 +5,9 @@ body {
 }
 
 #article1, #article2, #article3 {
-    max-height: 100vh;
+    max-height: 80vh;
+}
+
+#metadata1, #metadata2, #metadata3 {
+    max-height: 10vh;
 }

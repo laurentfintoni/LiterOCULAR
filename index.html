@@ -21,15 +21,13 @@
         <nav class="navbar navbar-light bg-white sticky-top">
             <div class="container-fluid justify-content-start text-dark">
             
-              <a class="navbar-brand" href="#">beautiful navbar</a>
+              <a class="navbar-brand" href="#">mgzLens</a>
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Issues
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" id="kmd-issue" href="?issue=KMD">KMD</a></li>
+                <li><a class="dropdown-item" id="timnit-issue" href="?issue=Timnit">Timnit</a></li>
               </ul>
     
               
@@ -39,12 +37,78 @@
 
         <!-- First row for metadata viewer and theme switcher -->
         <div class="row justify-content-center m-3">
-            <div class="col-11 border border-info text-center">
-                Here the metadata viewer and / or theme switcher would fit without taking too much space. <br>
-                maybe the theme switcher could be accessible from the navbar instead, or from a floating element in the page, like an icon or something. <br>
-                <button type="button" class="btn btn-link KMD">KMD</button>
-                <button type="button" class="btn btn-link Timnit">Timnit</button>
-            </div>
+                <div id="metadata1" class="col-4 overflow-auto">
+                    <ul>
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-track">track</li> 
+                        <li class="visually-hidden mention-rhyme">rhyme</li> 
+                        <li class="visually-hidden mention-album">album</li> 
+                        <li class="visually-hidden mention-label">label</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-genre">genre</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-character">character</li> 
+                        <li class="visually-hidden mention-sample">sample</li> 
+                        <li class="visually-hidden mention-subject">subject</li>
+                        <li class="visually-hidden mention-subject">subject</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-technology">technology</li> 
+                        <li class="visually-hidden mention-company">company</li> 
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-event">event</li> 
+                    </ul>
+                </div>
+                <div id="metadata2" class="col-4 overflow-auto">
+                    <ul>
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-track">track</li> 
+                        <li class="visually-hidden mention-rhyme">rhyme</li> 
+                        <li class="visually-hidden mention-album">album</li> 
+                        <li class="visually-hidden mention-label">label</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-genre">genre</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-character">character</li> 
+                        <li class="visually-hidden mention-sample">sample</li> 
+                        <li class="visually-hidden mention-subject">subject</li>
+                        <li class="visually-hidden mention-subject">subject</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-technology">technology</li> 
+                        <li class="visually-hidden mention-company">company</li> 
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-event">event</li> 
+                    </ul>
+                </div>
+                <div id="metadata3" class="col-4 overflow-auto">
+                    <ul>
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-track">track</li> 
+                        <li class="visually-hidden mention-rhyme">rhyme</li> 
+                        <li class="visually-hidden mention-album">album</li> 
+                        <li class="visually-hidden mention-label">label</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-genre">genre</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-character">character</li> 
+                        <li class="visually-hidden mention-sample">sample</li> 
+                        <li class="visually-hidden mention-subject">subject</li>
+                        <li class="visually-hidden mention-subject">subject</li> 
+                        <li class="visually-hidden mention-location">location</li> 
+                        <li class="visually-hidden mention-person">person</li> 
+                        <li class="visually-hidden mention-organization">organization</li> 
+                        <li class="visually-hidden mention-technology">technology</li> 
+                        <li class="visually-hidden mention-company">company</li> 
+                        <li class="visually-hidden mention-group">group</li> 
+                        <li class="visually-hidden mention-event">event</li> 
+                    </ul>
+                </div>
         </div>
 
         <!-- Second row for content (three cols of equal size spanning whole viewport width) -->
@@ -64,18 +128,6 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-        $(".KMD").click(function(){
-            $('#article1').load('KMD_egotrip_98.html');
-            $('#article2').load('KMD_egotrip_98.html');
-            $('#article3').load('KMD_egotrip_98.html');
-        });
-
-        $(".Timnit").click(function(){
-            $('#article1').load('Timnit_MITREVIEW_20.html');
-            $('#article2').load('Timnit_MITREVIEW_20.html');
-            $('#article3').load('Timnit_MITREVIEW_20.html');
-        });
-    </script>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
