@@ -1,0 +1,9 @@
+body {
+    position: fixed;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#article1, #article2, #article3 {
+    max-height: 100vh;
+}
