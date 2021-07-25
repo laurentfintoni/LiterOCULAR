@@ -7,6 +7,7 @@
     <!-- Styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" id="external-style-tag" href="/static/css/core.css">
+    <style id="dynamic-styling"></style>
     <!-- JQuery script-->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
@@ -38,73 +39,16 @@
         <!-- First row for metadata viewer and theme switcher -->
         <div class="row justify-content-center m-3">
                 <div class="col-4 overflow-auto no-scrollbar">
-                    <ul id="metadata1" class="list-group">
-                        <!-- <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-track">Track</li> 
-                        <li class="list-group-item visually-hidden mention-rhyme">Rhyme</li> 
-                        <li class="list-group-item visually-hidden mention-album">Album</li> 
-                        <li class="list-group-item visually-hidden mention-label">Label</li> 
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-genre">Genre</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-character">Character</li> 
-                        <li class="list-group-item visually-hidden mention-sample">Sample</li> 
-                        <li class="list-group-item visually-hidden mention-subject">Subject</li>
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-technology">Technology</li> 
-                        <li class="list-group-item visually-hidden mention-company">Company</li> 
-                        <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-event">Event</li>  -->
-                    </ul>
+                    <div class="accordion accordion-flush text-dark" id="metadata1">
+                    </div>
                 </div>
                 <div class="col-4 overflow-auto no-scrollbar">
-                    <ul id="metadata2" class="list-group">
-                        <!-- <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-track">Track</li> 
-                        <li class="list-group-item visually-hidden mention-rhyme">Rhyme</li> 
-                        <li class="list-group-item visually-hidden mention-album">Album</li> 
-                        <li class="list-group-item visually-hidden mention-label">Label</li> 
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-genre">Genre</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-character">Character</li> 
-                        <li class="list-group-item visually-hidden mention-sample">Sample</li> 
-                        <li class="list-group-item visually-hidden mention-subject">Subject</li>
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-technology">Technology</li> 
-                        <li class="list-group-item visually-hidden mention-company">Company</li> 
-                        <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-event">Event</li>  -->
-                    </ul>
+                    <div class="accordion accordion-flush" id="metadata2">
+                    </div>
                 </div>
                 <div class="col-4 overflow-auto no-scrollbar">
-                    <ul id="metadata3" class="list-group">
-                        <!-- <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-track">Track</li> 
-                        <li class="list-group-item visually-hidden mention-rhyme">Rhyme</li> 
-                        <li class="list-group-item visually-hidden mention-album">Album</li> 
-                        <li class="list-group-item visually-hidden mention-label">Label</li> 
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-genre">Genre</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-character">Character</li> 
-                        <li class="list-group-item visually-hidden mention-sample">Sample</li> 
-                        <li class="list-group-item visually-hidden mention-subject">Subject</li>
-                        <li class="list-group-item visually-hidden mention-location">Location</li> 
-                        <li class="list-group-item visually-hidden mention-person">Person</li> 
-                        <li class="list-group-item visually-hidden mention-organization">Organization</li> 
-                        <li class="list-group-item visually-hidden mention-technology">Technology</li> 
-                        <li class="list-group-item visually-hidden mention-company">Company</li> 
-                        <li class="list-group-item visually-hidden mention-group">Group</li> 
-                        <li class="list-group-item visually-hidden mention-event">Event</li>  -->
-                    </ul>
+                    <div class="accordion accordion-flush" id="metadata3">
+                    </div>
                 </div>
         </div>
 
