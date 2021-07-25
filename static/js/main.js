@@ -65,33 +65,11 @@ function fillMetadataBox() {
   let thirdMetadata = document.getElementById("metadata3");
 
   var articles = [firstArticle, secondArticle, thirdArticle];
-  const mentions = [
-    "mention-group",
-    "mention-person",
-    "mention-track",
-    "mention-rhyme",
-    "mention-album",
-    "mention-label",
-    "mention-location",
-    "mention-genre",
-    "mention-organization",
-    "mention-character",
-    "mention-sample",
-    "mention-subject",
-    "mention-subject",
-    "mention-location",
-    "mention-person",
-    "mention-organization",
-    "mention-technology",
-    "mention-company",
-    "mention-group",
-    "mention-event",
-  ];
+
   var articleCounter = 0;
   articles.forEach((article) => {
-    console.log(`Analysing article... (${articleCounter + 1})`);
 
-    const mentionsCount = {
+    var mentionsCount = {
       "mention-group": 0,
       "mention-person": 0,
       "mention-track": 0,
@@ -104,20 +82,19 @@ function fillMetadataBox() {
       "mention-character": 0,
       "mention-sample": 0,
       "mention-subject": 0,
-      "mention-subject": 0,
       "mention-location": 0,
-      "mention-person": 0,
       "mention-organization": 0,
       "mention-technology": 0,
       "mention-company": 0,
-      "mention-group": 0,
       "mention-event": 0,
     };
-
-    let spanMentions = article.querySelectorAll("span");
+    // Select all spans whose class contains "mention-*"
+    let spanMentions = article.querySelectorAll("span[class*='mention']");
     let spanArray = Array.from(spanMentions);
+
     spanArray.forEach((span) => {
       span.classList.forEach((spanClass) => {
+        let mentions = Object.keys(mentionsCount);
         if (mentions.includes(spanClass)) {
           mentionsCount[spanClass]++;
         }
@@ -132,10 +109,10 @@ function fillMetadataBox() {
       box = thirdMetadata;
     }
 
-    // Object contains all possible mentions. Sort that by number of mentions and reverse the order (descending)
+    // Object contains all possible mentions. Sort that by number of mentions (descending)
     var mentionsList = Object.entries(mentionsCount);
-    var sortedMentions = mentionsList.sort((type,num)=>{return num[1]}).reverse();
-    console.log(sortedMentions)
+    // custom function for comparison in sorting: arguments are two items to be compared, sort by 2nd value (number of mentions)
+    var sortedMentions = mentionsList.sort((m1,m2)=>{return m1[1] < m2[1]}) 
     for (const [type, num] of sortedMentions) {
       if (num != 0) {
         const item = document.createElement("li");
