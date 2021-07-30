@@ -15,6 +15,33 @@
 </head>
 <body>
 
+    <!-- TODO EDIT -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: fit-content;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body medium" style="height: fit-content;">
+            <div class="row border border-danger"> text </div>
+            <!-- Metadata viewer and theme switcher -->
+            <div class="row justify-content-center m-1 border border-danger">
+            <div class="col-4 overflow-auto no-scrollbar">
+                <div class="accordion accordion-flush text-dark" id="metadata1">
+                </div>
+            </div>
+            <div class="col-4 overflow-auto no-scrollbar">
+                <div class="accordion accordion-flush" id="metadata2">
+                </div>
+            </div>
+            <div class="col-4 overflow-auto no-scrollbar">
+                <div class="accordion accordion-flush" id="metadata3">
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      
+
     <!-- The container spans the whole viewport (vh-100) in height and all padding is removed from the sides (px-0) -->
     <div class="container-fluid bg-dark vh-100 vw-100 text-white px-0">
 
@@ -30,27 +57,14 @@
                 <li><a class="dropdown-item" id="kmd-issue" href="?issue=KMD">KMD</a></li>
                 <li><a class="dropdown-item" id="timnit-issue" href="?issue=Timnit">Timnit</a></li>
               </ul>
+              <a class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata</a>
+
     
               
 
             </div>
         </nav>
 
-        <!-- First row for metadata viewer and theme switcher -->
-        <div class="row justify-content-center m-3">
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush text-dark" id="metadata1">
-                    </div>
-                </div>
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush" id="metadata2">
-                    </div>
-                </div>
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush" id="metadata3">
-                    </div>
-                </div>
-        </div>
 
         <!-- Second row for content (three cols of equal size spanning whole viewport width) -->
         <div class="row mx-1">

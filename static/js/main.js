@@ -1,7 +1,13 @@
 // Global Variables
 var metadataViewerBox = document.getElementById("metadata-viewer");
 var articleSources = {
-  KMD: ["KMD_egotrip_98.html", "KMD_Source_1991.html", "KMD_Source_1994.html"],
+  KMD: {
+     metadata: "",
+     articles: [
+      "KMD_egotrip_98.html", 
+      "KMD_Source_1991.html", 
+      "KMD_Source_1994.html"]
+  },
   Timnit: [
     "Timnit_MITREVIEW_20.html",
     "Timnit_NYT_21.html",
@@ -182,6 +188,7 @@ function fillMetadataBox() {
         const mentionName = type.split("-")[1][0].toUpperCase() + type.split("-")[1].slice(1).toLowerCase();
         let links = []
         for (const aboutType of Object.keys(abouts)) {
+          // TODO: fede turn into buttons (split w/ "external source" dropdown)
           let el = setAttributes(document.createElement("a"), {"onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#"});
           el.innerText = aboutType;
           content.appendChild(el)
@@ -205,7 +212,13 @@ function fillMetadataBox() {
 function focusMetadata(element) {
   var styleTag = document.getElementById("dynamic-styling");
   console.log(element.id)
-  // i need an object where for each "mention type" there is a style
+  // TODO: fede Just one "highlighted style"
+  // toggle class ->total: mention-*/ (article-specific)      
+  //              ->fragment: about="*" (issue-wide)
+
+  // TODO: laurent disable offcanvas
+  // getElbyID() -> get or create instance
+  // https://getbootstrap.com/docs/5.0/components/offcanvas/#methods
 }
 
 function setAttributes(el, attrs) {
@@ -216,6 +229,7 @@ function setAttributes(el, attrs) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // TODO: Laurent load html issue metadata
   const issue = window.location.href.split("issue=")[1];
   if (issue == "KMD") {
     $("#article1").load("KMD_egotrip_98.html");
