@@ -58,6 +58,12 @@ var mentionColors = {
   "mention-event": "background-color: #8000FF;"
 }
 
+// Initialize tooltips
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 // Theme switching
 function switchTheme(btn) {
@@ -219,6 +225,10 @@ function focusMetadata(element) {
   // TODO: laurent disable offcanvas
   // getElbyID() -> get or create instance
   // https://getbootstrap.com/docs/5.0/components/offcanvas/#methods
+  var canvasoff = document.getElementById("canvasOff")
+  canvasoff.addEventListener('shown.bs.offcanvas', function(){
+    $("#mention-person/ZevLoveX").click.offcanvas('hide');
+  })
 }
 
 function setAttributes(el, attrs) {
@@ -229,19 +239,23 @@ function setAttributes(el, attrs) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // TODO: Laurent load html issue metadata
   const issue = window.location.href.split("issue=")[1];
+  var homepage = document.getElementById("homepage");
   if (issue == "KMD") {
-    $("#article1").load("KMD_egotrip_98.html");
-    $("#article2").load("KMD_Source_1991.html");
-    $("#article3").load("KMD_Source_1994.html");
+    homepage.remove();
+    $("#article1").load("KMD_Source_1991.html");
+    $("#article2").load("KMD_Source_1994.html");
+    $("#article3").load("KMD_egotrip_98.html");
+    $("#issue-meta").load("KMD_meta.html");
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
   } else if (issue == "Timnit") {
+    homepage.remove();
     $("#article1").load("Timnit_MITREVIEW_20.html");
-    $("#article2").load("Timnit_NYT_21.html");
-    $("#article3").load("Timnit_WAPO_20.html");
+    $("#article2").load("Timnit_WAPO_20.html");
+    $("#article3").load("Timnit_NYT_21.html");
+    $("#issue-meta").load("Timnit_meta.html");
     setTimeout(() => {
       fillMetadataBox();
     }, 500);

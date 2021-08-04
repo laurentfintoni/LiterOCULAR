@@ -17,12 +17,12 @@
 
     <!-- TODO EDIT -->
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: fit-content;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+        <div class="offcanvas-header border border-danger">
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Viewer</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body medium" style="height: fit-content;">
-            <div class="row border border-danger"> text </div>
+            <div class="row border border-danger" id="issue-meta">  </div>
             <!-- Metadata viewer and theme switcher -->
             <div class="row justify-content-center m-1 border border-danger">
             <div class="col-4 overflow-auto no-scrollbar">
@@ -49,14 +49,16 @@
         <nav class="navbar navbar-light bg-white sticky-top">
             <div class="container-fluid justify-content-start text-dark">
             
-              <a class="navbar-brand" href="#">mgzLens</a>
+              <a class="navbar-brand" href="/">mgzLens</a>
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Issues
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" id="kmd-issue" href="?issue=KMD">KMD</a></li>
-                <li><a class="dropdown-item" id="timnit-issue" href="?issue=Timnit">Timnit</a></li>
+                <li><a class="dropdown-item" id="kmd-issue" href="?issue=KMD">Death and Rebirth</a></li>
+                <li><a class="dropdown-item" id="timnit-issue" href="?issue=Timnit">Who Watches the Admen?</a></li>
               </ul>
+              <a class="nav-link" href="#">Documentation</a>
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#disclaimerModal" href="#">Disclaimer</a>
               <a class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata</a>
 
     
@@ -64,10 +66,65 @@
 
             </div>
         </nav>
-
-
+        <!-- Disclaimer modal-->
+        <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-dark" id="disclaimerModalLabel">This is not the content you are looking for</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-dark">
+                <p>The purpose of this web site is to explore various types of typographic and layout style for text documents, as an end-of-course project for the "Information Modelingand Web technologies" course of the Master Degree in Digital Humanities andDigital Knowledge of the University of Bologna, held by professor Fabio Vitali. </p>
+                <p>
+                  The documents contained in this web site have been selected for their length and
+                  complexity. Their publication here is not intended to be an alternative or
+                  replace their original locations. The documents in the Death and Rebirth issue are taken from print copies of <em>The Source</em> magazine (1991, 1994) and <em>Ego Trip</em> magazine (1998). The documents in the Who Watches the Admen? issue are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and <em>The Washington Post</em>.  
+                </p>
+                <p>
+                  All copyrights and related rights on the content remain with their original owners.
+                  All copyright on the typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <!-- Second row for content (three cols of equal size spanning whole viewport width) -->
-        <div class="row mx-1">
+        <div id="homepage" class="container-md">
+          <h1>Magazine Title</h1>
+          <p>Something something about the magazine here</p>
+          <h2>Issues</h2>
+          <p>Something something about the issues here.</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">Issue One</h5>
+                  <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-dark">Issue Two</h5>
+                  <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>About</h2>
+          <p>bla bla bla</p>
+        </div>
+        <div class="row p-2">
             <div id="article1" class="col-4 overflow-auto no-scrollbar">
 
             </div>

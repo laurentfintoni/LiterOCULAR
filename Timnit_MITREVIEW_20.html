@@ -1,30 +1,3 @@
-<style>
-    .mention-person.highlight {
-			background-color: #FF2D00;
-		}
-	.mention-location {
-			background-color: #FFF000;
-		}
-	.mention-group {
-			background-color: #7CFF00;
-		}
-    .mention-organization {
-			background-color: #00FFC1;
-		}			
-    .mention-subject {
-			background-color: #00FFF7;
-		}
-    .mention-technology {
-			background-color: #00ECFF;
-		}
-    .mention-company {
-			background-color: #0074FF;
-		}
-    .mention-event {
-			background-color: #8000FF;
-		}	
-</style>
-
 <h1 data-src="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/">We read the <span id="#" class="mention-subject" about="GebruResearchPaper">paper</span> that <span id="#" class="mention-subject" about="Firing">forced <span id="#" class="mention-person" about="TimnitGebru">Timnit Gebru</span> out of <span id="#" class="mention-company" about="Google">Google</span></span>. Here’s what it says.</h1>
 <p class="subheader"><span id="#" class="mention-company" about="Google">The company</span>'s <span id="#" class="mention-person" about="TimnitGebru">star ethics researcher</span> highlighted the risks of <span id="#" class="mention-technology" about="NLP">large language models</span>, which are key to <span id="#" class="mention-company" about="Google">Google</span>'s business.</p>
 <p class="byline"><span id="#" class="mention-person" about="KarenHao">Karen Hao</span></p>
@@ -56,7 +29,43 @@
 
 <p>Training <span id="#" class="mention-technology" about="AI">large AI models</span> consumes a lot of <span id="#" class="mention-technology" about="CPU">computer processing power</span>, and hence <span id="#" class="mention-subject" about="EnergyConsumption">a lot of electricity</span>. <span id="#" class="mention-person" about="TimnitGebru">Gebru</span> and her coauthors refer to a 2019 paper from <span id="#" class="mention-person" about="EmmaStrubell">Emma Strubell</span> and her collaborators on <span id="#" class="mention-subject" about="EnergyConsumption">the carbon emissions</span> and <span id="#" class="mention-subject" about="AICost">financial costs</span> of <span id="#" class="mention-technology" about="NLP">large language models</span>. It found that their <span id="#" class="mention-subject" about="EnergyConsumption">energy consumption</span> and <span id="#" class="mention-subject" about="EnergyConsumption">carbon footprint</span> have been exploding since 2017, as <span id="#" class="mention-technology" about="NLP">models</span> have been fed <span id="#" class="mention-technology" about="DataSets">more and more data</span>.</p>
 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carbonModal">
+ View chart
+</button>
+
+<div class="modal fade" id="carbonModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="exampleModalLabel">iframes are evil but charts are nice!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <iframe title="Common carbon footprint benchmarks" aria-label="Bar Chart" id="datawrapper-chart-VQEvf" src="//datawrapper.dwcdn.net/VQEvf/3/" scrolling="no" frameborder="0" style="width:0;min-width:100%;border:none" height="245"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
 <p><span id="#" class="mention-person" about="EmmaStrubell">Strubell</span>’s study found that training one <span id="#" class="mention-technology" about="NLP">language model</span> with a particular type of <span id="#" class="mention-technology" about="NeuralNetworks">“neural architecture search” (NAS) method</span> would have <span id="#" class="mention-subject" about="EnergyConsumption">produced the equivalent of 626,155 pounds (284 metric tons) of carbon dioxide</span>—about the lifetime output of five average American cars. Training a version of <span id="#" class="mention-company" about="Google">Google</span>’s <span id="#" class="mention-technology" about="NLP">language model</span>, <span id="#" class="mention-technology" about="BERT">BERT</span>, which underpins <span id="#" class="mention-company" about="Google">the company<span id="#" class="mention-company" about="Google">’s <span id="#" class="mention-technology" about="SearchEngines">search engine</span>, <span id="#" class="mention-subject" about="EnergyConsumption">produced 1,438 pounds of CO2 equivalent</span> in <span id="#" class="mention-person" about="EmmaStrubell">Strubell</span>’s estimate—nearly the same as a round-trip flight between <span id="#" class="mention-location" about="NewYorkCity">New York City</span> and <span id="#" class="mention-location" about="SanFrancisco">San Francisco</span>. These numbers should be viewed as minimums, <span id="#" class="mention-subject" about="EnergyConsumption">the cost of training a model one time through</span>. In practice, <span id="#" class="mention-technology" about="NLP">models</span> are trained and retrained many times over during research and development.</p>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#costModal">
+ View chart
+</button>
+
+<div class="modal fade" id="costModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="exampleModalLabel">iframes are evil but charts are nice!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe title="The estimated costs of training a model once" aria-label="chart" id="datawrapper-chart-wVVI7" src="https://datawrapper.dwcdn.net/wVVI7/6/" scrolling="no" frameborder="0" style="width:0;min-width:100%;border:none" height="631"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 <p><span id="#" class="mention-person" about="TimnitGebru">Gebru</span>’s <span id="#" class="mention-subject" about="GebruResearchPaper">draft paper</span> points out that <span id="#" class="mention-subject" about="EnergyConsumption">the sheer resources</span> required to build and sustain <span id="#" class="mention-technology" about="AI">such large AI models</span> means <span id="#" class="mention-subject" about="Bias">they tend to benefit wealthy organizations, while climate change hits marginalized communities hardest</span>. “It is past time for researchers to <span id="#" class="mention-subject" about="EnergyConsumption">prioritize energy efficiency</span> and <span id="#" class="mention-subject" about="AICost">cost</span> to reduce negative environmental impact and inequitable access to resources,” they write.</p>
 
@@ -94,7 +103,11 @@
 
 <p><span id="#" class="mention-person" about="NicolasLeRoux">Nicolas Le Roux</span>, a <span id="#" class="mention-group" about="GoogleAILab">Google AI</span> researcher in the <span id="#" class="mention-location" about="Montreal">Montreal</span> office, later noted on <span id="#" class="mention-technology" about="Twitter">Twitter</span> that the reasoning in <span id="#" class="mention-person" about="JeffDean">Dean</span>’s email was unusual. “My submissions were always checked for disclosure of sensitive material, never for the quality of the literature review,” he said.</p>
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Now might be a good time to remind everyone that the easiest way to discriminate is to make stringent rules, then to decide when and for whom to enforce them.<br>My submissions were always checked for disclosure of sensitive material, never for the quality of the literature review.</p>&mdash; Nicolas Le Roux (@le_roux_nicolas) <a href="https://twitter.com/le_roux_nicolas/status/1334601960972906496?ref_src=twsrc%5Etfw">December 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <p><span id="#" class="mention-person" about="JeffDean">Dean</span>’s email also says that <span id="#" class="mention-person" about="TimnitGebru">Gebru</span> and her colleagues gave <span id="#" class="mention-group" about="GoogleAILab">Google AI</span> only a day for an internal review of <span id="#" class="mention-subject" about="GebruResearchPaper">the paper</span> before they submitted it to a conference for publication. <span id="#" class="mention-person" about="JeffDean">He</span> wrote that “our aim is to rival peer-reviewed journals in terms of the rigor and thoughtfulness in how we review research before publication.”</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I understand the concern over Timnit’s resignation from Google. She’s done a great deal to move the field forward with her research. I wanted to share the email I sent to Google Research and some thoughts on our research process.<a href="https://t.co/djUGdYwNMb">https://t.co/djUGdYwNMb</a></p>&mdash; Jeff Dean (@🏡) (@JeffDean) <a href="https://twitter.com/JeffDean/status/1334953632719011840?ref_src=twsrc%5Etfw">December 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p><span id="#" class="mention-person" about="EmilyMBender">Bender</span> noted that even so, the conference would still put the paper through a substantial review process: “Scholarship is always a conversation and always a work in progress,” she said. </p>
 
@@ -103,3 +116,5 @@
 <p><span id="#" class="mention-company" about="Google">Google</span> pioneered much of the foundational research that has since led to the recent explosion in <span id="#" class="mention-technology" about="NLP">large language models</span>. <span id="#" class="mention-group" about="GoogleAILab">Google AI</span> was the first to invent <span id="#" class="mention-technology" about="NLP">the Transformer language model</span> in 2017 that serves as the basis for the company’s later model <span id="#" class="mention-technology" about="BERT">BERT</span>, and <span id="#" class="mention-company" about="OpenAI">OpenAI</span>’s <span id="#" class="mention-technology" about="GPT">GPT-2 and GPT-3</span>. <span id="#" class="mention-technology" about="BERT">BERT</span>, as noted above, now also powers <span id="#" class="mention-technology" about="SearchEngines">Google search</span>, <span id="#" class="mention-company" about="Google">the company</span>’s cash cow.</p>
 
 <p><span id="#" class="mention-person" about="EmilyMBender">Bender</span> worries that <span id="#" class="mention-company" about="Google">Google</span>’s actions could create “a chilling effect” on future <span id="#" class="mention-subject" about="AI">AI ethics research</span>. Many of <span id="#" class="mention-group" about="AICommunity">the top experts</span> in <span id="#" class="mention-subject" about="AI">AI ethics</span> work at <span id="#" class="mention-subject" about="TechCompanies">large tech companies</span> because that is where the money is. “That has been beneficial in many ways,” <span id="#" class="mention-person" about="EmilyMBender">she</span> says. “But we end up with an ecosystem that maybe <span id="#" class="mention-subject" about="Bias">has incentives that are not the very best ones for the progress of science for the world</span>.”</p>
+
+<p><em><b>Update (Dec 7):</b> Additional details have been added to clarify the environmental costs of large language models.</em></p>
