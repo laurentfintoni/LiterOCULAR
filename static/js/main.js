@@ -192,13 +192,27 @@ function fillMetadataBox() {
         );
 
         const mentionName = type.split("-")[1][0].toUpperCase() + type.split("-")[1].slice(1).toLowerCase();
-        let links = []
         for (const aboutType of Object.keys(abouts)) {
-          // TODO: fede turn into buttons (split w/ "external source" dropdown)
-          let el = setAttributes(document.createElement("a"), {"onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#"});
-          el.innerText = aboutType;
-          content.appendChild(el)
-          content.innerHTML += " ";
+          // Button creation (split btn type)
+          let btnGroup = setAttributes(document.createElement('div'), {"class": "btn-group"});
+          let mainBtn = setAttributes(document.createElement("button"), {"type": "button", "class": "btn btn-secondary btn-sm", "onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#", "data-article":articleCounter+1});
+          
+          mainBtn.innerText = aboutType;
+          btnGroup.appendChild(mainBtn);
+
+          if (aboutType != "total") {
+            let splitBtn = setAttributes(document.createElement("btn"), {"type": "button", "class": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split", "data-bs-toggle": "dropdown", "aria-expanded": "false"});
+            // Dropdown menu (points to external source)
+            let menuDrop = setAttributes(document.createElement("ul"), {"class": "dropdown-menu"});
+            let externalLink = setAttributes(document.createElement("li"), {"class": "dropdown-item"})
+            // TODO: add external links somehow
+            externalLink.innerHTML = `<a href="wikipedia.com/search?q=${aboutType}">External source</a>`;
+            menuDrop.appendChild(externalLink);
+            btnGroup.appendChild(splitBtn);
+            btnGroup.appendChild(menuDrop);
+          }
+          content.appendChild(btnGroup);
+          content.innerHTML += ", ";
         }
         btn.innerHTML = `${mentionName}: ${abouts['total']}`
         
@@ -216,19 +230,33 @@ function fillMetadataBox() {
 }
 
 function focusMetadata(element) {
-  var styleTag = document.getElementById("dynamic-styling");
-  console.log(element.id)
-  // TODO: fede Just one "highlighted style"
-  // toggle class ->total: mention-*/ (article-specific)      
-  //              ->fragment: about="*" (issue-wide)
+  // Unpack id mention/name into two variables
+  let [mentionType, mentionName] = element.id.split("/");
 
-  // TODO: laurent disable offcanvas
-  // getElbyID() -> get or create instance
-  // https://getbootstrap.com/docs/5.0/components/offcanvas/#methods
-  var canvasoff = document.getElementById("canvasOff")
-  canvasoff.addEventListener('shown.bs.offcanvas', function(){
-    $("#mention-person/ZevLoveX").click.offcanvas('hide');
-  })
+  if (mentionName != "total") {
+    // Issue-wide highlight of that specific mentioned item
+    console.log("Highlighting all mentions of ", mentionName)
+    let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
+    selectedMentions.forEach((mention) => {
+      mention.classList.add("custom-highlight");
+      setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
+    })
+  } else {
+    // Article-wide highlight of a mention category
+    let articleNumber = element.dataset.article;
+    let article = document.getElementById("article" + articleNumber);
+    console.log("Highlighting all", mentionType, "in article", articleNumber);
+    let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
+    selectedMentions.forEach((mention) => {
+      mention.classList.add("custom-highlight");
+      setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
+    })
+  }
+
+  // Disable offcanvas on text highlight
+  var offCanvas = document.getElementById("offcanvasBottom");
+  var bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offCanvas);
+  bsOffcanvas.hide();
 }
 
 function setAttributes(el, attrs) {
