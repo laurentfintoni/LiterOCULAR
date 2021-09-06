@@ -22,14 +22,15 @@
 
     <!-- TODO EDIT -->
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: fit-content;">
-        <div class="offcanvas-header border border-danger">
+        <div class="offcanvas-header ">
           <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Viewer</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body medium" style="height: fit-content;">
-            <div class="row border border-danger" id="issue-meta">  </div>
+        <div class="offcanvas-body medium pt-0" style="height: fit-content;">
+            <div class="row " id="issue-meta">  </div>
             <!-- Metadata viewer and theme switcher -->
-            <div class="row justify-content-center m-1 border border-danger">
+            <hr/>
+            <div class="row justify-content-center m-0 ">
             <div class="col-4 overflow-auto no-scrollbar">
                 <div class="accordion accordion-flush text-dark" id="metadata1">
                 </div>
@@ -59,6 +60,8 @@
                 Issues
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item disabled" href="#">Issues:</a></li>
+                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" id="kmd-issue" href="?issue=KMD">Death and Rebirth</a></li>
                 <li><a class="dropdown-item" id="timnit-issue" href="?issue=Timnit">Who Watches the Admen?</a></li>
               </ul>

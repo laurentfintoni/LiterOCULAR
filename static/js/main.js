@@ -40,7 +40,7 @@ var mentionCategories = {
     "mention-event",
   ],
 };
-var mentionColors = {
+var aboutColors = {
   "mention-person": "background-color: #FF2D00;",
   "mention-location": "background-color: #FFF000;",
   "mention-group": "background-color: #7CFF00;",
@@ -58,8 +58,8 @@ var mentionColors = {
   "mention-event": "background-color: #8000FF;"
 }
 
-// Initialize tooltips
-
+// Initialize tooltips 
+// TODO is this necessary? remove if not
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -67,14 +67,16 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 // Theme switching
 function switchTheme(btn) {
+  // Core is default, then one, two, three
   let cssLink = document.getElementById("external-style-tag");
-  switch (btn) {
+  let basePath = "/static/css/"
+  switch (btn.id) {
     case "ancient":
-      cssLink.href = "one.css";
+      cssLink.href = basePath + "one.css";
       break;
 
     case "contemporary":
-      cssLink.href = "two.css";
+      cssLink.href = basePath + "two.css";
       break;
 
     default:
@@ -97,6 +99,7 @@ function fillMetadataBox() {
   var articleCounter = 0;
   articles.forEach((article) => {
     var mentionsCount = {
+      // mention-type : {total: number, about1: number, about2: number}
       "mention-group": { total: 0 },
       "mention-person": { total: 0 },
       "mention-track": { total: 0 },
@@ -115,30 +118,28 @@ function fillMetadataBox() {
     };
     // Select all spans whose class contains "mention-*"
     let spanMentions = article.querySelectorAll("span[class*='mention']");
+    // querySelector returns weird objects: cast into array
     let spanArray = Array.from(spanMentions);
+    // array of mention names 
     let mentions = Object.keys(mentionsCount);
 
     spanArray.forEach((span) => {
       span.classList.forEach((spanClass) => {
         about = span.getAttribute("about");
         // Span contains a mention-* class AND the "about" object already has a value
-        if (
-          mentions.includes(spanClass) &&
-          mentionsCount[spanClass][about] != undefined
-        ) {
+        if (mentions.includes(spanClass) &&  mentionsCount[spanClass][about] != undefined) {
           mentionsCount[spanClass][about]++;
           mentionsCount[spanClass]["total"]++;
+
           // Span contains a mention-* class and the "about" object doesn't exist yet
-        } else if (
-          mentions.includes(spanClass) &&
-          mentionsCount[spanClass][about] == undefined
-        ) {
+        } else if (mentions.includes(spanClass) && mentionsCount[spanClass][about] == undefined) {
           mentionsCount[spanClass][about] = 1;
           mentionsCount[spanClass]["total"]++;
         }
       });
     });
-    var box = "";
+
+    var box;
     if (articleCounter == 0) {
       box = firstMetadata;
     } else if (articleCounter == 1) {
@@ -146,9 +147,11 @@ function fillMetadataBox() {
     } else if (articleCounter == 2) {
       box = thirdMetadata;
     }
+
     // Object contains all possible mentions. Sort that by number of mentions (descending)
     var mentionsList = Object.entries(mentionsCount);
     // custom function for comparison in sorting: arguments are two items to be compared, sort by 2nd value (number of mentions)
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     var sortedMentions = mentionsList.sort((first, second) => {
       let firstTotal = first[1]["total"];
       let secondTotal = second[1]["total"];
@@ -191,28 +194,34 @@ function fillMetadataBox() {
           {"class": "accordion-body"}
         );
 
+        // mention-person -> Person (first letter capitalised + rest of the word)
         const mentionName = type.split("-")[1][0].toUpperCase() + type.split("-")[1].slice(1).toLowerCase();
+
         for (const aboutType of Object.keys(abouts)) {
           // Button creation (split btn type)
           let btnGroup = setAttributes(document.createElement('div'), {"class": "btn-group"});
-          let mainBtn = setAttributes(document.createElement("button"), {"type": "button", "class": "btn btn-secondary btn-sm", "onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#", "data-article":articleCounter+1});
-          
-          mainBtn.innerText = aboutType;
+          let mainBtn = setAttributes(document.createElement("button"), {"type": "button", "class": "btn btn-outline-secondary btn-sm", "onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#", "data-article":articleCounter+1});
+          if (aboutType == "total") {
+            mainBtn.innerText = "View all " + mentionsCount[type][aboutType];
+          } else {
+            mainBtn.innerText = aboutType + " " + mentionsCount[type][aboutType];
+          }
           btnGroup.appendChild(mainBtn);
 
           if (aboutType != "total") {
+            // TODO get rid of the borders (core.css)
             let splitBtn = setAttributes(document.createElement("btn"), {"type": "button", "class": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split", "data-bs-toggle": "dropdown", "aria-expanded": "false"});
             // Dropdown menu (points to external source)
             let menuDrop = setAttributes(document.createElement("ul"), {"class": "dropdown-menu"});
             let externalLink = setAttributes(document.createElement("li"), {"class": "dropdown-item"})
-            // TODO: add external links somehow
-            externalLink.innerHTML = `<a href="wikipedia.com/search?q=${aboutType}">External source</a>`;
+            // TODO: fix external links
+            externalLink.innerHTML = `<a href="https://wikipedia.com/wiki/?q=${aboutType}">External source</a>`;
             menuDrop.appendChild(externalLink);
             btnGroup.appendChild(splitBtn);
             btnGroup.appendChild(menuDrop);
           }
           content.appendChild(btnGroup);
-          content.innerHTML += ", ";
+          content.innerHTML += " ";
         }
         btn.innerHTML = `${mentionName}: ${abouts['total']}`
         
@@ -239,7 +248,7 @@ function focusMetadata(element) {
     let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
+      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     })
   } else {
     // Article-wide highlight of a mention category
@@ -249,32 +258,44 @@ function focusMetadata(element) {
     let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
+      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     })
   }
 
   // Disable offcanvas on text highlight
-  var offCanvas = document.getElementById("offcanvasBottom");
-  var bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offCanvas);
-  bsOffcanvas.hide();
+  // var offCanvas = document.getElementById("offcanvasBottom");
+  // var bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offCanvas);
+  // bsOffcanvas.hide();
 }
 
+function resetHighlight(ev) {
+  let highlightedStuff = document.querySelectorAll(".custom-highlight");
+  highlightedStuff.forEach((item) => {
+    item.classList.remove("custom-highlight");
+  })
+}
+
+// Utils
 function setAttributes(el, attrs) {
+  // element + dictionary of attribute:value pairs to speed up the creation of elements
   Object.entries(attrs).forEach(([key, value]) => {
     el.setAttribute(key, value)
   });
   return el;
 }
 
+
+// TODO move content to issue.html file 
+// TODO load articles and metadata from articleSources object as shown in comments aside
 document.addEventListener("DOMContentLoaded", () => {
   const issue = window.location.href.split("issue=")[1];
   var homepage = document.getElementById("homepage");
   if (issue == "KMD") {
     homepage.remove();
-    $("#article1").load("KMD_Source_1991.html");
-    $("#article2").load("KMD_Source_1994.html");
-    $("#article3").load("KMD_egotrip_98.html");
-    $("#issue-meta").load("KMD_meta.html");
+    $("#article1").load("KMD_Source_1991.html"); // articleSources.issue.articles[0]
+    $("#article2").load("KMD_Source_1994.html"); // articleSources.issue.articles[1]
+    $("#article3").load("KMD_egotrip_98.html");  // articleSources.issue.articles[2]
+    $("#issue-meta").load("KMD_meta.html");      // articleSources.issue.metadata
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
@@ -288,4 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
       fillMetadataBox();
     }, 500);
   }
+
+  let articles = articleSources[issue][articles][0]
+
 });

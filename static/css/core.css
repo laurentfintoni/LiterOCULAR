@@ -17,3 +17,35 @@ body {
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+
+.span[about="mention-person"].custom-highlight {
+    background-color: #FF2D00;}
+.span[about="mention-location"].custom-highlight {
+    background-color: #FFF000;}
+.span[about="mention-group"].custom-highlight {
+    background-color: #7CFF00;}
+.span[about="mention-organization"].custom-highlight {
+    background-color: #00FFC1;}
+.span[about="mention-track"].custom-highlight {
+    background-color: #00FFF7;}
+.span[about="mention-album"].custom-highlight {
+    background-color: #00ECFF;}
+.span[about="mention-sample"].custom-highlight {
+    background-color: #0074FF;}
+.span[about="mention-rhyme"].custom-highlight {
+    background-color: #8000FF;}
+.span[about="mention-character"].custom-highlight {
+    background-color: #F000FF;}
+.span[about="mention-genre"].custom-highlight {
+    background-color: #FF0055;}
+.span[about="mention-label"].custom-highlight {
+    background-color: #C70039;}
+.span[about="mention-subject"].custom-highlight {
+    background-color: #DAF7A6;}
+.span[about="mention-technology"].custom-highlight {
+    background-color: #00ECFF;}
+.span[about="mention-company"].custom-highlight {
+    background-color: #0074FF;}
+.span[about="mention-event"].custom-highlight {
+    background-color: #8000FF;}
