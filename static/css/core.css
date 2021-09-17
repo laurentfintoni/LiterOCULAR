@@ -18,6 +18,10 @@ body {
     display: none;
 }
 
+button.btn.btn-outline-secondary {
+    border: none
+}
+
 
 .span[about="mention-person"].custom-highlight {
     background-color: #FF2D00;}

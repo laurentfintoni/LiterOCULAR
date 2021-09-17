@@ -1,18 +1,20 @@
 // Global Variables
 var metadataViewerBox = document.getElementById("metadata-viewer");
 var articleSources = {
-  KMD: {
-     metadata: "",
-     articles: [
+  "KMD": {
+     "metadata": "KMD_meta.html",
+     "articles": [
       "KMD_egotrip_98.html", 
       "KMD_Source_1991.html", 
       "KMD_Source_1994.html"]
   },
-  Timnit: [
+  "Timnit": {
+    "metadata": "Timnit_meta.html",
+    "articles": [
     "Timnit_MITREVIEW_20.html",
     "Timnit_NYT_21.html",
-    "Timnit_WAPO_20.html",
-  ],
+    "Timnit_WAPO_20.html"
+  ]}
 };
 var mentionCategories = {
   KMD: [
@@ -57,13 +59,6 @@ var aboutColors = {
   "mention-company": "background-color: #0074FF;",
   "mention-event": "background-color: #8000FF;"
 }
-
-// Initialize tooltips 
-// TODO is this necessary? remove if not
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
 
 // Theme switching
 function switchTheme(btn) {
@@ -209,13 +204,11 @@ function fillMetadataBox() {
           btnGroup.appendChild(mainBtn);
 
           if (aboutType != "total") {
-            // TODO get rid of the borders (core.css)
             let splitBtn = setAttributes(document.createElement("btn"), {"type": "button", "class": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split", "data-bs-toggle": "dropdown", "aria-expanded": "false"});
             // Dropdown menu (points to external source)
             let menuDrop = setAttributes(document.createElement("ul"), {"class": "dropdown-menu"});
             let externalLink = setAttributes(document.createElement("li"), {"class": "dropdown-item"})
-            // TODO: fix external links
-            externalLink.innerHTML = `<a href="https://wikipedia.com/wiki/?q=${aboutType}">External source</a>`;
+            externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank">External source</a>`;
             menuDrop.appendChild(externalLink);
             btnGroup.appendChild(splitBtn);
             btnGroup.appendChild(menuDrop);
@@ -284,32 +277,16 @@ function setAttributes(el, attrs) {
   return el;
 }
 
-
-// TODO move content to issue.html file 
-// TODO load articles and metadata from articleSources object as shown in comments aside
 document.addEventListener("DOMContentLoaded", () => {
-  const issue = window.location.href.split("issue=")[1];
-  var homepage = document.getElementById("homepage");
-  if (issue == "KMD") {
-    homepage.remove();
-    $("#article1").load("KMD_Source_1991.html"); // articleSources.issue.articles[0]
-    $("#article2").load("KMD_Source_1994.html"); // articleSources.issue.articles[1]
-    $("#article3").load("KMD_egotrip_98.html");  // articleSources.issue.articles[2]
-    $("#issue-meta").load("KMD_meta.html");      // articleSources.issue.metadata
-    setTimeout(() => {
-      fillMetadataBox();
-    }, 500);
-  } else if (issue == "Timnit") {
-    homepage.remove();
-    $("#article1").load("Timnit_MITREVIEW_20.html");
-    $("#article2").load("Timnit_WAPO_20.html");
-    $("#article3").load("Timnit_NYT_21.html");
-    $("#issue-meta").load("Timnit_meta.html");
+  // Homepage doesn't load articles
+  if (window.location.href.indexOf("index.html") == -1) {
+    let issue = window.location.href.split("issue=")[1];
+    $("#article1").load(articleSources[issue]["articles"][0]);
+    $("#article2").load(articleSources[issue]["articles"][1]);
+    $("#article3").load(articleSources[issue]["articles"][2]);
+    $("#issue-meta").load(articleSources[issue]["metadata"]);
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
   }
-
-  let articles = articleSources[issue][articles][0]
-
 });
