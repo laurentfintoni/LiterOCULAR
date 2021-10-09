@@ -1,27 +1,104 @@
+/* we need to download the fonts and load them locally for final version */
 
-/* General rules for the issue page */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab:wght@500&display=swap');
+
+/* Site wide rules */
+
+html {
+    font-size: 100%;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* navbar rules */
+
+.navbar {
+    margin-bottom: 1rem;
+    background-color: #111;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #f4f4f4;
+}
+
+.nav-link, .nav-link:focus, .nav-link:hover {
+    color: #f4f4f4;
+}
+
+.dropdown-menu {
+    color:#111;
+    background-color: #f4f4f4;
+}
+
+.dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
+    color: #111;
+}
+
+.dropdown-item:hover {
+    background-color: #E9ECEF;
+}
+
+/* body rules */
+
 body {
     position: fixed;
     max-width: 100vw;
     max-height: 100vh;
+    background-color: #f4f4f4;
+    color: #111;
 }
 
-#article1, #article2, #article3 {
-    max-height: 90vh;
+body.home {
+    position: relative;
 }
 
-#metadata1, #metadata2, #metadata3 {
-    max-height: 35vh;
+a {
+    color: #111;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+a.navbar-brand:hover {
+    color: #f4f4f4;
 }
 
-button.btn.btn-outline-secondary {
-    border: none
+a:hover {
+    color: #111;
 }
 
+.card {
+    background-color: #111;
+    color: #f4f4f4;
+    max-width: 100%;
+}
+
+.card-lens {
+    background-color: transparent;
+    color: #111;
+}
+
+.card-lens .card-title {
+    color: #111;
+}
+
+.card-title {
+    color: #f4f4f4;
+    font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #111;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+h5.modal-title {
+    font-size: 1.25rem;
+}
+
+/* do we still need these? */
 
 .span[about="mention-person"].custom-highlight {
     background-color: #FF2D00;}
@@ -53,3 +130,30 @@ button.btn.btn-outline-secondary {
     background-color: #0074FF;}
 .span[about="mention-event"].custom-highlight {
     background-color: #8000FF;}
+
+/* Issue page specific rules */
+
+.subheader {
+    font-size: 1.25rem;
+}
+
+figcaption, .byline {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+}
+
+#article1, #article2, #article3 {
+    max-height: 90vh;
+}
+
+#metadata1, #metadata2, #metadata3 {
+    max-height: 35vh;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+button.btn.btn-outline-secondary {
+    border: none
+}

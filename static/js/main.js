@@ -4,16 +4,16 @@ var articleSources = {
   "KMD": {
      "metadata": "KMD_meta.html",
      "articles": [
-      "KMD_egotrip_98.html", 
       "KMD_Source_1991.html", 
-      "KMD_Source_1994.html"]
+      "KMD_Source_1994.html",
+      "KMD_egotrip_98.html"]
   },
   "Timnit": {
     "metadata": "Timnit_meta.html",
     "articles": [
     "Timnit_MITREVIEW_20.html",
-    "Timnit_NYT_21.html",
-    "Timnit_WAPO_20.html"
+    "Timnit_WAPO_20.html",
+    "Timnit_NYT_21.html"
   ]}
 };
 var mentionCategories = {

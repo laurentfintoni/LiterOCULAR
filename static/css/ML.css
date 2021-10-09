@@ -1,0 +1,103 @@
+/* Machine Learning theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+/* navbar */
+
+.navbar-brand {
+    font-size: 1.2em;
+    margin: 10px;
+  }
+
+a.navbar-brand {
+    color: #fff;
+  }
+
+a.navbar-brand:hover {
+    color: #e64d75;
+  }
+
+.nav-link {
+    color: #fff;
+    line-height: 18px;
+    padding-left: 0.25em;
+  }
+
+.nav-link a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+.navbar {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* body rules */
+
+body {
+    position: fixed;
+    max-width: 100vw;
+    max-height: 100vh;
+    font-family: 'Josefin Slab', serif;
+    font-size: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: center;
+}
+
+a {
+    color: #007aff;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	line-height: 1.4em;
+	margin-bottom: 3px;
+    padding: 10px;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+
+/* Issue page specific rules */
+
+.subheader {
+    font-size: 1.25rem;
+}
+
+figcaption, .byline {
+    font-size: 0.875rem;
+}
+
+#article1, #article2, #article3 {
+    max-height: 90vh;
+}
+
+#metadata1, #metadata2, #metadata3 {
+    max-height: 35vh;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+button.btn.btn-outline-secondary {
+    border: none
+}

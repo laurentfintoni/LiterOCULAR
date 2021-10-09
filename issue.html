@@ -49,24 +49,23 @@
           
     
     <!-- Main container -->
-    <div class="container-fluid bg-dark vh-100 vw-100 text-white px-0">
+    <div class="container-fluid vh-100 vw-100 px-0">
     
         <!-- Navbar with sticky behaviour -->
-        <nav class="navbar navbar-light bg-white sticky-top">
-            <div class="container-fluid justify-content-start text-dark">
-            
-                <a class="navbar-brand" href="/">mgzLens</a>
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <nav class="navbar">
+            <div class="container-fluid justify-content-start">
+              
+              <a class="navbar-brand" href="/">LiterOCULAR</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Issues
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item disabled" href="#">Issues:</a></li>
-                <li><hr class="dropdown-divider"></li>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
                 <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a></li>
-                </ul>
-                <a class="nav-link" href="#">Documentation</a>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
+              </ul>
+              <a class="nav-link" href="#">Documentation</a>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
                 <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Metadata</a>
             </div>
         </nav>
@@ -76,10 +75,10 @@
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title text-dark" id="disclaimerModalLabel">This is not the content you are looking for</h5>
+                <h5 class="modal-title" id="disclaimerModalLabel">This is not the content you are looking for</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-dark">
+                <div class="modal-body">
                 <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em> style for text documents, as an end-of-course project for the "Information Modeling and Web technologies" course of the Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna, held by professor Fabio Vitali. </p>
                 <p>
                     The documents contained in this web site have been selected for their length and
@@ -95,6 +94,25 @@
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
+            </div>
+        </div>
+
+        <!-- About modal-->
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="aboutModalLabel">Why would you do this?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>It's a question we asked ourselves repeatedely during the process of completing this project. Sometimes the doing is the answer. </p>
+                        <p>Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood, sweat, and tears.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
             
