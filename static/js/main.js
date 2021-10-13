@@ -194,7 +194,7 @@ function fillMetadataBox() {
 
         for (const aboutType of Object.keys(abouts)) {
           // Button creation (split btn type)
-          let btnGroup = setAttributes(document.createElement('div'), {"class": "btn-group"});
+          let btnGroup = setAttributes(document.createElement('div'), {"class": "btn-group m-1"});
           let mainBtn = setAttributes(document.createElement("button"), {"type": "button", "class": "btn btn-outline-secondary btn-sm", "onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#", "data-article":articleCounter+1});
           if (aboutType == "total") {
             mainBtn.innerText = "View all " + mentionsCount[type][aboutType];
@@ -208,7 +208,7 @@ function fillMetadataBox() {
             // Dropdown menu (points to external source)
             let menuDrop = setAttributes(document.createElement("ul"), {"class": "dropdown-menu"});
             let externalLink = setAttributes(document.createElement("li"), {"class": "dropdown-item"})
-            externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank">External source</a>`;
+            externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank">Wikipedia</a>`;
             menuDrop.appendChild(externalLink);
             btnGroup.appendChild(splitBtn);
             btnGroup.appendChild(menuDrop);
