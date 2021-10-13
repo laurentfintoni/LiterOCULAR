@@ -22,6 +22,7 @@
 
 .nav-link:focus, .nav-link:hover {
     color: #D2042D;
+    text-decoration: none;
 }
 
 .dropdown-menu {
@@ -35,6 +36,7 @@
 
 .dropdown-item:hover {
     background-color: rgb(210 4 45 / 25%);
+    text-decoration: none;
 }
 
 /* body rules */
@@ -51,6 +53,7 @@ body {
 
 a {
     color: #111;
+    text-decoration: none;
 }
 
 a.navbar-brand:hover {
@@ -58,7 +61,9 @@ a.navbar-brand:hover {
 }
 
 a:hover {
-    color: #D2042D;
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #D2042D;
 }
 
 .card-title {
