@@ -1,1 +1,227 @@
-/* First theme */
+/* Base theme Greyscale*/
+
+/* we need to download the fonts and load them locally for final version */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab:wght@500&display=swap');
+
+/* navbar rules */
+
+.navbar {
+    margin-bottom: 1rem;
+    background-color: #111;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #f4f4f4;
+}
+
+.nav-link {
+    color: #f4f4f4;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #D2042D;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    color:#111;
+    background-color: #f4f4f4;
+}
+
+.dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
+    color: #111;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(210 4 45 / 25%);
+    text-decoration: none;
+}
+
+/* body rules */
+
+body {
+    background-color: #f4f4f4;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+}
+
+.blockquote-footer {
+    color: #D2042D;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
+
+a.navbar-brand:hover {
+    color: #D2042D;
+}
+
+a:hover {
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #D2042D;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-issue {
+    background-color: #111;
+    color: #f4f4f4;
+    max-width: 100%;
+}
+
+.card-issue:hover {
+    background-color: transparent;
+    color: #D2042D;
+}
+
+.card-issue .card-title {
+    color: inherit;
+}
+
+.card-lens {
+    background-color: transparent;
+    color: #D2042D;
+}
+
+.card-lens:hover {
+    background-color: #111;
+    color: #f4f4f4;
+}
+
+.card-lens .card-title {
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #111;
+    padding: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+.subheader {
+    font-size: 1.25rem;
+}
+
+figcaption, .byline {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+}
+
+.custom-highlight {
+    background-color: #D2042D;
+    color:#f4f4f4;
+}
+
+.accordion-item {
+    background-color: transparent;
+}
+
+.accordion-button {
+    color: #111;
+}
+
+.accordion-button:focus {
+    color: #f4f4f4;
+    background-color: #D2042D;
+    border-color: #D2042D;
+    box-shadow: 0 0 0 0.25rem rgb(210 4 45 / 25%);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f4f4f4;
+    background-color: #D2042D;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.btn-outline-secondary {
+    color: #111;
+}
+
+.btn-outline-secondary:active {
+    color: #f4f4f4;
+    background-color: #D2042D;
+}
+
+.btn-outline-secondary:hover {
+    color: #f4f4f4;
+    background-color: #D2042D;
+}
+
+.btn-secondary {
+    color: #f4f4f4;
+    background-color: #D2042D;
+    border-color: #D2042D;
+}
+
+.btn-secondary:hover {
+    color: #f4f4f4;
+    background-color: #111;
+    border-color: #111;
+}
+
+/* do we still need these? */
+
+.span[about="mention-person"].custom-highlight {
+    background-color: #FF2D00;}
+.span[about="mention-location"].custom-highlight {
+    background-color: #FFF000;}
+.span[about="mention-group"].custom-highlight {
+    background-color: #7CFF00;}
+.span[about="mention-organization"].custom-highlight {
+    background-color: #00FFC1;}
+.span[about="mention-track"].custom-highlight {
+    background-color: #00FFF7;}
+.span[about="mention-album"].custom-highlight {
+    background-color: #00ECFF;}
+.span[about="mention-sample"].custom-highlight {
+    background-color: #0074FF;}
+.span[about="mention-rhyme"].custom-highlight {
+    background-color: #8000FF;}
+.span[about="mention-character"].custom-highlight {
+    background-color: #F000FF;}
+.span[about="mention-genre"].custom-highlight {
+    background-color: #FF0055;}
+.span[about="mention-label"].custom-highlight {
+    background-color: #C70039;}
+.span[about="mention-subject"].custom-highlight {
+    background-color: #DAF7A6;}
+.span[about="mention-technology"].custom-highlight {
+    background-color: #00ECFF;}
+.span[about="mention-company"].custom-highlight {
+    background-color: #0074FF;}
+.span[about="mention-event"].custom-highlight {
+    background-color: #8000FF;}

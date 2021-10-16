@@ -1,168 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styling -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" id="external-style-tag" href="/static/css/core.css">
-    <style id="dynamic-styling">
-        .custom-highlight {
-            background-color: blueviolet;
-            color: black;
-        }
-    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" id="external-style-tag" href="/static/css/core.css" />
+    <link rel="stylesheet" id="external-style-tag" href="/static/css/one.css" />
     <!-- JQuery script-->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
     <title>Issue</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- OffCanvas -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"
-        style="height: fit-content;">
-        <div class="offcanvas-header ">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Viewer</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="offcanvasBottom"
+      aria-labelledby="offcanvasBottomLabel"
+      style="height: fit-content"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Binoculars</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body medium pt-0" style="height: fit-content">
+        <div class="row" id="issue-meta"></div>
+        <!-- Metadata viewer and theme switcher -->
+        <hr />
+        <div class="row justify-content-center m-0">
+          <div class="col-4 overflow-auto no-scrollbar">
+            <div class="accordion accordion-flush" id="metadata1"></div>
+          </div>
+          <div class="col-4 overflow-auto no-scrollbar">
+            <div class="accordion accordion-flush" id="metadata2"></div>
+          </div>
+          <div class="col-4 overflow-auto no-scrollbar">
+            <div class="accordion accordion-flush" id="metadata3"></div>
+          </div>
         </div>
-        <div class="offcanvas-body medium pt-0" style="height: fit-content;">
-            <div class="row " id="issue-meta"> </div>
-            <!-- Metadata viewer and theme switcher -->
-            <hr />
-            <div class="row justify-content-center m-0 ">
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush text-dark" id="metadata1">
-                    </div>
-                </div>
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush" id="metadata2">
-                    </div>
-                </div>
-                <div class="col-4 overflow-auto no-scrollbar">
-                    <div class="accordion accordion-flush" id="metadata3">
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <!-- Navbar with sticky behaviour -->
     <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <a class="navbar-brand" href="/">LiterOCULAR</a>
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Issues
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
-                    <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the
-                            Admen?</a>
-                    </li>
-                </ul>
-                <a class="nav-link" href="#">Documentation</a>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
-                <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
-                    aria-controls="offcanvasBottom">Metadata</a>
-            </div>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <a class="navbar-brand" href="/">LiterOCULAR</a>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Issues
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
+            <li>
+              <a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a>
+            </li>
+          </ul>
+          <a class="nav-link" href="#">Documentation</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom"
+            aria-controls="offcanvasBottom"
+            >Metadata</a
+          >
         </div>
+      </div>
     </nav>
-
 
     <!-- Main container -->
     <div class="container-fluid vh-100 vw-100 px-0">
-
-        <!-- Disclaimer modal-->
-        <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="disclaimerModalLabel">This is not the content you are looking for
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>The purpose of this web site is to explore various types of <em>typographic</em> and
-                            <em>layout</em> style for text documents, as an end-of-course project for the "Information
-                            Modeling and Web technologies" course of the Master's Degree in Digital Humanities and
-                            Digital Knowledge of the University of Bologna, held by professor Fabio Vitali.
-                        </p>
-                        <p>
-                            The documents contained in this web site have been selected for their length and
-                            complexity. Their publication here is not intended to be an alternative or
-                            replace their original locations. The documents in the <b>Death and Rebirth</b> issue are
-                            taken from print copies of <em>The Source</em> magazine (1991, 1994) and <em>Ego Trip</em>
-                            magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue are taken from
-                            <em>The New York Times</em>, the <em>MIT Technology Review</em>, and <em>The Washington
-                                Post</em>.
-                        </p>
-                        <p>
-                            All copyrights and related rights on the content remain with their original owners.
-                            All copyright on the typographic and layout choices are 2021 © Federico Cagnola, Laurent
-                            Fintoni
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+      <!-- Disclaimer modal-->
+      <div
+        class="modal fade"
+        id="disclaimerModal"
+        tabindex="-1"
+        aria-labelledby="disclaimerModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="disclaimerModalLabel">This is not the content you are looking for</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              <p>
+                The purpose of this web site is to explore various types of <em>typographic</em> and
+                <em>layout</em> style for text documents, as an end-of-course project for the "Information Modeling and
+                Web technologies" course of the Master's Degree in Digital Humanities and Digital Knowledge of the
+                University of Bologna, held by professor Fabio Vitali.
+              </p>
+              <p>
+                The documents contained in this web site have been selected for their length and complexity. Their
+                publication here is not intended to be an alternative or replace their original locations. The documents
+                in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
+                1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
+                are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
+                <em>The Washington Post</em>.
+              </p>
+              <p>
+                All copyrights and related rights on the content remain with their original owners. All copyright on the
+                typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- About modal-->
-        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="aboutModalLabel">Why would you do this?</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>It's a question we asked ourselves repeatedely during the process of completing this project.
-                            Sometimes the doing is the answer. </p>
-                        <p>Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a>
-                            and <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood,
-                            sweat, and tears.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+      <!-- About modal-->
+      <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="aboutModalLabel">Why would you do this?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              <p>
+                It's a question we asked ourselves repeatedely during the process of completing this project. Sometimes
+                the doing is the answer.
+              </p>
+              <p>
+                Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
+                <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood, sweat, and
+                tears.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Content row (three cols of equal size spanning whole viewport width) -->
-        <div class="row p-2">
-            <div id="article1" class="col-4 overflow-auto no-scrollbar">
-
-            </div>
-            <div id="article2" class="col-4 overflow-auto no-scrollbar">
-
-            </div>
-            <div id="article3" class="col-4 overflow-auto no-scrollbar">
-
-            </div>
-
-
-        </div>
-
+      <!-- Content row (three cols of equal size spanning whole viewport width) -->
+      <div class="row p-2">
+        <div id="article1" class="col-4 overflow-auto no-scrollbar"></div>
+        <div id="article2" class="col-4 overflow-auto no-scrollbar"></div>
+        <div id="article3" class="col-4 overflow-auto no-scrollbar"></div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="/static/js/main.js"></script>
-</body>
-
+  </body>
 </html>
