@@ -64,7 +64,7 @@ var aboutColors = {
 function switchTheme(btn) {
   // Core is default, then one, two, three
   let cssLink = document.getElementById("theme-style-tag");
-  let basePath = "/static/css/"
+  let basePath = "/static/css/";
   switch (btn.id) {
     case "theme-toggle-one":
       cssLink.href = basePath + "one.css";

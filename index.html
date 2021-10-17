@@ -42,6 +42,28 @@
         <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
           aria-controls="offcanvasBottom">Meta Binoculars</a>
       </div>
+      <div style="position: relative;">
+        <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="/img/layers.svg" alt="theme switcher" style="stroke: blanchedalmond;">
+          Themes
+        </a>
+        <ul class="dropdown-menu" id="themes-dropdown"
+          style="position: absolute; top: 100%; right: 0;margin-left: -100px;">
+          <li>
+            <a class="dropdown-item" id="theme-toggle-one" href="#" onclick="switchTheme(this);">'800 Newspaper</a>
+          </li>
+          <li>
+            <a class="dropdown-item" id="theme-toggle-two" href="#" onclick="switchTheme(this);">'900 Art Deco</a>
+          </li>
+          <li>
+            <a class="dropdown-item" id="theme-toggle-three" href="#" onclick="switchTheme(this);">Modern 1990s</a>
+          </li>
+          <li>
+            <a class="dropdown-item" id="theme-toggle-four" href="#" onclick="switchTheme(this);">HyperFuture 2050</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -108,7 +130,7 @@
     </div>
 
     <!-- Content row (three cols of equal size spanning whole viewport width) -->
-    <div id="homepage" class="container-md border border-success">
+    <div id="homepage" class="container-md my-5">
       <div class="row">
         <div class="col-md-8">
           <figure class="text-center">
@@ -156,12 +178,11 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-12 justify-content-center col-md-3">
           <div class="card card-lens border-dark mb-3">
             <div class="card-body">
-              <h5 class="card-title">Newspaper Lens</h5>
+              <h5 class="card-title text-center">Newspaper Lens</h5>
               <p class="card-text">
                 A CSS theme based on 19th century newspapers. <a href="#" class="stretched-link"></a>
               </p>
@@ -171,7 +192,7 @@
         <div class="col-12 justify-content-center col-md-3">
           <div class="card card-lens border-dark mb-3">
             <div class="card-body">
-              <h5 class="card-title">Art Deco Lens</h5>
+              <h5 class="card-title text-center">Art Deco Lens</h5>
               <p class="card-text">
                 A CSS theme inspired by the Art Deco movement. <a href="#" class="stretched-link"></a>
               </p>
