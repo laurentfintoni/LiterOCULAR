@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" id="external-style-tag" href="/static/css/core.css">
-  <link rel="stylesheet" id="external-style-tag" href="/static/css/one.css">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" id="core-style-tag" href="/static/css/core.css" />
+  <link rel="stylesheet" id="theme-style-tag" href="/static/css/one.css" />
   <!-- JQuery script-->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
@@ -17,11 +17,13 @@
 </head>
 
 <body class="home">
+
   <!-- Navbar with sticky behaviour -->
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -32,23 +34,19 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
-          <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a>
-          </li>
+          <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a></li>
         </ul>
         <a class="nav-link" href="#">Documentation</a>
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
         <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
-          aria-controls="offcanvasBottom">Metadata</a>
+          aria-controls="offcanvasBottom">Meta Binoculars</a>
       </div>
     </div>
   </nav>
 
   <!-- The container spans the whole viewport (vh-100) in height and all padding is removed from the sides (px-0) -->
   <div class="container-fluid">
-
-
-
     <!-- Disclaimer modal-->
     <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
       aria-hidden="true">
@@ -60,20 +58,20 @@
           </div>
           <div class="modal-body">
             <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em>
-              style for text documents, as an end-of-course project for the "Information Modeling and Web technologies"
-              course of the Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna,
-              held by professor Fabio Vitali. </p>
+              style for text documents, as an end-of-course project for the &#8220;Information Modeling and Web
+              technologies&#8221; course of the Master's Degree in Digital Humanities and Digital Knowledge of the
+              University of Bologna, held by professor Fabio Vitali. </p>
             <p>
-              The documents contained in this web site have been selected for their length and
-              complexity. Their publication here is not intended to be an alternative or
-              replace their original locations. The documents in the <b>Death and Rebirth</b> issue are taken from print
-              copies of <em>The Source</em> magazine (1991, 1994) and <em>Ego Trip</em> magazine (1998). The documents
-              in the <b>Who Watches the Admen?</b> issue are taken from <em>The New York Times</em>, the <em>MIT
-                Technology Review</em>, and <em>The Washington Post</em>.
+              The documents contained in this web site have been selected for their length and complexity. Their
+              publication here is not intended to be an alternative or replace their original locations. The documents
+              in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
+              1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
+              are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
+              <em>The Washington Post</em>.
             </p>
             <p>
-              All copyrights and related rights on the content remain with their original owners.
-              All copyright on the typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
+              All copyrights and related rights on the content remain with their original owners. All copyright on the
+              typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
             </p>
           </div>
           <div class="modal-footer">
@@ -92,10 +90,14 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>It's a question we asked ourselves repeatedely during the process of completing this project. Sometimes
-              the doing is the answer. </p>
-            <p>Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and <a
-                href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood, sweat, and tears.
+            <p>
+              It's a question we asked ourselves repeatedely during the process of completing this project. Sometimes
+              the doing is the answer.
+            </p>
+            <p>
+              Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
+              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood, sweat, and
+              tears.
             </p>
           </div>
           <div class="modal-footer">
@@ -106,74 +108,94 @@
     </div>
 
     <!-- Content row (three cols of equal size spanning whole viewport width) -->
-    <div id="homepage" class="container-md">
+    <div id="homepage" class="container-md border border-success">
       <div class="row">
         <div class="col-md-8">
           <figure class="text-center">
             <blockquote class="blockquote">
-              <p>&#8220;Twist the lines out of all recognition <br>
-                Understand this unnu have fi make a decision&#8221;</p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                <cite title="Source Title">The Spaceape</cite>
-              </figcaption>
-            </figure>  
-            <p>LiterOCULAR is a digital magazine created for the Information Modeling and Web technologies course of the Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna.</p> 
-            <p>The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly across four different eras. You never knew you needed this stuff and to be fair until we were told to build them for this class we didn't know either!</p>
-            <p>The first issue of LiterOCULAR features three articles that cover the metamophorsis of the late rapper Daniel Dumile AKA MF Doom following the death of his brother while the second issue focuses on the sudden departure of AI researcher Timnit Gebru from Google in late 2020.</p>         
-          </div>
-          <div class="col-md-4">
-            <h1 class="text-center">Issues</h1>
-            <div class="card card-issue border-dark m-2">
-              <div class="card-body">
-                <h5 class="card-title text-center">Death and Rebirth</h5>
-                <p class="card-text text-center">Death as catalyst for artistic rebirth.</p>
-                <a href="issue.html?issue=KMD" class="stretched-link"></a>
-              </div>
-            </div>
-            <div class="card card-issue border-dark m-2">
-              <div class="card-body">
-                <h5 class="card-title text-center">Who Watches the Admen?</h5>
-                <p class="card-text text-center">When ethics endangers profit.</p>
-                <a href="issue.html?issue=Timnit" class="stretched-link"></a>
-              </div>
-            </div>           
-          </div>
+              <p>
+                &#8220;Twist the lines out of all recognition <br />
+                Understand this unnu have fi make a decision&#8221;
+              </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <cite title="Source Title">The Spaceape</cite>
+            </figcaption>
+          </figure>
+          <p>
+            LiterOCULAR is a digital magazine created for the Information Modeling and Web technologies course of the
+            Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna.
+          </p>
+          <p>
+            The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the
+            articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly
+            across four different eras. You never knew you needed this stuff and to be fair until we were told to
+            build them for this class we didn't know either!
+          </p>
+          <p>
+            The first issue of LiterOCULAR features three articles that cover the metamophorsis of the late rapper
+            Daniel Dumile AKA MF Doom following the death of his brother while the second issue focuses on the sudden
+            departure of AI researcher Timnit Gebru from Google in late 2020.
+          </p>
         </div>
-        <div class="row">
-          <div class="col-12 justify-content-center col-md-3">
-            <div class="card card-lens border-dark mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Newspaper Lens</h5>
-                <p class="card-text">A CSS theme based on 19th century newspapers. <a href="#" class="stretched-link"></a></p>
-              </div>
+        <div class="col-md-4">
+          <h1 class="text-center">Issues</h1>
+          <div class="card card-issue border-dark m-2">
+            <div class="card-body">
+              <h5 class="card-title text-center">Death and Rebirth</h5>
+              <p class="card-text text-center">Death as catalyst for artistic rebirth.</p>
+              <a href="issue.html?issue=KMD" class="stretched-link"></a>
             </div>
           </div>
-          <div class="col-12 justify-content-center col-md-3">
-            <div class="card card-lens border-dark mb-3">
-              <div class="card-body">
-                <h5 class="card-title">Art Deco Lens</h5>
-                <p class="card-text">A CSS theme inspired by the Art Deco movement. <a href="#" class="stretched-link"></a></p>
-              </div>
+          <div class="card card-issue border-dark m-2">
+            <div class="card-body">
+              <h5 class="card-title text-center">Who Watches the Admen?</h5>
+              <p class="card-text text-center">When ethics endangers profit.</p>
+              <a href="issue.html?issue=Timnit" class="stretched-link"></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 justify-content-center col-md-3">
-        <div class="card card-lens border-dark mb-3">
-          <div class="card-body">
-            <h5 class="card-title text-center">1990s Lens</h5>
-            <p class="card-text">A CSS theme inspired by 90s music magazine designs. <a href="#"
-                class="stretched-link"></a></p>
+
+      <div class="row">
+        <div class="col-12 justify-content-center col-md-3">
+          <div class="card card-lens border-dark mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Newspaper Lens</h5>
+              <p class="card-text">
+                A CSS theme based on 19th century newspapers. <a href="#" class="stretched-link"></a>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 justify-content-center col-md-3">
-        <div class="card card-lens border-dark mb-3">
-          <div class="card-body">
-            <h5 class="card-title text-center">ML Lens</h5>
-            <p class="card-text">A CSS theme created entirely with Machine Learning. <a href="#"
-                class="stretched-link"></a></p>
+        <div class="col-12 justify-content-center col-md-3">
+          <div class="card card-lens border-dark mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Art Deco Lens</h5>
+              <p class="card-text">
+                A CSS theme inspired by the Art Deco movement. <a href="#" class="stretched-link"></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 justify-content-center col-md-3">
+          <div class="card card-lens border-dark mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-center">1990s Lens</h5>
+              <p class="card-text">
+                A CSS theme inspired by 90s music magazine designs. <a href="#" class="stretched-link"></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 justify-content-center col-md-3">
+          <div class="card card-lens border-dark mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-center">ML Lens</h5>
+              <p class="card-text">
+                A CSS theme created entirely with Machine Learning. <a href="#" class="stretched-link"></a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
