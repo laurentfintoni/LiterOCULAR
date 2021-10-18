@@ -16,6 +16,10 @@
     color: #f4f4f4;
 }
 
+a.navbar-brand:hover {
+    color: #D2042D;
+}
+
 .nav-link {
     color: #f4f4f4;
 }
@@ -54,10 +58,6 @@ body {
 a {
     color: #111;
     text-decoration: none;
-}
-
-a.navbar-brand:hover {
-    color: #D2042D;
 }
 
 a:hover {

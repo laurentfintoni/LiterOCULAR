@@ -2,12 +2,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
 
-/* navbar */
+/* navbar rules */
+
+.navbar {
+    text-align: center;
+    margin: 0 auto;
+}
 
 .navbar-brand {
     font-size: 1.2em;
     margin: 10px;
-  }
+}
+
+.nav-link {
+    color: #fff;
+    line-height: 18px;
+    padding-left: 0.25em;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #00BCD4;
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    text-align: right;
+}
+
+.dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
+    color: #00BCD4;
+    background-color: #f8f8f8;
+    border: none;
+    box-shadow: none;
+}
 
 a.navbar-brand {
     color: #fff;
@@ -17,21 +48,10 @@ a.navbar-brand:hover {
     color: #e64d75;
   }
 
-.nav-link {
-    color: #fff;
-    line-height: 18px;
-    padding-left: 0.25em;
-  }
-
 .nav-link a {
     color: #fff;
     text-decoration: none;
   }
-
-.navbar {
-    text-align: center;
-    margin: 0 auto;
-}
 
 /* body rules */
 
@@ -40,16 +60,49 @@ body {
     max-width: 100vw;
     max-height: 100vh;
     font-family: 'Josefin Slab', serif;
-    font-size: 100%;
+    font-size: 1.2rem;
     background-color: #000000;
     color: #ffffff;
     justify-content: center;
+}
+
+.blockquote-footer {
+    color: #f9e716;
 }
 
 a {
     color: #007aff;
     padding-right: 20px;
     padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.card-issue {
+    background-color: #DEDEDE;
+    color: #666;
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.card-issue:hover {
+    background-color: var(--color-primary-text-dark);
+    color: #007aff;
+}
+
+.card-lens {
+    background-color: #f7f7f7;
+    color: #2b2b2b;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.card-lens:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #f7f7f7;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,8 +128,13 @@ h4 {
 	font-size: 20px;
 }
 
+h5 {
+	font-size: 16px;
+}
 
-/* Issue page specific rules */
+h6 {
+    font-size: 100%;
+}
 
 .subheader {
     font-size: 1.25rem;
@@ -86,18 +144,73 @@ figcaption, .byline {
     font-size: 0.875rem;
 }
 
-#article1, #article2, #article3 {
-    max-height: 90vh;
+.custom-highlight {
+    background-color: #cde;
+    box-shadow: 0 0.1em 0.1em 0 rgba(white, 0.5);
+    color: #007aff;
+    position: relative;
+    width: 1em;
+    margin: 0.1em;
 }
 
-#metadata1, #metadata2, #metadata3 {
-    max-height: 35vh;
+.accordion-item {
+    background-color: transparent;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px;
+    margin-bottom: 1px;
+    transition: border 0.2s;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+.accordion-button {
+    color: #0088CC;
+    border-color: #0088CC;
 }
 
-button.btn.btn-outline-secondary {
-    border: none
+.accordion-button:focus {
+    color: blue;
+    box-shadow: 0 0 0 1px #c0d8ff;
+}
+
+.accordion-header-title {
+    color: black;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #5C3C3C;
+}
+
+.btn-outline-secondary {
+    color: #fff;
+    background-color: #35e1b3;
+}
+
+.btn-outline-secondary:active {
+    color: #fff;
+    background-color: #d7d7d7; 
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #d7d7d7; 
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #35e1b3;
+    border-color: #16a085;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #35e1b3;
+}
+
+.offcanvas {
+    color: #333; 
+}
+
+.modal {
+    color: #000;
 }
