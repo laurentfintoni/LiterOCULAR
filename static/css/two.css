@@ -1,0 +1,9 @@
+/* Newspaper  */
+@font-face {
+    font-family: 'newspaper-body';
+    src: url('/static/fonts/OldNewspaperTypes.ttf') format('truetype');
+}
+
+body {
+    font-family: "newspaper-body", serif;
+}

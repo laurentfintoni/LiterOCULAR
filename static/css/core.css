@@ -18,7 +18,9 @@ body.home {
     max-height: 90vh;
 }
 
-#metadata1, #metadata2, #metadata3 {
+#metadata1,
+#metadata2,
+#metadata3 {
     max-height: 35vh;
 }
 

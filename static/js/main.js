@@ -63,15 +63,23 @@ var aboutColors = {
 // Theme switching
 function switchTheme(btn) {
   // Core is default, then one, two, three
-  let cssLink = document.getElementById("external-style-tag");
-  let basePath = "/static/css/"
+  let cssLink = document.getElementById("theme-style-tag");
+  let basePath = "/static/css/";
   switch (btn.id) {
-    case "ancient":
+    case "theme-toggle-one":
       cssLink.href = basePath + "one.css";
       break;
 
-    case "contemporary":
+    case "theme-toggle-two":
       cssLink.href = basePath + "two.css";
+      break;
+
+    case "theme-toggle-three":
+      cssLink.href = basePath + "three.css";
+      break;
+
+    case "theme-toggle-four":
+      cssLink.href = basePath + "four.css";
       break;
 
     default:
