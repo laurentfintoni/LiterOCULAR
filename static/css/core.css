@@ -4,6 +4,13 @@ html {
     font-size: 100%;
 }
 
+.themes {
+    position: absolute; 
+    top: 100%; 
+    right: 0;
+    margin-left: -100px;
+}
+
 body {
     position: fixed;
     max-width: 100vw;

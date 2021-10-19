@@ -79,8 +79,11 @@ function switchTheme(btn) {
       break;
 
     case "theme-toggle-four":
-      cssLink.href = basePath + "four.css";
+      cssLink.href = basePath + "ML.css";
       break;
+    
+    case "theme-toggle-five":
+      cssLink.href = basePath + "one.css";
 
     default:
       break;
