@@ -1,3 +1,14 @@
 /* Music Magazine theme */
 
+@font-face {
+    font-family: 'century schoolbook';
+    src: url('static/fonts/C059-Roman.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* navbar rules */
+
+body {
+    font-family: 'century schoolbook', serif;
+}

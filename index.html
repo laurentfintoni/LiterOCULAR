@@ -32,7 +32,7 @@
           aria-expanded="false">
           Issues
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <ul class="dropdown-menu issues" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
           <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a></li>
         </ul>
@@ -42,13 +42,13 @@
         <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
           aria-controls="offcanvasBottom">Meta Binoculars</a>
       </div>
-      <div style="position: relative;">
+      <div class="theme-tab">
         <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
           data-bs-toggle="dropdown" aria-expanded="false">
           <img src="/img/layers.svg" alt="theme switcher" style="stroke: blanchedalmond;">
-          Themes
+          Lenses
         </a>
-        <ul class="dropdown-menu" id="themes-dropdown">
+        <ul class="dropdown-menu themes" id="themes-dropdown">
           <li>
             <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
           </li>
@@ -153,12 +153,12 @@
           <p>
             The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the
             articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly
-            across four different eras. You never knew you needed this stuff and to be fair until we were told to
-            build them for this class we didn't know either!
+            based on four distinct historic eras. You never knew you needed this stuff and to be fair until we were told to
+            build it for this class we didn't know either!
           </p>
           <p>
-            The first issue of LiterOCULAR features three articles that cover the metamophorsis of the late rapper
-            Daniel Dumile AKA MF Doom following the death of his brother while the second issue focuses on the sudden
+            The first issue of LiterOCULAR, Death and Rebirth, features three articles that cover the metamophorsis of the late rapper
+            Daniel Dumile AKA MF Doom following the death of his brother. The second issue, Who Watches the Admen?, focuses on the sudden
             departure of AI researcher Timnit Gebru from Google in late 2020.
           </p>
         </div>
@@ -186,7 +186,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">Newspaper Lens</h5>
               <p class="card-text">
-                A CSS theme based on 19th century newspapers. <a href="#" class="stretched-link"></a>
+                A CSS theme based on 19th century newspapers. <a class="stretched-link" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);"></a>
               </p>
             </div>
           </div>
@@ -196,7 +196,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">Art Deco Lens</h5>
               <p class="card-text">
-                A CSS theme inspired by the Art Deco movement. <a href="#" class="stretched-link"></a>
+                A CSS theme inspired by the Art Deco movement. <a class="stretched-link" id="theme-toggle-deco" href="#" onclick="switchTheme(this);"></a>
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">1990s Lens</h5>
               <p class="card-text">
-                A CSS theme inspired by 90s music magazine designs. <a href="#" class="stretched-link"></a>
+                A CSS theme inspired by 90s music magazine designs. <a class="stretched-link" id="theme-toggle-music" href="#" onclick="switchTheme(this);"></a>
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@
             <div class="card-body">
               <h5 class="card-title text-center">ML Lens</h5>
               <p class="card-text">
-                A CSS theme created entirely with Machine Learning. <a href="#" class="stretched-link"></a>
+                A CSS theme created entirely with Machine Learning. <a class="stretched-link" id="theme-toggle-ml" href="#" onclick="switchTheme(this);"></a>
               </p>
             </div>
           </div>

@@ -4,11 +4,16 @@ html {
     font-size: 100%;
 }
 
-.themes {
-    position: absolute; 
-    top: 100%; 
-    right: 0;
-    margin-left: -100px;
+.theme-tab {
+    position: relative;
+}
+
+.themes.show {
+    left: -25px;
+}
+
+.issues.show {
+    left: 75px;
 }
 
 body {
