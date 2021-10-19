@@ -66,24 +66,24 @@ function switchTheme(btn) {
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
   switch (btn.id) {
-    case "theme-toggle-one":
-      cssLink.href = basePath + "one.css";
+    case "theme-toggle-newspaper":
+      cssLink.href = basePath + "newspaper.css";
       break;
 
-    case "theme-toggle-two":
-      cssLink.href = basePath + "two.css";
+    case "theme-toggle-deco":
+      cssLink.href = basePath + "deco.css";
       break;
 
-    case "theme-toggle-three":
-      cssLink.href = basePath + "three.css";
+    case "theme-toggle-music":
+      cssLink.href = basePath + "music.css";
       break;
 
-    case "theme-toggle-four":
+    case "theme-toggle-ml":
       cssLink.href = basePath + "ML.css";
       break;
     
-    case "theme-toggle-five":
-      cssLink.href = basePath + "one.css";
+    case "theme-toggle-base":
+      cssLink.href = basePath + "base.css";
 
     default:
       break;
