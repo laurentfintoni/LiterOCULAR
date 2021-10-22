@@ -1,20 +1,14 @@
 // Global Variables
 var metadataViewerBox = document.getElementById("metadata-viewer");
 var articleSources = {
-  "KMD": {
-     "metadata": "KMD_meta.html",
-     "articles": [
-      "KMD_Source_1991.html", 
-      "KMD_Source_1994.html",
-      "KMD_egotrip_98.html"]
+  KMD: {
+    metadata: "KMD_meta.html",
+    articles: ["KMD_Source_1991.html", "KMD_Source_1994.html", "KMD_egotrip_98.html"],
   },
-  "Timnit": {
-    "metadata": "Timnit_meta.html",
-    "articles": [
-    "Timnit_MITREVIEW_20.html",
-    "Timnit_WAPO_20.html",
-    "Timnit_NYT_21.html"
-  ]}
+  Timnit: {
+    metadata: "Timnit_meta.html",
+    articles: ["Timnit_MITREVIEW_20.html", "Timnit_WAPO_20.html", "Timnit_NYT_21.html"],
+  },
 };
 var mentionCategories = {
   KMD: [
@@ -46,7 +40,7 @@ var aboutColors = {
   "mention-person": "background-color: #FF2D00;",
   "mention-location": "background-color: #FFF000;",
   "mention-group": "background-color: #7CFF00;",
-  "mention-organization":"background-color: #00FFC1;",
+  "mention-organization": "background-color: #00FFC1;",
   "mention-track": "background-color: #00FFF7;",
   "mention-album": "background-color: #00ECFF;",
   "mention-sample": "background-color: #0074FF;",
@@ -57,8 +51,8 @@ var aboutColors = {
   "mention-subject": "background-color: #DAF7A6;",
   "mention-technology": "background-color: #00ECFF;",
   "mention-company": "background-color: #0074FF;",
-  "mention-event": "background-color: #8000FF;"
-}
+  "mention-event": "background-color: #8000FF;",
+};
 
 // Theme switching
 function switchTheme(btn) {
@@ -81,13 +75,16 @@ function switchTheme(btn) {
     case "theme-toggle-ml":
       cssLink.href = basePath + "ML.css";
       break;
-    
+
     case "theme-toggle-base":
       cssLink.href = basePath + "base.css";
 
     default:
       break;
   }
+  // Save the choice to local storage: this is preserved for the same domain
+  // so we can access the same variables from another page of the same website
+  localStorage.setItem("theme", btn.id);
 }
 
 // Metadata viewer
@@ -126,14 +123,14 @@ function fillMetadataBox() {
     let spanMentions = article.querySelectorAll("span[class*='mention']");
     // querySelector returns weird objects: cast into array
     let spanArray = Array.from(spanMentions);
-    // array of mention names 
+    // array of mention names
     let mentions = Object.keys(mentionsCount);
 
     spanArray.forEach((span) => {
       span.classList.forEach((spanClass) => {
         about = span.getAttribute("about");
         // Span contains a mention-* class AND the "about" object already has a value
-        if (mentions.includes(spanClass) &&  mentionsCount[spanClass][about] != undefined) {
+        if (mentions.includes(spanClass) && mentionsCount[spanClass][about] != undefined) {
           mentionsCount[spanClass][about]++;
           mentionsCount[spanClass]["total"]++;
 
@@ -161,52 +158,53 @@ function fillMetadataBox() {
     var sortedMentions = mentionsList.sort((first, second) => {
       let firstTotal = first[1]["total"];
       let secondTotal = second[1]["total"];
-      if (firstTotal > secondTotal) { return -1 }
-      else if (secondTotal > firstTotal) { return 1 }
-      else {return 0}
+      if (firstTotal > secondTotal) {
+        return -1;
+      } else if (secondTotal > firstTotal) {
+        return 1;
+      } else {
+        return 0;
+      }
     });
 
     for (const [type, abouts] of sortedMentions) {
-      if (abouts['total'] != 0) {
+      if (abouts["total"] != 0) {
         // Accordion item: item[ h2[button] body[content] ]
-        const item = setAttributes(
-          document.createElement("div"), 
-          {"class":"accordion-item", 
-          "id":`metadata${articleCounter+1}-${type}`}
-        );
-        const header = setAttributes(
-          document.createElement("h3"),
-          {"class":"accordion-header",
-          "id": `${type}-header`}
-        );
-        const btn = setAttributes(
-          document.createElement("button"), 
-          {"class": "accordion-button collapsed",
-          "type": "button",
+        const item = setAttributes(document.createElement("div"), {
+          class: "accordion-item",
+          id: `metadata${articleCounter + 1}-${type}`,
+        });
+        const header = setAttributes(document.createElement("h3"), { class: "accordion-header", id: `${type}-header` });
+        const btn = setAttributes(document.createElement("button"), {
+          class: "accordion-button collapsed",
+          type: "button",
           "data-bs-toggle": "collapse",
-          "data-bs-target": `#${type}-collapse-${articleCounter+1}`,
+          "data-bs-target": `#${type}-collapse-${articleCounter + 1}`,
           "aria-expanded": "false",
-          "aria-controls": `${type}-collapse`}
-        );
-        const body = setAttributes(
-          document.createElement("div"),
-          {"id": `${type}-collapse-${articleCounter+1}`,
-          "class": "accordion-collapse collapse",
-          "data-bs-parent": `#metadata${articleCounter+1}`}
-        );
-        
-        const content = setAttributes(
-          document.createElement("p"),
-          {"class": "accordion-body"}
-        );
+          "aria-controls": `${type}-collapse`,
+        });
+        const body = setAttributes(document.createElement("div"), {
+          id: `${type}-collapse-${articleCounter + 1}`,
+          class: "accordion-collapse collapse",
+          "data-bs-parent": `#metadata${articleCounter + 1}`,
+        });
+
+        const content = setAttributes(document.createElement("p"), { class: "accordion-body" });
 
         // mention-person -> Person (first letter capitalised + rest of the word)
         const mentionName = type.split("-")[1][0].toUpperCase() + type.split("-")[1].slice(1).toLowerCase();
 
         for (const aboutType of Object.keys(abouts)) {
           // Button creation (split btn type)
-          let btnGroup = setAttributes(document.createElement('div'), {"class": "btn-group m-1"});
-          let mainBtn = setAttributes(document.createElement("button"), {"type": "button", "class": "btn btn-outline-secondary btn-sm", "onclick":"focusMetadata(this);", "id": `${type}/${aboutType}`, "href":"#", "data-article":articleCounter+1});
+          let btnGroup = setAttributes(document.createElement("div"), { class: "btn-group m-1" });
+          let mainBtn = setAttributes(document.createElement("button"), {
+            type: "button",
+            class: "btn btn-outline-secondary btn-sm",
+            onclick: "focusMetadata(this);",
+            id: `${type}/${aboutType}`,
+            href: "#",
+            "data-article": articleCounter + 1,
+          });
           if (aboutType == "total") {
             mainBtn.innerText = "View all " + mentionsCount[type][aboutType];
           } else {
@@ -215,10 +213,15 @@ function fillMetadataBox() {
           btnGroup.appendChild(mainBtn);
 
           if (aboutType != "total") {
-            let splitBtn = setAttributes(document.createElement("btn"), {"type": "button", "class": "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split", "data-bs-toggle": "dropdown", "aria-expanded": "false"});
+            let splitBtn = setAttributes(document.createElement("btn"), {
+              type: "button",
+              class: "btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split",
+              "data-bs-toggle": "dropdown",
+              "aria-expanded": "false",
+            });
             // Dropdown menu (points to external source)
-            let menuDrop = setAttributes(document.createElement("ul"), {"class": "dropdown-menu"});
-            let externalLink = setAttributes(document.createElement("li"), {"class": "dropdown-item"})
+            let menuDrop = setAttributes(document.createElement("ul"), { class: "dropdown-menu" });
+            let externalLink = setAttributes(document.createElement("li"), { class: "dropdown-item" });
             externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank">Wikipedia</a>`;
             menuDrop.appendChild(externalLink);
             btnGroup.appendChild(splitBtn);
@@ -227,8 +230,8 @@ function fillMetadataBox() {
           content.appendChild(btnGroup);
           content.innerHTML += " ";
         }
-        btn.innerHTML = `${mentionName}: ${abouts['total']}`
-        
+        btn.innerHTML = `${mentionName}: ${abouts["total"]}`;
+
         header.appendChild(btn);
         item.appendChild(header);
 
@@ -248,12 +251,12 @@ function focusMetadata(element) {
 
   if (mentionName != "total") {
     // Issue-wide highlight of that specific mentioned item
-    console.log("Highlighting all mentions of ", mentionName)
+    console.log("Highlighting all mentions of ", mentionName);
     let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
       // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
-    })
+    });
   } else {
     // Article-wide highlight of a mention category
     let articleNumber = element.dataset.article;
@@ -263,7 +266,7 @@ function focusMetadata(element) {
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
       // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
-    })
+    });
   }
 
   // Disable offcanvas on text highlight
@@ -276,21 +279,21 @@ function resetHighlight(ev) {
   let highlightedStuff = document.querySelectorAll(".custom-highlight");
   highlightedStuff.forEach((item) => {
     item.classList.remove("custom-highlight");
-  })
+  });
 }
 
 // Utils
 function setAttributes(el, attrs) {
   // element + dictionary of attribute:value pairs to speed up the creation of elements
   Object.entries(attrs).forEach(([key, value]) => {
-    el.setAttribute(key, value)
+    el.setAttribute(key, value);
   });
   return el;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   // Homepage doesn't load articles
-  if (window.location.href.indexOf("index.html") == -1) {
+  if (window.location.href.indexOf("issue.html") != -1) {
     let issue = window.location.href.split("issue=")[1];
     $("#article1").load(articleSources[issue]["articles"][0]);
     $("#article2").load(articleSources[issue]["articles"][1]);
@@ -299,5 +302,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
+  }
+
+  // If the user chose a theme preserve their choice on page load by
+  // accessing the variable and setting the desired theme
+  let chosenTheme = localStorage.getItem("theme");
+  if (chosenTheme) {
+    // instead of passing the element we pass an object which has a propery of id
+    switchTheme({ id: localStorage.getItem("theme") });
   }
 });
