@@ -1,45 +1,75 @@
 /* Site wide rules that do not change w/ other CSS themes */
 
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 .theme-tab {
-    position: relative;
+  position: relative;
 }
 
 .themes.show {
-    left: -25px;
+  left: -25px;
 }
 
 .issues.show {
-    left: 75px;
+  left: 75px;
 }
 
 body {
-    position: fixed;
-    max-width: 100vw;
-    max-height: 100vh;
+  position: fixed;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 body.home {
-    position: relative;
+  position: relative;
 }
 
-#article1, #article2, #article3 {
-    max-height: 90vh;
+#article1,
+#article2,
+#article3 {
+  max-height: 90vh;
 }
 
 #metadata1,
 #metadata2,
 #metadata3 {
-    max-height: 35vh;
+  max-height: 35vh;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 button.btn.btn-outline-secondary {
-    border: none
+  border: none;
+}
+
+/* Css transition on theme switching */
+.anim-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: -100%;
+  bottom: auto;
+  right: auto;
+  background: #4d606e;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.anim-layer.active {
+  left: 100%;
+}
+.anim-layer--2 {
+  background: #d3d4d8;
+  transition-delay: 0.3s;
+}
+.anim-layer--3 {
+  background: #d3d4d8;
+  transition-delay: 0.12s;
+}
+.anim-layer--4 {
+  background: #c06c84;
+  transition-delay: 0.08s;
 }

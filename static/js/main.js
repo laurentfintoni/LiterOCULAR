@@ -56,6 +56,12 @@ var aboutColors = {
 
 // Theme switching
 function switchTheme(btn) {
+  // toggle transition
+  const transitionEls = document.querySelectorAll(".anim-layer");
+  for (const layer of transitionEls) {
+    layer.classList.toggle("active");
+  }
+
   // Core is default, then one, two, three
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
