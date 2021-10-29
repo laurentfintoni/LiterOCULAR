@@ -65,6 +65,7 @@ function switchTheme(btn) {
   // Core is default, then one, two, three
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
+  setTimeout(function(){
   switch (btn.id) {
     case "theme-toggle-newspaper":
       cssLink.href = basePath + "newspaper.css";
@@ -87,7 +88,7 @@ function switchTheme(btn) {
 
     default:
       break;
-  }
+  }}, 500); 
   // Save the choice to local storage: this is preserved for the same domain
   // so we can access the same variables from another page of the same website
   localStorage.setItem("theme", btn.id);

@@ -1,14 +1,25 @@
 /* Music Magazine theme */
 
 @font-face {
-    font-family: 'century schoolbook';
-    src: url('static/fonts/C059-Roman.otf') format('otf');
+    font-family: 'centuryschoolbook';
+    src: url('static/fonts/C059-Roman.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'eurostile';
+    src: url('static/fonts/sd_eurostile_elite_demo.ttf') format('truetype');
 }
 
 /* navbar rules */
 
 body {
-    font-family: 'century schoolbook', serif;
+    font-family: centuryschoolbook, serif;
+}
+
+h1 {
+    font-family: eurostile, sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
 }

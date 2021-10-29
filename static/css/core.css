@@ -12,6 +12,10 @@ html {
   left: -25px;
 }
 
+.themes-image{
+  stroke: blanchedalmond;
+}
+
 .issues.show {
   left: 75px;
 }
