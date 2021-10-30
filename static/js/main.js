@@ -65,33 +65,34 @@ function switchTheme(btn) {
   // Core is default, then one, two, three
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
-  setTimeout(function(){
-  switch (btn.id) {
-    case "theme-toggle-newspaper":
-      cssLink.href = basePath + "newspaper.css";
-      break;
+  setTimeout(function () {
+    switch (btn.id) {
+      case "theme-toggle-newspaper":
+        cssLink.href = basePath + "newspaper.css";
+        break;
 
-    case "theme-toggle-deco":
-      cssLink.href = basePath + "deco.css";
-      break;
+      case "theme-toggle-deco":
+        cssLink.href = basePath + "deco.css";
+        break;
 
-    case "theme-toggle-music":
-      cssLink.href = basePath + "music.css";
-      break;
+      case "theme-toggle-music":
+        cssLink.href = basePath + "music.css";
+        break;
 
-    case "theme-toggle-ml":
-      cssLink.href = basePath + "ML.css";
-      break;
+      case "theme-toggle-ml":
+        cssLink.href = basePath + "ML.css";
+        break;
 
-    case "theme-toggle-base":
-      cssLink.href = basePath + "base.css";
+      case "theme-toggle-base":
+        cssLink.href = basePath + "base.css";
 
-    default:
-      break;
-  }}, 500); 
-  // Save the choice to local storage: this is preserved for the same domain
+      default:
+        break;
+    }
+  }, 500);
+  // Save the choice to session storage: this is preserved for the same domain
   // so we can access the same variables from another page of the same website
-  localStorage.setItem("theme", btn.id);
+  sessionStorage.setItem("theme", btn.id);
 }
 
 // Metadata viewer
@@ -313,9 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // If the user chose a theme preserve their choice on page load by
   // accessing the variable and setting the desired theme
-  let chosenTheme = localStorage.getItem("theme");
+  let chosenTheme = sessionStorage.getItem("theme");
   if (chosenTheme) {
     // instead of passing the element we pass an object which has a propery of id
-    switchTheme({ id: localStorage.getItem("theme") });
+    switchTheme({ id: sessionStorage.getItem("theme") });
   }
 });
