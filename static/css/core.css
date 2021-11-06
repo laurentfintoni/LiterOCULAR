@@ -12,7 +12,7 @@ html {
   left: -25px;
 }
 
-.themes-image{
+.themes-image {
   stroke: blanchedalmond;
 }
 
@@ -27,6 +27,7 @@ body {
 }
 
 body.home {
+  height: 100vh;
   position: relative;
 }
 
