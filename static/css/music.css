@@ -1,25 +1,37 @@
 /* Music Magazine theme */
 
 @font-face {
-    font-family: 'centuryschoolbook';
-    src: url('static/fonts/C059-Roman.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "centuryschoolbook";
+  src: url("static/fonts/C059-Roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'eurostile';
-    src: url('static/fonts/sd_eurostile_elite_demo.ttf') format('truetype');
+  font-family: "eurostile";
+  src: url("static/fonts/sd_eurostile_elite_demo.ttf") format("truetype");
 }
 
+/* hey man, fede here
+i found a couple of fonts i initially liked for the newspaper but ended up 
+not using, but i think they could fit with this music theme
+try them, maybe you like one (i suggest using the first w/ letter-spacing: 0.2em;) */
+@font-face {
+  font-family: "215000";
+  src: url("/static/fonts/215000E.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Radio Newsman";
+  src: url("/static/fonts/RadioNewsman.ttf") format("truetype");
+}
 /* navbar rules */
 
 body {
-    font-family: centuryschoolbook, serif;
+  font-family: centuryschoolbook, serif;
 }
 
 h1 {
-    font-family: eurostile, sans-serif;
-    font-size: 3rem;
-    font-weight: normal;
+  font-family: eurostile, sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
 }
