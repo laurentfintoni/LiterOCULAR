@@ -20,7 +20,6 @@
 }
 
 a.navbar-brand:hover {
-  font-family: "Chomsky", sans-serif;
   color: #f9eac8;
 }
 
@@ -58,12 +57,12 @@ body {
   font-family: "newspaper-body", serif;
 }
 
-a {
+a:not(.navbar *) {
   color: #111;
   text-decoration: none;
 }
 
-a:hover {
+a:not(.navbar *):hover {
   color: #111;
   text-decoration: underline;
   text-decoration-color: #d2042d;
