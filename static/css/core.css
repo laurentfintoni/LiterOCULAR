@@ -53,6 +53,7 @@ button.btn.btn-outline-secondary {
 
 /* Css transition on theme switching */
 .anim-layer {
+  z-index: 2000;
   position: absolute;
   width: 100%;
   height: 100%;
