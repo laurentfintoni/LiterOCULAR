@@ -114,6 +114,10 @@ h6 {
   font-family: "Chomsky", sans-serif;
   color: #111;
   padding: 0.5rem;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 0 2px 0;
 }
 
 h1 {
