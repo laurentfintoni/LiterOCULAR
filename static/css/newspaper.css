@@ -74,6 +74,7 @@ a:not(.navbar *):hover {
 
 .card-title {
   font-size: 1.25rem;
+  border: none;
 }
 
 .card-issue {
@@ -229,4 +230,8 @@ figcaption,
 
 img {
   filter: grayscale(100%);
+}
+
+.modal-title {
+  border: none;
 }
