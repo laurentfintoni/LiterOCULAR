@@ -56,16 +56,11 @@ var aboutColors = {
 
 // Theme switching
 function switchTheme(btn) {
-  // toggle transition
-  const transitionEls = document.querySelectorAll(".anim-layer");
-  for (const layer of transitionEls) {
-    layer.classList.toggle("active");
-  }
-
-  // Core is default, then one, two, three
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
-  setTimeout(function () {
+
+  // toggle transition
+  if (btn.animation === false) {
     switch (btn.id) {
       case "theme-toggle-newspaper":
         cssLink.href = basePath + "newspaper.css";
@@ -85,11 +80,45 @@ function switchTheme(btn) {
 
       case "theme-toggle-base":
         cssLink.href = basePath + "base.css";
+        break;
 
       default:
         break;
     }
-  }, 500);
+    return;
+  } else {
+    const transitionEls = document.querySelectorAll(".anim-layer");
+    for (const layer of transitionEls) {
+      layer.classList.toggle("active");
+    }
+
+    setTimeout(function () {
+      switch (btn.id) {
+        case "theme-toggle-newspaper":
+          cssLink.href = basePath + "newspaper.css";
+          break;
+
+        case "theme-toggle-deco":
+          cssLink.href = basePath + "deco.css";
+          break;
+
+        case "theme-toggle-music":
+          cssLink.href = basePath + "music.css";
+          break;
+
+        case "theme-toggle-ml":
+          cssLink.href = basePath + "ML.css";
+          break;
+
+        case "theme-toggle-base":
+          cssLink.href = basePath + "base.css";
+
+        default:
+          break;
+      }
+    }, 500);
+  }
+
   // Save the choice to session storage: this is preserved for the same domain
   // so we can access the same variables from another page of the same website
   sessionStorage.setItem("theme", btn.id);
@@ -317,6 +346,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let chosenTheme = sessionStorage.getItem("theme");
   if (chosenTheme) {
     // instead of passing the element we pass an object which has a propery of id
-    switchTheme({ id: sessionStorage.getItem("theme") });
+    switchTheme({
+      id: sessionStorage.getItem("theme"),
+      animation: false,
+    });
   }
 });
