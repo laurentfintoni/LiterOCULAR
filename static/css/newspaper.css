@@ -222,3 +222,7 @@ figcaption,
   background-color: #4a1520;
   border-color: #4a1520;
 }
+
+img {
+  filter: grayscale(100%);
+}
