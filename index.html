@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" id="core-style-tag" href="/static/css/core.css" type="text/css" />
   <link rel="stylesheet" id="theme-style-tag" href="/static/css/base.css" type="text/css" />
   <!-- JQuery script-->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-
-  <title>Home</title>
+  
+  <title>LiterOCULAR | Home</title>
 </head>
 
 <body class="home">
@@ -25,219 +25,204 @@
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
       <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <a class="navbar-brand" href="/">LiterOCULAR</a>
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Issues
-        </a>
-        <ul class="dropdown-menu issues" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
-          <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a></li>
-        </ul>
-        <a class="nav-link" href="/documentation.html">Documentation</a>
-        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
-        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
-        <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
-          aria-controls="offcanvasBottom">Meta Binoculars</a>
-      </div>
-      <div class="theme-tab">
-        <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="/img/layers.svg" alt="theme switcher" class="themes-image">
-          Lenses
-        </a>
-        <ul class="dropdown-menu themes" id="themes-dropdown">
-          <li>
-            <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">90s Music Mag</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Machine Learning</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Base theme</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Issues
+    </a>
+    <ul class="dropdown-menu homepage" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" id="kmd-issue" href="/issue.html?issue=KMD">Death and Rebirth</a></li>
+      <li><a class="dropdown-item" id="timnit-issue" href="/issue.html?issue=Timnit">Who Watches the Admen?</a></li>
+    </ul>
+    <a class="nav-link" href="/documentation.html">Documentation</a>
+    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
+    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
+    <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+    aria-controls="offcanvasBottom">Meta Binoculars</a>
+  </div>
+</div>
+</nav>
 
-  <!-- The container spans the whole viewport (vh-100) in height and all padding is removed from the sides (px-0) -->
-  <div class="container-fluid d-flex justify-content-center align-items-center">
-    <!-- Disclaimer modal-->
-    <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="disclaimerModalLabel">This is not the content you are looking for</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em>
-              style for text documents, as an end-of-course project for the &#8220;Information Modeling and Web
-              technologies&#8221; course of the Master's Degree in Digital Humanities and Digital Knowledge of the
-              University of Bologna, held by professor Fabio Vitali. </p>
-            <p>
-              The documents contained in this web site have been selected for their length and complexity. Their
-              publication here is not intended to be an alternative or replace their original locations. The documents
-              in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
-              1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
-              are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
-              <em>The Washington Post</em>.
-            </p>
-            <p>
-              All copyrights and related rights on the content remain with their original owners. All copyright on the
-              typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+<!-- The container spans the whole viewport (vh-100) in height and all padding is removed from the sides (px-0) -->
+<div class="container-fluid d-flex justify-content-center align-items-center">
+  <!-- Disclaimer modal-->
+  <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="disclaimerModalLabel">This is not the content you are looking for</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em>
+          style for text documents, as an end-of-course project for the &#8220;Information Modeling and Web
+          technologies&#8221; course of the Master's Degree in Digital Humanities and Digital Knowledge of the
+          University of Bologna, held by professor Fabio Vitali. </p>
+          <p>
+            The documents contained in this web site have been selected for their length and complexity. Their
+            publication here is not intended to be an alternative or replace their original locations. The documents
+            in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
+            1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
+            are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
+            <em>The Washington Post</em>.
+          </p>
+          <p>
+            All copyrights and related rights on the content remain with their original owners. All copyright on the
+            typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-
-    <!-- About modal-->
-    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="aboutModalLabel">Why would you do this?</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>
-              It's a question we asked ourselves repeatedely during the process of completing this project. Sometimes
-              the doing is the answer.
-            </p>
-            <p>
-              Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
-              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> with digital blood, sweat, and
-              tears.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+  </div>
+  
+  <!-- About modal-->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">Why would you do this?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            It's a question we asked ourselves repeatedly during the process of completing this project. Sometimes
+            the doing is the answer.
+          </p>
+          <p>
+            Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
+            <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> over countless hours.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-
-    <!-- Content row (three cols of equal size spanning whole viewport width) -->
-    <div id="homepage" class="container-md my-5">
-      <div class="row">
-        <div class="col-md-8">
-          <figure class="text-center">
-            <blockquote class="blockquote">
-              <p>
-                &#8220;Twist the lines out of all recognition <br />
-                Understand this, unnu have fi make a decision&#8221;
-              </p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              <cite title="Source Title">The Spaceape</cite>
-            </figcaption>
-          </figure>
-          <p>
-            LiterOCULAR is a digital magazine created for the Information Modeling and Web technologies course of the
-            Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna.
-          </p>
-          <p>
-            The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the
-            articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly
-            based on four distinct historic eras. You never knew you needed this stuff and to be fair until we were told
-            to
-            build it for this class we didn't know either!
-          </p>
-          <p>
-            The first issue of LiterOCULAR, Death and Rebirth, features three articles that cover the metamophorsis of
-            the late rapper
-            Daniel Dumile AKA MF Doom following the death of his brother. The second issue, Who Watches the Admen?,
-            focuses on the sudden
-            departure of AI researcher Timnit Gebru from Google in late 2020.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h1 class="text-center">Issues</h1>
-          <div class="card card-issue border-dark m-2">
-            <div class="card-body">
-              <h5 class="card-title text-center">Death and Rebirth</h5>
-              <p class="card-text text-center">Death as catalyst for artistic rebirth.</p>
-              <a href="issue.html?issue=KMD" class="stretched-link"></a>
-            </div>
-          </div>
-          <div class="card card-issue border-dark m-2">
-            <div class="card-body">
-              <h5 class="card-title text-center">Who Watches the Admen?</h5>
-              <p class="card-text text-center">When ethics endangers profit.</p>
-              <a href="issue.html?issue=Timnit" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
+  </div>
+  
+  <!-- Content row (three cols of equal size spanning whole viewport width) -->
+  <div id="homepage" class="container-fluid my-3">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="text-center homepage-header"><span class="protect">Liter</span>OCULAR</h1>
+        <h3 class="text-center homepage-sub">Adventures in text and code</h3>
+        <p>
+          LiterOCULAR is a digital magazine created for the Information Modeling and Web technologies course of the
+          Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna.
+        </p>
+        <p>
+          The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the
+          articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly
+          based on four distinct historic eras. You never knew you needed this stuff and to be fair until we were told
+          to
+          build it for this class we didn't know either!
+        </p>
+        <p class="last">
+          The first issue of LiterOCULAR, Death and Rebirth, features three articles that cover the metamophorsis of
+          the late rapper
+          Daniel Dumile AKA MF Doom following the death of his brother. The second issue, Who Watches the Admen?,
+          focuses on the sudden
+          departure of AI researcher Timnit Gebru from Google in late 2020.
+        </p>
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            &#8220;Twist the lines out of all recognition <br />
+            Understand this, unnu have fi make a decision&#8221;
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <cite title="Source Title">The Spaceape</cite>
+          </figcaption>
+        </figure>
       </div>
-      <div class="row">
-        <div class="col-12 justify-content-center col-md-3">
-          <div class="card card-lens border-dark mb-3">
-            <div class="card-body">
-              <h5 class="card-title text-center">Newspaper Lens</h5>
-              <p class="card-text">
-                A CSS theme based on 19th century newspapers. <a class="stretched-link" id="theme-toggle-newspaper"
-                  href="#" onclick="switchTheme(this);"></a>
-              </p>
+      <div class="col md-4">
+        <h1 class="text-center homepage">Issues</h1>
+        <div class="row row-cols-1 row-cols-md-1 g-2">
+          <div class="col">
+            <div class="card card-issue border-dark m-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Death and Rebirth</h5>
+                <p class="card-text text-center">From Zev Love X to MF DOOM</p>
+                <a href="issue.html?issue=KMD" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-issue border-dark m-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Who Watches the Admen?</h5>
+                <p class="card-text text-center">When ethics clash with profits</p>
+                <a href="issue.html?issue=Timnit" class="stretched-link"></a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 justify-content-center col-md-3">
-          <div class="card card-lens border-dark mb-3">
-            <div class="card-body">
-              <h5 class="card-title text-center">Art Deco Lens</h5>
-              <p class="card-text">
-                A CSS theme inspired by the Art Deco movement. <a class="stretched-link" id="theme-toggle-deco" href="#"
-                  onclick="switchTheme(this);"></a>
-              </p>
+        <h1 class="text-center homepage">Lenses</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-2">
+          <div class="col">
+            <div class="card card-lens border-dark mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Newspaper</h5>
+                <p class="card-text text-center">
+                  Old timey 
+                </p>
+                <a class="stretched-link" id="theme-toggle-newspaper"
+                href="#" onclick="switchTheme(this);"></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 justify-content-center col-md-3">
-          <div class="card card-lens border-dark mb-3">
-            <div class="card-body">
-              <h5 class="card-title text-center">1990s Lens</h5>
-              <p class="card-text">
-                A CSS theme inspired by 90s music magazine designs. <a class="stretched-link" id="theme-toggle-music"
-                  href="#" onclick="switchTheme(this);"></a>
-              </p>
+          <div class="col">
+            <div class="card card-lens border-dark mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Art Deco</h5>
+                <p class="card-text text-center">
+                 Sleek and bright 
+                </p>
+                <a class="stretched-link" id="theme-toggle-deco" href="#"
+                onclick="switchTheme(this);"></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 justify-content-center col-md-3">
-          <div class="card card-lens border-dark mb-3">
-            <div class="card-body">
-              <h5 class="card-title text-center">ML Lens</h5>
-              <p class="card-text">
-                A CSS theme created entirely with Machine Learning. <a class="stretched-link" id="theme-toggle-ml"
-                  href="#" onclick="switchTheme(this);"></a>
-              </p>
+          <div class="col">
+            <div class="card card-lens border-dark mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">The Source</h5>
+                <p class="card-text text-center">
+                  For the culture
+                </p>
+                <a class="stretched-link" id="theme-toggle-music"
+                href="#" onclick="switchTheme(this);"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-lens border-dark mb-3">
+              <div class="card-body">
+                <h5 class="card-title text-center">Transformer</h5>
+                <p class="card-text text-center">
+                  Prompts 
+                </p>
+                <a class="stretched-link pointer" id="theme-toggle-ml"
+                href="#" onclick="switchTheme(this);"></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="/static/js/main.js"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script src="/static/js/main.js"></script>
 </body>
 
 </html>

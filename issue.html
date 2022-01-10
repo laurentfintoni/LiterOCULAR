@@ -34,12 +34,15 @@
       <hr />
       <div class="row justify-content-center m-0">
         <div class="col-4 overflow-auto no-scrollbar">
+          <h6 class="binocular-header">Article 1</h6>
           <div class="accordion accordion-flush" id="metadata1"></div>
         </div>
         <div class="col-4 overflow-auto no-scrollbar">
+          <h6 class="binocular-header">Article 2</h6>
           <div class="accordion accordion-flush" id="metadata2"></div>
         </div>
         <div class="col-4 overflow-auto no-scrollbar">
+          <h6 class="binocular-header">Article 3</h6>
           <div class="accordion accordion-flush" id="metadata3"></div>
         </div>
       </div>
@@ -55,7 +58,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <a class="navbar-brand" href="/">LiterOCULAR</a>
+        <a class="navbar-brand" href="/"><span class="protect">Liter</span>OCULAR</a>
         <a class="nav-link dropdown-toggle" href="#issues-dropdown" id="issues-dropdown" role="button"
           data-bs-toggle="dropdown" aria-expanded="false">
           Issues
@@ -71,32 +74,31 @@
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
         <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
           aria-controls="offcanvasBottom">Metadata</a>
+          <div class="theme-tab">
+            <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/img/layers.svg" alt="theme switcher" class="themes-image">
+              Lenses
+            </a>
+            <ul class="dropdown-menu themes" id="themes-dropdown">
+              <li>
+                <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">90s Music Mag</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Machine Learning</a>
+              </li>
+              <li>
+                <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Base theme</a>
+              </li>
+            </ul>
+          </div>
       </div>
-      <div class="theme-tab">
-        <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="/img/layers.svg" alt="theme switcher" class="themes-image">
-          Lenses
-        </a>
-        <ul class="dropdown-menu themes" id="themes-dropdown">
-          <li>
-            <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">90s Music Mag</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Machine Learning</a>
-          </li>
-          <li>
-            <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Base theme</a>
-          </li>
-        </ul>
-      </div>
-
     </div>
   </nav>
 

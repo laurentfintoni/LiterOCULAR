@@ -1,37 +1,770 @@
 /* Music Magazine theme */
 
-@font-face {
-  font-family: "centuryschoolbook";
-  src: url("static/fonts/C059-Roman.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
+/* slab serif for title, imitating Aachen */ 
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
-@font-face {
-  font-family: "eurostile";
-  src: url("static/fonts/sd_eurostile_elite_demo.ttf") format("truetype");
-}
+/* serif for body, riffing off American/old style types */
 
-/* hey man, fede here
-i found a couple of fonts i initially liked for the newspaper but ended up 
-not using, but i think they could fit with this music theme
-try them, maybe you like one (i suggest using the first w/ letter-spacing: 0.2em;) */
-@font-face {
-  font-family: "215000";
-  src: url("/static/fonts/215000E.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Radio Newsman";
-  src: url("/static/fonts/RadioNewsman.ttf") format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* sans serif bold for block quotes, riffing off alt gothic */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+/* serif caps for menus + bylines based on contents page */
+
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+
 /* navbar rules */
 
+.navbar {
+  background-color: #222125;
+}
+
+.nav-link, .navbar-brand, .dropdown-item {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+  color: #d5473b;
+}
+
+.protect {
+  text-transform: none;
+}
+
+a.navbar-brand:hover, a.navbar-brand:focus {
+  color: #d5473b;
+  text-decoration: none;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #d5473b;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  background-color: #222125;
+}
+
+.dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
+  color: #e1dcd8;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(213 71 59 / 25%);
+  text-decoration: none;
+}
+
+/* body rules */
+
 body {
-  font-family: centuryschoolbook, serif;
+  font-family: 'Libre Baskerville', serif;
+  background-color: #e1dcd8;
+  color: #222125;
+  font-size: 1.25vw;
+}
+
+a {
+  color: #d5473b;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #d5473b;
+  text-decoration: underline;
+}
+
+/* home page boxes */
+
+.card-body {
+  padding: 0.62vw;
+}
+
+.card-issue, .card-lens {
+  background-color: #DBBC9F;
+  color: #222125;
+  max-width: 100%;
+}
+
+p.card-text {
+  font-family: 'Glegoo', serif;
+  margin-bottom: 0.62vw;
+}
+
+.card-issue .card-title, .card-lens .card-title {
+  font-size: 1.4vw;
+  color: #70557D;
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+.border-dark {
+  border-color: #8c485f!important;
+  border-width: 0.1566vw;
+}
+
+/* header rules */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222125;
+  padding: 0.31vw;
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: normal;
 }
 
 h1 {
-  font-family: eurostile, sans-serif;
-  font-size: 3rem;
-  font-weight: normal;
+  font-size: 3.75vw;
+}
+
+h1.homepage {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.34vw;
+}
+
+h3 {
+  font-size: 1.875vw;
+}
+
+h4 {
+  font-size: 1.5625vw;
+}
+
+h5 {
+  font-size: 1.40vw;
+}
+
+h5.modal-title {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 1.25vw;
+}
+
+/* blockquote rules */
+
+.blockquote {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5vw;
+}
+
+.blockquote-footer {
+  color: #8c485f;
+  text-transform: none !important;
+}
+
+/* paragraph rules */
+
+p {
+  margin-bottom: 0vw;
+}
+
+.modal-body p:nth-child(n+2) {
+  text-indent: 1.25vw;
+}
+
+#homepage p:nth-child(n+4) {
+  text-indent: 1.25vw;
+}
+
+#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(3)::first-letter {
+  font-size: 3.75vw;
+  float: left;
+  line-height: 3.50vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+}
+
+#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter {
+  font-size: 12.5vw;
+  float: left;
+  line-height: 10.02vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+}
+
+.dropcap::first-letter {
+  font-size: 12.5vw;
+  float: left;
+  line-height: 10.02vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+}
+
+.dropcap-two::first-letter {
+  font-size: 12.5vw;
+  float: left;
+  line-height: 10.02vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+  color: #f4f4f4;
+}
+
+p.no-dropcap::first-letter {
+  font-size: 1.25vw !important;
+  float: none !important;
+  line-height: normal !important;
+  padding-right: 0 !important;
+  font-family: 'Libre Baskerville', serif !important;
+  color: #222125 !important;
+}
+
+p.no-dropcap {
+  text-indent: 1.25vw;
+}
+
+p.after-box {
+  text-indent: 0 !important;
+  padding-top: 0.23vw;
+}
+
+.after-box::first-letter {
+  font-size: 3.75vw;
+  float: left;
+  line-height: 3.60vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+}
+
+#article2 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter {
+  font-size: 12.5vw;
+  float: left;
+  line-height: 10.02vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+  color: #2d1c68;
+}
+
+.dropcap-wapo::first-letter {
+  font-size: 12.5vw !important;
+  float: left !important;
+  line-height: 10.02vw !important;
+  padding-right: 0.31vw !important;
+  font-family: 'Oswald', sans-serif !important;
+  color: #e7b926 !important ;
+}
+
+#article3 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter {
+  font-size: 12.5vw;
+  float: left;
+  line-height: 10.02vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+  color: #f4f4f4;
+}
+
+.dropcap-nyt::first-letter {
+  font-size: 12.5vw !important;
+  float: left !important;
+  line-height: 10.02vw !important;
+  padding-right: 0.31vw !important;
+  font-family: 'Oswald', sans-serif !important;
+  color: #46bb53 !important ;
+}
+
+#article1 p:not(.dropcap):nth-child(n+5) {
+  text-indent: 1.25vw;
+}
+
+#article2 p:nth-child(n+6) {
+  text-indent: 1.25vw;
+}
+
+#article3 p:not(.dropcap-two):nth-child(n+6) {
+  text-indent: 1.25vw;
+}
+
+.last {
+  margin-bottom: 1.25vw;
+}
+
+/* buttons and modals */
+
+.btn-outline-secondary {
+  color: #222125;
+}
+
+.btn-outline-secondary:active {
+  color: #222125;
+  background-color: #70557D;
+}
+
+.btn-outline-secondary:hover {
+  color: #222125 ;
+  background-color: #70557D;
+}
+
+.btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer {
+  color: #70557D;
+  background-color: #DBBC9F;
+  border-color: #8c485f;
+  padding: 0.62vw;
+}
+
+.btn-secondary {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+  font-size: 1.40vw;
+}
+
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+  color: #70557D;
+  background-color: #DBBC9F;
+  border-color: #8c485f;
+  box-shadow: none;
+}
+
+/* text */ 
+
+figcaption {
+  text-transform: uppercase;
+  font-size: 0.78vw;
+  padding-top: 0.31vw;
+}
+
+.byline {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+  font-size: 1.09vw;
+}
+
+.update {
+  font-size: 1.09vw;
+}
+
+.homepage-header {
+  color: #d5473b;
+  margin-bottom: 0;
+}
+
+.homepage-sub {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  -webkit-text-stroke: #d5473b 0.078vw;
+}
+
+/* theme specific */
+
+.end-dot {
+  content: url(square-png.png);
+  width: 1.25vw;
+  height: 1.25vw;
+  margin-top: 0.23vw;
+  vertical-align: baseline;
+}
+
+/* kmd styles */
+
+.cover {
+  border: 0.17vw solid black;
+}
+
+.kmd-91-t {
+  text-align: center;
+  color: #f4f4f4;
+  margin-top: -37vw;
+  margin-bottom: 31.25vw;
+}
+
+.kmd-91-b {
+  letter-spacing: 0.039vw;
+  margin-bottom: 1.25vw;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2vw;
+  text-decoration-color: #222125;
+  text-underline-position: under;
+}
+
+.kmd-91-bq {
+  letter-spacing: -0.04rem;
+  line-height: 130%;
+  border-radius: 1.95vw;
+  border: 0.31vw solid;
+  padding: 1.25vw;
+  margin-top: 1.09vw;
+  text-align: center;
+}
+
+.kmd-94-t {
+  color: #1d6364;
+  -webkit-text-stroke: #2d1c68 0.2vw;
+}
+
+h1.kmd-94-t {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.kmd-94-b {
+  letter-spacing: 0.125vw;
+  margin-bottom: 1.25vw;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2vw;
+  text-decoration-color: #1d6364;
+  text-underline-position: under;
+}
+
+.kmd-94-s {
+  font-weight: 700;
+  word-spacing: 0.1vw;
+  margin-bottom: 0.625vw;
+  font-size: 1.5625vw;
+}
+
+.kmd-94-img {
+  transform: skew(350deg, 10deg);
+  float: right;
+  width: 12.5vw;
+  position: relative;
+  left: -1.17vw;
+  padding: 1.56vw;
+}
+
+.kmd-94-caption {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  font-size: 1.4vw;
+  color: #2d1c68;
+  letter-spacing: -0.0125vw;
+  text-align: center;
+}
+
+.kmd-94-bq {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-text-stroke: #1d6364 0.03vw;
+  text-align: center;
+  padding-top: 1.25vw;
+}
+
+.kmd-94-bq-ft {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-text-stroke: #1d6364 0.03vw;
+  text-align: center;
+  color: #222125;
+  position: relative;
+  top: -0.78vw;
+}
+
+.kmd-94-artwork {
+  margin-top: 1.25vw;
+}
+
+.header-and-sub {
+  background-image: url(header.png);
+  margin-bottom: 0.625vw;
+  background-color: transparent;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0.78vw 0 0.78vw 0;
+}
+
+.kmd-98.img {
+  size: 100vw;
+}
+
+.kmd-98-t {
+  margin-bottom: 0;
+  text-align: center;
+  color: #aba3a3;
+  font-size: 2.875vw;
+}
+
+.kmd-98-b {
+  letter-spacing: 0.0625vw;
+  margin-bottom: 1.25vw;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.23vw;
+  text-decoration-color: #aba3a3;
+  text-underline-position: under;
+}
+
+.kmd-98-s {
+  font-weight: 700;
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  text-align: center;
+  color: #aba3a3;
+  margin-bottom: 0.625vw;
+  font-size: 1.25vw;
+}
+
+.kmd-98-artwork, .kmd-98-artwork-2, .kmd-98-artwork-3, .kmd-98-artwork-4 {
+  margin: 0.625vw 0 0 0.625vw;
+  float: right;
+  width: 50%;
+}
+
+/* timnit styles */
+
+.timnit-mit-f img {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timnit-mit-t {
+  text-align: center;
+  color: #8a3133;
+  word-spacing: -0.625vw;
+}
+
+.timnit-mit-b {
+  word-spacing: -0.04vw;
+  margin-bottom: 1.25vw;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.23vw;
+  text-decoration-color: #222125;
+  text-underline-position: under;
+}
+
+.timnit-mit-s {
+  font-weight: 700;
+  word-spacing: -0.09vw;
+  margin-bottom: 0.625vw;
+  font-size: 1.5625vw;
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2.mit-header {
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  background-color: black;
+  color: #8a3133;
+  padding: 0.625vw;
+  float: left;
+  width: 65%;
+  margin: 0.625vw;
+}
+
+h2.mit-header.cost {
+  font-size: 1.9vw;
+}
+
+.timnit-wapo-t {
+  position: relative;
+  color: #283d36;
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+  font-size: 2.96875vw;
+}
+
+.timnit-wapo-t::before {
+  content: "";
+  position: absolute;
+  height: 0.78vw;
+  background-color: #e7b926;
+  width: 100%;
+  top: -0.39vw;
+  right: 0;
+}
+
+.timnit-wapo-t::after {
+  content: "";
+  position: absolute;
+  height: 0.78vw;
+  background-color: #e7b926;
+  width: 100%;
+  bottom: -0.39vw;
+  left: 0px;
+}
+
+.timnit-wapo-s {
+  font-weight: 700;
+  word-spacing: -0.09vw;
+  margin-bottom: 0.625vw;
+  font-size: 1.5625vw;
+  text-align: justify;
+  font-family: 'Alfa Slab One';
+  text-transform: uppercase;
+}
+
+.timnit-wapo-b {
+  word-spacing: -0.1vw;
+  margin-bottom: 1.25vw;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.23vw;
+  text-decoration-color: #222125;
+  text-underline-position: under;
+}
+
+.timnit-nyt-c {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin-top: -160px;
+}
+
+.timnit-nyt-t {
+  margin-top: -60px;
+  text-align: right;
+  color: #644f98;
+  text-transform: uppercase;
+  font-size: 2.96875vw;
+}
+
+.timnit-nyt-green {
+  color: #46bb53;
+}
+
+.timnit-nyt-s {
+  word-spacing: -0.1vw;
+  margin-bottom: 0.625vw;
+  font-size: 1.5625vw;
+  text-align: right;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.timnit-nyt-b {
+  margin-bottom: 1.25vw;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 0.23vw;
+  text-decoration-color: #222125;
+  text-underline-position: under;
+}
+
+h2.nyt-header {
+  font-family: 'Alfa Slab One', cursive;
+  background-color: #46bb53;
+  color: #644f98;
+  padding: 0.625vw;
+  float: left;
+  width: 95%;
+  margin: 0.625vw;
+}
+
+p.nyt-after-h {
+  text-indent: 0 !important;
+}
+
+/* metadata viewer */
+
+.offcanvas {
+  background-color: #DBBC9F;
+  color: #222125;
+}
+
+.offcanvas-title, .offcanvas-body h5 {
+  color: #70557D;
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+.offcanvas-header {
+  border-bottom: 0.15vw solid #70557D;
+  margin: 0.625vw;
+}
+
+.offcanvas-body p, .offcanvas ul {
+  font-size: 1.09375vw;
+}
+
+.offcanvas ul {
+  background-color: #DBBC9F;
+}
+
+.offcanvas li a {
+  color: #70557D;
+}
+
+.offcanvas li a:hover {
+  text-decoration: none;
+}
+
+.offcanvas li:hover {
+  background-color: #DBBC9F;
+}
+
+.offcanvas-body h6 {
+  color: #70557D;
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+  margin-top: 0.625vw;
+}
+
+h6.binocular-header {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.offcanvas hr {
+  color: #70557D;
+  height: 0.1vw !important;
+  opacity: 1 !important;
+}
+
+.accordion-header {
+  color: #70557D;
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: 0.07vw solid rgba(112 85 125);
+}
+
+.offcanvas .accordion-button {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+}
+
+.accordion-button {
+  color: #222125;
+  font-size: 1.25vw;
+}
+
+.accordion-button:focus {
+  color: #70557D;
+  background-color: #DBBC9F;
+  border-color: #DBBC9F;
+  box-shadow: 0 0 0 0.31vw rgb(219 188 159 / 50%);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #222125;
+  background-color: #70557D;
+}
+
+.accordion-button.collapsed {
+  color: #70557D;
+  background-color: #DBBC9F;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2370557D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button::after {
+  width: 1.56vw;
+  height: 1.56vw;
+  background-size: 1.56vw;
+}
+
+.custom-highlight {
+  background-color: #70557D;
+  color:#e1dcd8;
 }

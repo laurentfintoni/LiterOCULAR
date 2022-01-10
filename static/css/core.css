@@ -8,12 +8,12 @@ html {
   position: relative;
 }
 
-.themes.show {
-  left: -25px;
-}
-
 .themes-image {
   stroke: blanchedalmond;
+}
+
+.homepage.show {
+  left: 25px;
 }
 
 .issues.show {
@@ -51,6 +51,10 @@ button.btn.btn-outline-secondary {
   border: none;
 }
 
+.offcanvas-bottom {
+  height: 85vh !important;
+}
+
 /* Css transition on theme switching */
 .anim-layer {
   z-index: 2000;
@@ -61,21 +65,25 @@ button.btn.btn-outline-secondary {
   left: -100%;
   bottom: auto;
   right: auto;
-  background: #4d606e;
-  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: transparent;
+  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .anim-layer.active {
   left: 100%;
 }
 .anim-layer--2 {
-  background: #d3d4d8;
-  transition-delay: 0.3s;
+  background: #f4f4f4;
+  transition-delay: 0.2s;
 }
 .anim-layer--3 {
-  background: #d3d4d8;
-  transition-delay: 0.12s;
+  background: #D2042D;
+  transition-delay: 0.010s;
 }
 .anim-layer--4 {
-  background: #c06c84;
-  transition-delay: 0.08s;
+  background: #111;
+  transition-delay: 0.06s;
+}
+
+a.pointer {
+  cursor:pointer;
 }

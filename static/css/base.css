@@ -1,28 +1,37 @@
 /* Base theme Greyscale*/
 
-/* we need to download the fonts and load them locally for final version */
+/* Ubuntu mono for menus, riffing off popularity of ubuntu */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/* roboto slab 900 for titles */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+
+/* lato for body */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* navbar rules */
 
 .navbar {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25vw;
     background-color: #111;
 }
 
-.navbar-brand {
-    font-family: 'Roboto Slab', sans-serif;
+.navbar-brand, .nav-link, .dropdown-item {
+    font-family: 'Ubuntu Mono', monospace;
     color: #f4f4f4;
+    text-transform: uppercase;
 }
 
-a.navbar-brand:hover {
+.protect {
+    text-transform: none;
+  }
+
+a.navbar-brand:hover, a.navbar-brand:focus {
     color: #D2042D;
     text-decoration: none;
-}
-
-.nav-link {
-    color: #f4f4f4;
 }
 
 .nav-link:focus, .nav-link:hover {
@@ -31,16 +40,15 @@ a.navbar-brand:hover {
 }
 
 .dropdown-menu {
-    color:#111;
-    background-color: #f4f4f4;
+    background-color: #111;
 }
 
 .dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
-    color: #111;
+    color: #f4f4f4;
 }
 
 .dropdown-item:hover {
-    background-color: rgb(210 4 45 / 25%);
+    background-color: rgb(210 4 45 / 50%);
     text-decoration: none;
 }
 
@@ -49,124 +57,177 @@ a.navbar-brand:hover {
 body {
     background-color: #f4f4f4;
     color: #111;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.40vw;
 }
 
-.blockquote-footer {
-    color: #D2042D;
-}
 
-a {
-    color: #111;
-    text-decoration: none;
-}
-
-a:hover {
+a, a:hover, a:focus {
     color: #111;
     text-decoration: underline;
     text-decoration-color: #D2042D;
 }
 
-.card-title {
-    font-size: 1.25rem;
+/* home page boxes */ 
+
+.card-body {
+    padding: 0.62vw;
 }
 
-.card-issue {
-    background-color: #111;
-    color: #f4f4f4;
+.card-issue, .card-lens {
+    background-color: transparent;
+    color: #D2042D;
     max-width: 100%;
+    margin: 0 !important;
 }
 
-.card-issue:hover {
-    background-color: transparent;
-    color: #D2042D;
+p.card-text {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-bottom: 0.625vw;
 }
 
-.card-issue .card-title {
-    color: inherit;
-}
-
-.card-lens {
-    background-color: transparent;
-    color: #D2042D;
-}
-
-.card-lens:hover {
+.card-issue:hover, .card-lens:hover {
     background-color: #111;
     color: #f4f4f4;
 }
 
-.card-lens .card-title {
-    color: inherit;
+.card-issue:hover .card-title, .card-lens:hover .card-title {
+    color: #D2042D
 }
+
+.card-issue .card-title, .card-lens .card-title {
+    color: inherit;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.border-dark {
+    border-width: 0.1566vw;
+}
+
+/* text rules */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', sans-serif;
     color: #111;
-    padding: 0.5rem;
+    padding: 0.625vw;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3.75vw;
+}
+
+h1.homepage {
+    font-size: 2.96vw;
 }
 
 h2 {
-    font-size: 1.875rem;
+    font-size: 2.34vw;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.875vw;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.5625vw;
 }
 
 h5 {
-    font-size: 1.125rem;
+    font-size: 1.40vw;
+}
+
+h5.modal-title {
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: 1.25vw;
 }
 
-.subheader {
-    font-size: 1.25rem;
+/* blockquote rules */
+
+.blockquote {
+    font-size: 2.5vw;
 }
 
-figcaption, .byline {
-    font-size: 0.875rem;
-    padding: 0.25rem;
+.blockquote-footer {
+    color: #D2042D;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center !important;
 }
 
-.custom-highlight {
+/* paragraph rules */
+
+#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::before {
+    content: '';
+    height: 5px;
     background-color: #D2042D;
-    color:#f4f4f4;
+    position: absolute;
+    width: 100%;
+    top: -0.78vw;
+    right: 0;
 }
 
-.accordion-item {
-    background-color: transparent;
-}
+#article1 p:nth-child(n+5) {
+    position: relative;
+  }
 
-.accordion-button {
-    color: #111;
-}
-
-.accordion-button:focus {
-    color: #f4f4f4;
+#article1 p.dropcap:before, #article3 p.dropcap-nyt:before {
+    content: '';
+    height: 5px;
     background-color: #D2042D;
-    border-color: #D2042D;
-    box-shadow: 0 0 0 0.25rem rgb(210 4 45 / 25%);
+    position: absolute;
+    width: 100%;
+    top: -0.78vw;
+    right: 0;
 }
 
-.accordion-button:not(.collapsed) {
-    color: #f4f4f4;
+#article2 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::before {
+    content: '';
+    height: 5px;
     background-color: #D2042D;
+    position: absolute;
+    width: 100%;
+    top: -0.78vw;
+    right: 0;
 }
 
-.accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+#article2 p:nth-child(n+5) {
+    position: relative;
+  }
+
+#article3 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::before {
+    content: '';
+    height: 5px;
+    background-color: #D2042D;
+    position: absolute;
+    width: 100%;
+    top: -0.78vw;
+    right: 0;
 }
+
+#article3 p:nth-child(n+4) {
+    position: relative;
+}
+
+p.update::before {
+    content: '';
+    height: 5px;
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    top: -0.78vw;
+    right: 0;
+}
+
+p.update {
+    position: relative;
+  }
+
+/* buttons and modals */
 
 .btn-outline-secondary {
     color: #111;
@@ -183,9 +244,9 @@ figcaption, .byline {
 }
 
 .btn-secondary {
-    color: #f4f4f4;
-    background-color: #D2042D;
-    border-color: #D2042D;
+    color: #D2042D;
+    background-color: #f4f4f4;
+    border-color: #111;
 }
 
 .btn-secondary:hover {
@@ -194,35 +255,339 @@ figcaption, .byline {
     border-color: #111;
 }
 
-/* do we still need these? */
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    color: #D2042D;
+    background-color: #f4f4f4;
+    border-color: #111;
+    box-shadow: none !important; 
+}
 
-.span[about="mention-person"].custom-highlight {
-    background-color: #FF2D00;}
-.span[about="mention-location"].custom-highlight {
-    background-color: #FFF000;}
-.span[about="mention-group"].custom-highlight {
-    background-color: #7CFF00;}
-.span[about="mention-organization"].custom-highlight {
-    background-color: #00FFC1;}
-.span[about="mention-track"].custom-highlight {
-    background-color: #00FFF7;}
-.span[about="mention-album"].custom-highlight {
-    background-color: #00ECFF;}
-.span[about="mention-sample"].custom-highlight {
-    background-color: #0074FF;}
-.span[about="mention-rhyme"].custom-highlight {
-    background-color: #8000FF;}
-.span[about="mention-character"].custom-highlight {
-    background-color: #F000FF;}
-.span[about="mention-genre"].custom-highlight {
-    background-color: #FF0055;}
-.span[about="mention-label"].custom-highlight {
-    background-color: #C70039;}
-.span[about="mention-subject"].custom-highlight {
-    background-color: #DAF7A6;}
-.span[about="mention-technology"].custom-highlight {
-    background-color: #00ECFF;}
-.span[about="mention-company"].custom-highlight {
-    background-color: #0074FF;}
-.span[about="mention-event"].custom-highlight {
-    background-color: #8000FF;}
+/* text */ 
+
+figcaption {
+    font-size: 0.9vw;
+    padding-top: 0.31vw;
+    text-align: right;
+}
+
+.byline {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.09vw;
+    padding: 0.31vw;
+    text-align: center;
+}
+
+.byline::before {
+    content: '\01F58B';
+    padding-right: 0.78vw;
+}
+
+.update {
+    font-size: 1.09vw;
+}
+
+.homepage-header {
+    color: #D2042D;
+    margin-bottom: 0;
+}
+
+.homepage-sub {
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+
+.subheader {
+    font-size: 1.56vw;
+}
+
+/* kmd styles */
+
+
+.kmd-91-bq{
+    text-indent: 1.25vw;
+}
+
+.kmd-91-t, .kmd-94-t, .kmd-98-t {
+    text-align: right;
+    position: relative;
+}
+
+.kmd-91-t {
+    margin-bottom: 4vw;
+}
+
+.kmd-91-b {
+    margin-top: -51.3vw;
+    margin-bottom: 47vw;
+    position: sticky;
+}
+
+.kmd-91-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+.kmd-91-bq {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.kmd-94-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+.kmd-94-b {
+    margin-top: -60.8vw;
+    margin-bottom: 60vw;
+    position: sticky;
+}
+
+.kmd-94-s, .kmd-98-s {
+    text-align: right;
+}
+
+.kmd-94-caption {
+    font-size: 1.2vw;
+    letter-spacing: -0.0125vw;
+    text-align: center;
+  }
+
+.kmd-94-img {
+    transform: skew(350deg, 10deg);
+    float: right;
+    width: 13vw;
+    position: relative;
+    left: -1.17vw;
+    padding: 1.56vw;
+}
+
+.kmd-94-bq {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.kmd-94-bq-ft {
+    text-align: right !important;
+}
+
+.kmd-94-bq-ft:before {
+    content: '💬';
+    padding-right: 0.78vw;
+}
+
+.kmd-98-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+.kmd-98-b {
+    margin-top: -64.2vw;
+    margin-bottom: 63.4vw;
+    position: sticky;
+}
+
+.kmd-98-t:before {
+    content: url(mf-doom.png);
+    transform: scale(.5);
+    position: absolute;
+    left: 0;
+    top: -20%;
+}
+
+.kmd-98-artwork, .kmd-98-artwork-2, .kmd-98-artwork-3, .kmd-98-artwork-4 {
+    margin: 0.625vw 0 0 0.625vw;
+    float: right;
+    width: 50%;
+}
+
+/* timnit styles */
+
+.timnit-mit-t, .timnit-wapo-t, .timnit-nyt-t {
+    text-align: right;
+    position: relative;
+}
+
+.timnit-mit-b {
+    margin-top: -80.2vw;
+    margin-bottom: 79vw;
+    position: sticky;
+    break-inside: avoid;
+}
+
+.timnit-mit-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+.timnit-mit-s, .timnit-wapo-s, .timnit-nyt-s {
+    text-align: right;
+}
+
+h2.mit-header, h2.nyt-header {
+    text-align: right;
+    word-wrap: normal;
+}
+
+h2.mit-header.paper:before {
+    content: '📝';
+    padding-right: 0.78vw;
+}
+
+h2.mit-header.cost:before {
+    content: '📈';
+    padding-right: 0.78vw;
+}
+
+h2.mit-header.research:before {
+    content: '💰';
+    padding-right: 0.78vw;
+}
+
+h2.mit-header.data:before {
+    content: '🔎';
+    padding-right: 0.78vw;
+}
+
+h2.mit-header.illusion:before {
+    content: '🤔';
+    padding-right: 0.78vw;
+}
+
+h2.mit-header.matter:before {
+    content: '💯';
+    padding-right: 0.78vw;
+}
+
+h2.nyt-header.pron:before {
+    content: '🍆💦';
+    padding-right: 0.78vw;
+}
+
+h2.nyt-header.mask:before {
+    content: '🎭';
+    padding-right: 0.78vw;
+}
+
+h2.nyt-header.end:before {
+    content: '🤐';
+    padding-right: 0.78vw;
+}
+
+.timnit-wapo-b {
+    margin-top: -72.95vw;
+    margin-bottom: 68.6vw;
+    position: sticky;
+}
+
+.timnit-wapo-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+.timnit-nyt-b {
+    margin-top: -72.85vw;
+    margin-bottom: 71.7vw;
+    position: sticky;
+}
+
+.timnit-nyt-f {
+    margin: 1.95vw 0 1.25vw 0;
+    position: relative;
+}
+
+/* metadata viewer */
+
+.custom-highlight {
+    background-color: #D2042D;
+    color:#f4f4f4;
+}
+
+.offcanvas {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+.offcanvas-title, .offcanvas-body h5, .offcanvas-body h6 {
+    font-family: 'Ubuntu mono', monospace;
+    text-transform: uppercase;
+}
+
+.offcanvas-header {
+    border-bottom: 0.15vw solid #D2042D;
+    margin: 0.625vw;
+}
+
+.offcanvas-body p, .offcanvas ul {
+    font-size: 1.09375vw;
+}
+
+.offcanvas li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.offcanvas li a:hover {
+    text-decoration: none;
+}
+
+li:not(.topics).offcanvas:hover {
+    background-color: rgb(210 4 45 / 50%);
+    text-decoration: none;
+}
+
+h6.binocular-header {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.offcanvas hr {
+    color: #D2042D;
+    height: 0.1vw !important;
+    opacity: 1 !important;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: 0.07vw solid rgba(210 4 45 / 50%);
+}
+
+.offcanvas .accordion-button {
+    font-family: 'Ubuntu Mono', monospace;
+    text-transform: uppercase;
+    color: #111;
+    background-color: #f4f4f4;
+    font-size: 1.25vw;
+}
+
+.offcanvas .btn-outline-secondary {
+    font-size: 1.09vw;
+}
+
+.accordion-button:focus {
+    color: #f4f4f4;
+    background-color: #D2042D;
+    border-color: #D2042D;
+    box-shadow: 0 0 0 0.25rem rgb(210 4 45 / 50%);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f4f4f4;
+    background-color: #D2042D;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f4f4f4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button::after {
+    width: 1.56vw;
+    height: 1.56vw;
+    background-size: 1.56vw;
+}
+
+
+/* do we still need these? */
