@@ -9,13 +9,18 @@
   src: url("/static/fonts/Chomsky.woff") format("woff");
 }
 
+@font-face {
+  font-family: "newspaper-header";
+  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
+}
+
 .navbar {
   margin-bottom: 1rem;
   background-color: #353434;
 }
 
 .navbar-brand {
-  font-family: "newspaper-body", sans-serif;
+  font-family: "newspaper-header", sans-serif;
   color: #f4f4f4;
 }
 
@@ -25,6 +30,8 @@ a.navbar-brand:hover {
 
 .nav-link {
   color: #f4f4f4;
+  font-family: "newspaper-header", sans-serif;
+  text-transform: uppercase;
 }
 
 .nav-link:focus,
@@ -36,6 +43,8 @@ a.navbar-brand:hover {
 .dropdown-menu {
   color: #111;
   background-color: #fef5e0;
+  font-family: "newspaper-header", sans-serif;
+  text-transform: uppercase;
 }
 
 .dropdown-item,
@@ -73,6 +82,8 @@ a:not(.navbar *):hover {
 }
 
 .card-title {
+  font-family: "newspaper-header", sans-serif;
+  text-transform: uppercase;
   font-size: 1.25rem;
   border: none;
 }
@@ -184,18 +195,17 @@ figcaption,
 
 .accordion-button {
   color: #111;
+  background-color: #d7ccc1;
 }
 
 .accordion-button:focus {
-  color: #f4f4f4;
-  background-color: #4a1520;
-  border-color: #4a1520;
-  box-shadow: 0 0 0 0.25rem rgb(74 21 32 / 25%);
+  color: #111;
+  box-shadow: none;
 }
 
 .accordion-button:not(.collapsed) {
-  color: #f4f4f4;
-  background-color: #4a1520;
+  color: #111;
+  background-color: #d7ccc1;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -211,29 +221,38 @@ figcaption,
 }
 
 .btn-outline-secondary {
+  border-radius: 0px;
   color: #4a1520;
 }
 
 .btn-outline-secondary:active {
-  color: #f4f4f4;
-  background-color: #4a1520;
+  color: #353434;
+  background-color: transparent;
 }
 
 .btn-outline-secondary:hover {
-  color: #f4f4f4;
-  background-color: #4a1520;
+  color: #353434;
+  background-color: transparent;
 }
 
 .btn-secondary {
-  color: #f4f4f4;
-  background-color: #353434;
-  border-color: #4a1520;
+  color: #353434;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .btn-secondary:hover {
-  color: #f4f4f4;
-  background-color: #4a1520;
-  border-color: #4a1520;
+  color: #353434;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn.clear-highlights {
+  box-shadow: none;
+}
+
+.btn.clear-highlights:hover {
+  box-shadow: 0 0 0 0.25rem rgb(53 53 53 / 25%);
 }
 
 img {
@@ -242,4 +261,24 @@ img {
 
 .modal-title {
   border: none;
+}
+
+.offcanvas-title,
+.offcanvas-body h5,
+.offcanvas-body h6 {
+  font-family: "newspaper-header", sans-serif;
+  text-transform: uppercase;
+}
+
+.offcanvas {
+  background-color: #d7ccc1;
+}
+
+h3.accordion-header {
+  border: none;
+}
+
+.accordion-button:focus.collapsed::after,
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
