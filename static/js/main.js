@@ -124,6 +124,14 @@ function switchTheme(btn) {
   sessionStorage.setItem("theme", btn.id);
 }
 
+function checkSize() {
+  if (screen.width < 760) {
+    const modal = new bootstrap.Modal(document.getElementById("minScreenModal"));
+    modal.show();
+  }
+}
+window.addEventListener("resize", checkSize);
+
 // Metadata viewer
 function fillMetadataBox() {
   let firstArticle = document.getElementById("article1");
@@ -351,4 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
       animation: false,
     });
   }
+
+  checkSize();
 });

@@ -26,6 +26,8 @@
     style="height: fit-content">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Binoculars</h5>
+      <button type="button" class="btn clear-highlights" onclick="resetHighlight()"><em>Clear
+          highlights</em></button>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body medium pt-0" style="height: fit-content">
@@ -74,36 +76,58 @@
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
         <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
           aria-controls="offcanvasBottom">Metadata</a>
-          <div class="theme-tab">
-            <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="/img/layers.svg" alt="theme switcher" class="themes-image">
-              Lenses
-            </a>
-            <ul class="dropdown-menu themes" id="themes-dropdown">
-              <li>
-                <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
-              </li>
-              <li>
-                <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
-              </li>
-              <li>
-                <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">90s Music Mag</a>
-              </li>
-              <li>
-                <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Machine Learning</a>
-              </li>
-              <li>
-                <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Base theme</a>
-              </li>
-            </ul>
-          </div>
+        <div class="theme-tab">
+          <a class="nav-link dropdown-toggle" href="#themes-dropdown" id="themes-dropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/layers.svg" alt="theme switcher" class="themes-image">
+            Lenses
+          </a>
+          <ul class="dropdown-menu themes" id="themes-dropdown">
+            <li>
+              <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
+            </li>
+            <li>
+              <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
+            </li>
+            <li>
+              <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">90s Music Mag</a>
+            </li>
+            <li>
+              <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Machine Learning</a>
+            </li>
+            <li>
+              <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Base theme</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- Main container -->
   <div class="container-fluid vh-100 vw-100 px-0">
+
+    <div class="modal fade" id="minScreenModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="minScreenModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="minScreenModalLabel">Bigger screen required!</h5>
+              <!-- Removed closing button to make it un-closable -->
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <p class="lead">Hi! Thanks for visiting our website, it took us a lot of effort to build it, and it's meant
+              to be experienced as a reading medium with rich functionality. Unfortunately, this means that screens
+              smaller than a medium-sized tablet can't possibly let you enjoy your experience, so we inhibit access from
+              these devices. Please turn to a desktop or laptop and enjoy the ride!</p>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Disclaimer modal-->
     <div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel"
