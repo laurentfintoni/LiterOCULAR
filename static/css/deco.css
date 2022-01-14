@@ -1,3 +1,66 @@
 /* Art Deco theme */
 
+/* Poiret One for menus */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Limelight for titles */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+/* Prata (serif) for text */
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 /* navbar rules */
+
+.nav-link, .navbar-brand, .dropdown-item {
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0.31vw;
+    font-family: 'Limelight', cursive;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Prata', serif;
+    font-size: 1.25vw;
+}
+
+/* 
+#homepage {
+    margin:20px;
+    padding:20px;
+    border:2px solid black;
+    min-height:300px;
+ }
+ 
+ #homepage:before {
+    content:'';
+    position: absolute;
+    top:-20px;
+    bottom:-20px;
+    left:10px;
+    right:10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+ }
+ 
+ #homepage:after {
+    content:'';
+    position: absolute;
+    top:10px;
+    bottom:10px;
+    left:-20px;
+    right:-20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+ }
+ */
+
+.home {
+     background-image: url(artdeco/rectangleframevert.png);
+ }

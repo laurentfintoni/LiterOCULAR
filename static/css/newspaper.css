@@ -243,3 +243,11 @@ img {
 .modal-title {
   border: none;
 }
+
+.btn-group>:not(.btn-check)+.btn {
+  border-radius: 0 !important;
+}
+
+.btn, .dropdown-menu {
+  border-radius: 0 !important;
+}

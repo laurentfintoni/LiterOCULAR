@@ -245,7 +245,7 @@ function fillMetadataBox() {
           if (aboutType == "total") {
             mainBtn.innerText = "View all " + mentionsCount[type][aboutType];
           } else {
-            mainBtn.innerText = aboutType + " " + mentionsCount[type][aboutType];
+            mainBtn.innerText = aboutType + " (" + mentionsCount[type][aboutType] + ") ";
           }
           btnGroup.appendChild(mainBtn);
 

@@ -318,6 +318,18 @@ p.after-box {
   box-shadow: none;
 }
 
+.btn-group>:not(.btn-check)+.btn {
+  border-radius: 0 !important;
+}
+
+.btn, .dropdown-menu {
+  border-radius: 0 !important;
+}
+
+.btn-sm {
+  font-size: 1.09vw !important;
+}
+
 /* text */ 
 
 figcaption {
@@ -673,12 +685,18 @@ p.nyt-after-h {
   margin: 0.625vw;
 }
 
-.offcanvas-body p, .offcanvas ul {
+.offcanvas-body p, .offcanvas ul, .offcanvas ol {
   font-size: 1.09375vw;
 }
 
-.offcanvas ul {
+.offcanvas ul, .offcanvas ol {
   background-color: #DBBC9F;
+}
+
+.offcanvas ol li::marker {
+  font-family: 'Glegoo', serif;
+  text-transform: uppercase;
+  color: 70557D;
 }
 
 .offcanvas li a {

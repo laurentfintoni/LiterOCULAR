@@ -161,7 +161,7 @@ h6 {
 
 /* paragraph rules */
 
-#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::before {
+#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::before {
     content: '';
     height: 5px;
     background-color: #D2042D;
@@ -171,7 +171,7 @@ h6 {
     right: 0;
 }
 
-#article1 p:nth-child(n+5) {
+#article1 p:nth-child(n+4) {
     position: relative;
   }
 
@@ -262,6 +262,10 @@ p.update {
     box-shadow: none !important; 
 }
 
+.btn-sm {
+    font-size: 1.09vw !important;
+}
+
 /* text */ 
 
 figcaption {
@@ -275,10 +279,22 @@ figcaption {
     font-size: 1.09vw;
     padding: 0.31vw;
     text-align: center;
+    word-spacing: -0.15vw;
+    white-space: pre-line;
 }
 
 .byline::before {
     content: '\01F58B';
+    padding-right: 0.78vw;
+}
+
+.date-emoji::before {
+    content: '📅';
+    padding-right: 0.78vw;
+} 
+
+.pub-emoji::before {
+    content: '📖';
     padding-right: 0.78vw;
 }
 
@@ -302,7 +318,6 @@ figcaption {
 
 /* kmd styles */
 
-
 .kmd-91-bq{
     text-indent: 1.25vw;
 }
@@ -313,33 +328,15 @@ figcaption {
 }
 
 .kmd-91-t {
-    margin-bottom: 4vw;
+    margin-bottom: 0.5vw;
 }
 
-.kmd-91-b {
-    margin-top: -51.3vw;
-    margin-bottom: 47vw;
-    position: sticky;
-}
-
-.kmd-91-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
+.kmd-91-b, .kmd-94-b, .kmd-98-b {
+    text-align: right;
 }
 
 .kmd-91-bq {
     font-family: 'Ubuntu Mono', monospace;
-}
-
-.kmd-94-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
-}
-
-.kmd-94-b {
-    margin-top: -60.8vw;
-    margin-bottom: 60vw;
-    position: sticky;
 }
 
 .kmd-94-s, .kmd-98-s {
@@ -374,17 +371,6 @@ figcaption {
     padding-right: 0.78vw;
 }
 
-.kmd-98-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
-}
-
-.kmd-98-b {
-    margin-top: -64.2vw;
-    margin-bottom: 63.4vw;
-    position: sticky;
-}
-
 .kmd-98-t:before {
     content: url(mf-doom.png);
     transform: scale(.5);
@@ -406,16 +392,8 @@ figcaption {
     position: relative;
 }
 
-.timnit-mit-b {
-    margin-top: -80.2vw;
-    margin-bottom: 79vw;
-    position: sticky;
-    break-inside: avoid;
-}
-
-.timnit-mit-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
+.timnit-mit-b, .timnit-wapo-b, .timnit-nyt-b {
+    text-align: right;
 }
 
 .timnit-mit-s, .timnit-wapo-s, .timnit-nyt-s {
@@ -472,28 +450,6 @@ h2.nyt-header.end:before {
     padding-right: 0.78vw;
 }
 
-.timnit-wapo-b {
-    margin-top: -72.95vw;
-    margin-bottom: 68.6vw;
-    position: sticky;
-}
-
-.timnit-wapo-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
-}
-
-.timnit-nyt-b {
-    margin-top: -72.85vw;
-    margin-bottom: 71.7vw;
-    position: sticky;
-}
-
-.timnit-nyt-f {
-    margin: 1.95vw 0 1.25vw 0;
-    position: relative;
-}
-
 /* metadata viewer */
 
 .custom-highlight {
@@ -516,8 +472,13 @@ h2.nyt-header.end:before {
     margin: 0.625vw;
 }
 
-.offcanvas-body p, .offcanvas ul {
+.offcanvas-body p, .offcanvas ul, .offcanvas ol {
     font-size: 1.09375vw;
+}
+
+.offcanvas ol li::marker {
+    font-family: 'Ubuntu Mono', monospace;
+    color:  rgb(210 4 45 / 50%);
 }
 
 .offcanvas li a {
@@ -588,6 +549,3 @@ h6.binocular-header {
     height: 1.56vw;
     background-size: 1.56vw;
 }
-
-
-/* do we still need these? */
