@@ -12,14 +12,6 @@ html {
   stroke: blanchedalmond;
 }
 
-.homepage.show {
-  left: 25px;
-}
-
-.issues.show {
-  left: 75px;
-}
-
 body {
   position: fixed;
   max-width: 100vw;
