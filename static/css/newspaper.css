@@ -77,6 +77,10 @@ a:not(.navbar *):hover {
   text-decoration-color: #d2042d;
 }
 
+.card {
+  border-radius: 0 !important;
+}
+
 .card.border-dark {
   border-color: rgb(46, 0, 15) !important;
 }

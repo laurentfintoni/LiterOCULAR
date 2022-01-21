@@ -75,6 +75,10 @@ a:hover, a:focus {
 
 /* home page boxes */
 
+.card {
+  border-radius: 0 !important;
+}
+
 .card-body {
   padding: 0.62vw;
 }

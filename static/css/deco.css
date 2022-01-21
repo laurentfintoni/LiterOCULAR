@@ -1,8 +1,12 @@
 /* Art Deco theme */
 
-/* Poiret One for menus */ 
+/* Poiret One for quotes */ 
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* Cormorant Garamond for menus, inspired by Arts & Decoration  */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 /* Limelight for titles */ 
 
@@ -14,10 +18,95 @@
 
 /* navbar rules */
 
+.navbar {
+    margin-bottom: 1.25vw;
+    background-color: #6F1946;
+}
+
 .nav-link, .navbar-brand, .dropdown-item {
-    font-family: 'Poiret One', cursive;
+    font-family: 'Cormorant Garamond', serif ;
     text-transform: uppercase;
+    color: #fff ;
   }
+
+.protect {
+    text-transform: none;
+  }
+
+a.navbar-brand:hover, a.navbar-brand:focus {
+    color: #68A469;
+    text-decoration: none;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #68A469;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #6F1946;
+}
+
+.dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(104 164 105 / 75%);
+    text-decoration: none;
+}
+
+/* body rules */
+
+body {
+    background-color: #fff;
+    color: #111;
+    font-family: 'Prata', serif;
+    font-size: 1.25vw;
+}
+
+
+a, a:hover, a:focus {
+    color: #111;
+    text-decoration: underline;
+    text-decoration-color: #6F1946;
+}
+
+/* home page boxes */ 
+
+.card {
+    border-radius: 0 !important;
+}
+
+.card-body {
+    padding: 0.62vw;
+}
+
+.card-issue, .card-lens {
+    background-color: transparent;
+    color: #D2042D;
+    max-width: 100%;
+    margin: 0 !important;
+}
+
+p.card-text {
+    font-family: 'Cormorant Garamond', serif ;
+    margin-bottom: 0.625vw;
+}
+
+.card-issue .card-title, .card-lens .card-title {
+    color: inherit;
+    font-size: 1.4vw;
+    text-transform: uppercase;
+    color: #111;
+    font-family: 'Cormorant Garamond', serif ;
+}
+
+.border-dark {
+    border-width: 0.1566vw;
+}
+
+
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0.31vw;
@@ -25,13 +114,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-body {
-    font-family: 'Prata', serif;
-    font-size: 1.25vw;
-}
 
-/* 
 #homepage {
+    position: relative;
     margin:20px;
     padding:20px;
     border:2px solid black;
@@ -59,8 +144,4 @@ body {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
  }
- */
-
-.home {
-     background-image: url(artdeco/rectangleframevert.png);
- }
+ 
