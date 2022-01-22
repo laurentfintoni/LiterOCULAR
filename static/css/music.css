@@ -50,8 +50,9 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 }
 
 .dropdown-item:hover {
-  background-color: rgb(213 71 59 / 25%);
+  background-color: transparent;
   text-decoration: none;
+  color: #d5473b;
 }
 
 /* body rules */
@@ -292,14 +293,9 @@ p.after-box {
   color: #222125;
 }
 
-.btn-outline-secondary:active {
-  color: #222125;
-  background-color: #70557D;
-}
-
-.btn-outline-secondary:hover {
-  color: #222125 ;
-  background-color: #70557D;
+.btn-outline-secondary:active, .btn-outline-secondary:hover {
+  color: #70557D;
+  background-color: transparent;
 }
 
 .btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer {
@@ -319,7 +315,11 @@ p.after-box {
   color: #70557D;
   background-color: #DBBC9F;
   border-color: #8c485f;
-  box-shadow: none;
+  box-shadow: 0 0 0 0.31vw rgba(112 85 125 / 75%);
+}
+
+.btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.31vw rgba(112 85 125 / 75%);
 }
 
 .btn-group>:not(.btn-check)+.btn {
@@ -704,11 +704,12 @@ p.nyt-after-h {
 }
 
 .offcanvas li a {
-  color: #70557D;
+  color: #222125;
 }
 
 .offcanvas li a:hover {
   text-decoration: none;
+  color: #70557D;
 }
 
 .offcanvas li:hover {
@@ -759,7 +760,7 @@ h6.binocular-header {
   color: #70557D;
   background-color: #DBBC9F;
   border-color: #DBBC9F;
-  box-shadow: 0 0 0 0.31vw rgb(219 188 159 / 50%);
+  box-shadow: 0 0 0 0.31vw rgba(112 85 125 / 75%);
 }
 
 .accordion-button:not(.collapsed) {
