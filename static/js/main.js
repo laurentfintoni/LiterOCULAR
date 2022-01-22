@@ -1,4 +1,5 @@
 // Global Variables
+var screenSizeModal;
 var metadataViewerBox = document.getElementById("metadata-viewer");
 var articleSources = {
   KMD: {
@@ -125,9 +126,12 @@ function switchTheme(btn) {
 }
 
 function checkSize() {
-  if (screen.width < 760) {
-    const modal = new bootstrap.Modal(document.getElementById("minScreenModal"));
-    modal.show();
+  if (window.innerWidth < 760) {
+    screenSizeModal = bootstrap.Modal.getOrCreateInstance(document.querySelector("#minScreenModal"));
+    screenSizeModal.show();
+  } else {
+    screenSizeModal = bootstrap.Modal.getOrCreateInstance(document.querySelector("#minScreenModal"));
+    screenSizeModal.hide();
   }
 }
 window.addEventListener("resize", checkSize);
@@ -361,4 +365,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   checkSize();
+
+  setInterval(() => {
+    if (window.location.href.endsWith("#")) {
+      window.location.href = window.location.href.slice(0, -1);
+    }
+  }, 1500);
 });

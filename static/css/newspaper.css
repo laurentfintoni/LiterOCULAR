@@ -1,18 +1,27 @@
-/* Newspaper  */
+/* Newspaper Theme */
+
+/* newspaper-like body font for articles and dense texts */
 @font-face {
   font-family: "newspaper-body";
-  src: url("/LiterOCULAR/static/fonts/OldNewspaperTypes.ttf") format("truetype");
+  src: url("/static/fonts/OldNewspaperTypes.ttf") format("truetype");
 }
 
+/* elaborate and decorated font for website-mag title */
 @font-face {
   font-family: "Chomsky";
-  src: url("/LiterOCULAR/static/fonts/Chomsky.woff") format("woff");
+  src: url("/static/fonts/Chomsky.woff") format("woff");
 }
 
+/* boldy font for headers and menus */
 @font-face {
   font-family: "newspaper-header";
-  src: url("/LiterOCULAR/static/fonts/chunkfive.print.ttf") format("truetype");
+  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
 }
+
+/* bold serif plain font for subheaders inside articles */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@500&display=swap");
+
+/* navbar rules */
 
 .navbar {
   margin-bottom: 1rem;
@@ -26,6 +35,10 @@
 
 a.navbar-brand:hover {
   color: #f9eac8;
+}
+
+.protect {
+  text-transform: none;
 }
 
 .nav-link {
@@ -77,6 +90,8 @@ a:not(.navbar *):hover {
   text-decoration-color: #d2042d;
 }
 
+/* homepage boxes */
+
 .card {
   border-radius: 0 !important;
 }
@@ -121,27 +136,60 @@ a:not(.navbar *):hover {
   color: inherit;
 }
 
+/* header rules */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Chomsky", sans-serif;
+  font-family: "Newsreader", serif;
   color: #111;
   padding: 0.5rem;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.issues-lenses > h1 {
   border-color: black;
   border-style: solid;
   border-width: 2px 0 2px 0;
+}
+.issues-lenses > h1::before {
+  content: "👉🏼";
 }
 
 h1 {
   font-size: 2rem;
 }
 
+h1.homepage-header {
+  font-family: "Chomsky", serif;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 0 2px 0;
+}
+
+#article1 > h1,
+#article2 > h1,
+#article3 > h1,
+.header-and-sub > h1 {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 0 2px 0;
+}
+
 h2 {
   font-size: 1.875rem;
+}
+
+#article1 > h2,
+#article2 > h2,
+#article3 > h2 {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 0 2px 0;
 }
 
 h3 {
@@ -156,30 +204,106 @@ h5 {
   font-size: 1.125rem;
 }
 
+h5.modal-title {
+  font-family: "Newsreader", serif;
+  text-transform: uppercase;
+}
+
 h6 {
   font-size: 1rem;
 }
 
-p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):first-letter {
-  color: rgb(46, 0, 15);
+/* paragraph rules */
+p {
+  margin-bottom: 0.2vw;
+  text-align: justify;
+  letter-spacing: -0.01vw;
+}
+
+.modal-body p:nth-child(n + 2) {
+  text-indent: 1.25vw;
+}
+
+#homepage p:nth-child(n + 5) {
+  text-indent: 1.25vw;
+}
+
+#homepage
+  p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
+  font-size: 2.75vw;
   float: left;
-  font-family: Georgia;
-  font-size: 3em;
-  line-height: 1em;
-  padding-top: 0;
+  line-height: 2vw;
   padding-right: 8px;
   padding-left: 3px;
+  font-family: "Newsreader", serif;
+}
+
+#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter,
+#article2 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter,
+#article3 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter,
+.dropcap::first-letter,
+.dropcap-two::first-letter {
+  font-size: 3.5vw;
+  float: left;
+  line-height: 2.5vw;
+  padding-right: 0.3vw;
+  font-family: "Newsreader", serif;
+}
+
+p.no-dropcap::first-letter {
+  font-size: 1.25vw !important;
+  float: none !important;
+  line-height: normal !important;
+  padding-right: 0 !important;
+  font-family: "newspaper-body", serif !important;
+}
+
+p.no-dropcap {
+  text-indent: 1.25vw;
+}
+
+p.after-box {
+  text-indent: 0 !important;
+  padding-top: 0.23vw;
 }
 
 .byline {
   font-family: "newspaper-body";
   color: rgb(46, 0, 15);
   font-style: oblique;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px 0 2px 0;
 }
 
 .subheader {
   font-size: 1.25rem;
   color: #1a0000;
+}
+
+.homepage-col > figure {
+  position: relative;
+  padding: 1rem 0px;
+  margin: 3rem 0px;
+}
+
+.homepage-col > figure:before {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 1px;
+  width: 50%;
+}
+.homepage-col > figure:after {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  height: 1px;
+  width: 50%;
 }
 
 figcaption,
@@ -188,9 +312,26 @@ figcaption,
   padding: 0.25rem;
 }
 
+img {
+  filter: grayscale(100%);
+}
+
 .custom-highlight {
   background-color: #4a1520;
   color: #f4f4f4;
+}
+
+/* metadata viewer */
+
+.offcanvas-title,
+.offcanvas-body h5,
+.offcanvas-body h6 {
+  font-family: "newspaper-header", sans-serif;
+  text-transform: uppercase;
+}
+
+.offcanvas {
+  background-color: #d7ccc1;
 }
 
 .accordion-item {
@@ -224,6 +365,7 @@ figcaption,
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f4f4f4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+/* btns and modals */
 .btn-outline-secondary {
   border-radius: 0px;
   color: #4a1520;
@@ -259,30 +401,17 @@ figcaption,
   box-shadow: 0 0 0 0.25rem rgb(53 53 53 / 25%);
 }
 
-img {
-  filter: grayscale(100%);
-}
-
 .modal-title {
   border: none;
 }
 
-.btn-group>:not(.btn-check)+.btn {
+.btn-group > :not(.btn-check) + .btn {
   border-radius: 0 !important;
 }
 
-.btn, .dropdown-menu {
+.btn,
+.dropdown-menu {
   border-radius: 0 !important;
-}
-.offcanvas-title,
-.offcanvas-body h5,
-.offcanvas-body h6 {
-  font-family: "newspaper-header", sans-serif;
-  text-transform: uppercase;
-}
-
-.offcanvas {
-  background-color: #d7ccc1;
 }
 
 h3.accordion-header {
