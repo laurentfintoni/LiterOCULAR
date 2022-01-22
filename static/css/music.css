@@ -171,11 +171,11 @@ p {
   text-indent: 1.25vw;
 }
 
-#homepage p:nth-child(n+4) {
+#homepage p:nth-child(n+5) {
   text-indent: 1.25vw;
 }
 
-#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(3)::first-letter {
+#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
   font-size: 3.75vw;
   float: left;
   line-height: 3.50vw;
