@@ -57,7 +57,7 @@ var aboutColors = {
 // Theme switching
 function switchTheme(btn) {
   let cssLink = document.getElementById("theme-style-tag");
-  let basePath = "/LiterOCULAR/static/css/";
+  let basePath = "/static/css/";
 
   // toggle transition
   if (btn.animation === false) {
