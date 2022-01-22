@@ -174,18 +174,19 @@ p {
     text-indent: 1.25vw;
 }
 
-#homepage p:nth-child(n+4) {
+#homepage p:nth-child(n+5) {
     text-indent: 1.25vw;
 }
 
-#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(3)::first-letter {
+#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
     font-size: 3.75vw;
     float: left;
-    line-height: 3.50vw;
-    padding-right: 0.31vw;
-    font-family: 'Oswald', sans-serif;
+    line-height: 4vw;
+    padding-right: 0.46vw;
+    margin-bottom: -0.3vw;
 }
 
+/*
 #article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter {
     font-size: 12.5vw;
     float: left;
@@ -288,6 +289,56 @@ p.after-box {
 .last {
     margin-bottom: 1.25vw;
 }
+
+/*
+
+/* buttons and modals */
+
+.btn-outline-secondary {
+    color: #222125;
+  }
+  
+  .btn-outline-secondary:active {
+    color: #222125;
+    background-color: #70557D;
+  }
+  
+  .btn-outline-secondary:hover {
+    color: #222125 ;
+    background-color: #70557D;
+  }
+  
+  .btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer {
+    color: #70557D;
+    background-color: #DBBC9F;
+    border-color: #8c485f;
+    padding: 0.62vw;
+  }
+  
+  .btn-secondary {
+    font-family: 'Glegoo', serif;
+    text-transform: uppercase;
+    font-size: 1.40vw;
+  }
+  
+  .btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    color: #70557D;
+    background-color: #DBBC9F;
+    border-color: #8c485f;
+    box-shadow: none;
+  }
+  
+  .btn-group>:not(.btn-check)+.btn {
+    border-radius: 0 !important;
+  }
+  
+  .btn, .dropdown-menu {
+    border-radius: 0 !important;
+  }
+  
+  .btn-sm {
+    font-size: 1.09vw !important;
+  }
 
 /* Borders and Dividers */
 
