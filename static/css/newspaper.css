@@ -1,17 +1,17 @@
 /* Newspaper  */
 @font-face {
   font-family: "newspaper-body";
-  src: url("/static/fonts/OldNewspaperTypes.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/OldNewspaperTypes.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Chomsky";
-  src: url("/static/fonts/Chomsky.woff") format("woff");
+  src: url("/LiterOCULAR/static/fonts/Chomsky.woff") format("woff");
 }
 
 @font-face {
   font-family: "newspaper-header";
-  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/chunkfive.print.ttf") format("truetype");
 }
 
 .navbar {
