@@ -21,10 +21,15 @@
 .navbar {
     margin-bottom: 1.25vw;
     background-color: #6F1946;
-    font-size: 1.5vw;
+    font-size: 1.51vw;
 }
 
-.nav-link, .navbar-brand, .dropdown-item {
+.navbar-brand {
+    font-family: 'Limelight', cursive;
+    color: #fff;
+}
+
+.nav-link, .dropdown-item {
     font-family: 'Cormorant Garamond', serif ;
     text-transform: uppercase;
     color: #fff ;
@@ -93,7 +98,7 @@ p.card-text {
     font-family: 'Cormorant Garamond', serif ;
     font-style: italic;
     margin-bottom: 0.625vw;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
 }
 
 .card-issue .card-title, .card-lens .card-title {
@@ -102,7 +107,7 @@ p.card-text {
     margin-bottom: 0;
     color: #6F1946;
     text-transform: uppercase;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
 }
 
 .card-issue:hover, .card-lens:hover {
@@ -110,14 +115,6 @@ p.card-text {
 }
 
 /* header rules */
-
-.homepage-sub {
-    font-style: italic;
-}
-
-.homepage-header {
-    margin-bottom: 0;
-}
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0.31vw;
@@ -146,7 +143,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.40vw;
+    font-size: 1.51vw;
 }
 
 h5.modal-title {
@@ -160,8 +157,14 @@ h6 {
   
 /* blockquote rules */
 
+.blockquote {
+    font-size: 1.6vw;
+    margin: 1.25vw 0 1.25vw 0;
+}
+
 .blockquote-footer {
     color: #6F1946;
+    font-size: 1.25vw;
 }
 
 /* paragraph rules */
@@ -295,7 +298,7 @@ p.after-box {
 /* buttons and modals */
 
 .btn-outline-secondary {
-    color: #111;
+    color: #fff;
 }
 
 .btn-outline-secondary:active, .btn-outline-secondary:hover {
@@ -303,11 +306,20 @@ p.after-box {
     background-color: transparent;
 }
 
-.btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer {
+.btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer, .clear-highlights {
     color: #fff;
     background-color: #6F1946;
     border-color: #68A469;
     padding: 0.62vw;
+}
+
+.btn.clear-highlights:hover {
+    color: #fff;
+}
+
+.clear-highlights {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
 }
 
 .btn-secondary {
@@ -316,27 +328,27 @@ p.after-box {
     font-size: 1.40vw;
 }
 
-.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+.btn-check:focus+.btn-secondary, .btn-secondary:focus, .btn:focus {
     color: #fff;
     background-color: #6F1946;
     border-color: #68A469;
-    box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
+    box-shadow: 0 0 0 0.15vw rgb(104 164 105 / 75%);
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    border-radius: 0.31vw;
+    border-radius: 0.15vw;
 }
 
 .btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus {
-    box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
+    box-shadow: 0 0 0 0.15vw rgb(104 164 105 / 75%);
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    border-radius: 0.31vw;
+    border-radius: 0.15vw;
 }
 
 .btn-group>:not(.btn-check)+.btn {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    border-radius: 0.31vw;
+    border-radius: 0.15vw;
 }
 
 .btn, .dropdown-menu {
@@ -348,33 +360,159 @@ p.after-box {
     font-size: 1.09vw !important;
 }
 
+.btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2368A469'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.btn-close:focus {
+    box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
+}
+
 /* text */ 
 
 figcaption {
-    text-transform: uppercase;
     font-size: 0.78vw;
-    padding-top: 0.31vw;
+    padding-top: 0.625vw;
+    font-style: italic;
+    text-align: center;
 }
 
 .byline {
-    font-family: 'Glegoo', serif;
+    font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
-    font-size: 1.09vw;
 }
 
 .update {
     font-size: 1.09vw;
 }
 
+.homepage-sub {
+    font-style: italic;
+}
+
 .homepage-header {
-    color: #d5473b;
     margin-bottom: 0;
 }
 
-.homepage-sub {
-    font-family: 'Alfa Slab One';
+/* metadata viewer */
+
+.offcanvas {
+    background-color: #6F1946;
+    color: #fff;
+}
+
+.offcanvas-title, .offcanvas-body h5 {
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
-    -webkit-text-stroke: #d5473b 0.078vw;
+    text-align: center;
+}
+
+.offcanvas-header {
+    border-bottom: 0.15vw solid #68A469;
+    margin: 0.625vw;
+}
+
+.offcanvas-body p, .offcanvas ul, .offcanvas ol {
+    font-size: 1.09375vw;
+}
+
+.offcanvas ul, .offcanvas ol {
+    background-color: #6F1946;
+}
+
+.offcanvas ol li::marker {
+    font-family: 'Poiret One', cursive;
+    color: #68A469;
+}
+
+.offcanvas li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.offcanvas li a:hover {
+    text-decoration: none;
+    color: #6F1946;
+}
+
+.offcanvas li:hover {
+    background-color: transparent;
+}
+
+.offcanvas .dropdown-menu.show {
+    background-color: #68A469;
+}
+
+.offcanvas-body h6 {
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    margin-top: 0.625vw;
+    text-align: center;
+}
+
+.offcanvas hr {
+    color: #68A469;
+    height: 0.1vw !important;
+    opacity: 1 !important;
+}
+
+.accordion-header {
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: 0.07vw solid rgb(104 164 105);
+}
+
+.offcanvas .accordion-button {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+.accordion-button {
+    color: #fff;
+    font-size: 1.25vw;
+}
+
+.accordion-button:focus {
+    color: #fff;
+    background-color: transparent;
+    border-color: #6F1946;
+    box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: transparent;
+}
+
+.accordion-button.collapsed {
+    color: #fff;
+    background-color: transparent;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2368A469'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button::after {
+    width: 1.56vw;
+    height: 1.56vw;
+    background-size: 1.56vw;
+}
+
+.custom-highlight {
+    background-color: #6F1946;
+    color:#fff;
 }
 
 /* Borders and Dividers */
@@ -449,7 +587,7 @@ figcaption {
     position: relative;
 }
 
-.blockquote:before {
+.blockquote:after {
     content: '';
     background-image: url(artdeco/bar-right.png);
     position: absolute;
@@ -458,10 +596,10 @@ figcaption {
     background-repeat: no-repeat;
     background-size: contain;
     height: 150%;
-    top: -0.5vw;
+    top: -1vw;
 }
 
-.blockquote:after {
+.blockquote:before {
     content: '';
     background-image: url(artdeco/bar-left.png);
     position: absolute;
@@ -470,5 +608,5 @@ figcaption {
     background-repeat: no-repeat;
     background-size: contain;
     height: 150%;
-    top: -0.5vw;
+    top: -1vw;
 }

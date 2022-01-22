@@ -21,7 +21,11 @@
   background-color: #222125;
 }
 
-.nav-link, .navbar-brand, .dropdown-item {
+.navbar-brand {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.nav-link, .dropdown-item {
   font-family: 'Glegoo', serif;
   text-transform: uppercase;
   color: #d5473b;
@@ -298,20 +302,20 @@ p.after-box {
   background-color: transparent;
 }
 
-.btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer {
+.btn-secondary, .btn-secondary:hover, .modal-header, .modal-footer, .clear-highlights, .btn.clear-highlights:hover {
   color: #70557D;
   background-color: #DBBC9F;
   border-color: #8c485f;
   padding: 0.62vw;
 }
 
-.btn-secondary {
+.btn-secondary, .clear-highlights {
   font-family: 'Glegoo', serif;
   text-transform: uppercase;
   font-size: 1.40vw;
 }
 
-.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+.btn-check:focus+.btn-secondary, .btn-secondary:focus, .btn:focus {
   color: #70557D;
   background-color: #DBBC9F;
   border-color: #8c485f;
@@ -332,6 +336,14 @@ p.after-box {
 
 .btn-sm {
   font-size: 1.09vw !important;
+}
+
+.btn-close {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2370557D'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.btn-close:focus {
+  box-shadow: 0 0 0 0.31vw rgba(112 85 125 / 75%);
 }
 
 /* text */ 
@@ -686,7 +698,7 @@ p.nyt-after-h {
 
 .offcanvas-header {
   border-bottom: 0.15vw solid #70557D;
-  margin: 0.625vw;
+  margin: 0.625vw 0.625vw 0.625vw 0;
 }
 
 .offcanvas-body p, .offcanvas ul, .offcanvas ol {
@@ -694,13 +706,13 @@ p.nyt-after-h {
 }
 
 .offcanvas ul, .offcanvas ol {
-  background-color: #DBBC9F;
+  background-color: transparent;
 }
 
 .offcanvas ol li::marker {
   font-family: 'Glegoo', serif;
   text-transform: uppercase;
-  color: 70557D;
+  color: #70557D;
 }
 
 .offcanvas li a {
@@ -709,11 +721,15 @@ p.nyt-after-h {
 
 .offcanvas li a:hover {
   text-decoration: none;
-  color: #70557D;
+  color: #DBBC9F;
 }
 
 .offcanvas li:hover {
-  background-color: #DBBC9F;
+  background-color: transparent;
+}
+
+.offcanvas .dropdown-menu.show {
+  background-color: #70557D;
 }
 
 .offcanvas-body h6 {
@@ -721,12 +737,7 @@ p.nyt-after-h {
   font-family: 'Glegoo', serif;
   text-transform: uppercase;
   margin-top: 0.625vw;
-}
-
-h6.binocular-header {
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 .offcanvas hr {
