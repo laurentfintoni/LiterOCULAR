@@ -1,17 +1,17 @@
 /* Newspaper  */
 @font-face {
   font-family: "newspaper-body";
-  src: url("/LiterOCULAR/static/fonts/OldNewspaperTypes.ttf") format("truetype");
+  src: url("/static/fonts/OldNewspaperTypes.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Chomsky";
-  src: url("/LiterOCULAR/static/fonts/Chomsky.woff") format("woff");
+  src: url("/static/fonts/Chomsky.woff") format("woff");
 }
 
 @font-face {
   font-family: "newspaper-header";
-  src: url("/LiterOCULAR/static/fonts/chunkfive.print.ttf") format("truetype");
+  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
 }
 
 .navbar {
@@ -267,11 +267,12 @@ img {
   border: none;
 }
 
-.btn-group>:not(.btn-check)+.btn {
+.btn-group > :not(.btn-check) + .btn {
   border-radius: 0 !important;
 }
 
-.btn, .dropdown-menu {
+.btn,
+.dropdown-menu {
   border-radius: 0 !important;
 }
 .offcanvas-title,
