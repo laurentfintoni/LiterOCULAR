@@ -370,5 +370,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.location.href.endsWith("#")) {
       window.location.href = window.location.href.slice(0, -1);
     }
-  }, 300);
+  }, 1500);
 });
