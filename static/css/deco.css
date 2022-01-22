@@ -1,14 +1,14 @@
 /* Art Deco theme */
 
-/* Poiret One for quotes */ 
+/* Poiret One for quotes, titles */ 
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 /* Cormorant Garamond for menus, inspired by Arts & Decoration  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
 
-/* Limelight for titles */ 
+/* Limelight for brand */ 
 
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
@@ -21,6 +21,7 @@
 .navbar {
     margin-bottom: 1.25vw;
     background-color: #6F1946;
+    font-size: 1.5vw;
 }
 
 .nav-link, .navbar-brand, .dropdown-item {
@@ -69,13 +70,14 @@ body {
 a, a:hover, a:focus {
     color: #111;
     text-decoration: underline;
-    text-decoration-color: #6F1946;
+    text-decoration-color: #68A469;
 }
 
 /* home page boxes */ 
 
 .card {
     border-radius: 0 !important;
+    border: none !important;
 }
 
 .card-body {
@@ -83,65 +85,302 @@ a, a:hover, a:focus {
 }
 
 .card-issue, .card-lens {
-    background-color: transparent;
-    color: #D2042D;
     max-width: 100%;
     margin: 0 !important;
 }
 
 p.card-text {
     font-family: 'Cormorant Garamond', serif ;
+    font-style: italic;
     margin-bottom: 0.625vw;
+    font-size: 1.6vw;
 }
 
 .card-issue .card-title, .card-lens .card-title {
-    color: inherit;
-    font-size: 1.4vw;
-    text-transform: uppercase;
-    color: #111;
+    font-weight: 600;
     font-family: 'Cormorant Garamond', serif ;
+    margin-bottom: 0;
+    color: #6F1946;
+    text-transform: uppercase;
+    font-size: 1.5vw;
 }
 
-.border-dark {
-    border-width: 0.1566vw;
+.card-issue:hover, .card-lens:hover {
+    color: #68A469;
 }
 
+/* header rules */
 
+.homepage-sub {
+    font-style: italic;
+}
+
+.homepage-header {
+    margin-bottom: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0.31vw;
     font-family: 'Limelight', cursive;
     font-weight: normal;
 }
+  
+h1 {
+    font-size: 3.75vw;
+}
 
+h1.homepage, .homepage-sub {
+    font-family: 'Poiret One', cursive;
+}
 
-#homepage {
+h2 {
+    font-size: 2.34vw;
+}
+
+h3 {
+    font-size: 1.875vw;
+}
+
+h4 {
+    font-size: 1.5625vw;
+}
+
+h5 {
+    font-size: 1.40vw;
+}
+
+h5.modal-title {
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-size: 1.25vw;
+}
+  
+/* blockquote rules */
+
+.blockquote-footer {
+    color: #6F1946;
+}
+
+/* paragraph rules */
+
+p {
+    margin-bottom: 0vw;
+}
+
+.modal-body p:nth-child(n+2) {
+    text-indent: 1.25vw;
+}
+
+#homepage p:nth-child(n+4) {
+    text-indent: 1.25vw;
+}
+
+#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(3)::first-letter {
+    font-size: 3.75vw;
+    float: left;
+    line-height: 3.50vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+#article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter {
+    font-size: 12.5vw;
+    float: left;
+    line-height: 10.02vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropcap::first-letter {
+    font-size: 12.5vw;
+    float: left;
+    line-height: 10.02vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropcap-two::first-letter {
+    font-size: 12.5vw;
+    float: left;
+    line-height: 10.02vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+    color: #f4f4f4;
+}
+
+p.no-dropcap::first-letter {
+    font-size: 1.25vw !important;
+    float: none !important;
+    line-height: normal !important;
+    padding-right: 0 !important;
+    font-family: 'Libre Baskerville', serif !important;
+    color: #222125 !important;
+}
+
+p.no-dropcap {
+    text-indent: 1.25vw;
+}
+
+p.after-box {
+    text-indent: 0 !important;
+    padding-top: 0.23vw;
+}
+
+.after-box::first-letter {
+    font-size: 3.75vw;
+    float: left;
+    line-height: 3.60vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+#article2 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter {
+    font-size: 12.5vw;
+    float: left;
+    line-height: 10.02vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+    color: #2d1c68;
+}
+
+.dropcap-wapo::first-letter {
+    font-size: 12.5vw !important;
+    float: left !important;
+    line-height: 10.02vw !important;
+    padding-right: 0.31vw !important;
+    font-family: 'Oswald', sans-serif !important;
+    color: #e7b926 !important ;
+}
+
+#article3 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter {
+    font-size: 12.5vw;
+    float: left;
+    line-height: 10.02vw;
+    padding-right: 0.31vw;
+    font-family: 'Oswald', sans-serif;
+    color: #f4f4f4;
+}
+
+.dropcap-nyt::first-letter {
+    font-size: 12.5vw !important;
+    float: left !important;
+    line-height: 10.02vw !important;
+    padding-right: 0.31vw !important;
+    font-family: 'Oswald', sans-serif !important;
+    color: #46bb53 !important ;
+}
+
+#article1 p:not(.dropcap):nth-child(n+5) {
+    text-indent: 1.25vw;
+}
+
+#article2 p:nth-child(n+6) {
+    text-indent: 1.25vw;
+}
+
+#article3 p:not(.dropcap-two):nth-child(n+6) {
+    text-indent: 1.25vw;
+}
+
+.last {
+    margin-bottom: 1.25vw;
+}
+
+/* Borders and Dividers */
+
+.triple-diamond-deco-container {
+    display: grid;
+    grid-template-columns: [line-start] 1fr [small-start] 0.6vw [large-start] 0.2vw [small-end] 0.9vw [small-start] 0.14vw [large-end] 0.625vw [small-end] 1fr [line-end];
+    grid-template-rows: [large-start] 0.25vw [small-start] 0.33vw [midline] 0.45vw [small-end] 0.25vw [large-end];
+    margin-bottom: 1vw;
+}
+
+.triple-diamond-deco-container .left-line {
+    grid-row: midline / large-end;
+    border-top: 0.15vw solid #111;
+}
+
+.triple-diamond-deco-container .right-line {
+    grid-row: midline / large-end;
+    border-top: 0.15vw solid #111;
+}
+
+.triple-diamond-deco-container .small-diamond-left {
+    grid-column: small-start 1 / small-end 1;
+    grid-row: small-start / small-end;
+    transform: rotate(45deg);
+    border: 0.2vw solid #6F1946;
+}
+
+.triple-diamond-deco-container .small-diamond-right {
+    grid-column: small-start 2 / small-end 2;
+    grid-row: small-start / small-end;
+    transform: rotate(45deg);
+    border: 0.2vw solid #6F1946;
+}
+
+.triple-diamond-deco-container .large-diamond {
+    grid-area: large;
+    transform: rotate(45deg);
+    border: 0.15vw solid #68A469;
+}
+
+.issues-lenses {
     position: relative;
-    margin:20px;
-    padding:20px;
-    border:2px solid black;
-    min-height:300px;
- }
- 
- #homepage:before {
+    padding-top: 1.56vw;
+    padding-bottom: 1.56vw;
+    border: 0.07vw solid black;
+}
+
+.issues-lenses:before {
     content:'';
     position: absolute;
-    top:-20px;
-    bottom:-20px;
-    left:10px;
-    right:10px;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
- }
- 
- #homepage:after {
+    top:-0.78vw;
+    bottom:-0.78vw;
+    left:0.39vw;
+    right:0.39vw;
+    border-left: 0.07vw solid black;
+    border-right: 0.07vw solid black;
+}
+
+.issues-lenses:after {
     content:'';
     position: absolute;
-    top:10px;
-    bottom:10px;
-    left:-20px;
-    right:-20px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
- }
- 
+    top:0.39vw;
+    bottom:0.39vw;
+    left:-0.78vw;
+    right:-0.78vw;
+    border-top: 0.07vw solid black;
+    border-bottom: 0.07vw solid black;
+}
+
+.blockquote {
+    position: relative;
+}
+
+.blockquote:before {
+    content: '';
+    background-image: url(artdeco/bar-right.png);
+    position: absolute;
+    left: 50vw;
+    right: 0vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150%;
+    top: -0.5vw;
+}
+
+.blockquote:after {
+    content: '';
+    background-image: url(artdeco/bar-left.png);
+    position: absolute;
+    left: 12vw;
+    right: 0vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150%;
+    top: -0.5vw;
+}
