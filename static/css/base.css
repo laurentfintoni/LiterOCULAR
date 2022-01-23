@@ -19,7 +19,13 @@
     background-color: #111;
 }
 
-.navbar-brand, .nav-link, .dropdown-item {
+.navbar-brand {
+    font-family: 'Roboto Slab', sans-serif;
+    color: #fff;
+    font-size: 1.56vw;
+}
+
+.nav-link, .dropdown-item {
     font-family: 'Ubuntu Mono', monospace;
     color: #f4f4f4;
     text-transform: uppercase;
@@ -247,6 +253,7 @@ p.update {
     color: #D2042D;
     background-color: #f4f4f4;
     border-color: #111;
+    font-size: 1.25vw;
 }
 
 .btn-secondary:hover, .btn.clear-highlights:hover {
@@ -362,7 +369,6 @@ figcaption {
   }
 
 .kmd-94-img {
-    transform: skew(350deg, 10deg);
     float: right;
     width: 13vw;
     position: relative;

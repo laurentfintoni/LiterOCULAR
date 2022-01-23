@@ -23,6 +23,7 @@
 
 .navbar-brand {
   font-family: 'Alfa Slab One', cursive;
+  font-size: 1.56vw;
 }
 
 .nav-link, .dropdown-item {
@@ -387,7 +388,7 @@ figcaption {
 
 /* kmd styles */
 
-.cover {
+.cover-kmd {
   border: 0.17vw solid black;
 }
 
@@ -401,7 +402,6 @@ figcaption {
 .kmd-91-b {
   letter-spacing: 0.039vw;
   margin-bottom: 1.25vw;
-  position: relative;
   text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 0.2vw;
@@ -497,10 +497,6 @@ h1.kmd-94-t {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 0.78vw 0 0.78vw 0;
-}
-
-.kmd-98.img {
-  size: 100vw;
 }
 
 .kmd-98-t {
@@ -677,10 +673,6 @@ h2.nyt-header {
   float: left;
   width: 95%;
   margin: 0.625vw;
-}
-
-p.nyt-after-h {
-  text-indent: 0 !important;
 }
 
 /* metadata viewer */

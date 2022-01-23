@@ -12,6 +12,10 @@ html {
   stroke: blanchedalmond;
 }
 
+.issues.show {
+  left: 7vw;
+}
+
 body {
   position: fixed;
   max-width: 100vw;
