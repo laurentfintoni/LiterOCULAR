@@ -679,9 +679,10 @@ h2.mit-header, h2.nyt-header {
 
 .issues-lenses {
     position: relative;
-    padding-top: 1.56vw;
-    padding-bottom: 1.56vw;
+    padding-top: 1.4vw;
+    padding-bottom: 1.4vw;
     border: 0.07vw solid black;
+    top: -0.93vw;
 }
 
 .issues-lenses:before {
@@ -929,35 +930,3 @@ h2.mit-header, h2.nyt-header {
     border-left: 1px solid #6F1946;
     border-right: 1px solid #6F1946;
 }
-
-/*
-
-.blockquote {
-    position: relative;
-}
-
-.blockquote:after {
-    content: '';
-    background-image: url(artdeco/bar-right.png);
-    position: absolute;
-    left: 50vw;
-    right: 0vw;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 150%;
-    top: -1vw;
-}
-
-.blockquote:before {
-    content: '';
-    background-image: url(artdeco/bar-left.png);
-    position: absolute;
-    left: 12vw;
-    right: 0vw;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 150%;
-    top: -1vw;
-}
-
-*/
