@@ -342,6 +342,54 @@ figcaption, .byline {
     padding-left: 406px;
 }
 
+.cover-timnit-mit {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-timnit-wapo {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/googlefiredher.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-timnit-nyt {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_2.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.nyt-photo {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_3.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.nyt-photo-2 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_4.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+
+
+
 
 
 
