@@ -629,14 +629,7 @@ h2.mit-header.cost {
   text-underline-position: under;
 }
 
-.timnit-nyt-c {
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  margin-top: -160px;
-}
-
 .timnit-nyt-t {
-  margin-top: -60px;
   text-align: right;
   color: #644f98;
   text-transform: uppercase;

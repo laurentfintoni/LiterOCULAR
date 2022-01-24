@@ -6,8 +6,11 @@
 /* brand */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
 
-/* menus, titles */
+/* menus */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
+
+/*titles*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 /* navbar rules */
 
@@ -82,8 +85,6 @@ body {
 
 a {
     color: #007aff;
-    padding-right: 20px;
-    padding-bottom: 20px;
     text-decoration: underline;
 }
 
@@ -123,13 +124,12 @@ a:hover, a:focus {
 p.card-text {
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.5rem;
     margin: 0;
 }
 
 .card-issue .card-title, .card-lens .card-title {
     text-transform: uppercase;
-    text-overflow: ellipsis;
 }
 
 /* header rules */
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4em;
 	margin-bottom: 3px;
     padding: 10px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -208,7 +208,7 @@ h6 {
 /* buttons and modals */
 
 .btn-outline-secondary {
-    color: #fff;
+    color: #111;
     background-color: #35e1b3;
 }
 
@@ -218,7 +218,7 @@ h6 {
 }
 
 .btn-secondary, .btn, .modal-header, .modal-footer, .clear-highlights {
-    color: #fff;
+    color: #111;
     background-color: #35e1b3;
     border-color: #16a085;
 }
@@ -232,10 +232,17 @@ h6 {
     background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2335e1b3'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
 }
 
+.btn-sm {
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
 /* text */ 
 
 figcaption, .byline {
-    font-size: 0.875rem;
+    font-size: 0.8em;
+    line-height: 1.2em;
 }
 
 .update {
@@ -253,13 +260,16 @@ figcaption, .byline {
     margin-bottom: 2px;
 }
 
-
 .subheader {
     font-size: 1.25rem;
 }
 
 
 /* theme specific */
+
+img {
+    margin-bottom: 20px;
+}
 
 .cover-kmd {
     display: block;
@@ -387,20 +397,50 @@ figcaption, .byline {
     padding-left: 406px;
 }
 
+.kmd-94-s, .kmd-98-s, .timnit-mit-s, .timnit-wapo-s, .timnit-nyt-s {
+    font-size: 24px;
+    font-weight: bold;
+}
 
+h2.mit-header, h2.nyt-header {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #20b3e0;
+}
 
+/* metadata viewer */
 
-
-
-
+.offcanvas, .modal-body {
+    background-color: #333; 
+}
 
 .custom-highlight {
     background-color: #cde;
-    box-shadow: 0 0.1em 0.1em 0 rgba(white, 0.5);
+    box-shadow: 0 0.1em 0.1em 0 white;
     color: #007aff;
-    position: relative;
     width: 1em;
     margin: 0.1em;
+}
+
+.offcanvas-title, .offcanvas-body h5, .offcanvas-body h6, .accordion-header {
+    font-family: 'Roboto Mono', monospace ;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid lightgray;
+}
+
+.offcanvas hr {
+    color: lightgray;
+    height: 0.1vw !important;
+    opacity: 1 !important;
+}
+
+.accordion-header {
+    color: #0081c2;
 }
 
 .accordion-item {
@@ -409,7 +449,6 @@ figcaption, .byline {
     border-bottom-left-radius: 5px;
     padding: 15px;
     margin-bottom: 1px;
-    transition: border 0.2s;
 }
 
 .accordion-button {
@@ -422,45 +461,21 @@ figcaption, .byline {
     box-shadow: 0 0 0 1px #c0d8ff;
 }
 
-.accordion-header-title {
-    color: black;
-}
-
 .accordion-button:not(.collapsed) {
     color: white;
     background-color: #5C3C3C;
 }
 
-.btn-outline-secondary {
-    color: #fff;
-    background-color: #35e1b3;
+.accordion-button.collapsed {
+    color: white;
+    background-color: #5C3C3C;
 }
 
-.btn-outline-secondary:active {
-    color: #fff;
-    background-color: #d7d7d7; 
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2335e1b3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-.btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #d7d7d7; 
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2335e1b3'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-.btn-secondary {
-    color: #fff;
-    background-color: #35e1b3;
-    border-color: #16a085;
-}
-
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #35e1b3;
-}
-
-.offcanvas {
-    color: #333; 
-}
-
-.modal {
-    color: #000;
-}
