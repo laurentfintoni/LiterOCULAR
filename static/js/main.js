@@ -60,9 +60,9 @@ function switchTheme(btn) {
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
 
-  // toggle transition
-  if (btn.animation === false) {
-    switch (btn.id) {
+  function switcher(button) {
+    console.info(button.id);
+    switch (button.id) {
       case "theme-toggle-newspaper":
         cssLink.href = basePath + "newspaper.css";
         break;
@@ -86,37 +86,23 @@ function switchTheme(btn) {
       default:
         break;
     }
+  }
+  // toggle transition
+  if (btn.animation === "no") {
+    console.info("No animation switch");
+    // change stylesheet without triggering the animation
+    switcher(btn);
     return;
   } else {
+    console.info("Animated switch");
+    // trigger the animation
     const transitionEls = document.querySelectorAll(".anim-layer");
     for (const layer of transitionEls) {
       layer.classList.toggle("active");
     }
-
+    // after animation has started change stylesheet
     setTimeout(function () {
-      switch (btn.id) {
-        case "theme-toggle-newspaper":
-          cssLink.href = basePath + "newspaper.css";
-          break;
-
-        case "theme-toggle-deco":
-          cssLink.href = basePath + "deco.css";
-          break;
-
-        case "theme-toggle-music":
-          cssLink.href = basePath + "music.css";
-          break;
-
-        case "theme-toggle-ml":
-          cssLink.href = basePath + "ML.css";
-          break;
-
-        case "theme-toggle-base":
-          cssLink.href = basePath + "base.css";
-
-        default:
-          break;
-      }
+      switcher(btn);
     }, 500);
   }
 
@@ -304,7 +290,6 @@ function focusMetadata(element) {
     let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     });
   } else {
     // Article-wide highlight of a mention category
@@ -314,7 +299,6 @@ function focusMetadata(element) {
     let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     });
   }
 
@@ -360,15 +344,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // instead of passing the element we pass an object which has a propery of id
     switchTheme({
       id: sessionStorage.getItem("theme"),
-      animation: false,
+      animation: "no",
     });
   }
 
   checkSize();
-
-  setInterval(() => {
-    if (window.location.href.endsWith("#")) {
-      window.location.href = window.location.href.slice(0, -1);
-    }
-  }, 1500);
 });

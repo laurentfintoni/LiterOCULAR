@@ -23,11 +23,11 @@
   <div class="anim-layer anim-layer--4"></div>
   <!-- OffCanvas -->
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"
-  style="height: fit-content">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Binoculars</h5>
-    <button type="button" class="btn clear-highlights" onclick="resetHighlight()">Clear
-      highlights</button>
+    style="height: fit-content">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Metadata Binoculars</h5>
+      <button type="button" class="btn clear-highlights" onclick="resetHighlight()">Clear
+        highlights</button>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body medium pt-0" style="height: fit-content">
@@ -84,19 +84,19 @@
           </a>
           <ul class="dropdown-menu themes" id="themes-dropdown">
             <li>
-              <a class="dropdown-item" id="theme-toggle-newspaper" href="#" onclick="switchTheme(this);">Newspaper</a>
+              <a class="dropdown-item" id="theme-toggle-newspaper" onclick="switchTheme(this);">Newspaper</a>
             </li>
             <li>
-              <a class="dropdown-item" id="theme-toggle-deco" href="#" onclick="switchTheme(this);">Art Deco</a>
+              <a class="dropdown-item" id="theme-toggle-deco" onclick="switchTheme(this);">Art Deco</a>
             </li>
             <li>
-              <a class="dropdown-item" id="theme-toggle-music" href="#" onclick="switchTheme(this);">The Source</a>
+              <a class="dropdown-item" id="theme-toggle-music" onclick="switchTheme(this);">The Source</a>
             </li>
             <li>
-              <a class="dropdown-item" id="theme-toggle-ml" href="#" onclick="switchTheme(this);">Transformer</a>
+              <a class="dropdown-item" id="theme-toggle-ml" onclick="switchTheme(this);">Transformer</a>
             </li>
             <li>
-              <a class="dropdown-item" id="theme-toggle-base" href="#" onclick="switchTheme(this);">Default</a>
+              <a class="dropdown-item" id="theme-toggle-base" onclick="switchTheme(this);">Default</a>
             </li>
           </ul>
         </div>
@@ -117,10 +117,13 @@
               <!-- Removed closing button to make it un-closable -->
           </div>
           <div class="modal-body">
-            <p class="lead">Hi! Thanks for visiting our website, two quick things:<br/><br/>
-              1. It took us a lot of effort to build this, and it's meant to be experienced as a reading medium with rich functionality. Unfortunately, this means that screens smaller than a medium-sized tablet won't work very well, so we inhibit access from
-              these devices.<br/><br/>
-              2. We also recommend Chrome as the browser with which to view the site, though it will work in Firefox and Safari with some slight stylistic inconsistencies (no idea about Edge because, honestly, who cares?). 
+            <p class="lead">Hi! Thanks for visiting our website, two quick things:<br /><br />
+              1. It took us a lot of effort to build this, and it's meant to be experienced as a reading medium with
+              rich functionality. Unfortunately, this means that screens smaller than a medium-sized tablet won't work
+              very well, so we inhibit access from
+              these devices.<br /><br />
+              2. We also recommend Chrome as the browser with which to view the site, though it will work in Firefox and
+              Safari with some slight stylistic inconsistencies (no idea about Edge because, honestly, who cares?).
             </p>
           </div>
         </div>

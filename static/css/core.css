@@ -43,6 +43,10 @@ body.home {
   display: none;
 }
 
+.dropdown-menu.themes > * {
+  cursor: pointer;
+}
+
 button.btn.btn-outline-secondary {
   border: none;
 }
@@ -72,8 +76,8 @@ button.btn.btn-outline-secondary {
   transition-delay: 0.2s;
 }
 .anim-layer--3 {
-  background: #D2042D;
-  transition-delay: 0.010s;
+  background: #d2042d;
+  transition-delay: 0.01s;
 }
 .anim-layer--4 {
   background: #111;
@@ -81,5 +85,9 @@ button.btn.btn-outline-secondary {
 }
 
 a.pointer {
-  cursor:pointer;
+  cursor: pointer;
+}
+
+.card-lens > .card-body {
+  cursor: pointer;
 }
