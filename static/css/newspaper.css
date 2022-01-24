@@ -24,13 +24,14 @@
 /* navbar rules */
 
 .navbar {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25vw;
   background-color: #353434;
 }
 
 .navbar-brand {
-  font-family: "newspaper-header", sans-serif;
+  font-family: "Chomsky", serif;
   color: #f4f4f4;
+  font-size: 1.56vw;
 }
 
 a.navbar-brand:hover {
@@ -58,6 +59,7 @@ a.navbar-brand:hover {
   background-color: #fef5e0;
   font-family: "newspaper-header", sans-serif;
   text-transform: uppercase;
+  font-size: 1.25vw;
 }
 
 .dropdown-item,
@@ -77,6 +79,7 @@ body {
   background-color: #ebe7dd;
   color: #111;
   font-family: "newspaper-body", serif;
+  font-size: 1.25vw;
 }
 
 a:not(.navbar *) {
@@ -96,40 +99,34 @@ a:not(.navbar *):hover {
   border-radius: 0 !important;
 }
 
+.card-body {
+  padding: 0.315vw;
+}
+
 .card.border-dark {
   border-color: rgb(46, 0, 15) !important;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .card-title {
   font-family: "newspaper-header", sans-serif;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: 1.56vw;
   border: none;
-}
-
-.card-issue {
-  background-color: #353434;
-  color: #f4f4f4;
-  max-width: 100%;
-}
-
-.card-issue:hover {
-  background-color: transparent;
-  color: rgb(46, 0, 15);
 }
 
 .card-issue .card-title {
   color: inherit;
 }
 
-.card-lens {
+.card-lens, .card-issue {
   background-color: transparent;
   color: rgb(46, 0, 15);
 }
 
-.card-lens:hover {
-  background-color: #353434;
-  color: #f4f4f4;
+.card-lens:hover, .card-issue:hover {
+  color: #353434;
 }
 
 .card-lens .card-title {
@@ -146,7 +143,7 @@ h5,
 h6 {
   font-family: "Newsreader", serif;
   color: #111;
-  padding: 0.5rem;
+  padding: 0.625vw;
   text-align: center;
   text-transform: uppercase;
 }
@@ -154,27 +151,37 @@ h6 {
 .issues-lenses > h1 {
   border-color: black;
   border-style: solid;
-  border-width: 2px 0 2px 0;
-  font-style: italic;
+  border-width: 0.15vw 0 0 0;
+  font-style: bold;
+  padding-right: 1.95vw;
 }
+
 .issues-lenses > h1::before {
-  content: "👉🏼";
-  padding: 0.5em;
+  content: url(hand.png);
+  padding: 0.31vw;
+}
+
+.issues-hp, .lenses-hp {
+  border-color: black;
+  border-style: double;
+  border-width: 0.31vw 0 0 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3.75vw;
 }
 
 h1.homepage-header {
   font-family: "Chomsky", serif;
   border-color: black;
   border-style: solid;
-  border-width: 2px 0 2px 0;
+  border-width: 0.15vw 0 0 0;
 }
 
 .homepage-sub {
-  font-style: italic;
+  border-color: black;
+  border-style: double;
+  border-width: 0 0 0.31vw 0;
 }
 
 #article1 > h1,
@@ -183,32 +190,33 @@ h1.homepage-header {
 .header-and-sub > h1 {
   border-color: black;
   border-style: solid;
-  border-width: 2px 0 2px 0;
-  font-size: 1.5rem;
+  border-width: 0.15vw 0 0 0;
+  font-size: 2.5vw;
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 2.34vw;
 }
 
 #article1 > h2,
 #article2 > h2,
 #article3 > h2 {
   border-color: black;
-  border-style: solid;
-  border-width: 2px 0 2px 0;
+  border-style: double;
+  border-width: 0.31vw 0 0.31vw 0;
+  margin-top: 0.625vw;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.875vw;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.56vw;
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.40vw;
 }
 
 h5.modal-title {
@@ -217,7 +225,7 @@ h5.modal-title {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.25vw;
 }
 
 /* paragraph rules */
@@ -233,23 +241,37 @@ p {
   max-height: 88vh !important;
 }
 
-.modal-body p:nth-child(n + 2) {
+.modal-body p:nth-child(n + 1) {
   text-indent: 1.25vw;
 }
 
-#homepage p:nth-child(n + 5) {
+#homepage p:nth-child(n + 4) {
   text-indent: 1.25vw;
 }
 
+#article1 p:nth-child(n+4) {
+  text-indent: 1.25vw;
+}
+
+#article2 p:nth-child(n+5) {
+  text-indent: 1.25vw;
+}
+
+#article3 p:nth-child(n+4) {
+  text-indent: 1.25vw;
+}
+
+/*
 #homepage
-  p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
-  font-size: 2.75vw;
+p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
+  font-size: 4.06vw;
   float: left;
-  line-height: 2vw;
-  padding-right: 8px;
-  padding-left: 3px;
+  line-height: 3.8vw;
+  padding-right: 2px;
   font-family: "Newsreader", serif;
+  margin-bottom: -0.05vw;
 }
+
 
 #article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter,
 #article2 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(5)::first-letter,
@@ -279,55 +301,56 @@ p.after-box {
   text-indent: 0 !important;
   padding-top: 0.23vw;
 }
+*/
 
 .byline {
   font-family: "newspaper-body";
   color: rgb(46, 0, 15);
-  font-style: oblique;
+  text-align: center;
   border-color: black;
   border-style: solid;
-  border-width: 0.2777vw 0 0.2777vw 0;
+  border-width: 0.15vw 0 0.15vw 0;
+  padding: 0.625vw 0 0.625vw 0;
 }
 
 .subheader {
-  font-size: 1.1rem;
-  letter-spacing: -0.3px
+  font-size: 1.37vw;
+  letter-spacing: -0.023vw;
   color: #1a0000;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.15vw 0 0 0;
+  padding: 0.625vw 0 0.625vw 0;
 }
 
-.homepage-col > figure {
+.homepage-col figure {
   position: relative;
-  padding: 1rem 0px;
-  margin: 3rem 0px;
+  padding: 1.25vw 0;
+  margin: 3.75vw 0 0 0;
 }
 
-.homepage-col > figure:before {
+.homepage-col figure:before {
   content: "";
   background: black;
   position: absolute;
   top: 0;
   left: 25%;
-  height: 0.121506vh;
+  height: 0.12vh;
   width: 50%;
 }
-.homepage-col > figure:after {
+.homepage-col figure:after {
   content: "";
   background: black;
   position: absolute;
   bottom: 0;
   left: 25%;
-  height: 0.121506vh;
+  height: 0.12vh;
   width: 50%;
 }
 
-.homepage.container {
-  margin: 3em 0.5em;
-}
-
-figcaption,
-.byline {
-  font-size: 0.875rem;
-  padding: 0.25rem;
+figcaption, .byline {
+  font-size: 1.09vw;
 }
 
 img {
@@ -339,11 +362,59 @@ img {
   color: #f4f4f4;
 }
 
+.blockquote {
+  border-color: black;
+  border-style: double;
+  border-width: 0.31vw 0 0.31vw 0;
+  margin-top: 0.625vw;
+}
+
+.kmd-94-bq-ft {
+  text-align: center;
+}
+
+.kmd-98-artwork, .kmd-98-artwork-2, .kmd-98-artwork-3, .kmd-98-artwork-4, .kmd-94-img {
+  margin: 0.625vw 0 -0.625vw 0.625vw;
+  float: right;
+  width: 50%;
+}
+
+.kmd-94-img-2, .kmd-94-caption {
+  margin: 0.625vw 0.625vw 0 0;
+  float: left;
+  width: 50%;
+}
+
+.nyt-photo {
+  float: right;
+  width: 50%;
+  margin: 0.625vw 0 0 0.625vw;
+}
+
+.nyt-photo-cap {
+  float: right;
+  width: 50%;
+  margin: 0.625vw 0 0 0.625vw;
+}
+
+.nyt-photo-2 {
+  float: left;
+  width: 50%;
+  margin: 0.625vw 0.625vw 0 0;
+}
+
+.nyt-photo-cap-2 {
+  float: left;
+  width: 50%;
+  margin: 0.625vw 0.625vw 0 0;
+}
+
 /* metadata viewer */
 
 .offcanvas-title,
 .offcanvas-body h5,
-.offcanvas-body h6 {
+.offcanvas-body h6, 
+.offcanvas .accordion-button {
   font-family: "newspaper-header", sans-serif;
   text-transform: uppercase;
 }
@@ -352,13 +423,26 @@ img {
   background-color: #d7ccc1;
 }
 
+.offcanvas-header {
+  border-bottom: 0.15vw solid black;
+  margin: 0.625vw;
+}
+
+.offcanvas hr {
+  color: black;
+  height: 0.1vw !important;
+  opacity: 1 !important;
+}
+
 .accordion-item {
   background-color: transparent;
+  border: 0.07vw solid black;
 }
 
 .accordion-button {
   color: #111;
   background-color: #d7ccc1;
+  font-size: 1.25vw;
 }
 
 .accordion-button:focus {
@@ -384,9 +468,11 @@ img {
 }
 
 /* btns and modals */
+
 .btn-outline-secondary {
-  border-radius: 0px;
+  border-radius: 0vw;
   color: #4a1520;
+  font-size: 1.09vw;
 }
 
 .btn-outline-secondary:active {
@@ -403,6 +489,7 @@ img {
   color: #353434;
   background-color: transparent;
   border-color: transparent;
+  font-size: 1.25vw;
 }
 
 .btn-secondary:hover {
@@ -413,14 +500,23 @@ img {
 
 .btn.clear-highlights {
   box-shadow: none;
+  font-size: 1.25vw;
 }
 
 .btn.clear-highlights:hover {
-  box-shadow: 0 0 0 0.25rem rgb(53 53 53 / 25%);
+  box-shadow: 0 0 0 0.31vw rgb(53 53 53 / 25%);
 }
 
-.modal-title {
-  border: none;
+.modal-header, .modal-footer {
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: 1px solid black;
+}
+
+.modal-footer {
+  border-top: 1px solid black;
 }
 
 .btn-group > :not(.btn-check) + .btn {
@@ -440,3 +536,14 @@ h3.accordion-header {
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
+
+.modal-content {
+  border-radius: 0;
+}
+
+.btn-check:focus+.btn-secondary, .btn-secondary:focus, .btn:focus, .btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus, .btn-close:focus {
+  box-shadow: 0 0 0 0.31vw rgb(53 53 53 / 25%);
+  background-color: transparent;
+  color: rgb(53, 52, 52);
+  border: none;
+} 

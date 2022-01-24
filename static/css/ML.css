@@ -22,15 +22,15 @@
 }
 
 .navbar-brand {
-    font-size: 1.2em;
-    margin: 10px;
+    font-size: 1.5vw;
+    margin: 0.78vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
 }
 
 .nav-link {
     color: #fff;
-    line-height: 18px;
+    line-height: 1.4vw;
     padding-left: 0.25em;
 }
 
@@ -40,9 +40,9 @@
 }
 
 .dropdown-menu {
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
+    padding: 0.39vw 0;
+    margin: 0.15vw 0 0;
+    font-size: 1.25vw;
     text-align: right;
 }
 
@@ -67,7 +67,7 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 }
 
 .dropdown-item:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.625vw 1.25vw 0.625vw rgba(0, 0, 0, 0.2);
     background-color: #000;
 }
 
@@ -75,7 +75,7 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 
 body {
     font-family: 'Josefin Slab', serif;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     background-color: #000000;
     color: #ffffff;
     justify-content: center;
@@ -95,8 +95,8 @@ a:hover, a:focus {
 /* home page boxes */ 
 
 .card-body {
-    padding: 0.5rem;
-    border: 1px solid;
+    padding: 0.625vw;
+    border: 0.078vw solid;
 }
 
 .card-issue {
@@ -124,7 +124,7 @@ a:hover, a:focus {
 p.card-text {
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
-    line-height: 1.5rem;
+    line-height: 1.875vw;
     margin: 0;
 }
 
@@ -136,14 +136,13 @@ p.card-text {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
-	line-height: 1.4em;
-	margin-bottom: 3px;
-    padding: 10px;
+	margin-bottom: 0.23vw;
+    padding: 0.78vw;
     font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 2.81vw;
 }
 
 .homepage-header, .homepage-sub {
@@ -152,19 +151,19 @@ h1 {
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 2.34vw;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 1.875vw;
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 1.56vw;
 }
 
 h5 {
-	font-size: 16px;
+	font-size: 1.25vw;
 }
 
 h5.modal-title {
@@ -183,26 +182,26 @@ h6 {
 
 .blockquote {
     font-size: 85%;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 20px;
-    border: 2px solid #007aff;
-    margin-right: 8px;
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+    margin-left: 1.56vw;
+    border: 0.15vw solid #007aff;
+    margin-right: 0.625vw;
 }
 
 /* paragraph rules */
 
 .modal-body p:nth-child(n+2) {
-    text-indent: 35px;
+    text-indent: 2.73vw;
 }
 
 #homepage p:nth-child(n+5) {
-    text-indent: 35px;
+    text-indent: 2.73vw;
 }
 
 #homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
-    font-size: 75px;
-    line-height: 35px;
+    font-size: 5.85vw;
+    line-height: 2.73vw;
 }
 
 /* buttons and modals */
@@ -233,16 +232,16 @@ h6 {
 }
 
 .btn-sm {
-    font-size: 14px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    font-size: 1.09vw;
+    padding-top: 0.46vw;
+    padding-bottom: 0.46vw;
 }
 
 /* text */ 
 
 figcaption, .byline {
-    font-size: 0.8em;
-    line-height: 1.2em;
+    font-size: 1vw;
+    line-height: 1.5vw;
 }
 
 .update {
@@ -257,18 +256,18 @@ figcaption, .byline {
 }
 
 .homepage-header {
-    margin-bottom: 2px;
+    margin-bottom: 0.15vw;
 }
 
 .subheader {
-    font-size: 1.25rem;
+    font-size: 1.56vw;
 }
 
 
 /* theme specific */
 
 img {
-    margin-bottom: 20px;
+    margin-bottom: 1.56vw;
 }
 
 .cover-kmd {
@@ -276,8 +275,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/lifeafterdeathCLIPGUIDED.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.7vw;
+    padding-left: 35vw;
 }
 
 .cover-kmd-91 {
@@ -285,8 +284,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/imisagodCLIPGUIDED.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .cover-kmd-98 {
@@ -294,8 +293,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/internationalgodofmysteryCLIPGUIDED.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-94-img-2 {
@@ -303,8 +302,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/doom_source_94_2_vgan.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-94-img {
@@ -312,8 +311,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/doom_source_94_3_vgan.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-98-artwork {
@@ -321,8 +320,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/crewofdoom.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-98-artwork-2 {
@@ -330,8 +329,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/handofdoom.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-98-artwork-3 {
@@ -339,8 +338,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/seedofdoom.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-98-artwork-4 {
@@ -348,8 +347,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/physicaldoom.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .cover-timnit-mit {
@@ -357,8 +356,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/artificialintelligencethicsCLIPGUIDED.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .cover-timnit-wapo {
@@ -366,8 +365,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/googlefiredher.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .cover-timnit-nyt {
@@ -375,8 +374,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/artificialintelligencethicsCLIPGUIDED_2.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .nyt-photo {
@@ -384,8 +383,8 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/artificialintelligencethicsCLIPGUIDED_3.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .nyt-photo-2 {
@@ -393,18 +392,18 @@ img {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(Generated/artificialintelligencethicsCLIPGUIDED_4.png) no-repeat;
-    height: 405px;
-    padding-left: 406px;
+    height: 31.64vw;
+    padding-left: 31.71vw;
 }
 
 .kmd-94-s, .kmd-98-s, .timnit-mit-s, .timnit-wapo-s, .timnit-nyt-s {
-    font-size: 24px;
+    font-size: 1.875vw;
     font-weight: bold;
 }
 
 h2.mit-header, h2.nyt-header {
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.625vw;
     color: #20b3e0;
 }
 
@@ -416,10 +415,10 @@ h2.mit-header, h2.nyt-header {
 
 .custom-highlight {
     background-color: #cde;
-    box-shadow: 0 0.1em 0.1em 0 white;
+    box-shadow: 0 0.125vw 0.125vw 0 white;
     color: #007aff;
-    width: 1em;
-    margin: 0.1em;
+    width: 1.25vw;
+    margin: 0.125vw;
 }
 
 .offcanvas-title, .offcanvas-body h5, .offcanvas-body h6, .accordion-header {
@@ -430,7 +429,7 @@ h2.mit-header, h2.nyt-header {
 }
 
 .offcanvas-header {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0.078vw solid lightgray;
 }
 
 .offcanvas hr {
@@ -445,10 +444,10 @@ h2.mit-header, h2.nyt-header {
 
 .accordion-item {
     background-color: transparent;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 15px;
-    margin-bottom: 1px;
+    border-bottom-right-radius: 0.39vw;
+    border-bottom-left-radius: 0.39vw;
+    padding: 1.17vw;
+    margin-bottom: 0.078vw;
 }
 
 .accordion-button {
@@ -458,7 +457,7 @@ h2.mit-header, h2.nyt-header {
 
 .accordion-button:focus {
     color: blue;
-    box-shadow: 0 0 0 1px #c0d8ff;
+    box-shadow: 0 0 0 0.078vw #c0d8ff;
 }
 
 .accordion-button:not(.collapsed) {

@@ -47,6 +47,7 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 
 .dropdown-menu {
     background-color: #111;
+    font-size: 1.25vw;
 }
 
 .dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
@@ -423,47 +424,47 @@ h2.mit-header, h2.nyt-header {
     word-wrap: normal;
 }
 
-h2.mit-header.paper:before {
+.paper:before {
     content: '📝';
     padding-right: 0.78vw;
 }
 
-h2.mit-header.cost:before {
+.cost:before {
     content: '📈';
     padding-right: 0.78vw;
 }
 
-h2.mit-header.research:before {
+.research:before {
     content: '💰';
     padding-right: 0.78vw;
 }
 
-h2.mit-header.data:before {
+.data:before {
     content: '🔎';
     padding-right: 0.78vw;
 }
 
-h2.mit-header.illusion:before {
+.illusion:before {
     content: '🤔';
     padding-right: 0.78vw;
 }
 
-h2.mit-header.matter:before {
+.matter:before {
     content: '💯';
     padding-right: 0.78vw;
 }
 
-h2.nyt-header.pron:before {
+.pron:before {
     content: '🍆💦';
     padding-right: 0.78vw;
 }
 
-h2.nyt-header.mask:before {
+.mask:before {
     content: '🎭';
     padding-right: 0.78vw;
 }
 
-h2.nyt-header.end:before {
+.end:before {
     content: '🤐';
     padding-right: 0.78vw;
 }

@@ -52,6 +52,7 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 
 .dropdown-menu {
     background-color: #6F1946;
+    font-size: 1.25vw;
 }
 
 .dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
@@ -367,6 +368,15 @@ p.after-box {
 
 .btn-close:focus {
     box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
+}
+
+.modal-content {
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.modal-footer {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* text */ 

@@ -48,6 +48,7 @@ a.navbar-brand:hover, a.navbar-brand:focus {
 
 .dropdown-menu {
   background-color: #222125;
+  font-size: 1.25vw;
 }
 
 .dropdown-item, .dropdown-item:focus, .dropdown-item:hover {
@@ -347,6 +348,11 @@ p.after-box {
   box-shadow: 0 0 0 0.31vw rgba(112 85 125 / 75%);
 }
 
+.modal-content {
+  border-radius: 0;
+}
+
+
 /* text */ 
 
 figcaption {
@@ -629,7 +635,7 @@ h2.mit-header.cost {
   text-underline-position: under;
 }
 
-.timnit-nyt-t {
+.timnit-nyt-t { 
   text-align: right;
   color: #644f98;
   text-transform: uppercase;
