@@ -179,7 +179,7 @@ h6 {
 
 #article1 p:nth-child(n+4) {
     position: relative;
-  }
+}
 
 #article1 p.dropcap:before, #article3 p.dropcap-nyt:before {
     content: '';
