@@ -1,17 +1,28 @@
 /* Machine Learning theme */
 
+/* body */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+/* brand */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
+
+/* menus, titles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
 
 /* navbar rules */
 
 .navbar {
     text-align: center;
     margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
 }
 
 .navbar-brand {
     font-size: 1.2em;
     margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
 }
 
 .nav-link {
@@ -29,7 +40,6 @@
     padding: 5px 0;
     margin: 2px 0 0;
     font-size: 14px;
-    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     text-align: right;
 }
 
@@ -44,30 +54,30 @@ a.navbar-brand {
     color: #fff;
   }
 
-a.navbar-brand:hover {
+a.navbar-brand:hover, a.navbar-brand:focus {
     color: #e64d75;
   }
 
 .nav-link a {
     color: #fff;
     text-decoration: none;
-  }
+}
+
+.dropdown-item:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
 
 /* body rules */
 
 body {
-    position: fixed;
-    max-width: 100vw;
-    max-height: 100vh;
     font-family: 'Josefin Slab', serif;
     font-size: 1.2rem;
     background-color: #000000;
     color: #ffffff;
     justify-content: center;
-}
-
-.blockquote-footer {
-    color: #f9e716;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 a {
@@ -77,15 +87,27 @@ a {
     text-decoration: underline;
 }
 
-a:hover {
+a:hover, a:focus {
     color: #ff0000;
+}
+
+/* home page boxes */ 
+
+.card-body {
+    padding: 0.5rem;
+    border: 1px solid;
 }
 
 .card-issue {
     background-color: #DEDEDE;
     color: #666;
     max-width: 100%;
-    margin-top: 50px;
+}
+
+.card-lens {
+    background-color: #f7f7f7;
+    color: #2b2b2b;
+    max-width: 100%;
 }
 
 .card-issue:hover {
@@ -93,27 +115,40 @@ a:hover {
     color: #007aff;
 }
 
-.card-lens {
-    background-color: #f7f7f7;
-    color: #2b2b2b;
-    padding: 30px;
-    margin-top: 60px;
-}
-
 .card-lens:hover {
     background-color: rgba(0, 0, 0, 0.1);
     color: #f7f7f7;
 }
+
+p.card-text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.card-issue .card-title, .card-lens .card-title {
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+}
+
+/* header rules */
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	line-height: 1.4em;
 	margin-bottom: 3px;
     padding: 10px;
+    font-family: 'Josefin Slab', serif;
 }
 
 h1 {
 	font-size: 36px;
+}
+
+.homepage-header, .homepage-sub {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
 }
 
 h2 {
@@ -132,17 +167,232 @@ h5 {
 	font-size: 16px;
 }
 
+h5.modal-title {
+    text-transform: uppercase;
+}
+
 h6 {
     font-size: 100%;
 }
+
+/* blockquote rules */
+
+.blockquote-footer {
+    color: #f9e716;
+}
+
+.blockquote {
+    font-size: 85%;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 20px;
+    border: 2px solid #007aff;
+    margin-right: 8px;
+}
+
+/* paragraph rules */
+
+.modal-body p:nth-child(n+2) {
+    text-indent: 35px;
+}
+
+#homepage p:nth-child(n+5) {
+    text-indent: 35px;
+}
+
+#homepage p:not(.byline):not(.subheader):not(blockquote > p):not(.card-text):not(#issue-meta p):nth-child(4)::first-letter {
+    font-size: 75px;
+    line-height: 35px;
+}
+
+/* buttons and modals */
+
+.btn-outline-secondary {
+    color: #fff;
+    background-color: #35e1b3;
+}
+
+.btn-outline-secondary:active, .btn-outline-secondary:hover {
+    color: #16a085;
+    background-color: #fff; 
+}
+
+.btn-secondary, .btn, .modal-header, .modal-footer, .clear-highlights {
+    color: #fff;
+    background-color: #35e1b3;
+    border-color: #16a085;
+}
+
+.btn-secondary:hover, .btn.clear-highlights:hover {
+    color: #35e1b3;
+    background-color: #fff;
+}
+
+.btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2335e1b3'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+/* text */ 
+
+figcaption, .byline {
+    font-size: 0.875rem;
+}
+
+.update {
+    font-size: 1.09vw;
+    font-style: italic;
+    color: #888;
+}
+
+.homepage-sub {
+    font-style: italic;
+    color: #888;
+}
+
+.homepage-header {
+    margin-bottom: 2px;
+}
+
 
 .subheader {
     font-size: 1.25rem;
 }
 
-figcaption, .byline {
-    font-size: 0.875rem;
+
+/* theme specific */
+
+.cover-kmd {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/lifeafterdeathCLIPGUIDED.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
 }
+
+.cover-kmd-91 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/imisagodCLIPGUIDED.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-kmd-98 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/internationalgodofmysteryCLIPGUIDED.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-94-img-2 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/doom_source_94_2_vgan.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-94-img {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/doom_source_94_3_vgan.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-98-artwork {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/crewofdoom.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-98-artwork-2 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/handofdoom.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-98-artwork-3 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/seedofdoom.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.kmd-98-artwork-4 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/physicaldoom.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-timnit-mit {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-timnit-wapo {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/googlefiredher.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.cover-timnit-nyt {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_2.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.nyt-photo {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_3.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+.nyt-photo-2 {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(Generated/artificialintelligencethicsCLIPGUIDED_4.png) no-repeat;
+    height: 405px;
+    padding-left: 406px;
+}
+
+
+
+
+
+
+
 
 .custom-highlight {
     background-color: #cde;

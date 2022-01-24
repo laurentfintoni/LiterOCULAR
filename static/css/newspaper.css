@@ -222,9 +222,15 @@ h6 {
 
 /* paragraph rules */
 p {
-  margin-bottom: 0.2vw;
+  margin-bottom: 0vw;
   text-align: justify;
   letter-spacing: -0.01vw;
+}
+
+#article1,
+#article2,
+#article3 {
+  max-height: 88vh !important;
 }
 
 .modal-body p:nth-child(n + 2) {
