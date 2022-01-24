@@ -290,7 +290,6 @@ function focusMetadata(element) {
     let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     });
   } else {
     // Article-wide highlight of a mention category
@@ -300,7 +299,6 @@ function focusMetadata(element) {
     let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
-      // setTimeout(()=>{ mention.classList.remove("custom-highlight")}, 10000)
     });
   }
 
@@ -351,10 +349,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   checkSize();
-
-  // setInterval(() => {
-  //   if (window.location.href.endsWith("#")) {
-  //     window.location.href = window.location.href.slice(0, -1);
-  //   }
-  // }, 1500);
 });
