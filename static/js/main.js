@@ -5,6 +5,10 @@ var articleSources = {
   KMD: {
     metadata: "KMD_meta.html",
     articles: ["KMD_Source_1991.html", "KMD_Source_1994.html", "KMD_egotrip_98.html"],
+    imgs: {
+      "kmd-91-f": { original: "KMD-image.jpeg", generated: "imisagodCLIPGUIDED.png" },
+      "mkd-94-f": { original: "doom_source_94_1.jpg", generated: "" },
+    },
   },
   Timnit: {
     metadata: "Timnit_meta.html",
