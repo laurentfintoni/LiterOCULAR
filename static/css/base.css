@@ -344,7 +344,6 @@ figcaption {
 
 .kmd-91-t, .kmd-94-t, .kmd-98-t {
     text-align: right;
-    position: relative;
 }
 
 .kmd-91-t {
@@ -390,12 +389,13 @@ figcaption {
     padding-right: 0.78vw;
 }
 
-.kmd-98-t:before {
+.kmd-98-s {
+    position: relative;
+}
+
+.kmd-98-s:after {
     content: url(mf-doom.png);
-    transform: scale(.5);
-    position: absolute;
-    left: 0;
-    top: -20%;
+    padding-left: 0.31vw;
 }
 
 .kmd-98-artwork, .kmd-98-artwork-2, .kmd-98-artwork-3, .kmd-98-artwork-4 {

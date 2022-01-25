@@ -414,6 +414,10 @@ figcaption {
     padding: 1.56vw;
 }
 
+img {
+    filter: grayscale(100%);
+}
+
 /* kmd styles */
 
 
