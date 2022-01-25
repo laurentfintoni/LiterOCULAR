@@ -349,13 +349,6 @@ p.after-box {
   width: 50%;
 }
 
-.hp-bq {
-  border-color: transparent !important;
-  border-style: none !important;
-  border-width: 0 !important;
-  margin-top: 0 !important;
-}
-
 figcaption, .byline {
   font-size: 1.09vw;
 }
@@ -369,7 +362,7 @@ img {
   color: #f4f4f4;
 }
 
-.blockquote {
+.kmd-91-bq, .kmd-94-bq {
   border-color: black;
   border-style: double;
   border-width: 0.31vw 0 0.31vw 0;
