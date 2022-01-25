@@ -362,7 +362,7 @@ img {
   color: #f4f4f4;
 }
 
-.blockquote {
+.kmd-91-bq, .kmd-94-bq {
   border-color: black;
   border-style: double;
   border-width: 0.31vw 0 0.31vw 0;

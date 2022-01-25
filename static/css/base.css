@@ -469,6 +469,16 @@ h2.mit-header, h2.nyt-header {
     padding-right: 0.78vw;
 }
 
+.homepage-header:before {
+    content: '🧐';
+    padding-right: 0.78vw;
+}
+
+.homepage-sub:after {
+    content: '📜 ⌨️';
+    padding-left: 0.78vw;
+}
+
 /* metadata viewer */
 
 .custom-highlight {

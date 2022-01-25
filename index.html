@@ -34,7 +34,7 @@
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#disclaimerModal">Disclaimer</a>
         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a>
         <a class="nav-link disabled" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
-          aria-controls="offcanvasBottom">Meta Binoculars</a>
+          aria-controls="offcanvasBottom">Metadata</a>
       </div>
     </div>
   </nav>
@@ -53,12 +53,12 @@
           </div>
           <div class="modal-body">
             <p class="lead">Hi! Thanks for visiting our website, two quick things:<br /><br />
-              1. It took us a lot of effort to build this, and it's meant to be experienced as a reading medium with
-              rich functionality. Unfortunately, this means that screens smaller than a medium-sized tablet won't work
+              1. LiterOCULAR is intended as a reading framework with
+              rich functionality and interesting design. Unfortunately, this means screens smaller than a medium-sized tablet won't work
               very well, so we inhibit access from
               these devices.<br /><br />
-              2. We also recommend Chrome as the browser with which to view the site, though it will work in Firefox and
-              Safari with some slight stylistic inconsistencies (no idea about Edge because, honestly, who cares?).
+              2. Chrome is the best browser which to view the site, though it will also work in Firefox and
+              Safari with some slight stylistic inconsistencies. No idea about Edge because, honestly, who cares?
             </p>
           </div>
         </div>
@@ -70,24 +70,121 @@
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="docuModalLabel">This is not the content you are looking for</h5>
+            <h5 class="modal-title" id="docuModalLabel">This documentation rules the nation, with version</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em>
-              style for text documents, as an end-of-course project for the &#8220;Information Modeling and Web
-              technologies&#8221; course of the Master's Degree in Digital Humanities and Digital Knowledge of the
-              University of Bologna, held by professor Fabio Vitali. </p>
-            <p>The documents contained in this web site have been selected for their length and complexity. Their
-              publication here is not intended to be an alternative or replace their original locations. The documents
-              in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
-              1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue are
-              taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and <em>The Washington
-                Post</em>.
-            </p>
-            <p>All copyrights and related rights on the content remain with their original owners. All copyright on the
-              typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
-            </p>
+            <div class="accordion accordion-flush" id="accordionDocu">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Issue and Article Selection 🤓
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body"> 
+                    <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom features and interviews downloaded following his death in late 2020. Text was extracted using the pytesseract Python library, and then manually cleaned up, and images extracted via Photoshop.</p>
+                    <p>Source articles for Who Watches the Admen? were manually scraped from the source code at <em>MIT Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em> and then manually cleaned up.</p>
+                    <p>The topics of both issues were chosen for their historical and specific differences, as well as for their close relation to our personal interests and field of study in Digital Humanities: hip-hop culture and archival in the case of Death And Rebirth, and ethics and representation in computer science and tech in the case of Who Watches the Admen?. Each article within these issues was chosen in order to give a range of perspective on the same theme, with some cross over between both in the case of more specific topics such as identity.</p>
+                    <p>Full details of every article's source can be found in the Disclaimer section of the magazine, while details of each issue's primary topics and themes can be found in the contents section and metadata viewer.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Text Formatting 💻
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>The chosen articles were formatted for metadata extraction and reference including article-level (source, byline, publication date) and topic-specific metadata. We chose to give all texts a common layout, where headers would have a <code>h1</code> tag, subs and bylines their own specific class, and most of the article would be in <code>p</code> tags. We added figures and <code>blockquotes</code> as necessary to handle images and pull out quotes. We also kept external embeds when possible (a video in <em>The Washington Post</em> article was removed as it went offline during development) and either left them in the text itself or put them in modals when necessary. We also spent time reflecting on the content to decide what should be formatted with specific <code>span</code> tags for metadata usage.</p>
+                    <p>These <code>span</code> tags include ID attributes, which we ended up not using but have kept for potential future development, a class instance of <code>mention-*</code>, where * would stand for the topic the fragment refers to, and an <code>about=”*”</code> attribute, where * would refer to a specific entity within the topic. This system, which was implemented partly by hand and partly through regular expression matching, was designed to then plug into the dynamic functionality requirements of the project.</p>
+                    <p>After a first round of formatting we had a set of topic classes for each issue (e.g. person, subject, organization etc...) which allowed us to evaluate the main themes of each, decide how to handle abstract topics, and decide on whether or not to merge / remove certain entities for clarity and focus (such as as the two different aliases, Zev Love X and MF Doom, of the primary subject in Death And Rebirts and the gender, identity, and racism topics in Who Watches the Admen?). In the end we felt that there would be benefits in being able to view closely connected topics together and so decided against merging entities. The metadata viewer shows the primary topics for each issue based on this work.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Base Functionality, Design and Requirements 📋 🤔
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the spec for this project:<br/>
+                    <div style="display: flex; justify-content: center;"><img src="/img/maths.gif" class="img-fluid" style="align: center;" alt="animated image of the thinking equations meme" title="When the specs make you think"></div>
+                    As a first step we built a virgin Bootstrap 5 skeleton with two pages: the home page, which would act as both cover and content page of the digital magazine, and an issue page, within which all articles would be viewable within columns. We also included a static navbar to enable navigation, access to the metadata viewer and CSS themes. Towards the end of development we also decided to adjust the navbar so that it would be partial on the cover, allowing access to the about, documentation, and disclaimer while showing the metadata viewer as yet unavailable, because access to the issues and lenses from it is possible on page.</p>  
+                    <p><span style="text-decoration: underline;">Early on we decided to use the following line from the spec as an overall guiding principle when approaching the underlying design of the magazine</span>: "The canvas should be exactly as big as the viewport. Individual articles and metadata viewer will scroll autonomously within the overall canvas."</p>
+                    <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time deciding the best approach for the metadata viewer, finally settling on using Bootstrap's offcanvas functionality and placing the viewer on the bottom half of the screen with a height of 85 to enable us to have as much space within it as possible. This choice did end up affecting another part of the spec, namely our ability to enable clicking on a fragment within the metadata viewer to auto scroll to the its position within the article. As the articles are partially covered by the offcanvas while browsing the metadata viewer this would have required a fair amount of hoop jumping via scripts that we felt was too complicated. Furthermore, due to most topic fragments having multiple instances, auto scroll to first instance felt somewhat redundant from a user experience point of view. <span style="text-decoration: underline;">We justify this choice, as well as others detailed in this documentation by referring to another part of the spec which we also used as a guiding principle: "design deliberately."</span></p>
+                    <p>The decision to adhere to the canvas lock also led us to decide that no part of the magazine should be scrollable aside from the articles themselves and the modals. In essence, we made the design decision that this magazine would be constrained in a similar way as print magazines were by their choice of paper size. Therefore we made all additional page requirements (disclaimer, about, documentation) modals and designed the cover/content page to fit within the viewport at all available sizes (see below).</p>
+                    <figure style="float: left; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                      <img src="/img/res1.png" class="img-fluid" alt="screenshot of base relative unit scaling" title="4K res without vw">
+                      <figcaption>4K/2560x1357 res without vw</figcaption>
+                    </figure>
+                    <p>One last but important note on this subject regards typometry and the baseline measurement of every element in this magazine. We started designing LiterOCULAR using rem as the base relative unit, for two reasons: it is the unit used by Bootstrap's core css, and <a href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">it simplifies nesting declarations</a>. However, once we'd gotten deeper into the various historical designs we made the decision to switch our base relative unit to vw. This was due to the fact that when viewing the magazine on higher resolution screens, Bootstrap's framework can lead to an overall shrinking/stretching of the design within the canvas.</p> 
+                    <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                      <img src="/img/res2.png" class="img-fluid" alt="screenshot of base relative unit scaling" title="4K res without vw">
+                      <figcaption>4K/2560x1357 res with vw</figcaption>
+                    </figure>
+                    <p>While experimenting with some design ideas we realised that by changing all the necessary base relative units in our css as well as overiding key elements in the core css we could have a design that scaled relative to screen resolution. As there is no such thing as a clean answer in web dev — 😆 — we then realised that this approach meant that once you went below a tablet in device size you encountered the opposite problem: everything was scaled too small to be pleasant and usable. One option to get around this would have been to script a calculation function to change the base relative unit in the css based on device so that anything below 768 would revert to px or rem and anything above the most common resolutions for desktop and laptop used vw. As the decision to switch to vw was made relatively late in the development process (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and essentially put Federico in front of it as an accomplished fact 🤫), by which point we already had a lot of scripts already implemented, we decided to instead block access to the site for any devices below 768. Again, we justify this by invoking the "design deliberately" principle.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Metadata Viewer 🔎
+                  </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body"> 
+                    <p>With the metadata viewer being a central part of the spec we also spent some time deliberating the best way to approach its requirements. In the end we settled on a design within the viewer that imitates that of the issue page: three columns. In turn the viewer is separated into three horizontal sections: header with title and controls, issue-level metadata and usage instructions, and article-level metadata. In turn, the latter is split into accordions based on subject (drawn from the <code>mention-*</code> class) within which the user can find all instances of the subject (titled using the <code>about=”*”</code> attribute). Lastly, each instance of a subject auto-generates a Wikipedia search via a secondary button.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    Historical Theming (AKA CSS ⏱️ ✈️)
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body"> 
+                    <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                      <img src="/img/dawson-crying.gif" class="img-fluid" style="display: flex; margin: auto;" alt="animated image of Dawson from Dawson Creek crying" title="When the specs make you cry">
+                      <img src="/img/9000.gif" class="img-fluid" style="display: flex; margin: auto; padding: 0.625vw 0 0 0;" alt="animated image of Vegeta crushing his energy reader" title="When the specs make you stronger">
+                    </figure>
+                    <p>If the functionality requirements of the spec left us feeling like thinking equations meme, then the design requirements of creating 4 different historical CSS themes left us feeling like Dawson. Still the only choice was to embrace the pain and let it make us stronger, like Vegeta.</p> 
+                    <p>Based on the spec we decided on the following 4 historical themes:<br/>
+                      <ul>
+                        <li>Newspapers for the 19th century</li>
+                        <li>Art Deco for the first half of the 20th century</li>
+                        <li>Music magazines for late 20th century print</li>
+                        <li>Promptism for 2030s</li>
+                      </ul>
+                    Each theme was given an appropriate title. While newspapers and Art Deco are self-evident, the name for the 1990s music magazines theme was was taken from the publication used as direct reference for the theme, The Source, while the name for the Promptism theme was taken from one of the <a href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in Machine Learning today, transformers.</p>
+                    <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme (such as canvas lock, offcanvas positioning, etc...) we then created each individual theme separately and built a functionality that would load a base theme by default and substitute it for the relevant historical one when selected via the cover or navbar menus. We also made the choice to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this switch and make the user experience more pleasant.</p>
+                    <figure style="float: right; width: 20%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                      <img src="/img/bugs.jpg" class="img-fluid" style="display: flex; margin: auto;" alt="squashing bugs meme" title="When you go down the rabbit hole">
+                      <img src="/img/bear.jpg" class="img-fluid" style="display: flex; margin: auto; padding: 0.625vw 0 0 0;" alt="Kyle McLachlan running from a bear meme" title="When you refuse to face your fears">
+                    </figure> 
+                    <p>As with all other main steps of the development of this project, CSS theming was an iterative process. We began with a base theme, then created initial versions of both the Promptism and Newspaper themes. However, it was during the creation of the music magazines theme that we refined and improved our approach and made several decisions that were then rolled out to all other themes ensuring a consistency that reflects the relevant historical periods without creating drastic changes on the content. This decision was a by-product of a last key guiding principle we had settled on: <span style="text-decoration: underline;">the content should the focus of this magazine with the design requirements a complement to it</span>.</p>
+                    <p>The decisions that were made at this point and further refined in each theme include: splitting the navbar contents between both pages, using the navbar brand as a home button, laying out the home page with two columns to enable on-page navigation, applying consistent and historically inspired styles to modern interactions (such as hover and focus), and consistent usage of a selection of fonts and colors for each theme.</p>
+                    <p>The entire CSS process is best summed by the two memes on the left: procrastination and bug squashing. You still here? Ok, read then move on to the next accordions for details of the design references and choices of each theme 😘.</p> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    Base theme: Emojis and Minimalism 🎉
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionDocu">
+                  <div class="accordion-body"> 
+                    <p>With the metadata viewer being a central part of the spec we also spent some time deliberating the best way to approach its requirements. In the end we settled on a design within the viewer that imitates that of the issue page: three columns. In turn the viewer is separated into three horizontal sections: header with title and controls, issue-level metadata and usage instructions, and article-level metadata. In turn, the latter is split into accordions based on subject (drawn from the <code>mention-*</code> class) within which the user can find all instances of the subject (titled using the <code>about=”*”</code> attribute). Lastly, each instance of a subject auto-generates a Wikipedia search via a secondary button.</p></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -115,8 +212,8 @@
               publication here is not intended to be an alternative or replace their original locations. The documents
               in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
               1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
-              are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
-              <em>The Washington Post</em>.
+              are taken from <a href="https://www.nytimes.com/2021/03/15/technology/artificial-intelligence-google-bias.html" target="_blank"><em>The New York Times</em></a>, the <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank"><em>MIT Technology Review</em></a>, and
+              <a href="https://www.washingtonpost.com/technology/2020/12/23/google-timnit-gebru-ai-ethics/" target="_blank"><em>The Washington Post</em></a>.
             </p>
             <p>
               All copyrights and related rights on the content remain with their original owners. All copyright on the
@@ -145,7 +242,7 @@
             </p>
             <p>
               Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
-              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> over countless hours.
+              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> over countless hours. Technically this makes us the editors, publishers, and designers of this imaginary magazine. 
             </p>
           </div>
           <div class="modal-footer">
@@ -173,18 +270,18 @@
             Master's Degree in Digital Humanities and Digital Knowledge of the University of Bologna, a/y 2020-21.
           </p>
           <p>
-            The magazine is enhanced by metadata binoculars, which allow you to identify various topics within the
+            The magazine is enhanced by metadata binoculars, which allow you to identify and compare various topics within the
             articles, and stylistic lenses, which allow you to change the design style of the magazine on the fly
-            based on four distinct historic eras. You never knew you needed this stuff and to be fair until we were told
+            based on four distinct historical eras. You never knew you needed this stuff and to be fair until we were told
             to
-            build it for this class we didn't know either!
+            build it we didn't know either!
           </p>
           <p class="last">
             The first issue of LiterOCULAR, Death and Rebirth, features three articles that cover the metamophorsis of
             the late rapper
             Daniel Dumile AKA MF Doom following the death of his brother. The second issue, Who Watches the Admen?,
             focuses on the sudden
-            departure of AI researcher Timnit Gebru from Google in late 2020.
+            departure of AI researcher Timnit Gebru from Google in late 2020. 
           </p>
 
           <div class="corners-deco-container homepage container">
