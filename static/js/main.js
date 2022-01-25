@@ -23,10 +23,10 @@ var articleSources = {
     articles: ["Timnit_MITREVIEW_20.html", "Timnit_WAPO_20.html", "Timnit_NYT_21.html"],
     imgs: {
       "cover-timnit-mit": { original: "mit1.jpeg", generated: "artificialintelligencethicsCLIPGUIDED.png" },
-      "cover-timnit-wapo": { original: "wapo1.jpeg", generated: "googlefiredher.png" },
-      "cover-timnit-nyt": { original: "nyt1.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_2.png" },
-      "nyt-photo": { original: "nyt2.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_3.png" },
-      "nyt-photo-2": { original: "nyt3.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_4.png" },
+      "cover-timnit-wapo": { original: "wapo1.jpg", generated: "googlefiredher.png" },
+      "cover-timnit-nyt": { original: "nyt1.jpg", generated: "artificialintelligencethicsCLIPGUIDED_2.png" },
+      "nyt-photo": { original: "nyt2.jpg", generated: "artificialintelligencethicsCLIPGUIDED_3.png" },
+      "nyt-photo-2": { original: "nyt3.jpg", generated: "artificialintelligencethicsCLIPGUIDED_4.png" },
     },
   },
 };
