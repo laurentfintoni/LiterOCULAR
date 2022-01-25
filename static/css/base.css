@@ -158,6 +158,7 @@ h6 {
 
 .blockquote {
     font-size: 2.5vw;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 .blockquote-footer {
@@ -354,10 +355,6 @@ figcaption {
     text-align: right;
 }
 
-.kmd-91-bq {
-    font-family: 'Ubuntu Mono', monospace;
-}
-
 .kmd-94-s, .kmd-98-s {
     text-align: right;
 }
@@ -374,10 +371,6 @@ figcaption {
     position: relative;
     left: -1.17vw;
     padding: 1.56vw;
-}
-
-.kmd-94-bq {
-    font-family: 'Ubuntu Mono', monospace;
 }
 
 .kmd-94-bq-ft {
@@ -476,6 +469,11 @@ h2.mit-header, h2.nyt-header {
 
 .homepage-sub:after {
     content: '📜 ⌨️';
+    padding-left: 0.78vw;
+}
+
+.offcanvas-title:after {
+    content: '👓';
     padding-left: 0.78vw;
 }
 
