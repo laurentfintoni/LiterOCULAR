@@ -1,14 +1,33 @@
 // Global Variables
 var screenSizeModal;
+var currentIssue;
 var metadataViewerBox = document.getElementById("metadata-viewer");
 var articleSources = {
   KMD: {
     metadata: "KMD_meta.html",
     articles: ["KMD_Source_1991.html", "KMD_Source_1994.html", "KMD_egotrip_98.html"],
+    imgs: {
+      "cover-kmd-91": { original: "KMD-image.jpeg", generated: "imisagodCLIPGUIDED.png" },
+      "cover-kmd": { original: "doom_source_94_1.jpg", generated: "lifeafterdeathCLIPGUIDED.png" },
+      "cover-kmd-98": { original: "egotrip1.jpg", generated: "internationalgodofmysteryCLIPGUIDED.png" },
+      "kmd-94-img-2": { original: "doom_source_94_2.jpg", generated: "doom_source_94_2_vgan.png" },
+      "kmd-94-img": { original: "doom_source_94_3.jpg", generated: "doom_source_94_3_vgan.png" },
+      "kmd-98-artwork": { original: "egotrip2.jpg", generated: "crewofdoom.png" },
+      "kmd-98-artwork-2": { original: "egotrip3.jpg", generated: "handofdoom.png" },
+      "kmd-98-artwork-3": { original: "egotrip4.jpg", generated: "seedofdoom.png" },
+      "kmd-98-artwork-4": { original: "egotrip5.jpg", generated: "physicaldoom.png" },
+    },
   },
   Timnit: {
     metadata: "Timnit_meta.html",
     articles: ["Timnit_MITREVIEW_20.html", "Timnit_WAPO_20.html", "Timnit_NYT_21.html"],
+    imgs: {
+      "cover-timnit-mit": { original: "mit1.jpeg", generated: "artificialintelligencethicsCLIPGUIDED.png" },
+      "cover-timnit-wapo": { original: "wapo1.jpeg", generated: "googlefiredher.png" },
+      "cover-timnit-nyt": { original: "nyt1.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_2.png" },
+      "nyt-photo": { original: "nyt2.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_3.png" },
+      "nyt-photo-2": { original: "nyt3.jpeg", generated: "artificialintelligencethicsCLIPGUIDED_4.png" },
+    },
   },
 };
 var mentionCategories = {
@@ -60,27 +79,56 @@ function switchTheme(btn) {
   let cssLink = document.getElementById("theme-style-tag");
   let basePath = "/static/css/";
 
+  function switchImages(toggle) {
+    const sources = articleSources[currentIssue];
+    for (const [cls, links] of Object.entries(sources.imgs)) {
+      console.log(cls, links);
+      if (toggle == "original") {
+        const generatedImage = document.querySelector(`.${cls.trim()}`);
+        console.log(generatedImage);
+        generatedImage.src = "/img/" + links.original;
+      } else {
+        const originalImage = document.querySelector(`.${cls.trim()}`);
+        console.log(originalImage);
+        originalImage.src = "/static/css/Generated/" + links.generated;
+      }
+    }
+  }
   function switcher(button) {
-    console.info(button.id);
     switch (button.id) {
       case "theme-toggle-newspaper":
         cssLink.href = basePath + "newspaper.css";
+        setTimeout(() => {
+          switchImages("original");
+        }, 200);
         break;
 
       case "theme-toggle-deco":
         cssLink.href = basePath + "deco.css";
+        setTimeout(() => {
+          switchImages("original");
+        }, 200);
         break;
 
       case "theme-toggle-music":
         cssLink.href = basePath + "music.css";
+        setTimeout(() => {
+          switchImages("original");
+        }, 200);
         break;
 
       case "theme-toggle-ml":
         cssLink.href = basePath + "ML.css";
+        setTimeout(() => {
+          switchImages("generated");
+        }, 200);
         break;
 
       case "theme-toggle-base":
         cssLink.href = basePath + "base.css";
+        setTimeout(() => {
+          switchImages("original");
+        }, 200);
         break;
 
       default:
@@ -327,11 +375,11 @@ function setAttributes(el, attrs) {
 document.addEventListener("DOMContentLoaded", () => {
   // Homepage doesn't load articles
   if (window.location.href.indexOf("issue.html") != -1) {
-    let issue = window.location.href.split("issue=")[1];
-    $("#article1").load(articleSources[issue]["articles"][0]);
-    $("#article2").load(articleSources[issue]["articles"][1]);
-    $("#article3").load(articleSources[issue]["articles"][2]);
-    $("#issue-meta").load(articleSources[issue]["metadata"]);
+    currentIssue = window.location.href.split("issue=")[1];
+    $("#article1").load(articleSources[currentIssue]["articles"][0]);
+    $("#article2").load(articleSources[currentIssue]["articles"][1]);
+    $("#article3").load(articleSources[currentIssue]["articles"][2]);
+    $("#issue-meta").load(articleSources[currentIssue]["metadata"]);
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
