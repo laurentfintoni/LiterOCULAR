@@ -163,7 +163,7 @@
                       </ul>
                     Each theme was given an appropriate title. While newspapers and Art Deco are self-evident, the name for the 1990s music magazines theme was taken from the publication used as direct reference for the theme, The Source, while the name for the Promptism theme was taken from one of the <a href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in Machine Learning today, transformers.</p>
                     <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme (such as canvas lock, offcanvas positioning, etc...) we then created each individual theme separately and built a functionality that would load a base theme by default and substitute it for the relevant historical one when selected via the cover or navbar menus. We also made the choice to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this switch and make the user experience more pleasant.</p>
-                    <figure style="float: right; width: 25%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                    <figure style="float: right; width: 20%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
                       <img src="/img/bugs.jpg" class="img-fluid" style="display: flex; margin: auto;" alt="squashing bugs meme" title="When you decide to look at the code">
                       <img src="/img/bear.jpg" class="img-fluid" style="display: flex; margin: auto; padding: 0.625vw 0 0 0;" alt="Kyle McLachlan running from a bear meme" title="When you refuse to face your fears">
                     </figure> 
@@ -181,8 +181,8 @@
                 </h2>
                 <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionDocu">
                   <div class="accordion-body"> 
-                    <p>🎨 #111 and #f4f4f4 (base), #D2042D (spot)<br/>
-                      ✍🏻  Roboto Slab (titles), Lato (body), Ubuntu Mono (menus, quotes)</p>
+                    <p>🎨 #111 + #f4f4f4 (base) | #D2042D (spot)<br/>
+                      ✍🏻  Roboto Slab (headers/branding) | Lato (body) | Ubuntu Mono (menus, quotes)</p>
                     <hr>
                     <p>The base theme for LiterOCULAR started with inspiration from the greyscale aesthetic of current website design. In particular <a href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference following some research. The idea was that by keeping the base theme simple it would contrast nicely with the historical themes. Two colors (#111 for black and #f4f4f4 for white) and two fonts (Roboto Slab for titles and Lato for body) were chosen for the first version of the theme, as well as various shades of grey as a spot color.</p>
                     <p>Eventually, the approach was expanded slightly while keeping mininalism in mind by adding the use of emojis as a visual cue signifying the theme's location in the current moment as well as the Ubuntu Mono font for menus and blockquotes and #D2042D as a cherry red highlight as spot color that contrasted nicely with #111 and #f4f4f4.</p>
@@ -193,17 +193,22 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingSeven">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                    Base theme: Emojis and Minimalism 🎉
+                    19th century theme: Newspapers 📰
                   </button>
                 </h2>
                 <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionDocu">
                   <div class="accordion-body"> 
-                    <p>🎨 #111 and #f4f4f4 (base), #D2042D (spot)<br/>
-                      ✍🏻  Roboto Slab (titles), Lato (body), Ubuntu Mono (menus, quotes)</p>
+                    <p>🎨  #111 + #ebe7dd + #f4f4f4 (base) | #f9eac8 + #353434 + #4a1520 (spot)<br/>
+                      ✍🏻  Chomsky (branding) | Old Newspaper Type (body) | Chunkfive (menus) | Newsreader (titles)</p>
                     <hr>
-                    <p>The base theme for LiterOCULAR started with inspiration from the greyscale aesthetic of current website design. In particular <a href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference following some research. The idea was that by keeping the base theme simple it would contrast nicely with the historical themes. Two colors (#111 for black and #f4f4f4 for white) and two fonts (Roboto Slab for titles and Lato for body) were chosen for the first version of the theme, as well as various shades of grey as a spot color.</p>
-                    <p>Eventually, the approach was expanded slightly while keeping mininalism in mind by adding the use of emojis as a visual cue signifying the theme's location in the current moment as well as the Ubuntu Mono font for menus and blockquotes and #D2042D as a cherry red highlight as spot color that contrasted nicely with #111 and #f4f4f4.</p>
-                    <p>Emojis were used as visual compliments to the articles headers and the cover while the layout was kept simple with text alignment to the right for headers, subheaders, and bylines to contrast with historical themes and blockquotes centered. Roboto Slab was chosen as an ideal header font that would complement a sans-serif font like Lato which has a self-effacing simplicity. Ubunto Mono was chosen for its contemporary style and the way in which its fixed-width would contrast with the other fonts.</p>
+                    <p>For the Newspaper-inspired theme we turned to Guilty Novin's exhaustive article for inspiration as well as <a href="https://www.loc.gov/newspapers/?dates=1800-1899" target="_blank">collection of 19th century newspapers</a> from the USA available at the Library of Congress. The layout certainly had to be preserved (simple columns) but many quirks and details could be added to give the look and feel of proper modern newspapers.</p>
+                    <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
+                      <img src="/img/morningherald.png" class="img-fluid" alt="screenshot of a 1839 edition of the Morning Herald" title="Morning Herald, 1839">
+                      <figcaption>Morning Herald, 1839</figcaption>
+                    </figure>
+                    <p>While we originally thought that this theme would make use of dropcaps, upon closer inspection of the LoC collection we noticed dropcaps only appeared to be applied to announcements and advertisements rather than articles themselves. Bottom margins were removed from <code>p</code> tags and margins and padding were adjusted elsewhere to emulate the condensed feel of the layouts of the time while solid, light lines were used to emulate the demarcations and boxing used by newspapers. A pointing hand icon was repurposed via Photoshop from <a href="https://www.loc.gov/resource/sn83030312/1839-09-07/ed-1/?sp=1&r=0.075,0.112,1.02,0.467,0" target="_blank">a 1839 edition of the Morning Herald</a> as a nod to the way in which newspapers of the time made use of icons to enliven their layout and draw attention.</p>
+                    <p>For the color palette, we settled on a dark gray (#353434), a yellow-ish gray for the background (#ebe7dd) and a slightly toned-down black (#111) and white (#f4f4f4) for text, in order to maintain high contrast and legibility. A light shade of yellow (#f9eac8) and dark shade of pink-red (#4a1520) were chosen as spot colors for drop down menus and highlights.</p>
+                    <p>Lastly, images were greyscaled via CSS filter to align them with the overall historical look.</p>
                   </div>
                 </div>
               </div>

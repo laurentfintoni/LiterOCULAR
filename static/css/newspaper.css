@@ -12,13 +12,13 @@
   src: url("/static/fonts/Chomsky.woff") format("woff");
 }
 
-/* boldy font for headers and menus */
+/* boldy font for menus */
 @font-face {
   font-family: "newspaper-header";
   src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
 }
 
-/* bold serif plain font for subheaders inside articles */
+/* bold serif plain font for headers */
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@500&display=swap");
 
 /* navbar rules */
@@ -414,7 +414,8 @@ img {
 .offcanvas-title,
 .offcanvas-body h5,
 .offcanvas-body h6, 
-.offcanvas .accordion-button {
+.offcanvas .accordion-button,
+#docuModal .accordion-button {
   font-family: "newspaper-header", sans-serif;
   text-transform: uppercase;
 }
