@@ -74,19 +74,19 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>The purpose of this web site is to explore various types of <em>typographic</em> and <em>layout</em>
-              style for text documents, as an end-of-course project for the &#8220;Information Modeling and Web
-              technologies&#8221; course of the Master's Degree in Digital Humanities and Digital Knowledge of the
-              University of Bologna, held by professor Fabio Vitali. </p>
-            <p>The documents contained in this web site have been selected for their length and complexity. Their
-              publication here is not intended to be an alternative or replace their original locations. The documents
-              in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
-              1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue are
-              taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and <em>The Washington
-                Post</em>.
-            </p>
-            <p>All copyrights and related rights on the content remain with their original owners. All copyright on the
-              typographic and layout choices are 2021 © Federico Cagnola, Laurent Fintoni
+            <h5>Issue and Article Selection</h5>
+            <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom features and interviews downloaded following his death in late 2020. Text was extracted using the pytesseract Python library, and then manually cleaned up, and images extracted via Photoshop.</p>
+            <p>Source articles for Who Watches the Admen? were taken from online articles about the firing of AI researcher Timnit Gebru available at <em>MIT Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em>.</p>
+            <p>The two issues were chosen for their historical and specific differences, as well as for their close relation to our field of study in Digital Humanities: archival in the case of MF Doom and ethics and representation in computer science and tech in the case of Gebru. Each article within these issues was chosen in order to give a range of perspective on the same theme, with some cross over between both in the case of more specific topics such as identity.</p>
+            <p>Full details of every article's source can be found in the Disclaimer section of the magazine, while details of each issue's subject and theme can be found in the contents section and metadata viewer.</p>
+            <h5>Text Formatting</h5>
+            <p>The chosen articles were formatted for metadata extraction and reference including article-level metadata (source, byline, publication date) and topic-specific metadata. We chose to give all texts a common layout, where headers would have a <code>h1</code> tag and most of the article would be in <code>p</code> tags. We added figures and <code>blockquotes</code> as necessary to handle images and pull out quotes. We then dove into the articles themselves, reflecting on the content to decide what should be formatted with specific <code>span</code> tags for metadata usage.</p>
+            <p>These <code>span</code> tags include ID attributes, which we ended up not using but have kept for potential future development, a class instance of <code>mention-*</code> where * would stand for the topic the fragment refers to, and an <code>about=”*”</code> attribute where * would refer to a specific entity within the topic. This system, which was implemented partly by hand and partly through regular expression matching, was designed to plug into the functionality requirements of the project.</p>
+            <p>After a first round of formatting we had a set of topic classes for each issue (e.g. person, subject, organization etc...) which allowed us to evaluate the main themes of each, decide how to handle abstract topics, and decide on whether or not to merge / remove certain entities for clarity and focus. In the case of the Death And Rebirth issue we chose to not merge the two different aliases of the primary subject (Zev Love X and MF Doom), while for Who Watches the Admen? we decided to keep the gender, identity, and racism topics separate despite their close semantic relationship. In both cases we ultimately felt that there would be benefits in being able to view these closely connected topics together. The metadata viewer shows the primary topics for each issue based on this work.</p>
+            <h5>Base Functionality, Design and Requirements</h5>
+            <p>Not gonna lie, we spent a fair amount feeling like this while contemplating the spec for this project:<br/>
+              <div style="display: flex; justify-content: center;"><img src="/img/maths.gif" class="img-fluid" style="align: center;" alt="animated image of the thinking equations meme" title="When the specs make you flip"></div>
+            As a first step we built a virgin Bootstrap skeleton with two pages: the home page, which would act as both cover and contents of the digital magazine, and an issue page, within which all articles would be viewable. We then decided to use the following line from the spec as an overall guiding principle when approaching the underlying design of the magazine: "The canvas should be exactly as big as the viewport. Individual articles and metadata viewer will scroll autonomously within the overall canvas."
             </p>
           </div>
           <div class="modal-footer">
@@ -115,8 +115,8 @@
               publication here is not intended to be an alternative or replace their original locations. The documents
               in the <b>Death and Rebirth</b> issue are taken from print copies of <em>The Source</em> magazine (1991,
               1994) and <em>Ego Trip</em> magazine (1998). The documents in the <b>Who Watches the Admen?</b> issue
-              are taken from <em>The New York Times</em>, the <em>MIT Technology Review</em>, and
-              <em>The Washington Post</em>.
+              are taken from <a href="https://www.nytimes.com/2021/03/15/technology/artificial-intelligence-google-bias.html" target="_blank"><em>The New York Times</em></a>, the <a href="https://www.technologyreview.com/2020/12/04/1013294/google-ai-ethics-research-paper-forced-out-timnit-gebru/" target="_blank"><em>MIT Technology Review</em></a>, and
+              <a href="https://www.washingtonpost.com/technology/2020/12/23/google-timnit-gebru-ai-ethics/" target="_blank"><em>The Washington Post</em></a>.
             </p>
             <p>
               All copyrights and related rights on the content remain with their original owners. All copyright on the

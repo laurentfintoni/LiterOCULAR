@@ -45,7 +45,7 @@ body.home {
   display: none;
 }
 
-.dropdown-menu.themes > * {
+.dropdown-menu > * {
   cursor: pointer;
 }
 

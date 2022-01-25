@@ -257,7 +257,7 @@ function fillMetadataBox() {
             // Dropdown menu (points to external source)
             let menuDrop = setAttributes(document.createElement("ul"), { class: "dropdown-menu" });
             let externalLink = setAttributes(document.createElement("li"), { class: "dropdown-item" });
-            externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank">Wikipedia</a>`;
+            externalLink.innerHTML = `<a href="https://en.wikipedia.com/w/index.php?search=${aboutType}" target="_blank" class="stretched-link">Wikipedia</a>`;
             menuDrop.appendChild(externalLink);
             btnGroup.appendChild(splitBtn);
             btnGroup.appendChild(menuDrop);
