@@ -1,6 +1,6 @@
 /* Music Magazine theme */
 
-/* slab serif for title, imitating Aachen */ 
+/* slab serif for brand/title, imitating Aachen */ 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 /* serif for body, riffing off American/old style types */
@@ -132,6 +132,7 @@ h1 {
 h1.homepage {
   font-family: 'Glegoo', serif;
   text-transform: uppercase;
+  border: 0.39vw solid #70557D;
 }
 
 h2 {
@@ -673,7 +674,7 @@ h2.nyt-header {
   color: #644f98;
   padding: 0.625vw;
   float: left;
-  width: 95%;
+  width: 60%;
   margin: 0.625vw;
 }
 
