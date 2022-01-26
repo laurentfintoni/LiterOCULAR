@@ -3,19 +3,19 @@
 /* newspaper-like body font for articles and dense texts */
 @font-face {
   font-family: "newspaper-body";
-  src: url("/static/fonts/OldNewspaperTypes.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/OldNewspaperTypes.ttf") format("truetype");
 }
 
 /* elaborate and decorated font for website-mag title */
 @font-face {
   font-family: "Chomsky";
-  src: url("/static/fonts/Chomsky.woff") format("woff");
+  src: url("/LiterOCULAR/static/fonts/Chomsky.woff") format("woff");
 }
 
 /* boldy font for menus */
 @font-face {
   font-family: "newspaper-header";
-  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/chunkfive.print.ttf") format("truetype");
 }
 
 /* bold serif plain font for headers */
