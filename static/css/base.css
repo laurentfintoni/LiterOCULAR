@@ -12,6 +12,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+
+/* extra fonts for docu */
+
+
 /* navbar rules */
 
 .navbar {
@@ -285,6 +289,20 @@ p.update {
 
 .btn-close:focus {
     box-shadow: 0 0 0 0.31vw rgb(210 4 45 / 50%);
+}
+
+.modal-header {
+    border-bottom: 0.1vw solid #D2042D;
+    background-color: #f4f4f4;
+  }
+  
+.modal-footer {
+    border-top: 0.1vw solid #D2042D;
+    background-color: #f4f4f4;
+}
+
+.modal-body {
+    background-color: #f4f4f4;
 }
 
 /* text */ 
@@ -576,3 +594,4 @@ h6.binocular-header {
     height: 1.56vw;
     background-size: 1.56vw;
 }
+

@@ -248,7 +248,7 @@ h6 {
 
 .btn-close {
   background: transparent
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2335e1b3'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2316a085'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
     center/1em auto no-repeat;
 }
 
@@ -287,10 +287,6 @@ figcaption,
 
 /* theme specific */
 
-img {
-  margin-bottom: 1.56vw;
-}
-
 .kmd-94-s,
 .kmd-98-s,
 .timnit-mit-s,
@@ -300,11 +296,33 @@ img {
   font-weight: bold;
 }
 
+.cover-kmd-91, 
+.cover-kmd, 
+.cover-kmd-98, 
+.cover-timnit-mit, 
+.cover-timnit-wapo,
+.cover-timnit-nyt {
+  padding: 0.78vw;
+}
+
 h2.mit-header,
 h2.nyt-header {
   text-align: center;
   margin-bottom: 0.625vw;
   color: #20b3e0;
+}
+
+.kmd-94-img {
+  transform: rotate(-90deg);
+  float: right;
+  width: 22.5vw;
+  padding: 0.78vw;
+}
+
+.kmd-98-artwork, .kmd-98-artwork-2, .kmd-98-artwork-3, .kmd-98-artwork-4 {
+  float: right;
+  padding: 0.78vw;
+  width: 11.25vw;
 }
 
 /* metadata viewer */

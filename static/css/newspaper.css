@@ -3,19 +3,19 @@
 /* newspaper-like body font for articles and dense texts */
 @font-face {
   font-family: "newspaper-body";
-  src: url("/static/fonts/OldNewspaperTypes.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/OldNewspaperTypes.ttf") format("truetype");
 }
 
 /* elaborate and decorated font for website-mag title */
 @font-face {
   font-family: "Chomsky";
-  src: url("/static/fonts/Chomsky.woff") format("woff");
+  src: url("/LiterOCULAR/static/fonts/Chomsky.woff") format("woff");
 }
 
 /* boldy font for menus */
 @font-face {
   font-family: "newspaper-header";
-  src: url("/static/fonts/chunkfive.print.ttf") format("truetype");
+  src: url("/LiterOCULAR/static/fonts/chunkfive.print.ttf") format("truetype");
 }
 
 /* bold serif plain font for headers */
@@ -243,11 +243,11 @@ p {
   max-height: 88vh !important;
 }
 
-.modal-body p:nth-child(n + 1) {
+.modal-body p:nth-child(n+1) {
   text-indent: 1.25vw;
 }
 
-#homepage p:nth-child(n + 4) {
+#homepage p:nth-child(n+4) {
   text-indent: 1.25vw;
 }
 
@@ -427,7 +427,7 @@ img {
 }
 
 .offcanvas-header {
-  border-bottom: 0.15vw solid black;
+  border-bottom: 0.625vw double black;
   margin: 0.625vw;
 }
 
@@ -515,11 +515,11 @@ img {
 }
 
 .modal-header {
-  border-bottom: 1px solid black;
+  border-bottom: 0.31vw double black;
 }
 
 .modal-footer {
-  border-top: 1px solid black;
+  border-top: 0.31vw double black;
 }
 
 .btn-group > :not(.btn-check) + .btn {
