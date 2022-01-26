@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-/* Cormorant Garamond for menus, inspired by Arts & Decoration  */
+/* Cormorant Garamond for menus  */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
 
@@ -197,7 +197,6 @@ p {
     font-size: 3.75vw;
     float: left;
     line-height: 4.4vw;
-    padding-right: 0.46vw;
     margin-bottom: -0.7vw;
 }
 
@@ -205,7 +204,6 @@ p {
     font-size: 6.25vw;
     float: left;
     line-height: 6.8vw;
-    padding-right: 0.46vw;
     margin-bottom: -1.2vw;
 }
 
@@ -213,7 +211,6 @@ p {
     font-size: 6.25vw;
     float: left;
     line-height: 6.8vw;
-    padding-right: 0.46vw;
     margin-bottom: -1.2vw;
 }
 
@@ -221,7 +218,6 @@ p {
     font-size: 6.25vw;
     float: left;
     line-height: 6.8vw;
-    padding-right: 0.46vw;
     margin-bottom: -1.2vw;
 }
 
@@ -229,7 +225,6 @@ p {
     font-size: 6.25vw;
     float: left;
     line-height: 6.8vw;
-    padding-right: 0.46vw;
     margin-bottom: -1.2vw;
 }
 
@@ -237,7 +232,6 @@ p {
     font-size: 6.25vw;
     float: left;
     line-height: 6.8vw;
-    padding-right: 0.46vw;
     margin-bottom: -1.2vw;
 }
 
@@ -245,7 +239,6 @@ p {
     font-size: 6.25vw !important;
     float: left !important;
     line-height: 6.8vw !important;
-    padding-right: 0.46vw !important;
     margin-bottom: -1.2vw !important;
 }
 
@@ -253,7 +246,6 @@ p {
     font-size: 6.25vw !important;
     float: left !important;
     line-height: 6.8vw !important;
-    padding-right: 0.46vw !important;
     margin-bottom: -1.2vw !important;
 }
 
@@ -262,8 +254,6 @@ p.no-dropcap::first-letter {
     float: none !important;
     line-height: normal !important;
     padding-right: 0 !important;
-    font-family: 'Libre Baskerville', serif !important;
-    color: #222125 !important;
 }
 
 p.no-dropcap {
@@ -291,7 +281,6 @@ p.after-box {
     font-size: 3.75vw;
     float: left;
     line-height: 4.4vw;
-    padding-right: 0.46vw;
     margin-bottom: -0.7vw;
 }
 
@@ -629,12 +618,12 @@ h2.mit-header, h2.nyt-header {
     box-shadow: 0 0 0 0.31vw rgb(104 164 105 / 75%);
 }
 
-.accordion-button:not(.collapsed) {
+.offcanvas .accordion-button:not(.collapsed) {
     color: #fff;
     background-color: transparent;
 }
 
-.accordion-button.collapsed {
+.offcanvas .accordion-button.collapsed {
     color: #fff;
     background-color: transparent;
 }

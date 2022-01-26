@@ -70,6 +70,10 @@ body {
   font-size: 1.25vw;
 }
 
+.modal-body {
+  background-color: #e1dcd8;
+}
+
 a {
   color: #d5473b;
   text-decoration: none;

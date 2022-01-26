@@ -82,15 +82,17 @@ body {
   font-size: 1.25vw;
 }
 
-a:not(.navbar *) {
+.blockquote-footer {
   color: #111;
+}
+
+a:not(.navbar *) {
+  color: #4a1520;
   text-decoration: none;
 }
 
 a:not(.navbar *):hover {
-  color: #111;
-  text-decoration: underline;
-  text-decoration-color: #d2042d;
+  color: #353434;
 }
 
 /* homepage boxes */
@@ -420,7 +422,7 @@ img {
   text-transform: uppercase;
 }
 
-.offcanvas {
+.offcanvas, .modal-content {
   background-color: #d7ccc1;
 }
 
