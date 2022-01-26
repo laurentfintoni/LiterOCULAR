@@ -80,6 +80,10 @@ function switchTheme(btn) {
   let basePath = "/static/css/";
 
   function switchImages(toggle) {
+    if (window.location.href.indexOf("issue.html") == -1) {
+      // homepage does not need to switch images
+      return;
+    }
     const sources = articleSources[currentIssue];
     for (const [cls, links] of Object.entries(sources.imgs)) {
       console.log(cls, links);
@@ -331,29 +335,24 @@ function fillMetadataBox() {
 function focusMetadata(element) {
   // Unpack id mention/name into two variables
   let [mentionType, mentionName] = element.id.split("/");
+  let articleNumber = element.dataset.article;
+  let article = document.getElementById("article" + articleNumber);
 
   if (mentionName != "total") {
-    // Issue-wide highlight of that specific mentioned item
-    console.log("Highlighting all mentions of ", mentionName);
-    let selectedMentions = document.querySelectorAll(`span[about=${mentionName}]`);
+    // Article-wide highlight of that specific mentioned item
+    console.log("Highlighting all mentions of", mentionName, "in article", articleNumber);
+    let selectedMentions = article.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
     });
   } else {
     // Article-wide highlight of a mention category
-    let articleNumber = element.dataset.article;
-    let article = document.getElementById("article" + articleNumber);
     console.log("Highlighting all", mentionType, "in article", articleNumber);
     let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
     selectedMentions.forEach((mention) => {
       mention.classList.add("custom-highlight");
     });
   }
-
-  // Disable offcanvas on text highlight
-  // var offCanvas = document.getElementById("offcanvasBottom");
-  // var bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offCanvas);
-  // bsOffcanvas.hide();
 }
 
 function resetHighlight(ev) {
