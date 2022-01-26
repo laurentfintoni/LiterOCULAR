@@ -200,6 +200,20 @@ p {
     margin-bottom: -0.7vw;
 }
 
+.modal-body p:nth-child(1)::first-letter {
+    font-size: 3.75vw;
+    float: left;
+    line-height: 4.4vw;
+    margin-bottom: -0.7vw;
+}
+
+#docuModal .modal-body p:nth-child(1)::first-letter {
+    font-size: 1.25vw !important;
+    float: none !important;
+    line-height: normal !important;
+    padding-right: 0 !important;
+}
+
 #article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter {
     font-size: 6.25vw;
     float: left;
@@ -630,6 +644,7 @@ h2.mit-header, h2.nyt-header {
 
 #docuModal .accordion-button:not(.collapsed), .accordion-button.collapsed {
     color: #111;
+    background-color: transparent;
 }
 
 .accordion-button:not(.collapsed)::after {

@@ -176,6 +176,7 @@ h6 {
 
 p {
   margin-bottom: 0vw;
+  text-align: justify;
 }
 
 .modal-body p:nth-child(n+2) {
@@ -192,6 +193,23 @@ p {
   line-height: 3.50vw;
   padding-right: 0.31vw;
   font-family: 'Oswald', sans-serif;
+}
+
+.modal-body p:nth-child(1)::first-letter {
+  font-size: 3.75vw;
+  float: left;
+  line-height: 3.50vw;
+  padding-right: 0.31vw;
+  font-family: 'Oswald', sans-serif;
+}
+
+#docuModal .modal-body p:nth-child(1)::first-letter {
+  font-size: 1.25vw !important;
+  float: none !important;
+  line-height: normal !important;
+  padding-right: 0 !important;
+  font-family: 'Libre Baskerville', serif !important;
+  color: #222125 !important;
 }
 
 #article1 p:not(.byline):not(.subheader):not(figure):not(h1):nth-child(4)::first-letter {
@@ -235,6 +253,7 @@ p.no-dropcap {
 p.after-box {
   text-indent: 0 !important;
   padding-top: 0.23vw;
+  letter-spacing: -0.030vw;
 }
 
 .after-box::first-letter {
@@ -463,7 +482,7 @@ h1.kmd-94-t {
   float: right;
   width: 12.5vw;
   position: relative;
-  left: -1.17vw;
+  left: 0.83vw;
   padding: 1.56vw;
 }
 
