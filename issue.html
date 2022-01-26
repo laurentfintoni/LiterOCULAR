@@ -119,7 +119,8 @@
           <div class="modal-body">
             <p class="lead">Hi! Thanks for visiting our website, two quick things:<br /><br />
               1. LiterOCULAR is intended as a reading framework with
-              rich functionality and interesting design. Unfortunately, this means screens smaller than a medium-sized tablet won't work
+              rich functionality and interesting design. Unfortunately, this means screens smaller than a medium-sized
+              tablet won't work
               very well, so we prevent access from
               these devices.<br /><br />
               2. Chrome is the best browser which to view the site, though it will also work in Firefox and
@@ -139,252 +140,613 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p style="text-align: center;">⚠️ Please note this documentation is best viewed with the base theme. Click <a href="#" id="theme-toggle-base" onclick="switchTheme(this);">here</a> to enable. ⚠️</p>
+            <p style="text-align: center;">⚠️ Please note this documentation is best viewed with the base theme. Click
+              <a href="#" id="theme-toggle-base" onclick="switchTheme(this);">here</a> to enable. ⚠️
+            </p>
             <div class="accordion accordion-flush" id="accordionDocu">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     Issue and Article Selection 🤓
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom features and interviews downloaded following his death in late 2020. Text was extracted using the pytesseract Python library, and then manually cleaned up, and images extracted via Photoshop.</p>
-                    <p>Source articles for Who Watches the Admen? were manually scraped from the source code at <em>MIT Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em> and then manually cleaned up.</p>
-                    <p>The topics of both issues were chosen for their historical and specific differences, as well as for their close relation to our personal interests and field of study in the Digital Humanities: hip-hop culture and archival in the case of Death And Rebirth, and ethics and representation in computer science and tech in the case of Who Watches the Admen?. Each article within these issues was chosen to give a range of perspective on the same subject (Dumile's artistic reinvention, Gebru's firing from Google), with some cross over between both in the case of more specific topics such as identity.</p>
-                    <p>Full details of every article's source can be found in the Disclaimer section of the magazine, while details of each issue's primary topics and themes can be found in the contents section and metadata viewer.</p></div>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom
+                      features and interviews downloaded following his death in late 2020. Text was extracted using the
+                      pytesseract Python library, and then manually cleaned up, and images extracted via Photoshop.</p>
+                    <p>Source articles for Who Watches the Admen? were manually scraped from the source code at <em>MIT
+                        Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em> and then manually
+                      cleaned up.</p>
+                    <p>The topics of both issues were chosen for their historical and specific differences, as well as
+                      for their close relation to our personal interests and field of study in the Digital Humanities:
+                      hip-hop culture and archival in the case of Death And Rebirth, and ethics and representation in
+                      computer science and tech in the case of Who Watches the Admen?. Each article within these issues
+                      was chosen to give a range of perspective on the same subject (Dumile's artistic reinvention,
+                      Gebru's firing from Google), with some cross over between both in the case of more specific topics
+                      such as identity.</p>
+                    <p>Full details of every article's source can be found in the Disclaimer section of the magazine,
+                      while details of each issue's primary topics and themes can be found in the contents section and
+                      metadata viewer.</p>
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                     Text Formatting 💻
                   </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionDocu">
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>The articles were formatted for metadata extraction and reference including article-level (source, byline, publication date) and topic-specific metadata. We chose to give all texts a common layout, where headers would have a <code>h1</code> tag, subs and bylines their own specific class, and the rest of the text would be in <code>p</code> tags. We added <code>figure</code> and <code>blockquote</code> tags as necessary to handle images and pull out quotes. We also kept external embeds when possible (a video in <em>The Washington Post</em> article was removed as it went offline during development) and either left them in the text itself or put them in modals when they couldn't easily be restyled. We also spent time reflecting on the content to decide what should be formatted with specific <code>span</code> tags for metadata usage.</p>
+                    <p>The articles were formatted for metadata extraction and reference including article-level
+                      (source, byline, publication date) and topic-specific metadata. We chose to give all texts a
+                      common layout, where headers would have a <code>h1</code> tag, subs and bylines their own specific
+                      class, and the rest of the text would be in <code>p</code> tags. We added <code>figure</code> and
+                      <code>blockquote</code> tags as necessary to handle images and pull out quotes. We also kept
+                      external embeds when possible (a video in <em>The Washington Post</em> article was removed as it
+                      went offline during development) and either left them in the text itself or put them in modals
+                      when they couldn't easily be restyled. We also spent time reflecting on the content to decide what
+                      should be formatted with specific <code>span</code> tags for metadata usage.
+                    </p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
-                      <img src="/LiterOCULAR/img/typing.gif" class="img-fluid" alt="animated image of Jim Carey typing" title="When the formatting hits">
+                      <img src="/LiterOCULAR/img/typing.gif" class="img-fluid" alt="animated image of Jim Carey typing"
+                        title="When the formatting hits">
                       <figcaption>Artist representation of formatting process</figcaption>
                     </figure>
-                    <p>These <code>span</code> tags include ID attributes, which we ended up not using but have kept for potential future development, a class instance of <code>mention-*</code>, where * would stand for the topic the fragment refers to, and an <code>about=”*”</code> attribute, where * would refer to a specific entity within the topic. This system, which was implemented partly by hand and partly through regular expression matching, was designed to then plug into the dynamic functionality requirements of the project.</p>
-                    <p>After a first round of formatting we had a set of topic classes for each issue (e.g. person, subject, organization etc...) which allowed us to evaluate the main themes, decide how to handle abstract topics, and decide on whether or not to merge / remove certain entities for clarity and focus. In the end we felt that there would be benefits in being able to view closely connected topics alongside each other and so decided against merging entities. The metadata viewer shows the primary topics for each issue based on this work.</p>
+                    <p>These <code>span</code> tags include ID attributes, which we ended up not using but have kept for
+                      potential future development, a class instance of <code>mention-*</code>, where * would stand for
+                      the topic the fragment refers to, and an <code>about=”*”</code> attribute, where * would refer to
+                      a specific entity within the topic. This system, which was implemented partly by hand and partly
+                      through regular expression matching, was designed to then plug into the dynamic functionality
+                      requirements of the project.</p>
+                    <p>After a first round of formatting we had a set of topic classes for each issue (e.g. person,
+                      subject, organization etc...) which allowed us to evaluate the main themes, decide how to handle
+                      abstract topics, and decide on whether or not to merge / remove certain entities for clarity and
+                      focus. In the end we felt that there would be benefits in being able to view closely connected
+                      topics alongside each other and so decided against merging entities. The metadata viewer shows the
+                      primary topics for each issue based on this work.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     Base Functionality, Design, and Requirements 📋 🤔
                   </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionDocu">
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the spec for this project:<br/>
-                    <div style="display: flex; justify-content: center; padding: 0.625vw;"><img src="/img/maths.gif" class="img-fluid" alt="animated image of the thinking equations meme" title="When the specs make you think"></div>
-                    As a first step we built a virgin Bootstrap 5 skeleton with two pages: the home page, which would act as both cover and ToC page of the digital magazine, and an issue page, within which all articles would be viewable inside columns. We also included a static navbar to enable navigation back and forth as well as access to the metadata viewer and CSS themes. Towards the end of development we also decided to adjust the navbar so that it would be partial on the cover (with access to the about, documentation, and disclaimer pages and showing the metadata viewer as yet unavailable) because access to  issues and lenses are available on page in the table of contents.</p>  
-                    <p><span style="text-decoration: underline;">Early on we decided to use the following line from the spec as an overall guiding principle when approaching the underlying design of the magazine</span>: "The canvas should be exactly as big as the viewport. Individual articles and metadata viewer will scroll autonomously within the overall canvas."</p>
-                    <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time deciding the best approach for the metadata viewer, finally settling on using Bootstrap's offcanvas functionality and placing the viewer on the bottom half of the screen with a height of 85 to enable us to have as much space within it as possible. This choice did end up affecting another part of the spec, namely our ability to enable clicking on a fragment within the metadata viewer to auto scroll to its position within the article. As the articles are partially covered by the offcanvas while browsing the metadata viewer this would have required a fair amount of hoop jumping via scripts that we felt was too complicated. Furthermore, due to most topic fragments having multiple instances, auto scroll to first instance felt somewhat redundant from a user experience point of view. <span style="text-decoration: underline;">We justify this choice, as well as others detailed in this documentation by referring to another part of the spec which we also used as a guiding principle: "design deliberately."</span></p>
-                    <p>The decision to adhere to the canvas lock also led us to decide that no part of the magazine should be scrollable aside from the articles themselves and the modals. In essence, we made the design decision that this magazine would be constrained in a similar way as print magazines were by their choice of paper size. Therefore we made all additional page requirements (disclaimer, about, documentation) modals and designed the cover/content page to fit within the viewport at all available sizes (see below).</p>
+                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the spec for
+                      this project:<br />
+                    <div style="display: flex; justify-content: center; padding: 0.625vw;"><img
+                        src="/LiterOCULAR/img/maths.gif" class="img-fluid"
+                        alt="animated image of the thinking equations meme" title="When the specs make you think"></div>
+                    As a first step we built a virgin Bootstrap 5 skeleton with two pages: the home page, which would
+                    act as both cover and ToC page of the digital magazine, and an issue page, within which all articles
+                    would be viewable inside columns. We also included a static navbar to enable navigation back and
+                    forth as well as access to the metadata viewer and CSS themes. Towards the end of development we
+                    also decided to adjust the navbar so that it would be partial on the cover (with access to the
+                    about, documentation, and disclaimer pages and showing the metadata viewer as yet unavailable)
+                    because access to issues and lenses are available on page in the table of contents.</p>
+                    <p><span style="text-decoration: underline;">Early on we decided to use the following line from the
+                        spec as an overall guiding principle when approaching the underlying design of the
+                        magazine</span>: "The canvas should be exactly as big as the viewport. Individual articles and
+                      metadata viewer will scroll autonomously within the overall canvas."</p>
+                    <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time
+                      deciding the best approach for the metadata viewer, finally settling on using Bootstrap's
+                      offcanvas functionality and placing the viewer on the bottom half of the screen with a height of
+                      85 to enable us to have as much space within it as possible. This choice did end up affecting
+                      another part of the spec, namely our ability to enable clicking on a fragment within the metadata
+                      viewer to auto scroll to its position within the article. As the articles are partially covered by
+                      the offcanvas while browsing the metadata viewer this would have required a fair amount of hoop
+                      jumping via scripts that we felt was too complicated. Furthermore, due to most topic fragments
+                      having multiple instances, auto scroll to first instance felt somewhat redundant from a user
+                      experience point of view. <span style="text-decoration: underline;">We justify this choice, as
+                        well as others detailed in this documentation by referring to another part of the spec which we
+                        also used as a guiding principle: "design deliberately."</span></p>
+                    <p>The decision to adhere to the canvas lock also led us to decide that no part of the magazine
+                      should be scrollable aside from the articles themselves and the modals. In essence, we made the
+                      design decision that this magazine would be constrained in a similar way as print magazines were
+                      by their choice of paper size. Therefore we made all additional page requirements (disclaimer,
+                      about, documentation) modals and designed the cover/content page to fit within the viewport at all
+                      available sizes (see below).</p>
                     <figure style="float: left; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
-                      <img src="/LiterOCULAR/img/res1.png" class="img-fluid" alt="screenshot of base relative unit scaling" title="4K res without vw">
+                      <img src="/LiterOCULAR/img/res1.png" class="img-fluid"
+                        alt="screenshot of base relative unit scaling" title="4K res without vw">
                       <figcaption style="float: left;">4K/2560x1357 res without vw</figcaption>
                     </figure>
-                    <p>One last but important note on this subject regards typometry and the baseline measurement of every element in this magazine. We started designing LiterOCULAR using <code>rem</code> as the base relative unit, for two reasons: it is the unit used by Bootstrap's core css, and <a href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">it simplifies nesting declarations</a>. However, once we'd gotten deeper into the various historical designs we made the decision to switch our base relative unit to <code>vw</code>. This was due to the fact that when viewing the magazine on higher resolution screens, Bootstrap's framework can lead to an overall shrinking/stretching of the design within the canvas.</p> 
+                    <p>One last but important note on this subject regards typometry and the baseline measurement of
+                      every element in this magazine. We started designing LiterOCULAR using <code>rem</code> as the
+                      base relative unit, for two reasons: it is the unit used by Bootstrap's core css, and <a
+                        href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">it
+                        simplifies nesting declarations</a>. However, once we'd gotten deeper into the various
+                      historical designs we made the decision to switch our base relative unit to <code>vw</code>. This
+                      was due to the fact that when viewing the magazine on higher resolution screens, Bootstrap's
+                      framework can lead to an overall shrinking/stretching of the design within the canvas.</p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
-                      <img src="/LiterOCULAR/img/res2.png" class="img-fluid" alt="screenshot of base relative unit scaling" title="4K res without vw">
+                      <img src="/LiterOCULAR/img/res2.png" class="img-fluid"
+                        alt="screenshot of base relative unit scaling" title="4K res without vw">
                       <figcaption>4K/2560x1357 res with vw</figcaption>
                     </figure>
-                    <p>While experimenting with some design ideas we realised that by changing all the necessary base relative units in our css as well as overiding key elements in the core css we could have a design that scaled relative to screen resolution. As there is no such thing as a clean answer in web dev — 😆 — we then realised that this approach meant that once you went below a tablet in device size you encountered the opposite problem: everything was scaled too small to be pleasant and usable. One option to get around this would have been to script a calculation function to change the base relative unit in the css based on device so that anything below 768 would revert to px or rem and anything above the most common resolutions for desktop and laptop used vw. As the decision to switch to vw was made relatively late in the development process, by which point we already had a lot of scripts already implemented, we decided to instead block access to the site for any devices below 768 (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and essentially put Federico in front of it as an accomplished fact 🤫). Again, we justify this by invoking the "design deliberately" principle.</p>
+                    <p>While experimenting with some design ideas we realised that by changing all the necessary base
+                      relative units in our css as well as overiding key elements in the core css we could have a design
+                      that scaled relative to screen resolution. As there is no such thing as a clean answer in web dev
+                      — 😆 — we then realised that this approach meant that once you went below a tablet in device size
+                      you encountered the opposite problem: everything was scaled too small to be pleasant and usable.
+                      One option to get around this would have been to script a calculation function to change the base
+                      relative unit in the css based on device so that anything below 768 would revert to px or rem and
+                      anything above the most common resolutions for desktop and laptop used vw. As the decision to
+                      switch to vw was made relatively late in the development process, by which point we already had a
+                      lot of scripts already implemented, we decided to instead block access to the site for any devices
+                      below 768 (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and
+                      essentially put Federico in front of it as an accomplished fact 🤫). Again, we justify this by
+                      invoking the "design deliberately" principle.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                     Metadata Viewer 🔎
                   </button>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>With the metadata viewer being a central part of the spec we also spent some time deliberating the best way to approach its requirements. In the end we settled on a design within the viewer that imitates that of the issue page: three columns. In turn the viewer is separated into three horizontal sections: header with title and controls, issue-level metadata and usage instructions, and article-level metadata. In turn, the latter is split into accordions based on subject (drawn from the <code>mention-*</code> class) within which the user can find all topics related to the subject (titled using the <code>about=”*”</code> attribute). Lastly, each topic auto-generates a Wikipedia search via a secondary button.</p></div>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>With the metadata viewer being a central part of the spec we also spent some time deliberating
+                      the best way to approach its requirements. In the end we settled on a design within the viewer
+                      that imitates that of the issue page: three columns. In turn the viewer is separated into three
+                      horizontal sections: header with title and controls, issue-level metadata and usage instructions,
+                      and article-level metadata. In turn, the latter is split into accordions based on subject (drawn
+                      from the <code>mention-*</code> class) within which the user can find all topics related to the
+                      subject (titled using the <code>about=”*”</code> attribute). Lastly, each topic auto-generates a
+                      Wikipedia search via a secondary button.</p>
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                     Historical Theming (AKA CSS ⏱️ ✈️)
                   </button>
                 </h2>
-                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
                     <figure style="float: right; width: 20%; padding: 0 0.625vw 0 0.625vw; margin-bottom: 0;">
-                      <img src="/LiterOCULAR/img/dawson-crying.gif" class="img-fluid" style="display: flex; margin: auto;" alt="animated image of Dawson from Dawson Creek crying" title="When the specs make you cry">
-                      <img src="/LiterOCULAR/img/9000.gif" class="img-fluid" style="display: flex; margin: auto; padding: 0.625vw 0 0 0;" alt="animated image of Vegeta crushing his energy reader" title="When the specs make you stronger">
+                      <img src="/LiterOCULAR/img/dawson-crying.gif" class="img-fluid"
+                        style="display: flex; margin: auto;" alt="animated image of Dawson from Dawson Creek crying"
+                        title="When the specs make you cry">
+                      <img src="/LiterOCULAR/img/9000.gif" class="img-fluid"
+                        style="display: flex; margin: auto; padding: 0.625vw 0 0 0;"
+                        alt="animated image of Vegeta crushing his energy reader"
+                        title="When the specs make you stronger">
                     </figure>
-                    <p>If the functionality requirements of the spec left us feeling like thinking equations meme, then the design requirements of creating 4 different historical CSS themes left us feeling like Dawson. Still the only choice was to embrace the pain and let it make us stronger, like Vegeta.</p> 
-                    <p>Based on the spec we decided on the following 4 historical themes:<br/>
-                      <ul>
-                        <li>Newspapers for the 19th century</li>
-                        <li>Art Deco for the first half of the 20th century</li>
-                        <li>Hip-hop magazines for late 20th century print</li>
-                        <li>Promptism for 2030s</li>
-                      </ul>
-                    Each theme was given an appropriate title. While newspapers and Art Deco are self-evident, the name for the 1990s music magazines theme was taken from the publication used as direct reference for the theme, <em>The Source</em>, while the name for the Promptist theme was taken from one of the <a href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in Machine Learning today, huggingface's transformers.</p>
-                    <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme (such as canvas lock, offcanvas positioning, etc...) we then created each individual theme separately and built a functionality that would load a base theme by default and substitute it for the relevant historical one when selected via the cover or navbar menus. We also made the choice to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this switch and make the user experience more pleasant.</p>
-                    <p>As with all other main steps of the development of this project, CSS theming was an iterative process. We began with a base theme, then created initial versions of both the Promptism and Newspaper themes. However, it was during the creation of the Source theme that we refined and improved our approach and made several decisions that were then rolled out to all other themes ensuring a consistency that reflects the relevant historical periods without creating drastic changes on the content. This decision was a by-product of a last key guiding principle we had settled on: <span style="text-decoration: underline;">the content should the focus of this magazine with the design requirements a complement to it</span>.</p>
-                    <p>The decisions that were made at this point and further refined in each theme include: splitting the navbar contents between both pages, using the navbar brand as a home button with its own specific font, laying out the home page with two columns to enable on-page navigation, applying consistent and historically inspired styles to modern interactions (such as hover and focus), replicating historically accurate layout touches, and consistent usage of a selection of fonts and colors for each theme.</p>
-                    <p>The entire CSS process is best summed by another two memes (like all good things in life): procrastination and bug squashing.</p>
+                    <p>If the functionality requirements of the spec left us feeling like thinking equations meme, then
+                      the design requirements of creating 4 different historical CSS themes left us feeling like Dawson.
+                      Still the only choice was to embrace the pain and let it make us stronger, like Vegeta.</p>
+                    <p>Based on the spec we decided on the following 4 historical themes:<br />
+                    <ul>
+                      <li>Newspapers for the 19th century</li>
+                      <li>Art Deco for the first half of the 20th century</li>
+                      <li>Hip-hop magazines for late 20th century print</li>
+                      <li>Promptism for 2030s</li>
+                    </ul>
+                    Each theme was given an appropriate title. While newspapers and Art Deco are self-evident, the name
+                    for the 1990s music magazines theme was taken from the publication used as direct reference for the
+                    theme, <em>The Source</em>, while the name for the Promptist theme was taken from one of the <a
+                      href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in
+                    Machine Learning today, huggingface's transformers.</p>
+                    <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme
+                      (such as canvas lock, offcanvas positioning, etc...) we then created each individual theme
+                      separately and built a functionality that would load a base theme by default and substitute it for
+                      the relevant historical one when selected via the cover or navbar menus. We also made the choice
+                      to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this
+                      switch and make the user experience more pleasant.</p>
+                    <p>As with all other main steps of the development of this project, CSS theming was an iterative
+                      process. We began with a base theme, then created initial versions of both the Promptism and
+                      Newspaper themes. However, it was during the creation of the Source theme that we refined and
+                      improved our approach and made several decisions that were then rolled out to all other themes
+                      ensuring a consistency that reflects the relevant historical periods without creating drastic
+                      changes on the content. This decision was a by-product of a last key guiding principle we had
+                      settled on: <span style="text-decoration: underline;">the content should the focus of this
+                        magazine with the design requirements a complement to it</span>.</p>
+                    <p>The decisions that were made at this point and further refined in each theme include: splitting
+                      the navbar contents between both pages, using the navbar brand as a home button with its own
+                      specific font, laying out the home page with two columns to enable on-page navigation, applying
+                      consistent and historically inspired styles to modern interactions (such as hover and focus),
+                      replicating historically accurate layout touches, and consistent usage of a selection of fonts and
+                      colors for each theme.</p>
+                    <p>The entire CSS process is best summed by another two memes (like all good things in life):
+                      procrastination and bug squashing.</p>
                     <div style="display: flex; justify-content: center;">
-                      <img src="/LiterOCULAR/img/bugs.jpg" class="img-fluid" style="width: 45%" alt="squashing bugs meme" title="When you decide to look at the code">
-                      <img src="/LiterOCULAR/img/bear.jpg" class="img-fluid" style="width: 45%" alt="Kyle McLachlan running from a bear meme" title="When you refuse to face your fears"> 
-                  </div>
+                      <img src="/LiterOCULAR/img/bugs.jpg" class="img-fluid" style="width: 45%"
+                        alt="squashing bugs meme" title="When you decide to look at the code">
+                      <img src="/LiterOCULAR/img/bear.jpg" class="img-fluid" style="width: 45%"
+                        alt="Kyle McLachlan running from a bear meme" title="When you refuse to face your fears">
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
                     Base theme: Emojis and Minimalism 🎉
                   </button>
                 </h2>
-                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>🎨  (base) <span style="background-color: #111; color:#fff;">#111</span> + <span style="background-color: #f4f4f4; color:#111;">#f4f4f4</span> <br/> 
-                      🎨  (spot) <span style="background-color: #D2042D; color:#fff;">#D2042D</span> <br/>
-                      ✍🏻  Roboto Slab (headers/branding) | Lato (body) | Ubunto Mono (menus, quotes)</p>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>🎨 (base) <span style="background-color: #111; color:#fff;">#111</span> + <span
+                        style="background-color: #f4f4f4; color:#111;">#f4f4f4</span> <br />
+                      🎨 (spot) <span style="background-color: #D2042D; color:#fff;">#D2042D</span> <br />
+                      ✍🏻 Roboto Slab (headers/branding) | Lato (body) | Ubunto Mono (menus, quotes)</p>
                     <hr>
-                    <p><span style="text-decoration: underline;">Inspiration:</span> The base theme was first thought of as a take on the greyscale aesthetic of current website design. In particular <a href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference following some research. The idea was that by keeping the base theme simple it would contrast nicely with the historical themes. Eventually this approach was rethought as the Promptism theme adopted a black background with white text and the Newspaper theme had potential for greyscale (though this was also later avoided). In the end we kept the white/black balance (#111 and #f4f4f4) and desire for mininalism but ditched the original use of greys as spot colors and instead used a cherry red highlight (#D2042D) that offered a perfect contrast. Inspired in part by the way in which modern sites make use of emojis to enliven navigation and reading, we decided to add them to article headers, byline, and cover as a visual cue signifying the theme's location in the current moment.</p>
-                    <p><span style="text-decoration: underline;">Fonts:</span> Roboto Slab was chosen as an ideal header font that would complement a sans-serif body font like Lato, which has a self-effacing simplicity. Another option for the body would have been to use Roboto but we wanted to try something a little different. Ubunto Mono was chosen for its contemporary style and the way in which its fixed-width would contrast with the other fonts.</p>
-                    <p><span style="text-decoration: underline;">Layout:</span> The idea was to keep the layout simple so as not to distract from the historical themes while offering a sense of playfulness that would invite the user to delve into the site's wider functionality and purpose. We repurposed Bootstrap's inbuilt functionalities, such as cards on the homepage mimicking buttons. We also decided to align headers, subs, and bylines to the right for a simple contrast with the other themes.</p>
+                    <p><span style="text-decoration: underline;">Inspiration:</span> The base theme was first thought of
+                      as a take on the greyscale aesthetic of current website design. In particular <a
+                        href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference
+                      following some research. The idea was that by keeping the base theme simple it would contrast
+                      nicely with the historical themes. Eventually this approach was rethought as the Promptism theme
+                      adopted a black background with white text and the Newspaper theme had potential for greyscale
+                      (though this was also later avoided). In the end we kept the white/black balance (#111 and
+                      #f4f4f4) and desire for mininalism but ditched the original use of greys as spot colors and
+                      instead used a cherry red highlight (#D2042D) that offered a perfect contrast. Inspired in part by
+                      the way in which modern sites make use of emojis to enliven navigation and reading, we decided to
+                      add them to article headers, byline, and cover as a visual cue signifying the theme's location in
+                      the current moment.</p>
+                    <p><span style="text-decoration: underline;">Fonts:</span> Roboto Slab was chosen as an ideal header
+                      font that would complement a sans-serif body font like Lato, which has a self-effacing simplicity.
+                      Another option for the body would have been to use Roboto but we wanted to try something a little
+                      different. Ubunto Mono was chosen for its contemporary style and the way in which its fixed-width
+                      would contrast with the other fonts.</p>
+                    <p><span style="text-decoration: underline;">Layout:</span> The idea was to keep the layout simple
+                      so as not to distract from the historical themes while offering a sense of playfulness that would
+                      invite the user to delve into the site's wider functionality and purpose. We repurposed
+                      Bootstrap's inbuilt functionalities, such as cards on the homepage mimicking buttons. We also
+                      decided to align headers, subs, and bylines to the right for a simple contrast with the other
+                      themes.</p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/greyscale.png" class="img-fluid" alt="screenshot of widman website" title="Widman website">
+                      <img src="/LiterOCULAR/img/greyscale.png" class="img-fluid" alt="screenshot of widman website"
+                        title="Widman website">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/huggingface.png" class="img-fluid" alt="screenshot of huggingface website" title="Huggingface website">
+                      <img src="/LiterOCULAR/img/huggingface.png" class="img-fluid"
+                        alt="screenshot of huggingface website" title="Huggingface website">
                     </figure>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingSeven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
                     19th century theme: Newspapers 📰
                   </button>
                 </h2>
-                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>🎨  (base) <span style="background-color: #111; color:#fff;">#111</span> + <span style="background-color: #ebe7dd; color:#111;">#ebe7dd</span> + <span style="background-color: #f4f4f4; color:#111;">#f4f4f4</span> <br/>
-                      🎨  (spot) <span style="background-color: #f9eac8; color:#111;">#f9eac8</span> + <span style="background-color: #353434; color:#fff;">#353434</span> + <span style="background-color: #4a1520; color:#fff;">#4a1520</span><br/>
-                      ✍🏻  Chomsky (branding) | Old Newspaper Type (body) | Chunkfive (menus) | Newsreader (titles)</p>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>🎨 (base) <span style="background-color: #111; color:#fff;">#111</span> + <span
+                        style="background-color: #ebe7dd; color:#111;">#ebe7dd</span> + <span
+                        style="background-color: #f4f4f4; color:#111;">#f4f4f4</span> <br />
+                      🎨 (spot) <span style="background-color: #f9eac8; color:#111;">#f9eac8</span> + <span
+                        style="background-color: #353434; color:#fff;">#353434</span> + <span
+                        style="background-color: #4a1520; color:#fff;">#4a1520</span><br />
+                      ✍🏻 Chomsky (branding) | Old Newspaper Type (body) | Chunkfive (menus) | Newsreader (titles)</p>
                     <hr>
-                    <p><span style="text-decoration: underline;">Inspiration:</span> For the Newspaper-inspired theme we turned to Guilty Novin's exhaustive article for inspiration as well as a <a href="https://www.loc.gov/newspapers/?dates=1800-1899" target="_blank">collection of 19th century newspapers</a> from the USA available at the Library of Congress. The typical layout of newspapers of the time was already preserved with our use of columns for the magazine skeleton and we focused on picking up some of the quirks and details of the time (an approach that was repeated for all historical themes). While we originally thought that this theme would make use of dropcaps, upon closer inspection of the LoC collection we noticed dropcaps only appeared to be used for classified adverts rather than articles themselves. For the color palette, we settled on a yellow-ish gray for the background (#ebe7dd) and a slightly toned-down black (#111) and white (#f4f4f4) for text, in order to maintain high contrast and legibility. A light shade of yellow (#f9eac8), a dark gray (#353434), and a dark shade of pink-red (#4a1520) were chosen as spot colors for drop down menus, buttons, and highlights. Images were greyscaled via CSS filter to align them with the overall historical feel. TK d7ccc1 (viewer / modal background color?)</p>
-                    <p><span style="text-decoration: underline;">Fonts:</span> TK TK TK</p>
-                    <p><span style="text-decoration: underline;">Layout:</span> Bottom margins were removed from <code>p</code> tags, margins and padding were adjusted elsewhere (images, titles, menus etc...), and text alignment was set to justified to emulate the condensed feel of the layouts of the time as well as some their peculiar distortions. Solid, light lines were used to emulate the demarcations and boxing of the time while a pointing hand was repurposed via Photoshop from <a href="https://www.loc.gov/resource/sn83030312/1839-09-07/ed-1/?sp=1&r=0.075,0.112,1.02,0.467,0" target="_blank">a 1839 edition of the Morning Herald</a> as a nod to the way in which newspapers of the time made use of icons to enliven their layout and draw attention. Lastly, rounded edges were removed from all boxes as they were not historically accurate.</p>
+                    <p><span style="text-decoration: underline;">Inspiration:</span> For the Newspaper-inspired theme we
+                      turned to Guilty Novin's exhaustive article for inspiration as well as a <a
+                        href="https://www.loc.gov/newspapers/?dates=1800-1899" target="_blank">collection of 19th
+                        century newspapers</a> from the USA available at the Library of Congress. The typical layout of
+                      newspapers of the time was already preserved with our use of columns for the magazine skeleton and
+                      we focused on picking up some of the quirks and details of the time (an approach that was repeated
+                      for all historical themes). While we originally thought that this theme would make use of
+                      dropcaps, upon closer inspection of the LoC collection we noticed dropcaps only appeared to be
+                      used for classified adverts rather than articles themselves. For the color palette, we settled on
+                      a yellow-ish gray for the background (#ebe7dd) and a slightly toned-down black (#111) and white
+                      (#f4f4f4) for text, in order to maintain high contrast and legibility. A light shade of yellow
+                      (#f9eac8), a dark gray (#353434), and a dark shade of pink-red (#4a1520) were chosen as spot
+                      colors for drop down menus, buttons, and highlights. Images were greyscaled via CSS filter to
+                      align them with the overall historical feel. TK d7ccc1 (viewer / modal background color?)</p>
+                    <p><span style="text-decoration: underline;">Fonts:</span> The easiest font to choose was the
+                      magazine header/title font, <em>Chomsky</em>: it looks just like 19th century newspaper titles.
+                      Next, we needed to find a fitting font for both body and headings: after unsuccessfully browsing
+                      multiple sources while comparing typefaces with our historical sources, we stumbled upon a font
+                      called <em>Old Newspaper Type</em>. It was freely available and in open format, and the deed was
+                      quickly done. The search for a heading font was a multi-step process: we initially used Chunkfive
+                      for both menus and textual headings, but quickly realized it wasn't historically accurate for
+                      article content. We opted for keeping Chunkfive as an <em>extension</em> of the theme in menus and
+                      interactive components, which clearly didn't exist at the time, and to use a more plain-looking
+                      typeface called Newsreader for article headings. This is also the only font for the newspaper
+                      theme found in GoogleFonts.</p>
+                    <p><span style="text-decoration: underline;">Layout:</span> Bottom margins were removed from
+                      <code>p</code> tags, margins and padding were adjusted elsewhere (images, titles, menus etc...),
+                      and text alignment was set to justified to emulate the condensed feel of the layouts of the time
+                      as well as some their peculiar distortions. Solid, light lines were used to emulate the
+                      demarcations and boxing of the time while a pointing hand was repurposed via Photoshop from <a
+                        href="https://www.loc.gov/resource/sn83030312/1839-09-07/ed-1/?sp=1&r=0.075,0.112,1.02,0.467,0"
+                        target="_blank">a 1839 edition of the Morning Herald</a> as a nod to the way in which newspapers
+                      of the time made use of icons to enliven their layout and draw attention. Lastly, rounded edges
+                      were removed from all boxes as they were not historically accurate.
+                    </p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/morningherald.png" class="img-fluid" alt="screenshot of a 1839 edition of the Morning Herald" title="Morning Herald, 1839">
+                      <img src="/LiterOCULAR/img/morningherald.png" class="img-fluid"
+                        alt="screenshot of a 1839 edition of the Morning Herald" title="Morning Herald, 1839">
                     </figure>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingEight">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
                     1900-1950 theme: Art Deco 📐
                   </button>
                 </h2>
-                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>🎨  (base) <span style="background-color: #111; color:#fff;">#111</span> + <span style="background-color: #fff; color:#111;">#fff</span> <br/>
-                      🎨  (spot) <span style="background-color: #68A469; color:#111;">#68A469</span> + <span style="background-color: #6F1946; color:#fff;">#6F1946</span><br/>
-                      ✍🏻  Limelight (branding) | Prata (body) | Cormorant Garamond (menus) | Poiret One (titles/quotes)</p>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>🎨 (base) <span style="background-color: #111; color:#fff;">#111</span> + <span
+                        style="background-color: #fff; color:#111;">#fff</span> <br />
+                      🎨 (spot) <span style="background-color: #68A469; color:#111;">#68A469</span> + <span
+                        style="background-color: #6F1946; color:#fff;">#6F1946</span><br />
+                      ✍🏻 Limelight (branding) | Prata (body) | Cormorant Garamond (menus) | Poiret One (titles/quotes)
+                    </p>
                     <hr>
-                    <p><span style="text-decoration: underline;">Inspiration:</span> We chose Art Deco as it is an early 20th century style more readily associated with architecture and material design than print, which we felt would be more interesting. After some research we honed in on two options: the more flamboyant aesthetic typical of posters of the era or the more subdued but still striking aesthetic of key print publications, namely <em>Harper's Bazaar</em> from NYC and <em>Arts &amp; D&#233;coration</em> from Paris. We chose the second as more realistic to achieve. Time wise we pulled from the first half of the Art Deco movement, before WWI, with references to a 1925 issue of <em>Harper's Bazaar</em> and a 1921 issue of <em>Arts &amp; D&#233;coration</em>, taken from the Internet Archive via <a href="https://onlinebooks.library.upenn.edu/webbin/serial?id=artsanddecoration" target="_blank">The Online Books Page resource</a>.</p>
-                    <p>We chose to focus the colors on a simple palette. Black (#111) and white (#fff) for background and text, largely due to the fact that we already made use of a yellow shade for the Newspaper theme to imitate old paper and we were unable to ascertain the exact page color from the scans. White seemed a likely historically accurate choice, with color primarily kept for covers. A dark shade of magenta-pink (#6F1946) and a shade of green (#68A469) were used as complimentary colors, inspired by a <em>Harper's Bazaar</em> 1922 cover. The magenta-pink allowed for an interesting twist on background color for menus and metadata viewer while the green as a spot color was a nice reference to jade, one of the natural materials used in Art Deco material designs such as jewelry and furniture.</p>
-                    <p><span style="text-decoration: underline;">Fonts:</span> Limelight was an obvious choice for the branding, with its high contrast, geometric style instantly evoking our current understanding of the era. Likewise, Poiret One was chosen as another cursive, sans-serif font that easily evokes the era and would be better suited to titling so as not to have titles become overbearing. Prata was chosen for the body as it emulated the contrast between curves and serifs seen in our reference magazines. After trying out Poiret One but finding it too light, we opted for Cormorant Garamond as the menu type. It felt like a good emulation of some of the title fonts in our references and also has direct historical relationship to the 1920s as it is an open-source adaption of Garamond which itself saw a revival during that period.</p>
-                    <p><span style="text-decoration: underline;">Layout:</span> One of the key layout elements we wanted to emulate from our references was the use of geometric figures and embellishments as borders and dividers. After doing some testing with images of historically accurate separators we opted to instead make use of CSS pseudo-elements as these can more easily scale. We stumbled on two useful bits of public code: a <a href="https://codepen.io/thewildmage/pen/ayewQw" target="_blank">Codepen</a> with various Art Deco inspired separators, and a <a href="https://stackoverflow.com/questions/65758024/art-deco-style-border-in-css" target="_blank">StackOverflow</a> thread with a simple double border frame. The latter was used for the ToC and the former to embellish the cover title and blockquotes with corners, diamond separators, and full frames. Returning to our references, we opted for double solid lines to frame the cover images of each article, with additional padding on the images themselves to emphasize the frame.</p>
-                    <p>Based on our references, we centered headers, subheaders, bylines, and captions and added italics to subheaders and captions and uppercase to bylines. Dropcaps were added to the beginning of each article, followed by indents, both using pseudo-elements to control all the necessary instances across the six articles using nth child logic. Due to the differences in some of the html structures of the articles, we also had to create additional exceptions to ensure that dropcaps and indents behaved correctly (and this was in turn taken across to other themes). The size of the dropcaps and indent were taken from visual estimation of our references: around three lines-height for primary dropcaps (two for secondary ones), no padding, and negative margin-bottom to ensure text wrapped tightly; the length of 2 letters for indents (this indent length appeared to be roughly the same across all historical themes and so was kept in all of them). The remaining letters of the first word of each line were also uppercased as was the norm then. Bottom margin was removed from paragraphs, and padding was kept around images in line with historical references. We only kept rounded edges on the top corners as based on our references that appeared like the most accurate use of rounded edges at the time. </p>
+                    <p><span style="text-decoration: underline;">Inspiration:</span> We chose Art Deco as it is an early
+                      20th century style more readily associated with architecture and material design than print, which
+                      we felt would be more interesting. After some research we honed in on two options: the more
+                      flamboyant aesthetic typical of posters of the era or the more subdued but still striking
+                      aesthetic of key print publications, namely <em>Harper's Bazaar</em> from NYC and <em>Arts &amp;
+                        D&#233;coration</em> from Paris. We chose the second as more realistic to achieve. Time wise we
+                      pulled from the first half of the Art Deco movement, before WWI, with references to a 1925 issue
+                      of <em>Harper's Bazaar</em> and a 1921 issue of <em>Arts &amp; D&#233;coration</em>, taken from
+                      the Internet Archive via <a
+                        href="https://onlinebooks.library.upenn.edu/webbin/serial?id=artsanddecoration"
+                        target="_blank">The Online Books Page resource</a>.</p>
+                    <p>We chose to focus the colors on a simple palette. Black (#111) and white (#fff) for background
+                      and text, largely due to the fact that we already made use of a yellow shade for the Newspaper
+                      theme to imitate old paper and we were unable to ascertain the exact page color from the scans.
+                      White seemed a likely historically accurate choice, with color primarily kept for covers. A dark
+                      shade of magenta-pink (#6F1946) and a shade of green (#68A469) were used as complimentary colors,
+                      inspired by a <em>Harper's Bazaar</em> 1922 cover. The magenta-pink allowed for an interesting
+                      twist on background color for menus and metadata viewer while the green as a spot color was a nice
+                      reference to jade, one of the natural materials used in Art Deco material designs such as jewelry
+                      and furniture.</p>
+                    <p><span style="text-decoration: underline;">Fonts:</span> Limelight was an obvious choice for the
+                      branding, with its high contrast, geometric style instantly evoking our current understanding of
+                      the era. Likewise, Poiret One was chosen as another cursive, sans-serif font that easily evokes
+                      the era and would be better suited to titling so as not to have titles become overbearing. Prata
+                      was chosen for the body as it emulated the contrast between curves and serifs seen in our
+                      reference magazines. After trying out Poiret One but finding it too light, we opted for Cormorant
+                      Garamond as the menu type. It felt like a good emulation of some of the title fonts in our
+                      references and also has direct historical relationship to the 1920s as it is an open-source
+                      adaption of Garamond which itself saw a revival during that period.</p>
+                    <p><span style="text-decoration: underline;">Layout:</span> One of the key layout elements we wanted
+                      to emulate from our references was the use of geometric figures and embellishments as borders and
+                      dividers. After doing some testing with images of historically accurate separators we opted to
+                      instead make use of CSS pseudo-elements as these can more easily scale. We stumbled on two useful
+                      bits of public code: a <a href="https://codepen.io/thewildmage/pen/ayewQw"
+                        target="_blank">Codepen</a> with various Art Deco inspired separators, and a <a
+                        href="https://stackoverflow.com/questions/65758024/art-deco-style-border-in-css"
+                        target="_blank">StackOverflow</a> thread with a simple double border frame. The latter was used
+                      for the ToC and the former to embellish the cover title and blockquotes with corners, diamond
+                      separators, and full frames. Returning to our references, we opted for double solid lines to frame
+                      the cover images of each article, with additional padding on the images themselves to emphasize
+                      the frame.</p>
+                    <p>Based on our references, we centered headers, subheaders, bylines, and captions and added italics
+                      to subheaders and captions and uppercase to bylines. Dropcaps were added to the beginning of each
+                      article, followed by indents, both using pseudo-elements to control all the necessary instances
+                      across the six articles using nth child logic. Due to the differences in some of the html
+                      structures of the articles, we also had to create additional exceptions to ensure that dropcaps
+                      and indents behaved correctly (and this was in turn taken across to other themes). The size of the
+                      dropcaps and indent were taken from visual estimation of our references: around three lines-height
+                      for primary dropcaps (two for secondary ones), no padding, and negative margin-bottom to ensure
+                      text wrapped tightly; the length of 2 letters for indents (this indent length appeared to be
+                      roughly the same across all historical themes and so was kept in all of them). The remaining
+                      letters of the first word of each line were also uppercased as was the norm then. Bottom margin
+                      was removed from paragraphs, and padding was kept around images in line with historical
+                      references. We only kept rounded edges on the top corners as based on our references that appeared
+                      like the most accurate use of rounded edges at the time. </p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/ArtDecoContents.png" class="img-fluid" alt="screenshot of the content page of Art &amp; Decoration 1921" title="Art &amp; Decoration, 1921">
+                      <img src="/LiterOCULAR/img/ArtDecoContents.png" class="img-fluid"
+                        alt="screenshot of the content page of Art &amp; Decoration 1921"
+                        title="Art &amp; Decoration, 1921">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/ArtDeco2.png" class="img-fluid" alt="screenshot of a feature page of Art &amp; Decoration 1921" title="Art &amp; Decoration, 1921">
+                      <img src="/LiterOCULAR/img/ArtDeco2.png" class="img-fluid"
+                        alt="screenshot of a feature page of Art &amp; Decoration 1921"
+                        title="Art &amp; Decoration, 1921">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/ArtDeco1.png" class="img-fluid" alt="screenshot of a feature page of Art &amp; Decoration 1921" title="Art &amp; Decoration, 1921">
+                      <img src="/LiterOCULAR/img/ArtDeco1.png" class="img-fluid"
+                        alt="screenshot of a feature page of Art &amp; Decoration 1921"
+                        title="Art &amp; Decoration, 1921">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/Harper.png" class="img-fluid" style="width: 40%;" alt="screenshot of a feature page of Harper's Bazaar 1925" title="Harper's Bazaar, 1925">
-                      <img src="/LiterOCULAR/img/Erte_Harpers_Bazar_cover_Feb_1922.jpeg" class="img-fluid" alt="screenshot of a 1922 Harper's Bazaar cover" title="Harper's Bazaar, 1922">
+                      <img src="/LiterOCULAR/img/Harper.png" class="img-fluid" style="width: 40%;"
+                        alt="screenshot of a feature page of Harper's Bazaar 1925" title="Harper's Bazaar, 1925">
+                      <img src="/LiterOCULAR/img/Erte_Harpers_Bazar_cover_Feb_1922.jpeg" class="img-fluid"
+                        alt="screenshot of a 1922 Harper's Bazaar cover" title="Harper's Bazaar, 1922">
                     </figure>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingNine">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
                     Late 20th Century print theme: 1990s Hip-Hop Magazines 🎤
                   </button>
                 </h2>
-                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>🎨  (base) <span style="background-color: #222125; color:#fff;">#222125</span> + <span style="background-color: #e1dcd8; color:#111;">#e1dcd8</span> + <span style="background-color: #DBBC9F; color:#111;">#DBBC9F</span> <br/>
-                      🎨  (spot) <span style="background-color: #d5473b; color:#111;">#d5473b</span> + <span style="background-color: #70557D; color:#fff;">#70557D</span> + <span style="background-color: #8c485f; color:#fff;">#8c485f</span> <br/>
-                      ✍🏻  Alfa Slab One (branding/titles) | Libre Baskerville (body) | Glegoo (menus) | Oswald (quotes)</p>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>🎨 (base) <span style="background-color: #222125; color:#fff;">#222125</span> + <span
+                        style="background-color: #e1dcd8; color:#111;">#e1dcd8</span> + <span
+                        style="background-color: #DBBC9F; color:#111;">#DBBC9F</span> <br />
+                      🎨 (spot) <span style="background-color: #d5473b; color:#111;">#d5473b</span> + <span
+                        style="background-color: #70557D; color:#fff;">#70557D</span> + <span
+                        style="background-color: #8c485f; color:#fff;">#8c485f</span> <br />
+                      ✍🏻 Alfa Slab One (branding/titles) | Libre Baskerville (body) | Glegoo (menus) | Oswald (quotes)
+                    </p>
                     <hr>
-                    <p><span style="text-decoration: underline;">Inspiration:</span> The choice of 1990s hip-hop magazines for this theme was clear from the beginning, as the articles of the Death And Rebirth issue were taken from issues of <em>The Source</em> and <em>Ego Trip Magazine</em>, two key US publications for fans of the music at the time. With access to a large personal collection of scans from these two publications and others (<em>XXL</em>, <em>Rap Pages</em>, and <em>Hip-Hop Connection</em> among others) we first began to look for key aesthetic elements common to this subset of music magazines from the decade. While each of these publications had a certain style, there was an undeniable common aesthetic to hip-hop magazines of the time and we originally considered making direct references to different publications before ultimately deciding that <em>The Source</em> would be the direct reference, essentially speaking for all. Part of the reason for this was that we had access to many different <em>Source</em> articles as reference, compared with other magazines, and that it is historically one of the most important publications of this specific subset.</p>
-                    <p>For our primary palette we decided on a very light shade of orange (#e1dcd8) as the main background color and a medium shade (#DBBC9F) for the metada viewer, modals, and buttons. This choice was inspired by some of the specific backgrounds in our reference documents. Text used a very dark shade of blue-magenta (#222125) extracted from scans, which was also used for the navbar in the spirit of how content pages and regular columns were presented. For primary spot colors we used a shade of red (#d5473b) which was a common balance to the black in many issues as well as a magenta (#70557D) and pink (#8c485f) for borders and highlights. The articles themselves feature additional color combinations in the titles, which was inspired by the way in which 1990s music magazines often called on a wide range of color combinations with each article often featuring its own specific palette.</p>
-                    <p><span style="text-decoration: underline;">Fonts:</span> After trying to analyse fonts used at the time and doing some research we settled on a combination that we think evokes the spirit of the times. Alfa Slab One was chosen for branding and titling as an old-style serif with a strong visual effect that brings to mind some of the title fonts used by <em>The Source</em> in its early days. Oswald was chosen as a clean gothic sans-serif ideal for blockquotes and dropcaps, evoking some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its slab serif evoking print in very clear ways. Lastly, Libre Baskerville was chosen for the body, as serifs tended to be common in body text at the time (though there was a switch to sans-serif in the decade) and it is optimised for body usage on computers. </p>
-                    <p><span style="text-decoration: underline;">Layout:</span> The aim with the layout of this theme was to try and capture how diverse the design of each article in hip-hop magazines was. Common elements were chosen to tie it together, especially as we didn't have the luxury of multiple pages: the use of uppercase for bylines and menus; straight corners on all borders, boxes, and buttons; no background hover colors; the use of a small black square to indicate the end of an article. After this we opted to recreate the layouts of the 3 different articles in Death And Rebirth as these were most directly related to our magazine. Each article has therefore been as closely recreated as possible, with the 1991 <em>Source</em> article about KMD featuring a different, but historically accurate, lead photo to allow us to recreate the title's positioning. For the second issue, we drew from the color combination and design styles of Source articles from 1991 and 1992 including the use of image cropping (recreated via CSS <code>clip-path</code> property thanks to this <a href="https://bennettfeely.com/clippy/" target="_blank">handy resource</a>), line boxing around titles, and color alternation. Subheaders within article were also styled in homage of the times with solid background colors, center alignment and small dropcaps and letter spacing to control its stretching across the available space. Lastly, bottom margins were removed from paragraphs, uppercase was applied to captions and bylines alonside an underline for the latter, and text was justified based on references.</p>
+                    <p><span style="text-decoration: underline;">Inspiration:</span> The choice of 1990s hip-hop
+                      magazines for this theme was clear from the beginning, as the articles of the Death And Rebirth
+                      issue were taken from issues of <em>The Source</em> and <em>Ego Trip Magazine</em>, two key US
+                      publications for fans of the music at the time. With access to a large personal collection of
+                      scans from these two publications and others (<em>XXL</em>, <em>Rap Pages</em>, and <em>Hip-Hop
+                        Connection</em> among others) we first began to look for key aesthetic elements common to this
+                      subset of music magazines from the decade. While each of these publications had a certain style,
+                      there was an undeniable common aesthetic to hip-hop magazines of the time and we originally
+                      considered making direct references to different publications before ultimately deciding that
+                      <em>The Source</em> would be the direct reference, essentially speaking for all. Part of the
+                      reason for this was that we had access to many different <em>Source</em> articles as reference,
+                      compared with other magazines, and that it is historically one of the most important publications
+                      of this specific subset.
+                    </p>
+                    <p>For our primary palette we decided on a very light shade of orange (#e1dcd8) as the main
+                      background color and a medium shade (#DBBC9F) for the metada viewer, modals, and buttons. This
+                      choice was inspired by some of the specific backgrounds in our reference documents. Text used a
+                      very dark shade of blue-magenta (#222125) extracted from scans, which was also used for the navbar
+                      in the spirit of how content pages and regular columns were presented. For primary spot colors we
+                      used a shade of red (#d5473b) which was a common balance to the black in many issues as well as a
+                      magenta (#70557D) and pink (#8c485f) for borders and highlights. The articles themselves feature
+                      additional color combinations in the titles, which was inspired by the way in which 1990s music
+                      magazines often called on a wide range of color combinations with each article often featuring its
+                      own specific palette.</p>
+                    <p><span style="text-decoration: underline;">Fonts:</span> After trying to analyse fonts used at the
+                      time and doing some research we settled on a combination that we think evokes the spirit of the
+                      times. Alfa Slab One was chosen for branding and titling as an old-style serif with a strong
+                      visual effect that brings to mind some of the title fonts used by <em>The Source</em> in its early
+                      days. Oswald was chosen as a clean gothic sans-serif ideal for blockquotes and dropcaps, evoking
+                      some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its slab
+                      serif evoking print in very clear ways. Lastly, Libre Baskerville was chosen for the body, as
+                      serifs tended to be common in body text at the time (though there was a switch to sans-serif in
+                      the decade) and it is optimised for body usage on computers. </p>
+                    <p><span style="text-decoration: underline;">Layout:</span> The aim with the layout of this theme
+                      was to try and capture how diverse the design of each article in hip-hop magazines was. Common
+                      elements were chosen to tie it together, especially as we didn't have the luxury of multiple
+                      pages: the use of uppercase for bylines and menus; straight corners on all borders, boxes, and
+                      buttons; no background hover colors; the use of a small black square to indicate the end of an
+                      article. After this we opted to recreate the layouts of the 3 different articles in Death And
+                      Rebirth as these were most directly related to our magazine. Each article has therefore been as
+                      closely recreated as possible, with the 1991 <em>Source</em> article about KMD featuring a
+                      different, but historically accurate, lead photo to allow us to recreate the title's positioning.
+                      For the second issue, we drew from the color combination and design styles of Source articles from
+                      1991 and 1992 including the use of image cropping (recreated via CSS <code>clip-path</code>
+                      property thanks to this <a href="https://bennettfeely.com/clippy/" target="_blank">handy
+                        resource</a>), line boxing around titles, and color alternation. Subheaders within article were
+                      also styled in homage of the times with solid background colors, center alignment and small
+                      dropcaps and letter spacing to control its stretching across the available space. Lastly, bottom
+                      margins were removed from paragraphs, uppercase was applied to captions and bylines alonside an
+                      underline for the latter, and text was justified based on references.</p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/KMDSource.jpeg" class="img-fluid" alt="screenshot of a 1991 Source feature on KMD" title="The Source, 1991">
+                      <img src="/LiterOCULAR/img/KMDSource.jpeg" class="img-fluid"
+                        alt="screenshot of a 1991 Source feature on KMD" title="The Source, 1991">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/KMD94_1.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1994 Source feature" title="The Source, 1994">
-                      <img src="/LiterOCULAR/img/KMD94_2.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1994 Source feature" title="The Source, 1994">
+                      <img src="/LiterOCULAR/img/KMD94_1.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1994 Source feature" title="The Source, 1994">
+                      <img src="/LiterOCULAR/img/KMD94_2.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1994 Source feature" title="The Source, 1994">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/KMDegotrip.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1998 Ego Trip feature page" title="Ego Trip, 1998">
+                      <img src="/LiterOCULAR/img/KMDegotrip.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1998 Ego Trip feature page" title="Ego Trip, 1998">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/SourceContents.png" class="img-fluid" style="width: 40%;" alt="screenshot of a 1993 Source content page" title="The Source, 1993">
-                      <img src="/LiterOCULAR/img/SourceBox.png" class="img-fluid" alt="screenshot of a 1993 Source feature" title="The Source, 1993">
+                      <img src="/LiterOCULAR/img/SourceContents.png" class="img-fluid" style="width: 40%;"
+                        alt="screenshot of a 1993 Source content page" title="The Source, 1993">
+                      <img src="/LiterOCULAR/img/SourceBox.png" class="img-fluid"
+                        alt="screenshot of a 1993 Source feature" title="The Source, 1993">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/SourceBoxes.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1992 Source feature page" title="The Source, 1992">
-                      <img src="/LiterOCULAR/img/SourceEditorial.png" class="img-fluid" alt="screenshot of a 1993 Source editorial" title="The Source, 1993">
+                      <img src="/LiterOCULAR/img/SourceBoxes.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1992 Source feature page" title="The Source, 1992">
+                      <img src="/LiterOCULAR/img/SourceEditorial.png" class="img-fluid"
+                        alt="screenshot of a 1993 Source editorial" title="The Source, 1993">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/tooshort_source892.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1992 Source feature page" title="The Source, 1992">
-                      <img src="/LiterOCULAR/img/Spike.Charles1.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1992 Source feature" title="The Source, 1992">
+                      <img src="/LiterOCULAR/img/tooshort_source892.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1992 Source feature page" title="The Source, 1992">
+                      <img src="/LiterOCULAR/img/Spike.Charles1.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1992 Source feature" title="The Source, 1992">
                     </figure>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
-                      <img src="/LiterOCULAR/img/QuikSource.jpeg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1991 Source feature page" title="The Source, 1991">
-                      <img src="/LiterOCULAR/img/SourceColors.jpg" class="img-fluid" style="width: 50%;" alt="screenshot of a 1992 Source feature" title="The Source, 1992">
+                      <img src="/LiterOCULAR/img/QuikSource.jpeg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1991 Source feature page" title="The Source, 1991">
+                      <img src="/LiterOCULAR/img/SourceColors.jpg" class="img-fluid" style="width: 50%;"
+                        alt="screenshot of a 1992 Source feature" title="The Source, 1992">
                     </figure>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTen">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
                     2030: Promptism 🤖
                   </button>
                 </h2>
-                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionDocu">
-                  <div class="accordion-body"> 
-                    <p>🎨  (base) 🤷🏻‍♂️ <br/>
-                      🎨  (spot) 🤷🏻‍♂️ <br/>
-                      ✍🏻  🤷🏻‍♂️ </p>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                  data-bs-parent="#accordionDocu">
+                  <div class="accordion-body">
+                    <p>🎨 (base) 🤷🏻‍♂️ <br />
+                      🎨 (spot) 🤷🏻‍♂️ <br />
+                      ✍🏻 🤷🏻‍♂️ </p>
                     <hr>
-                    <blockquote class="blockquote" style="text-align: center; font-size: 1.4vw;">Promptism is a movement rooted in the technological advances of the 21st century that holds the potential to completely transform artistic practices. Promptism was founded in response to the growing concern that traditional art had become irrelevant to the modern world. Going beyond painting and sculpture, Promptist art involves the manipulation of new media, specifically computer generated imagery, animation, and the Internet. Its unique dynamism makes Promptism a dynamic vehicle for the expression of identity and the implementation of real-time feedback between itself and the spectator.</blockquote>
-                    <figcaption class="blockquote-footer" style="text-align: center;">The Promptist Manifesto, GPT-3</figcaption>
-                    <p><span style="text-decoration: underline;">Inspiration:</span> For our last trick we gave some serious thoughts to how best to approach the spec's requirement that one of the themes be an imagination of what the future of design look like. Keeping it 💯 we're not fans of predictions, they just always seem so forced and rarely hit the spot (unless we're talking about speculative fiction but let's not go there because it's too depressing). One early idea was to mint an NFT and just make the entire website redirect to a blockchain entry, but we didn't have the money to be honest and it felt like too much of a cop out (still think it's funny though). Eventually we decided that it would be just as fun to use the current Promptist movement and advances in Machine Learning to generate most of the CSS code via prompts given to a GPT model: <a href="https://6b.eleuther.ai/" target="_blank">Eleuther AI's GPT-J-6B</a>.</p>
-                    <p>That's right, all of the CSS in this theme was generated from prompts with the model's suggestions refined and aligned to ensure the result wasn't too chaotic. The color scheme and fonts were picked from simple prompts of partial Google Fonts URLs and CSS properties and then we fed it the selectors we needed based on the default theme and continued along until we had something workable.</p>
-                    <p>In addition, we also generated new versions of all the images in our magazine using VGAN+CLIP <a href="https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W" target="_blank">Colab</a> <a href="https://colab.research.google.com/drive/1nWkU3HlGBF5Gl_XjWs_k-QIDDB18nDpK" target="_blank">notebooks</a>. The cover images were generated based on source image and title as prompt with the CLIP Guided Diffusion approach by Katherine Crowson, while article images were generated with source image and title as prompt from standard VGAN+CLIP models.</p>
-                    <p>The original idea was to have the entire site be generated by prompts, including the text, and we actually did generate alternate versions of each article but in the end finding a way to cleanly subsitute everything proved too demanding so we settled for simply swapping the images using Javascript.</p>
-                    <p>While this theme started as a bit of a joke and pushback against the spec requirements, we do think that Promptism, as the current movement of machine-enabled art has been coined by some, offers a genuinely interesting take on what the future of art and content will look like. The Promptist Manifesto, written by GPT-3, can be read <a href="https://deeplearn.art/the-promptist-manifesto/" target="_blank">here</a>.</p>
+                    <blockquote class="blockquote" style="text-align: center; font-size: 1.4vw;">Promptism is a movement
+                      rooted in the technological advances of the 21st century that holds the potential to completely
+                      transform artistic practices. Promptism was founded in response to the growing concern that
+                      traditional art had become irrelevant to the modern world. Going beyond painting and sculpture,
+                      Promptist art involves the manipulation of new media, specifically computer generated imagery,
+                      animation, and the Internet. Its unique dynamism makes Promptism a dynamic vehicle for the
+                      expression of identity and the implementation of real-time feedback between itself and the
+                      spectator.</blockquote>
+                    <figcaption class="blockquote-footer" style="text-align: center;">The Promptist Manifesto, GPT-3
+                    </figcaption>
+                    <p><span style="text-decoration: underline;">Inspiration:</span> For our last trick we gave some
+                      serious thoughts to how best to approach the spec's requirement that one of the themes be an
+                      imagination of what the future of design look like. Keeping it 💯 we're not fans of predictions,
+                      they just always seem so forced and rarely hit the spot (unless we're talking about speculative
+                      fiction but let's not go there because it's too depressing). One early idea was to mint an NFT and
+                      just make the entire website redirect to a blockchain entry, but we didn't have the money to be
+                      honest and it felt like too much of a cop out (still think it's funny though). Eventually we
+                      decided that it would be just as fun to use the current Promptist movement and advances in Machine
+                      Learning to generate most of the CSS code via prompts given to a GPT model: <a
+                        href="https://6b.eleuther.ai/" target="_blank">Eleuther AI's GPT-J-6B</a>.</p>
+                    <p>That's right, all of the CSS in this theme was generated from prompts with the model's
+                      suggestions refined and aligned to ensure the result wasn't too chaotic. The color scheme and
+                      fonts were picked from simple prompts of partial Google Fonts URLs and CSS properties and then we
+                      fed it the selectors we needed based on the default theme and continued along until we had
+                      something workable.</p>
+                    <p>In addition, we also generated new versions of all the images in our magazine using VGAN+CLIP <a
+                        href="https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W"
+                        target="_blank">Colab</a> <a
+                        href="https://colab.research.google.com/drive/1nWkU3HlGBF5Gl_XjWs_k-QIDDB18nDpK"
+                        target="_blank">notebooks</a>. The cover images were generated based on source image and title
+                      as prompt with the CLIP Guided Diffusion approach by Katherine Crowson, while article images were
+                      generated with source image and title as prompt from standard VGAN+CLIP models.</p>
+                    <p>The original idea was to have the entire site be generated by prompts, including the text, and we
+                      actually did generate alternate versions of each article but in the end finding a way to cleanly
+                      subsitute everything proved too demanding so we settled for simply swapping the images using
+                      Javascript.</p>
+                    <p>While this theme started as a bit of a joke and pushback against the spec requirements, we do
+                      think that Promptism, as the current movement of machine-enabled art has been coined by some,
+                      offers a genuinely interesting take on what the future of art and content will look like. The
+                      Promptist Manifesto, written by GPT-3, can be read <a
+                        href="https://deeplearn.art/the-promptist-manifesto/" target="_blank">here</a>.</p>
                   </div>
                 </div>
               </div>
@@ -448,7 +810,8 @@
             </p>
             <p>
               Built by <a href="https://twitter.com/laurent_fintoni" target="_blank">@laurent_fintoni</a> and
-              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> over countless hours. Technically this makes us the editors, publishers, and designers of this imaginary magazine. 
+              <a href="https://twitter.com/fcagnola" target="_blank">@fcagnola</a> over countless hours. Technically
+              this makes us the editors, publishers, and designers of this imaginary magazine.
             </p>
           </div>
           <div class="modal-footer">
