@@ -77,7 +77,7 @@ var aboutColors = {
 // Theme switching
 function switchTheme(btn) {
   let cssLink = document.getElementById("theme-style-tag");
-  let basePath = "/static/css/";
+  let basePath = "/LiterOCULAR/static/css/";
 
   function switchImages(toggle) {
     const sources = articleSources[currentIssue];
@@ -86,11 +86,11 @@ function switchTheme(btn) {
       if (toggle == "original") {
         const generatedImage = document.querySelector(`.${cls.trim()}`);
         console.log(generatedImage);
-        generatedImage.src = "/img/" + links.original;
+        generatedImage.src = "/LiterOCULAR/img/" + links.original;
       } else {
         const originalImage = document.querySelector(`.${cls.trim()}`);
         console.log(originalImage);
-        originalImage.src = "/static/css/Generated/" + links.generated;
+        originalImage.src = "/LiterOCULAR/static/css/Generated/" + links.generated;
       }
     }
   }
