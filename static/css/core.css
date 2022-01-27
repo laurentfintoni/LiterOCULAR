@@ -93,21 +93,21 @@ h3.modal-title {
   bottom: auto;
   right: auto;
   background: transparent;
-  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .anim-layer.active {
   left: 100%;
 }
 .anim-layer--2 {
   background: #f4f4f4;
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 .anim-layer--3 {
   background: #d2042d;
-  transition-delay: 0.01s;
+  transition-delay: 0.12s;
 }
 .anim-layer--4 {
   background: #111;
-  transition-delay: 0.06s;
+  transition-delay: 0.08s;
 }
 
