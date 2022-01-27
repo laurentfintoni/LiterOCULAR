@@ -1,8 +1,12 @@
 /* Site wide rules that do not change w/ other CSS themes */
 
+/* font */ 
+
 html {
   font-size: 100%;
 }
+
+/* navbar */
 
 .theme-tab {
   position: relative;
@@ -15,6 +19,8 @@ html {
 .issues.show {
   left: 7vw;
 }
+
+/* body */
 
 body {
   position: fixed;
@@ -47,9 +53,21 @@ body.home {
   display: none;
 }
 
+/* cursor */ 
+
 .dropdown-menu > * {
   cursor: pointer;
 }
+
+a.pointer {
+  cursor: pointer;
+}
+
+.card-lens > .card-body {
+  cursor: pointer;
+}
+
+/* buttons modals */
 
 button.btn.btn-outline-secondary {
   border: none;
@@ -59,7 +77,12 @@ button.btn.btn-outline-secondary {
   height: 85vh !important;
 }
 
+h3.modal-title {
+  font-size: 1.5rem !important;
+}
+
 /* Css transition on theme switching */
+
 .anim-layer {
   z-index: 2000;
   position: absolute;
@@ -88,10 +111,3 @@ button.btn.btn-outline-secondary {
   transition-delay: 0.06s;
 }
 
-a.pointer {
-  cursor: pointer;
-}
-
-.card-lens > .card-body {
-  cursor: pointer;
-}

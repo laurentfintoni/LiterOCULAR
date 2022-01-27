@@ -106,15 +106,13 @@ a:not(.navbar *):hover {
 }
 
 .card.border-dark {
-  border-color: rgb(46, 0, 15) !important;
-  border-top: 0;
-  border-bottom: 0;
+  border: none !important;
 }
 
 .card-title {
   font-family: "newspaper-header", sans-serif;
   text-transform: uppercase;
-  font-size: 1.56vw;
+  font-size: 1.40vw;
   border: none;
 }
 
@@ -135,6 +133,11 @@ a:not(.navbar *):hover {
   color: inherit;
 }
 
+.issues-lenses {
+  border: solid black;
+  border-width: 0 0 0 0.15vw;
+}
+
 /* header rules */
 
 h1,
@@ -151,10 +154,8 @@ h6 {
 }
 
 .issues-lenses > h1 {
-  border-color: black;
-  border-style: solid;
+  border: solid black;
   border-width: 0.15vw 0 0 0;
-  font-style: bold;
   padding-right: 1.95vw;
 }
 
@@ -164,9 +165,8 @@ h6 {
 }
 
 .issues-hp, .lenses-hp {
-  border-color: black;
-  border-style: double;
-  border-width: 0.31vw 0 0 0;
+  border: solid black;
+  border-width: 0.15vw 0 0 0;
 }
 
 h1 {
@@ -175,25 +175,23 @@ h1 {
 
 h1.homepage-header {
   font-family: "Chomsky", serif;
-  border-color: black;
-  border-style: solid;
-  border-width: 0.15vw 0 0 0;
+  border: 0.15vw double black;
+  border-width: 0.46vw 0 0 0;
 }
 
 .homepage-sub {
-  border-color: black;
-  border-style: double;
-  border-width: 0 0 0.31vw 0;
+  border: 0.15vw double black;
+  border-width: 0.46vw 0 0.46vw 0;
 }
 
 #article1 > h1,
 #article2 > h1,
 #article3 > h1,
 .header-and-sub > h1 {
-  border-color: black;
-  border-style: solid;
+  border: solid black;
   border-width: 0.15vw 0 0 0;
   font-size: 2.5vw;
+  margin-bottom: -0.15vw;
 }
 
 h2 {
@@ -203,10 +201,16 @@ h2 {
 #article1 > h2,
 #article2 > h2,
 #article3 > h2 {
-  border-color: black;
-  border-style: double;
-  border-width: 0.31vw 0 0.31vw 0;
+  border: solid black;
+  border-width: 0.15vw 0 0.15vw 0;
   margin-top: 0.625vw;
+}
+
+#article1 > h2::before,
+#article2 > h2::before,
+#article3 > h2::before {
+  content: url(hand.png);
+  padding: 0.31vw;
 }
 
 h3 {
@@ -241,6 +245,8 @@ p {
 #article2,
 #article3 {
   max-height: 88vh !important;
+  border: solid black;
+  border-width: 0 0.15vw 0 0;
 }
 
 .modal-body p:nth-child(n+1) {
@@ -423,7 +429,7 @@ img {
 }
 
 .offcanvas, .modal-content {
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
 }
 
 .offcanvas-header {
@@ -444,7 +450,7 @@ img {
 
 .accordion-button {
   color: #111;
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
   font-size: 1.25vw;
 }
 
@@ -455,7 +461,7 @@ img {
 
 .accordion-button:not(.collapsed) {
   color: #111;
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
 }
 
 .accordion-button:not(.collapsed)::after {
