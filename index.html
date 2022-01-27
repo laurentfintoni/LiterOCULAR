@@ -299,7 +299,7 @@
                       consistent and historically inspired styles to computer interactions (such as hover and focus),
                       replicating historically accurate layout touches, and consistent usage of a selection of fonts and
                       colors for each theme.</p>
-                    <p>With regards to font, dropcaps, indent, and padding sizes around text and images these were drawn from our historical references and replicated using visual estimation in the spirit of the spec's requirement to update historical elements. Dropcaps were eyeballed using sentence heights and indents using letter length. While dropcap heights did vary historically, we found that the indent length was roughly the same across all three themes that use it and so kept it the same.</p>
+                    <p>With regards to fonts, dropcaps, indents, and padding sizes around text and images these were drawn from our historical references and replicated using visual estimation in the spirit of the spec's requirement to update historical elements. Dropcaps were eyeballed using sentence heights and indents using letter length. While dropcap heights did vary historically, we found that the indent length was roughly the same across all three themes that use it and so kept it the same. All fonts are taken from GoogleFonts aside from three in the Newspaper theme. This is due to some issues we were having with loading local fonts outside the Newspaper theme, and so decided to pick up the challenge of finding everything we needed solely in their collection.</p>
                     <p>The entire CSS process is best summed by another two memes (like all good things in life):
                       procrastination and bug squashing.</p>
                     <div style="display: flex; justify-content: center;">
@@ -394,18 +394,17 @@
                       (#f4f4f4) for text, in order to maintain high contrast and legibility. A light shade of yellow
                       (#f9eac8), a dark gray (#353434), and a dark shade of pink-red (#4a1520) were chosen as spot
                       colors for drop down menus, buttons, and highlights. Images were greyscaled via CSS filter to
-                      align them with the overall historical feel. TK d7ccc1 (viewer / modal background color?)</p>
+                      align them with the overall historical feel.</p>
                     <p><span style="text-decoration: underline;">Fonts:</span> The easiest font to choose was the
-                      magazine header/title font, <em>Chomsky</em>: it looks just like 19th century newspaper titles.
-                      Next, we needed to find a fitting font for both body and headings: after unsuccessfully browsing
+                      magazine header/title font, Chomsky: it looks just like many 19th century newspaper titles.
+                      Next, we needed to find a fitting font for both body and headings. After unsuccessfully browsing
                       multiple sources while comparing typefaces with our historical sources, we stumbled upon a font
-                      called <em>Old Newspaper Type</em>. It was freely available and in open format, and the deed was
+                      called Old Newspaper Type that was freely available and in open format, and the deed was
                       quickly done. The search for a heading font was a multi-step process: we initially used Chunkfive
                       for both menus and textual headings, but quickly realized it wasn't historically accurate for
-                      article content. We opted for keeping Chunkfive as an <em>extension</em> of the theme in menus and
+                      article content. We opted for keeping Chunkfive for menus and
                       interactive components, which clearly didn't exist at the time, and to use a more plain-looking
-                      typeface called Newsreader for article headings. This is also the only font for the newspaper
-                      theme found in GoogleFonts.</p>
+                      typeface called Newsreader for article headings.</p>
                     <p><span style="text-decoration: underline;">Layout:</span> Bottom margins were removed from
                       <code>p</code> tags, margins and padding were adjusted elsewhere (images, titles, menus etc...),
                       and text alignment was set to justified to emulate the condensed feel of the layouts of the time
@@ -460,7 +459,7 @@
                       shade of magenta-pink (#6F1946) and a shade of green (#68A469) were used as complimentary colors,
                       inspired by a <em>Harper's Bazaar</em> 1922 cover. The magenta-pink allowed for an interesting
                       twist on background color for menus and metadata viewer while the green as a spot color was a nice
-                      reference to jade, one of the natural materials used in Art Deco material designs such as jewelry
+                      reference to jade, one of the natural materials used in Art Deco designs such as jewelry
                       and furniture.</p>
                     <p><span style="text-decoration: underline;">Fonts:</span> Limelight was an obvious choice for the
                       branding, with its high contrast, geometric style instantly evoking our current understanding of
@@ -486,16 +485,12 @@
                     <p>Based on our references, we centered headers, subheaders, bylines, and captions and added italics
                       to subheaders and captions and uppercase to bylines. Dropcaps were added to the beginning of each
                       article, followed by indents, both using pseudo-elements to control all the necessary instances
-                      across the six articles using nth child logic. Due to the differences in some of the html
-                      structures of the articles, we also had to create additional exceptions to ensure that dropcaps
-                      and indents behaved correctly (and this was in turn taken across to other themes). The size of the
-                      dropcaps and indent were taken from visual estimation of our references: around three lines-height
-                      for primary dropcaps (two for secondary ones), no padding, and negative margin-bottom to ensure
-                      text wrapped tightly; the length of 2 letters for indents (this indent length appeared to be
-                      roughly the same across all historical themes and so was kept in all of them). The remaining
-                      letters of the first word of each line were also uppercased as was the norm then. Bottom margin
+                      across the six articles (and modals) using <code>*nth-child</code> logic. Due to the differences in some of the html
+                      structures of the articles, we also had to create additional classes to ensure that dropcaps
+                      and indents behaved correctly across both issues (this was in turn taken across to other themes). The remaining
+                      letters of the first word of each line were also uppercased following a dropcap as was the norm. Bottom margin
                       was removed from paragraphs, and padding was kept around images in line with historical
-                      references. We only kept rounded edges on the top corners as based on our references that appeared
+                      references. We only kept rounded edges on the top corners of boxes (buttons, modals etc...) as based on our references that appeared
                       like the most accurate use of rounded edges at the time. </p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
                       <img src="/LiterOCULAR/img/ArtDecoContents.png" class="img-fluid"
@@ -546,9 +541,9 @@
                       magazines for this theme was clear from the beginning, as the articles of the Death And Rebirth
                       issue were taken from issues of <em>The Source</em> and <em>Ego Trip Magazine</em>, two key US
                       publications for fans of the music at the time. With access to a large personal collection of
-                      scans from these two publications and others (<em>XXL</em>, <em>Rap Pages</em>, and <em>Hip-Hop
+                      scans from publications of the time (<em>XXL</em>, <em>Rap Pages</em>, and <em>Hip-Hop
                         Connection</em> among others) we first began to look for key aesthetic elements common to this
-                      subset of music magazines from the decade. While each of these publications had a certain style,
+                      subset of music magazines. While each of these publications had a certain style,
                       there was an undeniable common aesthetic to hip-hop magazines of the time and we originally
                       considered making direct references to different publications before ultimately deciding that
                       <em>The Source</em> would be the direct reference, essentially speaking for all. Part of the
@@ -558,10 +553,10 @@
                     </p>
                     <p>For our primary palette we decided on a very light shade of orange (#e1dcd8) as the main
                       background color and a medium shade (#DBBC9F) for the metada viewer, modals, and buttons. This
-                      choice was inspired by some of the specific backgrounds in our reference documents. Text used a
+                      choice was inspired by some of the specific backgrounds in our reference documents, in particular a fact box that became the basis for the theme's boxes. Text used a
                       very dark shade of blue-magenta (#222125) extracted from scans, which was also used for the navbar
                       in the spirit of how content pages and regular columns were presented. For primary spot colors we
-                      used a shade of red (#d5473b) which was a common balance to the black in many issues as well as a
+                      used a shade of red (#d5473b) which was a common balance to the black in many issues as well as 
                       magenta (#70557D) and pink (#8c485f) for borders and highlights. The articles themselves feature
                       additional color combinations in the titles, which was inspired by the way in which 1990s music
                       magazines often called on a wide range of color combinations with each article often featuring its
@@ -571,16 +566,15 @@
                       times. Alfa Slab One was chosen for branding and titling as an old-style serif with a strong
                       visual effect that brings to mind some of the title fonts used by <em>The Source</em> in its early
                       days. Oswald was chosen as a clean gothic sans-serif ideal for blockquotes and dropcaps, evoking
-                      some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its slab
+                      some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its lighter slab
                       serif evoking print in very clear ways. Lastly, Libre Baskerville was chosen for the body, as
                       serifs tended to be common in body text at the time (though there was a switch to sans-serif in
                       the decade) and it is optimised for body usage on computers. </p>
                     <p><span style="text-decoration: underline;">Layout:</span> The aim with the layout of this theme
-                      was to try and capture how diverse the design of each article in hip-hop magazines was. Common
+                      was to try and capture how diverse the design of each article in <em>The Source</em> could often be. Common
                       elements were chosen to tie it together, especially as we didn't have the luxury of multiple
-                      pages: the use of uppercase for bylines and menus; straight corners on all borders, boxes, and
-                      buttons; no background hover colors; the use of a small black square to indicate the end of an
-                      article. After this we opted to recreate the layouts of the 3 different articles in Death And
+                      pages: the use of uppercase for bylines and menus; straight corners; no background hover colors; the use of a small black square to indicate the end of an
+                      article. After this we opted to recreate the layouts of the three different articles in Death And
                       Rebirth as these were most directly related to our magazine. Each article has therefore been as
                       closely recreated as possible, with the 1991 <em>Source</em> article about KMD featuring a
                       different, but historically accurate, lead photo to allow us to recreate the title's positioning.
@@ -589,9 +583,9 @@
                       property thanks to this <a href="https://bennettfeely.com/clippy/" target="_blank">handy
                         resource</a>), line boxing around titles, and color alternation. Subheaders within article were
                       also styled in homage of the times with solid background colors, center alignment and small
-                      dropcaps and letter spacing to control its stretching across the available space. Lastly, bottom
-                      margins were removed from paragraphs, uppercase was applied to captions and bylines alonside an
-                      underline for the latter, and text was justified based on references.</p>
+                      dropcaps and letter spacing to control their stretching across the available space. Lastly, bottom
+                      margins were removed from paragraphs, an 
+                      underline given to bylines, and text justified.</p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
                       <img src="/LiterOCULAR/img/KMDSource.jpeg" class="img-fluid"
                         alt="screenshot of a 1991 Source feature on KMD" title="The Source, 1991">
@@ -660,12 +654,12 @@
                     <figcaption class="blockquote-footer" style="text-align: center;">The Promptist Manifesto, GPT-3
                     </figcaption>
                     <p><span style="text-decoration: underline;">Inspiration:</span> For our last trick we gave some
-                      serious thoughts to how best to approach the spec's requirement that one of the themes be an
-                      imagination of what the future of design look like. Keeping it 💯 we're not fans of predictions,
+                      serious thought to how best to approach the spec's requirement that one of the themes be an
+                      imagination of what the future of design might look like. Keeping it 💯 we're not fans of predictions,
                       they just always seem so forced and rarely hit the spot (unless we're talking about speculative
                       fiction but let's not go there because it's too depressing). One early idea was to mint an NFT and
                       just make the entire website redirect to a blockchain entry, but we didn't have the money to be
-                      honest and it felt like too much of a cop out (still think it's funny though). Eventually we
+                      honest and it felt like too much of a cop out (still think it's funny in a conceptual art kinda way). Eventually we
                       decided that it would be just as fun to use the current Promptist movement and advances in Machine
                       Learning to generate most of the CSS code via prompts given to a GPT model: <a
                         href="https://6b.eleuther.ai/" target="_blank">Eleuther AI's GPT-J-6B</a>.</p>
@@ -679,8 +673,8 @@
                         target="_blank">Colab</a> <a
                         href="https://colab.research.google.com/drive/1nWkU3HlGBF5Gl_XjWs_k-QIDDB18nDpK"
                         target="_blank">notebooks</a>. The cover images were generated based on source image and title
-                      as prompt with the CLIP Guided Diffusion approach by Katherine Crowson, while article images were
-                      generated with source image and title as prompt from standard VGAN+CLIP models.</p>
+                      as prompt using the CLIP Guided Diffusion approach by Katherine Crowson, while article images were
+                      generated with source image and title as prompt using standard VGAN+CLIP models.</p>
                     <p>The original idea was to have the entire site be generated by prompts, including the text, and we
                       actually did generate alternate versions of each article but in the end finding a way to cleanly
                       subsitute everything proved too demanding so we settled for simply swapping the images using
