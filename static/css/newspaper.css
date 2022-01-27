@@ -188,10 +188,10 @@ h1.homepage-header {
 #article2 > h1,
 #article3 > h1,
 .header-and-sub > h1 {
-  border-color: black;
-  border-style: solid;
+  border: solid black;
   border-width: 0.15vw 0 0 0;
   font-size: 2.5vw;
+  margin-bottom: -0.15vw;
 }
 
 h2 {
@@ -201,10 +201,16 @@ h2 {
 #article1 > h2,
 #article2 > h2,
 #article3 > h2 {
-  border-color: black;
-  border-style: double;
-  border-width: 0.31vw 0 0.31vw 0;
+  border: solid black;
+  border-width: 0.15vw 0 0.15vw 0;
   margin-top: 0.625vw;
+}
+
+#article1 > h2::before,
+#article2 > h2::before,
+#article3 > h2::before {
+  content: url(hand.png);
+  padding: 0.31vw;
 }
 
 h3 {
