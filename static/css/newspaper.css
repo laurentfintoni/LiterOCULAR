@@ -135,6 +135,11 @@ a:not(.navbar *):hover {
   color: inherit;
 }
 
+.issues-lenses {
+  border: solid black;
+  border-width: 0 0 0 0.15vw;
+}
+
 /* header rules */
 
 h1,
@@ -151,8 +156,7 @@ h6 {
 }
 
 .issues-lenses > h1 {
-  border-color: black;
-  border-style: solid;
+  border: solid black;
   border-width: 0.15vw 0 0 0;
   font-style: bold;
   padding-right: 1.95vw;
@@ -164,8 +168,7 @@ h6 {
 }
 
 .issues-hp, .lenses-hp {
-  border-color: black;
-  border-style: double;
+  border: double black;
   border-width: 0.31vw 0 0 0;
 }
 
@@ -175,15 +178,13 @@ h1 {
 
 h1.homepage-header {
   font-family: "Chomsky", serif;
-  border-color: black;
-  border-style: solid;
-  border-width: 0.15vw 0 0 0;
+  border: 0.15vw double black;
+  border-width: 0.46vw 0 0 0;
 }
 
 .homepage-sub {
-  border-color: black;
-  border-style: double;
-  border-width: 0 0 0.31vw 0;
+  border: 0.15vw double black;
+  border-width: 0.46vw 0 0.46vw 0;
 }
 
 #article1 > h1,
@@ -241,6 +242,8 @@ p {
 #article2,
 #article3 {
   max-height: 88vh !important;
+  border: solid black;
+  border-width: 0 0.15vw 0 0;
 }
 
 .modal-body p:nth-child(n+1) {
