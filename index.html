@@ -68,7 +68,7 @@
 
     <!-- Documentation modal-->
     <div class="modal fade" id="docuModal" tabindex="-1" aria-labelledby="docuModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="docuModalLabel">This documentation rules the nation, with version</h5>
@@ -76,7 +76,7 @@
           </div>
           <div class="modal-body">
             <p style="text-align: center;">⚠️ Please note this documentation is best viewed with the base theme. Click
-              <a href="#" id="theme-toggle-base" onclick="switchTheme(this);">here</a> to enable. ⚠️
+              <a href="#" id="theme-toggle-base" onclick="switchTheme(this);">here</a> to switch. ⚠️
             </p>
             <div class="accordion accordion-flush" id="accordionDocu">
               <!-- Issue and article -->
@@ -92,20 +92,11 @@
                   <div class="accordion-body">
                     <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom
                       features and interviews downloaded following his death in late 2020. Text was extracted using the
-                      pytesseract Python library, and then manually cleaned up, and images extracted via Photoshop.</p>
-                    <p>Source articles for Who Watches the Admen? were manually scraped from the source code at <em>MIT
-                        Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em> and then manually
-                      cleaned up.</p>
+                      <a href="https://pypi.org/project/pytesseract/" target="_blank">pytesseract</a> Python library, and then manually cleaned up. Images were extracted via Photoshop.</p>
+                    <p>Source articles for Who Watches the Admen? were manually scraped and cleaned up from the source code at <em>MIT
+                        Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em>.</p>
                     <p>The topics of both issues were chosen for their historical and specific differences, as well as
-                      for their close relation to our personal interests and field of study in the Digital Humanities:
-                      hip-hop culture and archival in the case of Death And Rebirth, and ethics and representation in
-                      computer science and tech in the case of Who Watches the Admen?. Each article within these issues
-                      was chosen to give a range of perspective on the same subject (Dumile's artistic reinvention,
-                      Gebru's firing from Google), with some cross over between both in the case of more specific topics
-                      such as identity.</p>
-                    <p>Full details of every article's source can be found in the Disclaimer section of the magazine,
-                      while details of each issue's primary topics and themes can be found in the contents section and
-                      metadata viewer.</p>
+                      for their close relation to our personal interests and field of study in the Digital Humanities. Death And Rebirth documents the artistic evolution of Daniel Dumile from his time as Zev Love X within the group KMD to his rebirth as MF Doom following the death of his brother Dingilizwe Dumile. Who Watches the Admen? details the controversy around the sudden departure of Timnit Gebru from Google's Ethical AI team following the publication of a research paper she co-authored. Each article within these issues was chosen to give a range of perspectives on its subject with some cross over between both issues in the case of more specific topics such as identity and representation.</p>
                   </div>
                 </div>
               </div>
@@ -121,15 +112,15 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>The articles were formatted for metadata extraction and reference including article-level
-                      (source, byline, publication date) and topic-specific metadata. We chose to give all texts a
-                      common layout, where headers would have a <code>h1</code> tag, subs and bylines their own specific
-                      class, and the rest of the text would be in <code>p</code> tags. We added <code>figure</code> and
+                    <p>Following the specifications for this project, the articles were formatted for metadata extraction and reference at the article-level
+                      (source, byline, publication date) and at the fragment-level with topic-specific metadata. We chose to give the raw html for each article a
+                      common layout: titles in <code>h1</code> tag, subheaders and bylines with their own specific
+                      class, and the rest of the text in <code>p</code> tags. We added <code>figure</code> and
                       <code>blockquote</code> tags as necessary to handle images and pull out quotes. We also kept
                       external embeds when possible (a video in <em>The Washington Post</em> article was removed as it
                       went offline during development) and either left them in the text itself or put them in modals
-                      when they couldn't easily be restyled. We also spent time reflecting on the content to decide what
-                      should be formatted with specific <code>span</code> tags for metadata usage.
+                      when they couldn't easily be restyled due to using iframes. We also spent time reflecting on the content to decide what
+                      should be formatted with specific <code>span</code> tags for article- and fragment-level metadata usage.
                     </p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
                       <img src="/LiterOCULAR/img/typing.gif" class="img-fluid" alt="animated image of Jim Carey typing"
@@ -141,13 +132,12 @@
                       the topic the fragment refers to, and an <code>about=”*”</code> attribute, where * would refer to
                       a specific entity within the topic. This system, which was implemented partly by hand and partly
                       through regular expression matching, was designed to then plug into the dynamic functionality
-                      requirements of the project.</p>
-                    <p>After a first round of formatting we had a set of topic classes for each issue (e.g. person,
+                      requirements of the project: the classes would allow for population of article-level topics (e.g. technology) while the attribute would allow for population of specific instances of the topic (e.g. Artifical Intelligence).</p>
+                    <p>After a first round of formatting we had a set of article-level topics for each issue (e.g. person,
                       subject, organization etc...) which allowed us to evaluate the main themes, decide how to handle
                       abstract topics, and decide on whether or not to merge / remove certain entities for clarity and
                       focus. In the end we felt that there would be benefits in being able to view closely connected
-                      topics alongside each other and so decided against merging entities. The metadata viewer shows the
-                      primary topics for each issue based on this work.</p>
+                      topics (such as the different aliases of Daniel Dumile) alongside each other and so decided against merging entities.</p>
                   </div>
                 </div>
               </div>
@@ -163,21 +153,21 @@
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the spec for
+                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the functionality requirements for
                       this project:<br />
                     <div style="display: flex; justify-content: center; padding: 0.625vw;"><img
                         src="/LiterOCULAR/img/maths.gif" class="img-fluid"
                         alt="animated image of the thinking equations meme" title="When the specs make you think"></div>
                     As a first step we built a virgin Bootstrap 5 skeleton with two pages: the home page, which would
-                    act as both cover and ToC page of the digital magazine, and an issue page, within which all articles
+                    act as both cover and table of contents for the digital magazine, and an issue page, within which all articles
                     would be viewable inside columns. We also included a static navbar to enable navigation back and
                     forth as well as access to the metadata viewer and CSS themes. Towards the end of development we
                     also decided to adjust the navbar so that it would be partial on the cover (with access to the
                     about, documentation, and disclaimer pages and showing the metadata viewer as yet unavailable)
-                    because access to issues and lenses are available on page in the table of contents.</p>
-                    <p><span style="text-decoration: underline;">Early on we decided to use the following line from the
+                    because access to issues and lenses are available on page in the ToC.</p>
+                    <p>Early on we decided to use the following line from the
                         spec as an overall guiding principle when approaching the underlying design of the
-                        magazine</span>: "The canvas should be exactly as big as the viewport. Individual articles and
+                        magazine: "The canvas should be exactly as big as the viewport. Individual articles and
                       metadata viewer will scroll autonomously within the overall canvas."</p>
                     <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time
                       deciding the best approach for the metadata viewer, finally settling on using Bootstrap's
@@ -186,13 +176,14 @@
                       another part of the spec, namely our ability to enable clicking on a fragment within the metadata
                       viewer to auto scroll to its position within the article. As the articles are partially covered by
                       the offcanvas while browsing the metadata viewer this would have required a fair amount of hoop
-                      jumping via scripts that we felt was too complicated. Furthermore, due to most topic fragments
-                      having multiple instances, auto scroll to first instance felt somewhat redundant from a user
-                      experience point of view. <span style="text-decoration: underline;">We justify this choice, as
-                        well as others detailed in this documentation by referring to another part of the spec which we
-                        also used as a guiding principle: "design deliberately."</span></p>
+                      jumping via scripts that we felt was too complicated and with too many variables for a smooth user experience. Furthermore, due to most topic fragments
+                      having multiple instances, auto scroll to first instance with the viewer retracted felt somewhat pointless as the user would then have no way to continue flipping through each topic instance.<p>
+                        <p>We justify this choice, as
+                          well as others detailed in this documentation by referring to another part of the spec which we
+                          also used as a guiding principle: "design deliberately."</p>
+                      <p>The home page was laid out with a fluid container to tap into the viewport logic governing the project (see below for more detail on this). This container was then split into two columns: the left one acting as the cover / editor's letter and the right one acting as a ToC. They were proportioned to emphasise the cover and their columns were set to medium breakpoint to ensure consistency across all supported device sizes (see below for more on that). The ToC uses gutters and margins of <code>0.5rem</code>. The issue page is essentially a navbar and three columns split equally across the Bootstrap grid, with <code>0.5rem</code> of padding on the containing row to ensure that functionality, design, and legibility aren't compromised.</p>
                     <p>The decision to adhere to the canvas lock also led us to decide that no part of the magazine
-                      should be scrollable aside from the articles themselves and the modals. In essence, we made the
+                      should be scrollable aside from the articles themselves (using the CSS <code>overflow</code> property with scrollbar hidden by default) and the modals. In essence, we made the
                       design decision that this magazine would be constrained in a similar way as print magazines were
                       by their choice of paper size. Therefore we made all additional page requirements (disclaimer,
                       about, documentation) modals and designed the cover/content page to fit within the viewport at all
@@ -202,14 +193,14 @@
                         alt="screenshot of base relative unit scaling" title="4K res without vw">
                       <figcaption style="float: left;">4K/2560x1357 res without vw</figcaption>
                     </figure>
-                    <p>One last but important note on this subject regards typometry and the baseline measurement of
+                    <p>One last but important note regards typometry and the baseline measurement of
                       every element in this magazine. We started designing LiterOCULAR using <code>rem</code> as the
                       base relative unit, for two reasons: it is the unit used by Bootstrap's core css, and <a
                         href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">it
                         simplifies nesting declarations</a>. However, once we'd gotten deeper into the various
                       historical designs we made the decision to switch our base relative unit to <code>vw</code>. This
                       was due to the fact that when viewing the magazine on higher resolution screens, Bootstrap's
-                      framework can lead to an overall shrinking/stretching of the design within the canvas.</p>
+                      framework can lead to an overall shrinking/stretching of the design within the canvas (see screenshots).</p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
                       <img src="/LiterOCULAR/img/res2.png" class="img-fluid"
                         alt="screenshot of base relative unit scaling" title="4K res without vw">
@@ -219,14 +210,14 @@
                       relative units in our css as well as overiding key elements in the core css we could have a design
                       that scaled relative to screen resolution. As there is no such thing as a clean answer in web dev
                       — 😆 — we then realised that this approach meant that once you went below a tablet in device size
-                      you encountered the opposite problem: everything was scaled too small to be pleasant and usable.
+                      you encountered the opposite problem: the device's smaller width lead to everything being relatively too small to be readable or usable.
                       One option to get around this would have been to script a calculation function to change the base
                       relative unit in the css based on device so that anything below 768 would revert to px or rem and
                       anything above the most common resolutions for desktop and laptop used vw. As the decision to
-                      switch to vw was made relatively late in the development process, by which point we already had a
+                      switch to vw was made relatively late in the development process (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and
+                      essentially put Federico in front of it as an accomplished fact 🤫), by which point we already had a
                       lot of scripts already implemented, we decided to instead block access to the site for any devices
-                      below 768 (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and
-                      essentially put Federico in front of it as an accomplished fact 🤫). Again, we justify this by
+                      below 768. Furthermore anything smaller than a tablet makes the experience of content-focused interactive sites such as this difficult without a full rethinking of the layout. Again, we justify these decisions by
                       invoking the "design deliberately" principle.</p>
                   </div>
                 </div>
@@ -244,13 +235,11 @@
                   data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
                     <p>With the metadata viewer being a central part of the spec we also spent some time deliberating
-                      the best way to approach its requirements. In the end we settled on a design within the viewer
-                      that imitates that of the issue page: three columns. In turn the viewer is separated into three
-                      horizontal sections: header with title and controls, issue-level metadata and usage instructions,
-                      and article-level metadata. In turn, the latter is split into accordions based on subject (drawn
-                      from the <code>mention-*</code> class) within which the user can find all topics related to the
-                      subject (titled using the <code>about=”*”</code> attribute). Lastly, each topic auto-generates a
-                      Wikipedia search via a secondary button.</p>
+                      the best way to approach its requirements. In the end we settled on a design for the viewer
+                      that imitates that of the issue page: three columns. The offcanvas is separated into three
+                      rows: header with title and controls; issue-level metadata and usage instructions;
+                      and article-level metadata. The latter is in turn split into three columns containing a series of accordions populated by the article's topics (titled using the <code>mention-*</code> class). Each accordion gives the user access to all topic instances (titled using the <code>about=”*”</code> attribute), and selecting a topic instance will highlight it across the article. Lastly, each topic instance auto-generates a Wikipedia search via a split button. Both the accordions and topics within are presented in descending order of density within the article. A reset button enables the user to remove their chosen highlights and start again.</p>
+                      <p>Considering our design choices for the skeleton of the magazine we felt this approach allowed us to fulfill as many of the project's requirements as possible while also taking an approach aligned with the primary purpose of a magazine: reading.</p>
                   </div>
                 </div>
               </div>
@@ -275,25 +264,25 @@
                         alt="animated image of Vegeta crushing his energy reader"
                         title="When the specs make you stronger">
                     </figure>
-                    <p>If the functionality requirements of the spec left us feeling like thinking equations meme, then
-                      the design requirements of creating 4 different historical CSS themes left us feeling like Dawson.
+                    <p>If the functionality requirements of the spec left us feeling like the thinking equations meme, then
+                      the design requirements of creating four different historical CSS themes left us feeling like Dawson.
                       Still the only choice was to embrace the pain and let it make us stronger, like Vegeta.</p>
-                    <p>Based on the spec we decided on the following 4 historical themes:<br />
+                    <p>Based on the requirements we decided on the following four themes:<br />
                     <ul>
-                      <li>Newspapers for the 19th century</li>
-                      <li>Art Deco for the first half of the 20th century</li>
-                      <li>Hip-hop magazines for late 20th century print</li>
-                      <li>Promptism for 2030s</li>
+                      <li>19th century: Newspapers</li>
+                      <li>1900-1950: Art Deco</li>
+                      <li>Late 20th century print: 1990s hip-hop magazines</li>
+                      <li>2030s: Promptism</li>
                     </ul>
-                    Each theme was given an appropriate title. While newspapers and Art Deco are self-evident, the name
-                    for the 1990s music magazines theme was taken from the publication used as direct reference for the
-                    theme, <em>The Source</em>, while the name for the Promptist theme was taken from one of the <a
+                    Each theme was given an appropriate title. While Newspaper and Art Deco were self-evident, the name
+                    for the 1990s hip-hop magazines theme was taken from the publication used as direct reference for the
+                    theme, <em>The Source</em>, and the name for the Promptism theme was taken from one of the <a
                       href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in
                     Machine Learning today, huggingface's transformers.</p>
                     <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme
-                      (such as canvas lock, offcanvas positioning, etc...) we then created each individual theme
+                      (such as canvas lock, offcanvas positioning, switching animation etc...) we then created each individual theme
                       separately and built a functionality that would load a base theme by default and substitute it for
-                      the relevant historical one when selected via the cover or navbar menus. We also made the choice
+                      the relevant historical one when selected via the ToC or navbar menus. We also made the choice
                       to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this
                       switch and make the user experience more pleasant.</p>
                     <p>As with all other main steps of the development of this project, CSS theming was an iterative
@@ -302,20 +291,21 @@
                       improved our approach and made several decisions that were then rolled out to all other themes
                       ensuring a consistency that reflects the relevant historical periods without creating drastic
                       changes on the content. This decision was a by-product of a last key guiding principle we had
-                      settled on: <span style="text-decoration: underline;">the content should the focus of this
-                        magazine with the design requirements a complement to it</span>.</p>
-                    <p>The decisions that were made at this point and further refined in each theme include: splitting
+                      settled on: the content should the focus of this
+                        magazine with the design requirements a complement to it.</p>
+                    <p>The decisions that were made at this point and further refined in each theme include: switching to <code>vw</code> as the base relative unit, splitting
                       the navbar contents between both pages, using the navbar brand as a home button with its own
-                      specific font, laying out the home page with two columns to enable on-page navigation, applying
-                      consistent and historically inspired styles to modern interactions (such as hover and focus),
+                      specific font, applying
+                      consistent and historically inspired styles to computer interactions (such as hover and focus),
                       replicating historically accurate layout touches, and consistent usage of a selection of fonts and
                       colors for each theme.</p>
+                    <p>With regards to font, dropcaps, indent, and padding sizes around text and images these were drawn from our historical references and replicated using visual estimation in the spirit of the spec's requirement to update historical elements. Dropcaps were eyeballed using sentence heights and indents using letter length. While dropcap heights did vary historically, we found that the indent length was roughly the same across all three themes that use it and so kept it the same.</p>
                     <p>The entire CSS process is best summed by another two memes (like all good things in life):
                       procrastination and bug squashing.</p>
                     <div style="display: flex; justify-content: center;">
-                      <img src="/LiterOCULAR/img/bugs.jpg" class="img-fluid" style="width: 45%"
+                      <img src="/LiterOCULAR/img/bugs.jpg" class="img-fluid" style="width: 35%"
                         alt="squashing bugs meme" title="When you decide to look at the code">
-                      <img src="/LiterOCULAR/img/bear.jpg" class="img-fluid" style="width: 45%"
+                      <img src="/LiterOCULAR/img/bear.jpg" class="img-fluid" style="width: 35%"
                         alt="Kyle McLachlan running from a bear meme" title="When you refuse to face your fears">
                     </div>
                   </div>
@@ -343,8 +333,7 @@
                         href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference
                       following some research. The idea was that by keeping the base theme simple it would contrast
                       nicely with the historical themes. Eventually this approach was rethought as the Promptism theme
-                      adopted a black background with white text and the Newspaper theme had potential for greyscale
-                      (though this was also later avoided). In the end we kept the white/black balance (#111 and
+                      adopted a black background with white text and the Newspaper theme had potential for greyscale. In the end we kept the white/black balance (#111 and
                       #f4f4f4) and desire for mininalism but ditched the original use of greys as spot colors and
                       instead used a cherry red highlight (#D2042D) that offered a perfect contrast. Inspired in part by
                       the way in which modern sites make use of emojis to enliven navigation and reading, we decided to
@@ -837,7 +826,7 @@
           </div>
         </div>
         <div class="col md-4 issues-lenses">
-          <h1 class="text-center homepage">Issues</h1>
+          <h1 class="text-center homepage hp-issues">Issues</h1>
           <div class="row row-cols-1 row-cols-md-1 g-2 issues-hp">
             <div class="col">
               <div class="card card-issue border-dark m-2">
@@ -858,7 +847,7 @@
               </div>
             </div>
           </div>
-          <h1 class="text-center homepage">Lenses</h1>
+          <h1 class="text-center homepage hp-lenses">Lenses</h1>
           <div class="row row-cols-1 row-cols-md-2 g-2 lenses-hp">
             <div class="col">
               <div class="card card-lens border-dark m-2">
