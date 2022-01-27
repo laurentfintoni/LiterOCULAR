@@ -106,9 +106,7 @@ a:not(.navbar *):hover {
 }
 
 .card.border-dark {
-  border-color: rgb(46, 0, 15) !important;
-  border-top: 0;
-  border-bottom: 0;
+  border: none !important;
 }
 
 .card-title {
@@ -158,7 +156,6 @@ h6 {
 .issues-lenses > h1 {
   border: solid black;
   border-width: 0.15vw 0 0 0;
-  font-style: bold;
   padding-right: 1.95vw;
 }
 
@@ -168,8 +165,8 @@ h6 {
 }
 
 .issues-hp, .lenses-hp {
-  border: double black;
-  border-width: 0.31vw 0 0 0;
+  border: solid black;
+  border-width: 0.15vw 0 0 0;
 }
 
 h1 {
