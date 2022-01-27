@@ -429,7 +429,7 @@ img {
 }
 
 .offcanvas, .modal-content {
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
 }
 
 .offcanvas-header {
@@ -450,7 +450,7 @@ img {
 
 .accordion-button {
   color: #111;
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
   font-size: 1.25vw;
 }
 
@@ -461,7 +461,7 @@ img {
 
 .accordion-button:not(.collapsed) {
   color: #111;
-  background-color: #d7ccc1;
+  background-color: #ebe7dd;
 }
 
 .accordion-button:not(.collapsed)::after {
