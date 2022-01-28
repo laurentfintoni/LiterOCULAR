@@ -42,7 +42,7 @@
     </div>
   </nav>
 
-  <!-- The container spans the whole viewport (vh-100) in height and all padding is removed from the sides (px-0) -->
+  <!-- Main container -->
   <div class="container-fluid d-flex">
 
     <!-- Screen size modal -->
@@ -193,7 +193,7 @@
                       spec as an overall guiding principle when approaching the underlying design of the
                       magazine: "The canvas should be exactly as big as the viewport. Individual articles and
                       metadata viewer will scroll autonomously within the overall canvas."</p>
-                    <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time
+                    <p>As a result we locked the canvas of the issue page to viewport dimensions, <code>100vh/vw</code> and <code>position:fixed</code>, and the issue page was given a <code>position:relative</code> with <code>100vh</code> to account for browser window reszing and additional bars that might reduce visible canvas. We then spent some time
                       deciding the best approach for the metadata viewer, finally settling on using Bootstrap's
                       offcanvas functionality and placing the viewer on the bottom half of the screen with a height of
                       85 to enable us to have as much space within it as possible. This choice did end up affecting
