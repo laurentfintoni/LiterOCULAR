@@ -86,14 +86,11 @@ function switchTheme(btn) {
     }
     const sources = articleSources[currentIssue];
     for (const [cls, links] of Object.entries(sources.imgs)) {
-      console.log(cls, links);
       if (toggle == "original") {
         const generatedImage = document.querySelector(`.${cls.trim()}`);
-        console.log(generatedImage);
         generatedImage.src = "/LiterOCULAR/img/" + links.original;
       } else {
         const originalImage = document.querySelector(`.${cls.trim()}`);
-        console.log(originalImage);
         originalImage.src = "/LiterOCULAR/static/css/Generated/" + links.generated;
       }
     }

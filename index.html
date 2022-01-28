@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/LiterOCULAR/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/LiterOCULAR/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/LiterOCULAR/img/favicons/favicon-16x16.png">
   <!-- Styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -92,11 +95,21 @@
                   <div class="accordion-body">
                     <p>Source articles for the Death And Rebirth issue were taken from a personal archive of MF Doom
                       features and interviews downloaded following his death in late 2020. Text was extracted using the
-                      <a href="https://pypi.org/project/pytesseract/" target="_blank">pytesseract</a> Python library, and then manually cleaned up. Images were extracted via Photoshop.</p>
-                    <p>Source articles for Who Watches the Admen? were manually scraped and cleaned up from the source code at <em>MIT
+                      <a href="https://pypi.org/project/pytesseract/" target="_blank">pytesseract</a> Python library,
+                      and then manually cleaned up. Images were extracted via Photoshop.
+                    </p>
+                    <p>Source articles for Who Watches the Admen? were manually scraped and cleaned up from the source
+                      code at <em>MIT
                         Review</em>, <em>The Washington Post</em>, and <em>The New York Times</em>.</p>
                     <p>The topics of both issues were chosen for their historical and specific differences, as well as
-                      for their close relation to our personal interests and field of study in the Digital Humanities. Death And Rebirth documents the artistic evolution of Daniel Dumile from his time as Zev Love X within the group KMD to his rebirth as MF Doom following the death of his brother Dingilizwe Dumile. Who Watches the Admen? details the controversy around the sudden departure of Timnit Gebru from Google's Ethical AI team following the publication of a research paper she co-authored. Each article within these issues was chosen to give a range of perspectives on its subject with some cross over between both issues in the case of more specific topics such as identity and representation.</p>
+                      for their close relation to our personal interests and field of study in the Digital Humanities.
+                      Death And Rebirth documents the artistic evolution of Daniel Dumile from his time as Zev Love X
+                      within the group KMD to his rebirth as MF Doom following the death of his brother Dingilizwe
+                      Dumile. Who Watches the Admen? details the controversy around the sudden departure of Timnit Gebru
+                      from Google's Ethical AI team following the publication of a research paper she co-authored. Each
+                      article within these issues was chosen to give a range of perspectives on its subject with some
+                      cross over between both issues in the case of more specific topics such as identity and
+                      representation.</p>
                   </div>
                 </div>
               </div>
@@ -112,15 +125,19 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                   data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>Following the specifications for this project, the articles were formatted for metadata extraction and reference at the article-level
-                      (source, byline, publication date) and at the fragment-level with topic-specific metadata. We chose to give the raw html for each article a
+                    <p>Following the specifications for this project, the articles were formatted for metadata
+                      extraction and reference at the article-level
+                      (source, byline, publication date) and at the fragment-level with topic-specific metadata. We
+                      chose to give the raw html for each article a
                       common layout: titles in <code>h1</code> tag, subheaders and bylines with their own specific
                       class, and the rest of the text in <code>p</code> tags. We added <code>figure</code> and
                       <code>blockquote</code> tags as necessary to handle images and pull out quotes. We also kept
                       external embeds when possible (a video in <em>The Washington Post</em> article was removed as it
                       went offline during development) and either left them in the text itself or put them in modals
-                      when they couldn't easily be restyled due to using iframes. We also spent time reflecting on the content to decide what
-                      should be formatted with specific <code>span</code> tags for article- and fragment-level metadata usage.
+                      when they couldn't easily be restyled due to using iframes. We also spent time reflecting on the
+                      content to decide what
+                      should be formatted with specific <code>span</code> tags for article- and fragment-level metadata
+                      usage.
                     </p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
                       <img src="/LiterOCULAR/img/typing.gif" class="img-fluid" alt="animated image of Jim Carey typing"
@@ -132,12 +149,16 @@
                       the topic the fragment refers to, and an <code>about=”*”</code> attribute, where * would refer to
                       a specific entity within the topic. This system, which was implemented partly by hand and partly
                       through regular expression matching, was designed to then plug into the dynamic functionality
-                      requirements of the project: the classes would allow for population of article-level topics (e.g. technology) while the attribute would allow for population of specific instances of the topic (e.g. Artifical Intelligence).</p>
-                    <p>After a first round of formatting we had a set of article-level topics for each issue (e.g. person,
+                      requirements of the project: the classes would allow for population of article-level topics (e.g.
+                      technology) while the attribute would allow for population of specific instances of the topic
+                      (e.g. Artifical Intelligence).</p>
+                    <p>After a first round of formatting we had a set of article-level topics for each issue (e.g.
+                      person,
                       subject, organization etc...) which allowed us to evaluate the main themes, decide how to handle
                       abstract topics, and decide on whether or not to merge / remove certain entities for clarity and
                       focus. In the end we felt that there would be benefits in being able to view closely connected
-                      topics (such as the different aliases of Daniel Dumile) alongside each other and so decided against merging entities.</p>
+                      topics (such as the different aliases of Daniel Dumile) alongside each other and so decided
+                      against merging entities.</p>
                   </div>
                 </div>
               </div>
@@ -153,21 +174,23 @@
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                   data-bs-parent="#accordionDocu">
                   <div class="accordion-body">
-                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the functionality requirements for
+                    <p>Not gonna lie, we spent a fair amount of time feeling like this while contemplating the
+                      functionality requirements for
                       this project:<br />
                     <div style="display: flex; justify-content: center; padding: 0.625vw;"><img
                         src="/LiterOCULAR/img/maths.gif" class="img-fluid"
                         alt="animated image of the thinking equations meme" title="When the specs make you think"></div>
                     As a first step we built a virgin Bootstrap 5 skeleton with two pages: the home page, which would
-                    act as both cover and table of contents for the digital magazine, and an issue page, within which all articles
+                    act as both cover and table of contents for the digital magazine, and an issue page, within which
+                    all articles
                     would be viewable inside columns. We also included a static navbar to enable navigation back and
                     forth as well as access to the metadata viewer and CSS themes. Towards the end of development we
                     also decided to adjust the navbar so that it would be partial on the cover (with access to the
                     about, documentation, and disclaimer pages and showing the metadata viewer as yet unavailable)
                     because access to issues and lenses are available on page in the ToC.</p>
                     <p>Early on we decided to use the following line from the
-                        spec as an overall guiding principle when approaching the underlying design of the
-                        magazine: "The canvas should be exactly as big as the viewport. Individual articles and
+                      spec as an overall guiding principle when approaching the underlying design of the
+                      magazine: "The canvas should be exactly as big as the viewport. Individual articles and
                       metadata viewer will scroll autonomously within the overall canvas."</p>
                     <p>As a result we locked the canvas of both pages to viewport dimensions and then spent some time
                       deciding the best approach for the metadata viewer, finally settling on using Bootstrap's
@@ -176,14 +199,25 @@
                       another part of the spec, namely our ability to enable clicking on a fragment within the metadata
                       viewer to auto scroll to its position within the article. As the articles are partially covered by
                       the offcanvas while browsing the metadata viewer this would have required a fair amount of hoop
-                      jumping via scripts that we felt was too complicated and with too many variables for a smooth user experience. Furthermore, due to most topic fragments
-                      having multiple instances, auto scroll to first instance with the viewer retracted felt somewhat pointless as the user would then have no way to continue flipping through each topic instance.<p>
-                        <p>We justify this choice, as
-                          well as others detailed in this documentation by referring to another part of the spec which we
-                          also used as a guiding principle: "design deliberately."</p>
-                      <p>The home page was laid out with a fluid container to tap into the viewport logic governing the project (see below for more detail on this). This container was then split into two columns: the left one acting as the cover / editor's letter and the right one acting as a ToC. They were proportioned to emphasise the cover and their columns were set to medium breakpoint to ensure consistency across all supported device sizes (see below for more on that). The ToC uses gutters and margins of <code>0.5rem</code>. The issue page is essentially a navbar and three columns split equally across the Bootstrap grid, with <code>0.5rem</code> of padding on the containing row to ensure that functionality, design, and legibility aren't compromised.</p>
+                      jumping via scripts that we felt was too complicated and with too many variables for a smooth user
+                      experience. Furthermore, due to most topic fragments
+                      having multiple instances, auto scroll to first instance with the viewer retracted felt somewhat
+                      pointless as the user would then have no way to continue flipping through each topic instance.
+                    <p>
+                    <p>We justify this choice, as
+                      well as others detailed in this documentation by referring to another part of the spec which we
+                      also used as a guiding principle: "design deliberately."</p>
+                    <p>The home page was laid out with a fluid container to tap into the viewport logic governing the
+                      project (see below for more detail on this). This container was then split into two columns: the
+                      left one acting as the cover / editor's letter and the right one acting as a ToC. They were
+                      proportioned to emphasise the cover and their columns were set to medium breakpoint to ensure
+                      consistency across all supported device sizes (see below for more on that). The ToC uses gutters
+                      and margins of <code>0.5rem</code>. The issue page is essentially a navbar and three columns split
+                      equally across the Bootstrap grid, with <code>0.5rem</code> of padding on the containing row to
+                      ensure that functionality, design, and legibility aren't compromised.</p>
                     <p>The decision to adhere to the canvas lock also led us to decide that no part of the magazine
-                      should be scrollable aside from the articles themselves (using the CSS <code>overflow</code> property with scrollbar hidden by default) and the modals. In essence, we made the
+                      should be scrollable aside from the articles themselves (using the CSS <code>overflow</code>
+                      property with scrollbar hidden by default) and the modals. In essence, we made the
                       design decision that this magazine would be constrained in a similar way as print magazines were
                       by their choice of paper size. Therefore we made all additional page requirements (disclaimer,
                       about, documentation) modals and designed the cover/content page to fit within the viewport at all
@@ -200,7 +234,8 @@
                         simplifies nesting declarations</a>. However, once we'd gotten deeper into the various
                       historical designs we made the decision to switch our base relative unit to <code>vw</code>. This
                       was due to the fact that when viewing the magazine on higher resolution screens, Bootstrap's
-                      framework can lead to an overall shrinking/stretching of the design within the canvas (see screenshots).</p>
+                      framework can lead to an overall shrinking/stretching of the design within the canvas (see
+                      screenshots).</p>
                     <figure style="float: right; width: 30%; padding: 0.625vw 0.625vw 0 0.625vw; margin-bottom: 0;">
                       <img src="/LiterOCULAR/img/res2.png" class="img-fluid"
                         alt="screenshot of base relative unit scaling" title="4K res without vw">
@@ -210,14 +245,19 @@
                       relative units in our css as well as overiding key elements in the core css we could have a design
                       that scaled relative to screen resolution. As there is no such thing as a clean answer in web dev
                       — 😆 — we then realised that this approach meant that once you went below a tablet in device size
-                      you encountered the opposite problem: the device's smaller width lead to everything being relatively too small to be readable or usable.
+                      you encountered the opposite problem: the device's smaller width lead to everything being
+                      relatively too small to be readable or usable.
                       One option to get around this would have been to script a calculation function to change the base
                       relative unit in the css based on device so that anything below 768 would revert to px or rem and
                       anything above the most common resolutions for desktop and laptop used vw. As the decision to
-                      switch to vw was made relatively late in the development process (keeping it 💯 it was Laurent who made that decision in a CSS-induced fever and
-                      essentially put Federico in front of it as an accomplished fact 🤫), by which point we already had a
+                      switch to vw was made relatively late in the development process (keeping it 💯 it was Laurent who
+                      made that decision in a CSS-induced fever and
+                      essentially put Federico in front of it as an accomplished fact 🤫), by which point we already had
+                      a
                       lot of scripts already implemented, we decided to instead block access to the site for any devices
-                      below 768. Furthermore anything smaller than a tablet makes the experience of content-focused interactive sites such as this difficult without a full rethinking of the layout. Again, we justify these decisions by
+                      below 768. Furthermore anything smaller than a tablet makes the experience of content-focused
+                      interactive sites such as this difficult without a full rethinking of the layout. Again, we
+                      justify these decisions by
                       invoking the "design deliberately" principle.</p>
                   </div>
                 </div>
@@ -238,8 +278,16 @@
                       the best way to approach its requirements. In the end we settled on a design for the viewer
                       that imitates that of the issue page: three columns. The offcanvas is separated into three
                       rows: header with title and controls; issue-level metadata and usage instructions;
-                      and article-level metadata. The latter is in turn split into three columns containing a series of accordions populated by the article's topics (titled using the <code>mention-*</code> class). Each accordion gives the user access to all topic instances (titled using the <code>about=”*”</code> attribute), and selecting a topic instance will highlight it across the article. Lastly, each topic instance auto-generates a Wikipedia search via a split button. Both the accordions and topics within are presented in descending order of density within the article. A reset button enables the user to remove their chosen highlights and start again.</p>
-                      <p>Considering our design choices for the skeleton of the magazine we felt this approach allowed us to fulfill as many of the project's requirements as possible while also taking an approach aligned with the primary purpose of a magazine: reading.</p>
+                      and article-level metadata. The latter is in turn split into three columns containing a series of
+                      accordions populated by the article's topics (titled using the <code>mention-*</code> class). Each
+                      accordion gives the user access to all topic instances (titled using the <code>about=”*”</code>
+                      attribute), and selecting a topic instance will highlight it across the article. Lastly, each
+                      topic instance auto-generates a Wikipedia search via a split button. Both the accordions and
+                      topics within are presented in descending order of density within the article. A reset button
+                      enables the user to remove their chosen highlights and start again.</p>
+                    <p>Considering our design choices for the skeleton of the magazine we felt this approach allowed us
+                      to fulfill as many of the project's requirements as possible while also taking an approach aligned
+                      with the primary purpose of a magazine: reading.</p>
                   </div>
                 </div>
               </div>
@@ -264,8 +312,10 @@
                         alt="animated image of Vegeta crushing his energy reader"
                         title="When the specs make you stronger">
                     </figure>
-                    <p>If the functionality requirements of the spec left us feeling like the thinking equations meme, then
-                      the design requirements of creating four different historical CSS themes left us feeling like Dawson.
+                    <p>If the functionality requirements of the spec left us feeling like the thinking equations meme,
+                      then
+                      the design requirements of creating four different historical CSS themes left us feeling like
+                      Dawson.
                       Still the only choice was to embrace the pain and let it make us stronger, like Vegeta.</p>
                     <p>Based on the requirements we decided on the following four themes:<br />
                     <ul>
@@ -275,12 +325,14 @@
                       <li>2030s: Promptism</li>
                     </ul>
                     Each theme was given an appropriate title. While Newspaper and Art Deco were self-evident, the name
-                    for the 1990s hip-hop magazines theme was taken from the publication used as direct reference for the
+                    for the 1990s hip-hop magazines theme was taken from the publication used as direct reference for
+                    the
                     theme, <em>The Source</em>, and the name for the Promptism theme was taken from one of the <a
                       href="https://huggingface.co/docs/transformers/index" target="_blank">key libraries</a> used in
                     Machine Learning today, huggingface's transformers.</p>
                     <p>Having created a core css to handle the rules that would be needed regardless of stylistic theme
-                      (such as canvas lock, offcanvas positioning, switching animation etc...) we then created each individual theme
+                      (such as canvas lock, offcanvas positioning, switching animation etc...) we then created each
+                      individual theme
                       separately and built a functionality that would load a base theme by default and substitute it for
                       the relevant historical one when selected via the ToC or navbar menus. We also made the choice
                       to use a simple CSS animation, featuring the three primary colors of the base theme, to hide this
@@ -292,14 +344,22 @@
                       ensuring a consistency that reflects the relevant historical periods without creating drastic
                       changes on the content. This decision was a by-product of a last key guiding principle we had
                       settled on: the content should the focus of this
-                        magazine with the design requirements a complement to it.</p>
-                    <p>The decisions that were made at this point and further refined in each theme include: switching to <code>vw</code> as the base relative unit, splitting
+                      magazine with the design requirements a complement to it.</p>
+                    <p>The decisions that were made at this point and further refined in each theme include: switching
+                      to <code>vw</code> as the base relative unit, splitting
                       the navbar contents between both pages, using the navbar brand as a home button with its own
                       specific font, applying
                       consistent and historically inspired styles to computer interactions (such as hover and focus),
                       replicating historically accurate layout touches, and consistent usage of a selection of fonts and
                       colors for each theme.</p>
-                    <p>With regards to fonts, dropcaps, indents, and padding sizes around text and images these were drawn from our historical references and replicated using visual estimation in the spirit of the spec's requirement to update historical elements. Dropcaps were eyeballed using sentence heights and indents using letter length. While dropcap heights did vary historically, we found that the indent length was roughly the same across all three themes that use it and so kept it the same. All fonts are taken from GoogleFonts aside from three in the Newspaper theme. This is due to some issues we were having with loading local fonts outside the Newspaper theme, and so decided to pick up the challenge of finding everything we needed solely in their collection.</p>
+                    <p>With regards to fonts, dropcaps, indents, and padding sizes around text and images these were
+                      drawn from our historical references and replicated using visual estimation in the spirit of the
+                      spec's requirement to update historical elements. Dropcaps were eyeballed using sentence heights
+                      and indents using letter length. While dropcap heights did vary historically, we found that the
+                      indent length was roughly the same across all three themes that use it and so kept it the same.
+                      All fonts are taken from GoogleFonts aside from three in the Newspaper theme. This is due to some
+                      issues we were having with loading local fonts outside the Newspaper theme, and so decided to pick
+                      up the challenge of finding everything we needed solely in their collection.</p>
                     <p>The entire CSS process is best summed by another two memes (like all good things in life):
                       procrastination and bug squashing.</p>
                     <div style="display: flex; justify-content: center;">
@@ -333,11 +393,13 @@
                         href="https://widman.ski/" target="_blank">this site</a> was used as an early point of reference
                       following some research. The idea was that by keeping the base theme simple it would contrast
                       nicely with the historical themes. Eventually this approach was rethought as the Promptism theme
-                      adopted a black background with white text and the Newspaper theme had potential for greyscale. In the end we kept the white/black balance (#111 and
+                      adopted a black background with white text and the Newspaper theme had potential for greyscale. In
+                      the end we kept the white/black balance (#111 and
                       #f4f4f4) and desire for mininalism but ditched the original use of greys as spot colors and
                       instead used a cherry red highlight (#D2042D) that offered a perfect contrast. Inspired in part by
                       the way in which modern sites make use of emojis to enliven navigation and reading, we decided to
-                      add them to article headers, byline, and cover/ToC as a visual cue signifying the theme's location in
+                      add them to article headers, byline, and cover/ToC as a visual cue signifying the theme's location
+                      in
                       the current moment.</p>
                     <p><span style="text-decoration: underline;">Fonts:</span> Roboto Slab was chosen as an ideal header
                       font that would complement a sans-serif body font like Lato, which has a self-effacing simplicity.
@@ -396,15 +458,16 @@
                       colors for drop down menus, buttons, and highlights. Images were greyscaled via CSS filter to
                       align them with the overall historical feel.</p>
                     <p><span style="text-decoration: underline;">Fonts:</span> The easiest font to choose was the
-                      magazine header/title font, Chomsky: it looks just like many 19th century newspaper titles.
-                      Next, we needed to find a fitting font for both body and headings. After unsuccessfully browsing
+                      magazine header/title font, <em>Chomsky</em>: it looks just like 19th century newspaper titles.
+                      Next, we needed to find a fitting font for both body and headings: after unsuccessfully browsing
                       multiple sources while comparing typefaces with our historical sources, we stumbled upon a font
-                      called Old Newspaper Type that was freely available and in open format, and the deed was
+                      called <em>Old Newspaper Type</em>. It was freely available and in open format, and the deed was
                       quickly done. The search for a heading font was a multi-step process: we initially used Chunkfive
                       for both menus and textual headings, but quickly realized it wasn't historically accurate for
-                      article content. We opted for keeping Chunkfive for menus and
+                      article content. We opted for keeping Chunkfive as an <em>extension</em> of the theme in menus and
                       interactive components, which clearly didn't exist at the time, and to use a more plain-looking
-                      typeface called Newsreader for article headings.</p>
+                      typeface called Newsreader for article headings. This is also the only font for the newspaper
+                      theme found in GoogleFonts.</p>
                     <p><span style="text-decoration: underline;">Layout:</span> Bottom margins were removed from
                       <code>p</code> tags, margins and padding were adjusted elsewhere (images, titles, menus etc...),
                       and text alignment was set to justified to emulate the condensed feel of the layouts of the time
@@ -418,6 +481,11 @@
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
                       <img src="/LiterOCULAR/img/morningherald.png" class="img-fluid"
                         alt="screenshot of a 1839 edition of the Morning Herald" title="Morning Herald, 1839">
+                    </figure>
+                    <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
+                      <img src="/LiterOCULAR/img/sydney_morning_herald_1890.png" class="img-fluid"
+                        alt="screenshot of a 1890 edition of the Sydney Morning Herald"
+                        title="Sydney Morning Herald, 1890">
                     </figure>
                   </div>
                 </div>
@@ -485,12 +553,16 @@
                     <p>Based on our references, we centered headers, subheaders, bylines, and captions and added italics
                       to subheaders and captions and uppercase to bylines. Dropcaps were added to the beginning of each
                       article, followed by indents, both using pseudo-elements to control all the necessary instances
-                      across the six articles (and modals) using <code>*nth-child</code> logic. Due to the differences in some of the html
+                      across the six articles (and modals) using <code>*nth-child</code> logic. Due to the differences
+                      in some of the html
                       structures of the articles, we also had to create additional classes to ensure that dropcaps
-                      and indents behaved correctly across both issues (this was in turn taken across to other themes). The remaining
-                      letters of the first word of each line were also uppercased following a dropcap as was the norm. Bottom margin
+                      and indents behaved correctly across both issues (this was in turn taken across to other themes).
+                      The remaining
+                      letters of the first word of each line were also uppercased following a dropcap as was the norm.
+                      Bottom margin
                       was removed from paragraphs, and padding was kept around images in line with historical
-                      references. We only kept rounded edges on the top corners of boxes (buttons, modals etc...) as based on our references that appeared
+                      references. We only kept rounded edges on the top corners of boxes (buttons, modals etc...) as
+                      based on our references that appeared
                       like the most accurate use of rounded edges at the time. </p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
                       <img src="/LiterOCULAR/img/ArtDecoContents.png" class="img-fluid"
@@ -553,10 +625,11 @@
                     </p>
                     <p>For our primary palette we decided on a very light shade of orange (#e1dcd8) as the main
                       background color and a medium shade (#DBBC9F) for the metada viewer, modals, and buttons. This
-                      choice was inspired by some of the specific backgrounds in our reference documents, in particular a fact box that became the basis for the theme's boxes. Text used a
+                      choice was inspired by some of the specific backgrounds in our reference documents, in particular
+                      a fact box that became the basis for the theme's boxes. Text used a
                       very dark shade of blue-magenta (#222125) extracted from scans, which was also used for the navbar
                       in the spirit of how content pages and regular columns were presented. For primary spot colors we
-                      used a shade of red (#d5473b) which was a common balance to the black in many issues as well as 
+                      used a shade of red (#d5473b) which was a common balance to the black in many issues as well as
                       magenta (#70557D) and pink (#8c485f) for borders and highlights. The articles themselves feature
                       additional color combinations in the titles, which was inspired by the way in which 1990s music
                       magazines often called on a wide range of color combinations with each article often featuring its
@@ -566,14 +639,17 @@
                       times. Alfa Slab One was chosen for branding and titling as an old-style serif with a strong
                       visual effect that brings to mind some of the title fonts used by <em>The Source</em> in its early
                       days. Oswald was chosen as a clean gothic sans-serif ideal for blockquotes and dropcaps, evoking
-                      some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its lighter slab
+                      some of the extra bold sans-serif used at the time. Glegoo felt ideal for menus with its lighter
+                      slab
                       serif evoking print in very clear ways. Lastly, Libre Baskerville was chosen for the body, as
                       serifs tended to be common in body text at the time (though there was a switch to sans-serif in
                       the decade) and it is optimised for body usage on computers. </p>
                     <p><span style="text-decoration: underline;">Layout:</span> The aim with the layout of this theme
-                      was to try and capture how diverse the design of each article in <em>The Source</em> could often be. Common
+                      was to try and capture how diverse the design of each article in <em>The Source</em> could often
+                      be. Common
                       elements were chosen to tie it together, especially as we didn't have the luxury of multiple
-                      pages: the use of uppercase for bylines and menus; straight corners; no background hover colors; the use of a small black square to indicate the end of an
+                      pages: the use of uppercase for bylines and menus; straight corners; no background hover colors;
+                      the use of a small black square to indicate the end of an
                       article. After this we opted to recreate the layouts of the three different articles in Death And
                       Rebirth as these were most directly related to our magazine. Each article has therefore been as
                       closely recreated as possible, with the 1991 <em>Source</em> article about KMD featuring a
@@ -584,7 +660,7 @@
                         resource</a>), line boxing around titles, and color alternation. Subheaders within article were
                       also styled in homage of the times with solid background colors, center alignment and small
                       dropcaps and letter spacing to control their stretching across the available space. Lastly, bottom
-                      margins were removed from paragraphs, an 
+                      margins were removed from paragraphs, an
                       underline given to bylines, and text justified.</p>
                     <figure style="display: flex; justify-content: center; padding: 0.625vw; margin: auto;">
                       <img src="/LiterOCULAR/img/KMDSource.jpeg" class="img-fluid"
@@ -655,11 +731,13 @@
                     </figcaption>
                     <p><span style="text-decoration: underline;">Inspiration:</span> For our last trick we gave some
                       serious thought to how best to approach the spec's requirement that one of the themes be an
-                      imagination of what the future of design might look like. Keeping it 💯 we're not fans of predictions,
+                      imagination of what the future of design might look like. Keeping it 💯 we're not fans of
+                      predictions,
                       they just always seem so forced and rarely hit the spot (unless we're talking about speculative
                       fiction but let's not go there because it's too depressing). One early idea was to mint an NFT and
                       just make the entire website redirect to a blockchain entry, but we didn't have the money to be
-                      honest and it felt like too much of a cop out (still think it's funny in a conceptual art kinda way). Eventually we
+                      honest and it felt like too much of a cop out (still think it's funny in a conceptual art kinda
+                      way). Eventually we
                       decided that it would be just as fun to use the current Promptist movement and advances in Machine
                       Learning to generate most of the CSS code via prompts given to a GPT model: <a
                         href="https://6b.eleuther.ai/" target="_blank">Eleuther AI's GPT-J-6B</a>.</p>
@@ -755,7 +833,7 @@
       </div>
     </div>
 
-    <!-- Content row (three cols of equal size spanning whole viewport width) -->
+    <!-- Content row (spanning whole viewport width) -->
     <div id="homepage" class="container-fluid my-3">
       <div class="row">
         <div class="col-md-8 homepage-col">
