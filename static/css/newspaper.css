@@ -484,27 +484,24 @@ img {
   font-size: 1.09vw;
 }
 
-.btn-outline-secondary:active {
+.btn-outline-secondary:active, .btn-secondary:active, .btn.clear-highlights:active {
   color: #353434;
   background-color: transparent;
+  border-radius: 0vw;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover, .btn-secondary:hover, .btn.clear-highlights:hover {
   color: #353434;
   background-color: transparent;
+  border-color: transparent;
 }
 
 .btn-secondary {
-  color: #353434;
-  background-color: transparent;
-  border-color: transparent;
-  font-size: 1.25vw;
-}
-
-.btn-secondary:hover, .btn.clear-highlights:hover {
   color: #4a1520;
   background-color: transparent;
   border-color: transparent;
+  font-size: 1.25vw;
+  border-radius: 0vw;
 }
 
 .btn.clear-highlights {
