@@ -487,7 +487,6 @@ img {
 .btn-outline-secondary:active, .btn-secondary:active, .btn.clear-highlights:active {
   color: #353434;
   background-color: transparent;
-  border-radius: 0vw;
 }
 
 .btn-outline-secondary:hover, .btn-secondary:hover, .btn.clear-highlights:hover {
