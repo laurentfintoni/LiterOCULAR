@@ -30,49 +30,6 @@ var articleSources = {
     },
   },
 };
-var mentionCategories = {
-  KMD: [
-    "mention-person",
-    "mention-location",
-    "mention-group",
-    "mention-organization",
-    "mention-track",
-    "mention-album",
-    "mention-sample",
-    "mention-rhyme",
-    "mention-character",
-    "mention-genre",
-    "mention-label",
-    "mention-subject",
-  ],
-  Timnit: [
-    "mention-person",
-    "mention-location",
-    "mention-group",
-    "mention-organization",
-    "mention-subject",
-    "mention-technology",
-    "mention-company",
-    "mention-event",
-  ],
-};
-var aboutColors = {
-  "mention-person": "background-color: #FF2D00;",
-  "mention-location": "background-color: #FFF000;",
-  "mention-group": "background-color: #7CFF00;",
-  "mention-organization": "background-color: #00FFC1;",
-  "mention-track": "background-color: #00FFF7;",
-  "mention-album": "background-color: #00ECFF;",
-  "mention-sample": "background-color: #0074FF;",
-  "mention-rhyme": "background-color: #8000FF;",
-  "mention-character": "background-color: #F000FF;",
-  "mention-genre": "background-color: #FF0055;",
-  "mention-label": "background-color: #C70039;",
-  "mention-subject": "background-color: #DAF7A6;",
-  "mention-technology": "background-color: #00ECFF;",
-  "mention-company": "background-color: #0074FF;",
-  "mention-event": "background-color: #8000FF;",
-};
 
 // Theme switching
 function switchTheme(btn) {
@@ -99,6 +56,7 @@ function switchTheme(btn) {
     switch (button.id) {
       case "theme-toggle-newspaper":
         cssLink.href = basePath + "newspaper.css";
+        document.getElementById("alert-docs-theme").classList.remove("visually-hidden");
         setTimeout(() => {
           switchImages("original");
         }, 200);
@@ -106,6 +64,7 @@ function switchTheme(btn) {
 
       case "theme-toggle-deco":
         cssLink.href = basePath + "deco.css";
+        document.getElementById("alert-docs-theme").classList.remove("visually-hidden");
         setTimeout(() => {
           switchImages("original");
         }, 200);
@@ -113,6 +72,7 @@ function switchTheme(btn) {
 
       case "theme-toggle-music":
         cssLink.href = basePath + "music.css";
+        document.getElementById("alert-docs-theme").classList.remove("visually-hidden");
         setTimeout(() => {
           switchImages("original");
         }, 200);
@@ -120,6 +80,7 @@ function switchTheme(btn) {
 
       case "theme-toggle-ml":
         cssLink.href = basePath + "ML.css";
+        document.getElementById("alert-docs-theme").classList.remove("visually-hidden");
         setTimeout(() => {
           switchImages("generated");
         }, 200);
@@ -127,6 +88,7 @@ function switchTheme(btn) {
 
       case "theme-toggle-base":
         cssLink.href = basePath + "base.css";
+        document.getElementById("alert-docs-theme").classList.add("visually-hidden");
         setTimeout(() => {
           switchImages("original");
         }, 200);
