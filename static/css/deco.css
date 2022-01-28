@@ -701,7 +701,7 @@ h2.mit-header, h2.nyt-header {
     position: relative;
     padding-top: 1.4vw;
     padding-bottom: 1.4vw;
-    border: 0.07vw solid black;
+    border: 0.07vw solid #111;
     top: -0.93vw;
 }
 
@@ -712,8 +712,8 @@ h2.mit-header, h2.nyt-header {
     bottom:-0.78vw;
     left:0.39vw;
     right:0.39vw;
-    border-left: 0.07vw solid black;
-    border-right: 0.07vw solid black;
+    border-left: 0.07vw solid #111;
+    border-right: 0.07vw solid #111;
 }
 
 .issues-lenses:after {
@@ -723,38 +723,38 @@ h2.mit-header, h2.nyt-header {
     bottom:0.39vw;
     left:-0.78vw;
     right:-0.78vw;
-    border-top: 0.07vw solid black;
-    border-bottom: 0.07vw solid black;
+    border-top: 0.07vw solid #111;
+    border-bottom: 0.07vw solid #111;
 }
 
 .corners-deco-container {
     display: grid;
     grid-template-columns: 
-    [corner-start]  5px
-    [square-start]  5px
-    [edge-start]    5px
-    [square-end]    5px
-    [corner-end]    25px
+    [corner-start]  0.390625vw
+    [square-start]  0.390625vw
+    [edge-start]    0.390625vw
+    [square-end]    0.390625vw
+    [corner-end]    1.953125vw
     [edge-end]      1fr
-    [edge-start]    25px
-    [corner-start]  5px
-    [square-start]  5px
-    [edge-end]      5px
-    [square-end]    5px
+    [edge-start]    1.953125vw
+    [corner-start]  0.390625vw
+    [square-start]  0.390625vw
+    [edge-end]      0.390625vw
+    [square-end]    0.390625vw
     [corner-end]
     ;
     grid-template-rows: 
-    [corner-start]  5px 
-    [square-start]  5px
-    [edge-start]    5px
-    [square-end]    5px
-    [corner-end]    25px
+    [corner-start]  0.390625vw 
+    [square-start]  0.390625vw
+    [edge-start]    0.390625vw
+    [square-end]    0.390625vw
+    [corner-end]    1.953125vw
     [edge-end]      1fr
-    [edge-start]    25px
-    [corner-start]  5px
-    [square-start]  5px
-    [edge-end]      5px
-    [square-end]    5px
+    [edge-start]    1.953125vw
+    [corner-start]  0.390625vw
+    [square-start]  0.390625vw
+    [edge-end]      0.390625vw
+    [square-end]    0.390625vw
     [corner-end]
     ;
     padding: 1.25vw;
@@ -772,133 +772,133 @@ h2.mit-header, h2.nyt-header {
 .corners-deco-container .square-left-top {
     grid-column: square-start 1 / square-end 1;
     grid-row: square-start 1 / square-end 1;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .corners-deco-container .square-left-bottom {
     grid-column: square-start 1 / square-end 1;
     grid-row: square-start 2 / square-end 2;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .corners-deco-container .square-right-top {
     grid-column: square-start 2 / square-end 2;
     grid-row: square-start 1 / square-end 1;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .corners-deco-container .square-right-bottom {
     grid-column: square-start 2 / square-end 2;
     grid-row: square-start 2 / square-end 2;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .corners-deco-container .horizontal-edge-left {
     grid-column: edge-start 1 / edge-end 1;
     grid-row: edge-start 1 / edge-end 2;
-    border-top: 1px solid #111;
-    border-bottom: 1px solid #111;
+    border-top: 0.078125vw solid #111;
+    border-bottom: 0.078125vw solid #111;
 }
 
 .corners-deco-container .horizontal-edge-right {
     grid-column: edge-start 2 / edge-end 2;
     grid-row: edge-start 1 / edge-end 2;
-    border-top: 1px solid #111;
-    border-bottom: 1px solid #111;
+    border-top: 0.078125vw solid #111;
+    border-bottom: 0.078125vw solid #111;
 }
 
 .corners-deco-container .vertical-edge-left {
     grid-column: edge-start 1 / edge-end 2;
     grid-row: edge-start 1 / edge-end 1; 
-    border-left: 1px solid #111;
-    border-right: 1px solid #111;
+    border-left: 0.078125vw solid #111;
+    border-right: 0.078125vw solid #111;
 }
 
 .corners-deco-container .vertical-edge-right {
     grid-column: edge-start 1 / edge-end 2;
     grid-row: edge-start 2 / edge-end 2;
-    border-left: 1px solid #111;
-    border-right: 1px solid #111;
+    border-left: 0.078125vw solid #111;
+    border-right: 0.078125vw solid #111;
 }
 
 .corners-deco-container .left-outer {
     grid-column: corner-start 1 / corner-end 1;
     grid-row: corner-start 1 / corner-end 2;
-    border-top: 1px solid #6F1946;
-    border-bottom: 1px solid #6F1946;
+    border-top: 0.078125vw solid #6F1946;
+    border-bottom: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .right-outer {
     grid-column: corner-start 2 / corner-end 2;
     grid-row: corner-start 1 / corner-end 2;
-    border-top: 1px solid #6F1946;
-    border-bottom: 1px solid #6F1946;
+    border-top: 0.078125vw solid #6F1946;
+    border-bottom: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .top-outer {
     grid-column: corner-start 1 / corner-end 2;
     grid-row: corner-start 1 / corner-end 1;
-    border-left: 1px solid #6F1946;
-    border-right: 1px solid #6F1946;
+    border-left: 0.078125vw solid #6F1946;
+    border-right: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .bottom-outer {
     grid-column: corner-start 1 / corner-end 2;
     grid-row: corner-start 2 / corner-end 2;
-    border-left: 1px solid #6F1946;
-    border-right: 1px solid #6F1946;
+    border-left: 0.078125vw solid #6F1946;
+    border-right: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .left-inner {
     grid-column: corner-start 1 / edge-start 1;
     grid-row: corner-end 1 / corner-start 2;
-    border-top: 1px solid #6F1946;
-    border-bottom: 1px solid #6F1946;
+    border-top: 0.078125vw solid #6F1946;
+    border-bottom: 0.078125vw solid #6F1946;
 
 }
 
 .corners-deco-container .right-inner {
     grid-column: edge-end 2 / corner-end 2;
     grid-row: corner-end 1 / corner-start 2;
-    border-top: 1px solid #6F1946;
-    border-bottom: 1px solid #6F1946;
+    border-top: 0.078125vw solid #6F1946;
+    border-bottom: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .top-inner {
     grid-column: corner-end 1 / corner-start 2;
     grid-row: corner-start 1 / edge-start 1;
-    border-left: 1px solid #6F1946;
-    border-right: 1px solid #6F1946;
+    border-left: 0.078125vw solid #6F1946;
+    border-right: 0.078125vw solid #6F1946;
 }
 
 .corners-deco-container .bottom-inner {
     grid-column: corner-end 1 / corner-start 2;
     grid-row: edge-end 2 / corner-end 2;
-    border-left: 1px solid #6F1946;
-    border-right: 1px solid #6F1946;
+    border-left: 0.078125vw solid #6F1946;
+    border-right: 0.078125vw solid #6F1946;
 }
 
 .square-deco-container {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: 
-    [outer-start]  5px 
-    [mid-start]    5px
-    [inner-start]  2px
+    [outer-start]  0.390625vw 
+    [mid-start]    0.390625vw
+    [inner-start]  0.15625vw
     [gap-start]    1fr
-    [gap-end]      2px
-    [inner-end]    5px
-    [mid-end]      5px 
+    [gap-end]      0.15625vw
+    [inner-end]    0.390625vw
+    [mid-end]      0.390625vw 
     [outer-end] 
     ;
     grid-template-rows: 
-    [outer-start]  5px 
-    [mid-start]    5px 
-    [inner-start]  2px
+    [outer-start]  0.390625vw 
+    [mid-start]    0.390625vw 
+    [inner-start]  0.15625vw
     [gap-start]    1fr
-    [gap-end]      2px
-    [inner-end]    5px
-    [mid-end]      5px 
+    [gap-end]      0.15625vw
+    [inner-end]    0.390625vw
+    [mid-end]      0.390625vw 
     [outer-end] 
     ;
     padding: 1.25vw;
@@ -910,43 +910,43 @@ h2.mit-header, h2.nyt-header {
 
 .square-deco-container .square-deco-inner {
     grid-area: mid;
-    border: 1px solid #111;
+    border: 0.078125vw solid #111;
 }
 
 .square-deco-container .square-deco-square-left-top {
     grid-column: outer-start / inner-start;
     grid-row: outer-start / inner-start;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .square-deco-container .square-deco-square-left-bottom {
     grid-column: outer-start / inner-start;
     grid-row: inner-end / outer-end;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .square-deco-container .square-deco-square-right-top {
     grid-column: inner-end / outer-end;
     grid-row: outer-start / inner-start;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .square-deco-container .square-deco-square-right-bottom {
     grid-column: inner-end / outer-end;
     grid-row: inner-end / outer-end;
-    border: 1px solid #68A469;
+    border: 0.078125vw solid #68A469;
 }
 
 .square-deco-container .square-deco-tall {
     grid-column: gap-start / gap-end;
     grid-row: outer-start / outer-end;
-    border-top: 1px solid #6F1946;
-    border-bottom: 1px solid #6F1946;
+    border-top: 0.078125vw solid #6F1946;
+    border-bottom: 0.078125vw solid #6F1946;
 }
 
 .square-deco-container .square-deco-wide {
     grid-column: outer-start / outer-end;
     grid-row: gap-start / gap-end;
-    border-left: 1px solid #6F1946;
-    border-right: 1px solid #6F1946;
+    border-left: 0.078125vw solid #6F1946;
+    border-right: 0.078125vw solid #6F1946;
 }
