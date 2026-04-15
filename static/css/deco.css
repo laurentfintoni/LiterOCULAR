@@ -64,6 +64,17 @@ a.navbar-brand:hover, a.navbar-brand:focus {
     text-decoration: none;
 }
 
+/* highlight color palette */
+
+:root {
+  --highlight-color-1: #6F1946; --highlight-text-1: #ffffff;
+  --highlight-color-2: #1946A0; --highlight-text-2: #ffffff;
+  --highlight-color-3: #68A469; --highlight-text-3: #ffffff;
+  --highlight-color-4: #A07019; --highlight-text-4: #ffffff;
+  --highlight-color-5: #194666; --highlight-text-5: #ffffff;
+  --highlight-color-6: #8B1A1A; --highlight-text-6: #ffffff;
+}
+
 /* body rules */
 
 body {

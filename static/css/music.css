@@ -61,6 +61,17 @@ a.navbar-brand:hover, a.navbar-brand:focus {
   color: #d5473b;
 }
 
+/* highlight color palette */
+
+:root {
+  --highlight-color-1: #70557D; --highlight-text-1: #e1dcd8;
+  --highlight-color-2: #557D6A; --highlight-text-2: #e1dcd8;
+  --highlight-color-3: #7D6555; --highlight-text-3: #e1dcd8;
+  --highlight-color-4: #557D7D; --highlight-text-4: #e1dcd8;
+  --highlight-color-5: #7D7055; --highlight-text-5: #e1dcd8;
+  --highlight-color-6: #d5473b; --highlight-text-6: #e1dcd8;
+}
+
 /* body rules */
 
 body {

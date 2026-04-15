@@ -34,6 +34,10 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas">Close</button>
     </div>
     <div class="offcanvas-body medium pt-0" style="height: fit-content">
+      <div id="autoclose-notice" class="d-none autoclose-notice" role="status">
+        <span>Highlight added &mdash; closing in <strong id="autoclose-countdown">3</strong>s</span>
+        <button type="button" class="btn btn-sm autoclose-keep" onclick="cancelAutoClose()">Keep open</button>
+      </div>
       <div class="row" id="issue-meta"></div>
       <!-- Metadata viewer and theme switcher -->
       <hr />

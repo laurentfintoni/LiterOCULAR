@@ -2,6 +2,13 @@
 var screenSizeModal;
 var currentIssue;
 var metadataViewerBox = document.getElementById("metadata-viewer");
+
+// Metadata highlight state
+var colorIndex = 0;          // cycles 0–5 across the 6 highlight slots
+var hadSelections = false;   // true once any highlight is made in the current viewer session
+var autoCloseTimer = null;   // setTimeout reference for auto-close countdown
+var countdownInterval = null;// setInterval reference for the countdown display
+const HIGHLIGHT_COUNT = 6;
 var articleSources = {
   KMD: {
     metadata: "KMD_meta.html",
@@ -297,28 +304,95 @@ function focusMetadata(element) {
   let articleNumber = element.dataset.article;
   let article = document.getElementById("article" + articleNumber);
 
+  // Pick the next color slot (cycles 1–6)
+  colorIndex = (colorIndex % HIGHLIGHT_COUNT) + 1;
+  let colorClass = `custom-highlight-${colorIndex}`;
+  hadSelections = true;
+
   if (mentionName != "total") {
     // Article-wide highlight of that specific mentioned item
-    console.log("Highlighting all mentions of", mentionName, "in article", articleNumber);
+    console.log("Highlighting all mentions of", mentionName, "in article", articleNumber, "with", colorClass);
     let selectedMentions = article.querySelectorAll(`span[about=${mentionName}]`);
     selectedMentions.forEach((mention) => {
-      mention.classList.add("custom-highlight");
+      mention.classList.add(colorClass);
     });
   } else {
     // Article-wide highlight of a mention category
-    console.log("Highlighting all", mentionType, "in article", articleNumber);
+    console.log("Highlighting all", mentionType, "in article", articleNumber, "with", colorClass);
     let selectedMentions = article.querySelectorAll(`span.${mentionType}`);
     selectedMentions.forEach((mention) => {
-      mention.classList.add("custom-highlight");
+      mention.classList.add(colorClass);
     });
   }
+
+  // Show colour indicator on the button using the CSS custom property value
+  let cssColor = getComputedStyle(document.documentElement)
+    .getPropertyValue(`--highlight-color-${colorIndex}`)
+    .trim();
+  element.style.outline = `2px solid ${cssColor}`;
+  element.style.outlineOffset = "2px";
+
+  // Trigger the auto-close countdown
+  showAutoCloseNotice();
+}
+
+function showAutoCloseNotice() {
+  // Cancel any existing countdown
+  if (autoCloseTimer) clearTimeout(autoCloseTimer);
+  if (countdownInterval) clearInterval(countdownInterval);
+
+  const notice = document.getElementById("autoclose-notice");
+  const countdownEl = document.getElementById("autoclose-countdown");
+  notice.classList.remove("d-none");
+
+  let seconds = 3;
+  countdownEl.textContent = seconds;
+
+  countdownInterval = setInterval(() => {
+    seconds--;
+    countdownEl.textContent = seconds;
+    if (seconds <= 0) clearInterval(countdownInterval);
+  }, 1000);
+
+  autoCloseTimer = setTimeout(() => {
+    clearInterval(countdownInterval);
+    notice.classList.add("d-none");
+    const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById("offcanvasBottom"));
+    if (offcanvas) offcanvas.hide();
+    autoCloseTimer = null;
+  }, 3000);
+}
+
+function cancelAutoClose() {
+  if (autoCloseTimer) {
+    clearTimeout(autoCloseTimer);
+    autoCloseTimer = null;
+  }
+  if (countdownInterval) {
+    clearInterval(countdownInterval);
+    countdownInterval = null;
+  }
+  document.getElementById("autoclose-notice").classList.add("d-none");
 }
 
 function resetHighlight(ev) {
-  let highlightedStuff = document.querySelectorAll(".custom-highlight");
-  highlightedStuff.forEach((item) => {
-    item.classList.remove("custom-highlight");
+  // Remove all custom-highlight-N classes from every highlighted element
+  document.querySelectorAll('[class*="custom-highlight"]').forEach((item) => {
+    [...item.classList]
+      .filter((cls) => cls.startsWith("custom-highlight"))
+      .forEach((cls) => item.classList.remove(cls));
   });
+
+  // Clear button outlines set during focusMetadata
+  document.querySelectorAll('[onclick="focusMetadata(this);"]').forEach((btn) => {
+    btn.style.outline = "";
+    btn.style.outlineOffset = "";
+  });
+
+  // Reset state
+  colorIndex = 0;
+  hadSelections = false;
+  cancelAutoClose();
 }
 
 // Utils
@@ -341,6 +415,19 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       fillMetadataBox();
     }, 500);
+
+    // Reset all highlights whenever the viewer is reopened after a session with selections
+    document.getElementById("offcanvasBottom").addEventListener("show.bs.offcanvas", () => {
+      if (hadSelections) {
+        resetHighlight();
+      }
+      cancelAutoClose();
+    });
+
+    // Cancel auto-close if the user manually dismisses the viewer
+    document.getElementById("offcanvasBottom").addEventListener("hide.bs.offcanvas", () => {
+      cancelAutoClose();
+    });
   }
 
   // If the user chose a theme preserve their choice on page load by
