@@ -75,6 +75,17 @@ a.navbar-brand:focus {
   background-color: #000;
 }
 
+/* highlight color palette */
+
+:root {
+  --highlight-color-1: #b3e5fc; --highlight-text-1: #006064;
+  --highlight-color-2: #fce4ec; --highlight-text-2: #880e4f;
+  --highlight-color-3: #e8f5e9; --highlight-text-3: #1b5e20;
+  --highlight-color-4: #fff8e1; --highlight-text-4: #e65100;
+  --highlight-color-5: #f3e5f5; --highlight-text-5: #4a148c;
+  --highlight-color-6: #e0f2f1; --highlight-text-6: #004d40;
+}
+
 /* body rules */
 
 body {

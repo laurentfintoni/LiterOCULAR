@@ -73,6 +73,17 @@ a.navbar-brand:hover {
   text-decoration: underline;
 }
 
+/* highlight color palette */
+
+:root {
+  --highlight-color-1: #4a1520; --highlight-text-1: #ebe7dd;
+  --highlight-color-2: #1a4547; --highlight-text-2: #ebe7dd;
+  --highlight-color-3: #2d3a1a; --highlight-text-3: #ebe7dd;
+  --highlight-color-4: #4a3419; --highlight-text-4: #ebe7dd;
+  --highlight-color-5: #1a2b4a; --highlight-text-5: #ebe7dd;
+  --highlight-color-6: #3d1a4a; --highlight-text-6: #ebe7dd;
+}
+
 /* body rules */
 
 body {

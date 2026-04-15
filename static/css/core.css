@@ -79,6 +79,34 @@ h3.modal-title {
   font-size: 1.5rem !important;
 }
 
+/* auto-close notice */
+
+.autoclose-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.85;
+}
+
+.autoclose-keep {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid currentColor;
+}
+
+/* highlight color classes — colors defined per theme via CSS custom properties */
+
+.custom-highlight-1 { background-color: var(--highlight-color-1); color: var(--highlight-text-1); }
+.custom-highlight-2 { background-color: var(--highlight-color-2); color: var(--highlight-text-2); }
+.custom-highlight-3 { background-color: var(--highlight-color-3); color: var(--highlight-text-3); }
+.custom-highlight-4 { background-color: var(--highlight-color-4); color: var(--highlight-text-4); }
+.custom-highlight-5 { background-color: var(--highlight-color-5); color: var(--highlight-text-5); }
+.custom-highlight-6 { background-color: var(--highlight-color-6); color: var(--highlight-text-6); }
+
 /* Css transition on theme switching */
 
 .anim-layer {
